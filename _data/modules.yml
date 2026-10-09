@@ -1,0 +1,14 @@
+# Add modules using this structure; omit resource lists until files are ready.
+# - title: "Module title"
+#   dirname: modules/module-01
+#   filename: notes  # Optional PDF basename, without .pdf
+#   desc: "Module description"
+#   readings:
+#     - title: "Reading title"
+#   ps:
+#     - title: "Problem set"
+#       url: problem_set.pdf
+#   materials:
+#     - title: "Additional material"
+#       url: material.pdf
+[]

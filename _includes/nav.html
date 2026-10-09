@@ -1,0 +1,12 @@
+<ul class="menu">
+
+<!--          <li><a class="page-link" href="{{ site.baseurl }}/"><i class="fa fa-home fa-lg"></i>Home</a></li> -->
+<li><a class="page-link" href="{{ site.baseurl }}{{ site.syllabus }}"><i class="fa fa-list-ul fa-lg"></i> Syllabus</a></li>
+<!-- <li><a class="page-link" href="{{ site.baseurl }}/course-materials/"><i class="fas fa-book"></i> Course Materials</a></li> -->
+<li><a class="page-link" href="{{ site.baseurl }}/schedule/"><i class="fas fa-book"></i> Course Schedule</a></li>
+<li><a class="page-link" href="{{ site.baseurl }}/modules/"><i class="fas fa-book-reader"></i> Modules</a></li>
+<li><a class="page-link" href="{{ site.baseurl }}/model_lab/"><i class="fas fa-book-reader"></i> Model Labs</a></li>
+{% if site.canvas_url and site.canvas_url != "" %}
+<li><a class="page-link" href="{{ site.canvas_url }}"><i class="fas fa-school"></i> Canvas</a></li>
+{% endif %}
+    </ul>

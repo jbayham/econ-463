@@ -1,0 +1,38 @@
+# Site settings
+title: ECON 463
+subtitle: Course title to be added
+description: Course information will be added here.
+
+baseurl: "/econ-463"
+url: "https://jbayham.github.io"
+syllabus: "/syllabus/"
+githubdir: ""
+canvas_url: ""
+
+# Author/user information
+email: jbayham@colostate.edu
+#twitter_username: stevenvmiller
+github_username:  jbayham
+# authorurl: "https://sites.google.com/site/judebayham/home"
+# address: |
+#     Department of Political Science
+#     232 Brackett Hall
+#     Clemson, SC 29634-1354
+
+
+# Build settings
+markdown: kramdown
+
+# Other options
+permalink: blog/:year/:month/:title
+excerpt_separator: "<!--more-->"
+
+include: ['_images', '_css']
+
+# SEO stuff
+# google_author: ""
+# google_site_verification: ""
+# bing_webmastertools_id: ""
+
+# Keep authoring files out of the published website.
+exclude: [README.md, econ-463.Rproj]
