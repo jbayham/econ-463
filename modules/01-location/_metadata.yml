@@ -1,0 +1,8 @@
+subtitle: "Module 1 · ECON 463"
+author: "Jude Bayham"
+lang: en
+execute:
+  echo: false
+  warning: false
+  message: false
+  freeze: false

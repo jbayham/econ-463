@@ -1,0 +1,560 @@
+---
+title: "Location, Cities, and Agglomeration"
+subtitle: "Module 1 · ECON 463"
+format:
+  revealjs:
+    theme: [simple, assets/slides.scss]
+    width: 1280
+    height: 720
+    margin: 0.08
+    center: false
+    slide-number: c/t
+    transition: none
+    navigation-mode: linear
+    controls: true
+    progress: true
+    history: false
+    embed-resources: true
+    code-overflow: wrap
+    incremental: false
+    slide-level: 2
+    toc: false
+    number-sections: false
+---
+
+```{r}
+#| include: false
+source("R/examples.R")
+knitr::opts_chunk$set(fig.width = 9, fig.height = 4.3, fig.align = "center")
+```
+
+## Opening question
+
+**Why does economic activity concentrate in particular places?**
+
+::: {.prompt}
+Imagine identical resources everywhere, no scale economies, and costless movement. What would make firms cluster?
+:::
+
+Then relax one assumption at a time:
+
+- Places differ.
+- Scale changes production costs.
+- Proximity changes access to people, inputs, and ideas.
+
+::: {.notes}
+4 minutes. Opening block: 15 minutes across slides 1–4. Ask pairs to propose one reason for concentration. Require an economic mechanism rather than “firms go where other firms are.” Return to these responses on slide 25.
+:::
+
+## Regions and cities are connected
+
+**Regional economics:** activity across places and connections among them.
+
+**Urban economics:** city formation and organization within cities.
+
+A city draws workers and inputs from elsewhere and sells beyond its boundary.
+
+::: {.takeaway}
+Choose the geographic unit to fit the question. Formal measurement comes in Module 3.
+:::
+
+::: {.source}
+Regional framing: Hoover and Giarratani, Ch. 1, pp. 12–15.
+:::
+
+::: {.notes}
+4 minutes. Ask whether a commuting area and an administrative city must coincide. No detailed regional classification yet. Explain that this course links urban mechanisms to regional analysis rather than treating them as separate subjects.
+:::
+
+## What you should be able to explain
+
+**LO1:** How natural advantages, transport costs, and scale economies shape location and city formation.
+
+**LO2:** How suppliers, labor markets, and knowledge encourage clustering—and how costs limit it.
+
+::: {.prompt}
+Preparation check: distinguish total, marginal, and average cost. What does a line's slope measure?
+:::
+
+::: {.source}
+Primary reading: Brueckner, Ch. 1, §§1.1–1.5, pp. 1–18. The reader supplies worked examples and R practice.
+:::
+
+::: {.notes}
+7 minutes including brief course orientation. Check algebra readiness and explain that timed coding is not the exam objective. Our practice supports A1, but these materials do not contain its graded questions. Avoid assigning work on November 24.
+:::
+
+## Natural advantages and firm location
+
+A resource deposit can lower input costs.
+
+A port combines geography with built infrastructure.
+
+A large customer base can reduce delivery costs.
+
+::: {.prompt}
+Would the cheapest raw-material location necessarily maximize profit?
+:::
+
+::: {.notes}
+5 minutes. Start the 40-minute block, slides 5–12. Distinguish natural features from advantages created by investment or neighboring firms. Let students list missing costs before displaying the table.
+:::
+
+## Example 1: three possible plant locations
+
+Supply **1,000 identical units per period** to the same customers.
+
+```{r}
+knitr::kable(base_location[, 1:4], col.names = c("Site", "Production", "Inbound", "Outbound"))
+```
+
+All entries are **CU per unit of finished output**. Data are illustrative.
+
+::: {.prompt}
+Predict the preferred site. Explain which comparison matters.
+:::
+
+::: {.notes}
+5 minutes. Students calculate individually, then compare. Output, quality, selling price, and revenue are fixed. Inbound costs already reflect input requirements per unit of output. Site labels do not impose a literal straight-line geography.
+:::
+
+## Example 1: add the relevant costs
+
+$$d_i(\tau)=p_i+a_i+\tau b_i$$
+
+Production + inbound freight + adjusted outbound freight.
+
+```{r}
+knitr::kable(base_location[, c("site", "total")], col.names = c("Site", "Baseline cost (CU/unit)"))
+```
+
+**Junction saves `r fmt(3000)` CU per period** relative to either alternative.
+
+::: {.notes}
+5 minutes. Define tau as a dimensionless outbound freight multiplier, baseline 1. Explain why multiplying the unit cost difference of 3 by 1000 gives 3000. Discuss why minimizing one component fails.
+:::
+
+## Cost minimization needs a revenue assumption
+
+If revenue is the same at each site:
+
+$$\arg\max_i(R-C_i)=\arg\min_i C_i.$$
+
+If location changes price, quality, or sales, compare **profits**.
+
+::: {.prompt}
+Market costs 3 CU more per unit than Junction. What if faster service earns 5 CU more per unit?
+:::
+
+::: {.fragment}
+Market earns **2 CU more profit per unit**, holding quantity fixed.
+:::
+
+::: {.notes}
+4 minutes. Pause before revealing answer. Point to reader Practice A for full explanation. A different output level may also invalidate the original cost table.
+:::
+
+## Example 1: outbound freight falls by half
+
+Set $\tau=0.5$; hold production and inbound costs fixed.
+
+::: {.prompt}
+Which site gains most? Does a cost reduction help every site equally?
+:::
+
+::: {.fragment}
+```{r}
+knitr::kable(low_location[, c("site", "total")], col.names = c("Site", "New cost (CU/unit)"))
+```
+
+**Resource wins.** All sites become cheaper; their relative advantages change.
+:::
+
+::: {.notes}
+5 minutes. Ask students to compute before revealing. Explain that “losing the plant” is consistent with an absolute reduction in costs. This counterfactual affects outbound freight only.
+:::
+
+## Example 1: where does the decision switch?
+
+Resource and Junction tie when
+
+$$42+18\tau=49+8\tau.$$
+
+::: {.fragment}
+$$\tau^*=0.7,\qquad d_R=d_J=54.6.$$
+
+Check the third site: $d_M=58+2(0.7)=59.4$.
+
+**A pairwise tie is relevant only if no other site is cheaper.**
+:::
+
+::: {.notes}
+6 minutes. Have students solve the equation and check units. Tau has no units, delivered cost is CU/unit. A 30 percent reduction from baseline reaches the tie; a larger reduction favors Resource.
+:::
+
+## Example 1: read the lower envelope
+
+```{r}
+#| fig-alt: "Three delivered-cost lines. The least-cost site switches from Resource to Junction at tau 0.7 and from Junction to Market at tau 1.5."
+plot_location()
+```
+
+::: {.notes}
+5 minutes. Intercepts are production plus inbound freight; slopes are baseline outbound freight. Ask why the Resource–Market intersection at 1 does not change the winner. Show that Junction lies below both. This is a discrete site-choice model, not a continuous geographic location model.
+:::
+
+## Example 1: explain the mechanism
+
+At $\tau=0.8$, costs are **56.4, 55.4, and 59.6** CU/unit.
+
+**Junction still wins.** The reduction has not crossed the threshold.
+
+::: {.prompt}
+Why can cheaper transport make production farther from customers more attractive?
+:::
+
+::: {.source}
+Read alongside Brueckner §1.4; supplemental: Hoover–Giarratani §§2.3–2.7.
+:::
+
+::: {.notes}
+5 minutes. End the 40-minute block. Introduce source versus market orientation as conditional tendencies. Weight loss, bulk, perishability, multiple markets, and production costs matter. Invite one assumption that could reverse the conclusion.
+:::
+
+## Scale economies and city formation
+
+Example 1: **where** should one plant locate?
+
+Example 2: **how many** plants should operate?
+
+$$C(Q)=F+cQ,\qquad AC(Q)=F/Q+c.$$
+
+An avoidable fixed operating cost creates an internal scale economy.
+
+::: {.notes}
+5 minutes. Begin the 35-minute block, slides 13–19. Distinguish avoidable fixed cost from sunk expenditure. Derivative of average cost is negative for F positive. Take the first day's 10-minute break after this slide: 60 working minutes have elapsed.
+:::
+
+## Example 2: spread the fixed cost
+
+```{r}
+#| fig-alt: "Average production cost falls from 32 CU at 100 units to 26 CU at 200 units, with fixed cost 1200 and marginal cost 20."
+plot_average_cost()
+```
+
+::: {.notes}
+4 minutes, after the break. F=1200 and c=20. This is production average cost; delivery is not included. Ask whether doubling output requires another firm to locate nearby. No: this is internal to the plant.
+:::
+
+## Example 2: one plant or two?
+
+Two markets, **100 units each per period**.
+
+| Input | Assumption |
+|---|---|
+| Fixed operating cost per plant | 1,200 CU/period |
+| Marginal production cost | 20 CU/unit |
+| Shipping to the other market | 4 CU/unit |
+| Local delivery | 0 |
+
+Same revenue, no capacity limits, identical input access.
+
+::: {.notes}
+5 minutes. Define q as demand per market. One centralized plant can be in either identical market; its choice is symmetric. Only shipments to the other market incur t. Let students write both total-cost expressions.
+:::
+
+## Example 2: compare total costs
+
+**Two plants**
+
+$$C_D=2F+2cq=2(1{,}200)+20(200)=6{,}400.$$
+
+**One plant**
+
+$$C_C=F+2cq+tq=1{,}200+20(200)+4(100)=5{,}600.$$
+
+::: {.fragment}
+Save 1,200 in fixed costs; spend 400 more on freight.
+
+**Net saving: `r fmt(base_plants["dispersed"] - base_plants["centralized"])` CU per period.**
+:::
+
+::: {.notes}
+6 minutes. Ask why the freight term is t times 100, not t times 200. Compare production average cost 26 with delivered average cost 28 for the centralized plant.
+:::
+
+## Example 2: derive the shipping threshold
+
+$$C_C-C_D=tq-F.$$
+
+Centralize when $tq<F$; disperse when $tq>F$.
+
+::: {.fragment}
+$$t^*=F/q=1{,}200/100=12\text{ CU per unit shipped}.$$
+
+At $t=16$: one plant costs `r fmt(plant_costs(16)["centralized"])`; two cost `r fmt(plant_costs(16)["dispersed"])`.
+:::
+
+::: {.notes}
+5 minutes. F is CU/period and q is units/period, so the ratio is CU/unit. At the tie both costs are 6400. This comparison does not account for opening or closing transition costs.
+:::
+
+## Example 2: scale versus distance
+
+```{r}
+#| fig-alt: "One-plant total cost rises with freight rates and crosses the constant two-plant cost of 6400 at t equals 12."
+plot_plants()
+```
+
+::: {.notes}
+5 minutes. Ask students to identify which cost changes and which stays fixed. A higher F shifts the comparison toward centralization; a larger q raises the shipping burden under this technology. The reader supplies the market-size practice.
+:::
+
+## From a large plant to a city
+
+**Concentrated production → concentrated jobs → demand for nearby housing and services.**
+
+Commuting costs help connect jobs to residences.
+
+But this example does not determine city size or explain why many independent firms cluster.
+
+::: {.source}
+Brueckner §§1.2 and 1.5. Housing, land, and spatial equilibrium return in Module 4.
+:::
+
+::: {.notes}
+5 minutes. End the 35-minute block. Emphasize the distinction between an illustrative organizational comparison and an equilibrium model of a city. Transition to 30 minutes of guided practice.
+:::
+
+## Guided practice and synthesis
+
+Work from the module folder. The calculations require **base R**.
+
+```{r}
+#| echo: true
+#| eval: false
+source("R/examples.R")
+location_costs(tau = 0.8)
+location_threshold("Resource", "Junction")
+plant_costs(t = 4, q = 200)
+```
+
+Predict each result before running it. Confirm R access now.
+
+::: {.notes}
+10 minutes. Provide supported setup time. Students can do the arithmetic while a partner resolves R access. source() reads the supplied CSV from the module working directory; help diagnose incorrect working directories. These are ungraded activities, not additional submissions.
+:::
+
+## Practice: double demand in both markets
+
+Keep $F=1{,}200$, $c=20$, and $t=4$; set $q=200$.
+
+::: {.prompt}
+Does a larger market necessarily strengthen the case for centralization?
+:::
+
+::: {.fragment}
+One plant: **10,000** CU. Two plants: **10,400** CU.
+
+The saving falls to **400**: more units cross between markets, but the avoided fixed cost is unchanged.
+:::
+
+::: {.notes}
+12 minutes. Allow 6 minutes of pairs work, 3 minutes checking in R, and 3 minutes explanation. Total output is now 400, not 200. This is a conditional conclusion for the specified fixed-cost technology.
+:::
+
+## End of November 23: explain, then qualify
+
+Write three sentences:
+
+1. Which alternative wins?
+2. What mechanism explains the result?
+3. Which assumption could reverse the conclusion?
+
+::: {.takeaway}
+Cost rankings depend on the counterfactual and what is held fixed.
+:::
+
+Resume with agglomeration on **November 25**.
+
+::: {.notes}
+8 minutes. End the 30-minute practice block and the day's 120 working minutes. Collect a brief informal response if useful; no graded submission introduced here. November 24 has no class or required work. A1's graded opening questions remain a separate preparation task.
+:::
+
+## Agglomeration mechanisms
+
+**November 25 · first 60 working minutes**
+
+Internal scale: change the plant's own output.
+
+Agglomeration: change nearby activity while holding its own scale fixed.
+
+::: {.prompt}
+A small firm benefits when neighboring firms attract a testing laboratory. Where is the scale economy, and who benefits?
+:::
+
+::: {.notes}
+5 minutes. Begin the 30-minute agglomeration block, slides 23–27. Retrieve the distinction from the previous meeting. The laboratory may have internal scale economies; the customers gain an external location advantage.
+:::
+
+## Example 3: shared suppliers
+
+Many precision-component firms support a specialist testing laboratory.
+
+**More local customers → viable specialist → access to equipment and expertise.**
+
+Proximity helps when samples, turnaround time, and coordination matter.
+
+::: {.prompt}
+Would the advantage remain if testing could be supplied equally well from anywhere?
+:::
+
+::: {.notes}
+6 minutes. This is a generic hypothetical cluster. Discuss demand aggregation and the specialist's fixed costs. A purchased input can generate a pecuniary agglomeration advantage; not every advantage is an uncompensated spillover.
+:::
+
+## Example 3: labor pooling and matching
+
+A deep market can improve matching and reduce vacancy time.
+
+Workers have alternative employers; firms have alternative recruits.
+
+**Higher wages can coexist with lower labor cost per effective unit of output.**
+
+::: {.prompt}
+What happens to the insurance benefit if every employer faces the same negative shock?
+:::
+
+::: {.notes}
+7 minutes. Ask students to distinguish wage rates from productivity-adjusted costs. Explain that pooling works best for idiosyncratic fluctuations; correlated industry shocks weaken it. Connect to specialization and diversity later.
+:::
+
+## Example 3: knowledge spillovers
+
+Interaction, observation, or worker mobility can transmit useful knowledge.
+
+A spillover occurs when the originator does not capture the full benefit.
+
+Buying advice is a transaction; learning may also have uncompensated effects.
+
+::: {.prompt}
+What knowledge moved, between whom, and with what productivity consequence?
+:::
+
+::: {.notes}
+6 minutes. Avoid asserting that all nearby interactions are spillovers. Ask for a concrete example of a production improvement rather than a vague claim about creativity. Refer to Brueckner §1.3.
+:::
+
+## Example 3: distinguish mechanisms with evidence
+
+| Mechanism | Useful observations |
+|---|---|
+| Supplier sharing | Service availability, purchases, turnaround times |
+| Matching | Vacancy duration, worker transitions, skill matches |
+| Learning | Knowledge transmission and subsequent productivity |
+
+**A cluster's existence does not identify its cause.**
+
+::: {.source}
+Brueckner §1.3; Hoover–Giarratani §§5.2–5.4. Optional: Glaeser–Gottlieb §3.
+:::
+
+::: {.notes}
+6 minutes. End the 30-minute block. Ask students to choose one mechanism and one observation that might distinguish it from another. These observations are starting points; causal designs need more than correlations.
+:::
+
+## Limits and competing explanations
+
+Supplier and matching gains: $6+4=10$ CU/unit.
+
+Occupancy and congestion costs: $5+3=8$ CU/unit.
+
+**Net private advantage: 2 CU/unit.**
+
+::: {.prompt}
+An extra 3 CU/unit of congestion reverses the ranking. Does this accounting establish an optimal city size?
+:::
+
+::: {.notes}
+5 minutes. Begin the 20-minute block, slides 28–31. Answer: no. Numbers are illustrative and effects on other residents and firms are omitted. Differentiate rent payments, resource costs, and unpriced external effects without extending into a full welfare lecture.
+:::
+
+## Specialization versus diversity
+
+**Localization economies:** benefits linked to a concentration of a particular activity.
+
+**Urbanization economies:** benefits of broader urban scale and cross-industry connections.
+
+::: {.prompt}
+Which structure helps a specialized manufacturer? Which offers resilience to an industry-specific downturn?
+:::
+
+No universal winner: identify the mechanism and the relevant shocks.
+
+::: {.notes}
+5 minutes. Avoid treating diversity as automatically innovative or specialization as necessarily fragile. Supplier specificity, skill transferability, and shock correlation matter.
+:::
+
+## Vietnam connection: a pattern to explain
+
+The World Bank's *Vietnam Development Report 2019* documents concentration of population and estimated economic activity around **Hanoi and Ho Chi Minh City**.
+
+What could explain the pattern?
+
+**Market access · infrastructure · matching · suppliers · history**
+
+::: {.source}
+World Bank (2020), Ch. 4, Fig. 4.1, printed p. 79. Historical evidence; our numerical examples are not calibrated to Vietnam.
+:::
+
+::: {.notes}
+5 minutes. Refer students to the linked report through the reader bibliography. No current statistics or boundary claims are implied. Ask for one observation that would discriminate between market access and knowledge spillovers.
+:::
+
+## Concentration is not causal proof
+
+Productive firms and skilled workers may select dense locations.
+
+A common advantage may attract them both.
+
+::: {.takeaway}
+An association between density and productivity does not, by itself, establish a spillover.
+:::
+
+Ask what comparison would separate the proposed mechanism from these alternatives.
+
+::: {.notes}
+5 minutes. End the 20-minute block. Explain omitted location attributes in plain language. Do not require a complete econometric research design. Interpretation of spatial evidence returns in Module 5.
+:::
+
+## Retrieval and Module 2 bridge
+
+- Why can the lowest production cost lose?
+- What must follow a pairwise threshold calculation?
+- Internal scale economy or external agglomeration benefit?
+- Which cost could reverse the clustering incentive?
+
+**Next:** how trade, migration, and productivity transmit regional growth.
+
+::: {.notes}
+10 minutes. Seven minutes retrieval and discussion, three minutes bridge. This completes M1's 60 minutes on November 25, leaving 60 working minutes for M2. Reader provides answers. Reopen fixed-output and fixed-price assumptions as the course moves to regional adjustment.
+:::
+
+## Readings and example files {.references}
+
+**Primary:** Brueckner, Ch. 1, §§1.1–1.5, pp. 1–18 [@brueckner2011].
+
+**Supplemental:** Hoover–Giarratani, Ch. 1, pp. 12–15; §§2.3–2.7, pp. 19–35; §§5.2–5.4, pp. 84–96 [@hoover2020].
+
+**Optional advanced:** Glaeser–Gottlieb, §3, pp. 999–1015 [@glaeser2009].
+
+**Vietnam illustration:** World Bank, Ch. 4, Fig. 4.1, p. 79 [@worldbank2020].
+
+Full bibliography and worked answers: **companion reader**. Calculations: `R/examples.R`; inputs: `data/location-costs.csv`.
+
+::: {.notes}
+Reference slide, no additional teaching time. Page references use printed numbering. Bibliographic details appear in the companion reader. Do not assign all supplemental passages as additional required reading.
+:::
+
+::: {#refs .hidden}
+:::

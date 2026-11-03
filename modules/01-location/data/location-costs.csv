@@ -1,0 +1,4 @@
+site,production,inbound,outbound
+Resource,40,2,18
+Junction,43,6,8
+Market,48,10,2

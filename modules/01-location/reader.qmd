@@ -1,0 +1,319 @@
+---
+title: "Location, Cities, and Agglomeration"
+subtitle: "Module 1 · Student reader · ECON 463"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    embed-resources: true
+    code-fold: false
+    theme: cosmo
+  pdf:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    pdf-engine: xelatex
+    documentclass: article
+    fontsize: 11pt
+    geometry: margin=1in
+    colorlinks: true
+    keep-tex: false
+    include-in-header:
+      text: |
+        \raggedbottom
+---
+
+```{r}
+#| include: false
+source("R/examples.R")
+knitr::opts_chunk$set(fig.width = 7, fig.height = 3, fig.align = "center", fig.pos = "H")
+```
+
+# Opening question
+
+## Why does activity concentrate?
+
+Imagine an economy in which every location has the same resources, every firm can produce efficiently at a tiny scale, and moving goods, people, and information costs nothing. In that economy, concentrating production in one place offers little obvious advantage. Real economies depart from all three conditions. Some places have productive land or access to waterways. Large establishments can spread fixed costs across more output. Firms can benefit from nearby suppliers, workers, and other firms. Moving across space also consumes resources. These differences make location an economic choice rather than a label on a map.
+
+The question for this module is **why economic activity concentrates in particular places**. A useful answer identifies a decision maker, an alternative, and a mechanism. Saying that firms locate in a city because it is a business center merely restates the observation. Saying that a firm saves delivery costs by locating near its customers explains a possible choice. Saying that nearby producers support a specialized repair service identifies a different mechanism. Both mechanisms may operate in the same place, but they imply different responses to changes in transport costs or industrial composition.
+
+Regional economics studies economic activity across places and the connections among them. Urban economics examines cities, including their formation and internal organization. The subjects overlap: a city purchases inputs from other regions, attracts commuters and migrants, and sells products elsewhere. A region need not be a city, and its economically relevant boundary need not match an administrative boundary. For now, treat a region as an area relevant to the question being asked. Module 3 will develop measurement and boundary choices in detail.
+
+By the end of this module, you should be able to explain how natural advantages, transport costs, and scale economies affect location and city formation (**LO1**). You should also be able to distinguish supplier sharing, labor pooling, and knowledge spillovers, and explain how congestion and other costs limit concentration (**LO2**). The numerical work is deliberately small enough to solve by hand, then reproduce and vary in R. The goal is to connect an economic argument to a calculation whose assumptions you can explain.
+
+## How to use this reader
+
+The sequence matches the lecture deck. Read an example's setup, make a prediction, and then check the calculation. When your prediction is wrong, identify which cost or assumption you overlooked. After each example, ask: **What mechanism explains this result, and which assumption would change your conclusion?** That question is more useful than memorizing the preferred location in one particular table.
+
+The primary reading is @brueckner2011, Chapter 1, §§1.1–1.5, printed pp. 1–18. It develops city formation, scale economies, agglomeration, and transport costs. This reader changes the teaching order slightly by introducing a location calculation before the plant-scale comparison. Its numerical examples are original, synthetic teaching examples; they are not estimates for an actual firm or country. All amounts use illustrative **currency units (CU)**. Supplemental readings are identified where they add a distinct perspective. They are not an additional bundle of required chapters.
+
+Before proceeding, check that you can distinguish total cost, marginal cost, and average cost; interpret a straight line's intercept and slope; and solve an equation in one unknown. You should also be able to read a CSV file and create a new column in R. If one of these steps is unfamiliar, use the worked calculations as a refresher. No numerical optimizer or additional R package is needed to reproduce the examples.
+
+# Natural advantages and firm location
+
+## Natural advantages are only part of a location decision
+
+A natural advantage is a location-specific feature such as a mineral deposit, agricultural suitability, or a navigable waterway. Such a feature can make an input cheaper or more productive. A manufacturing firm may nevertheless choose a location away from its raw materials if access to customers, labor, or infrastructure more than compensates. A low input price is one component of profitability, not a complete location rule.
+
+It helps to distinguish natural advantages from advantages that depend on economic organization. A mineral deposit does not arise because neighboring firms are present. A specialized supplier network may arise because enough nearby customers make the supplier viable. A port combines physical geography with constructed infrastructure and institutions. Calling every existing advantage “natural” would obscure the question of how the advantage was created and whether it could change.
+
+Transport costs also extend beyond the freight invoice. Time in transit can tie up inventory, uncertain delivery can interrupt production, and moving a fragile product can cause damage. A firm with perishable output may value reliability more than a small reduction in the quoted shipping rate. Our first example compresses these complications into transparent monetary entries. That simplification makes the arithmetic manageable while reminding us to ask what each entry represents.
+
+For regional framing, see @hoover2020, Chapter 1, printed pp. 12–15. For location factors and their connection to production, consult Chapter 2, especially §§2.3–2.7, pp. 19–35. These are supplemental references: use the relevant subsection to investigate a mechanism that remains unclear.
+
+## Example 1: three possible plant locations
+
+A firm must deliver the same product to the same customers, at the same quality and price, regardless of where it produces. Output is fixed at 1,000 units per period. It can select one of three sites: **Resource**, close to a raw-material source; **Junction**, with an intermediate combination of costs; or **Market**, close to customers. The labels describe possible advantages, not a complete map. The numbers below are costs per unit of finished output, including the inputs required to make that unit.
+
+```{r}
+#| label: tbl-location
+#| tbl-cap: "Example 1: illustrative delivered costs, CU per unit of output."
+knitr::kable(base_location, col.names = c("Site", "Production", "Inbound", "Outbound", "Total"), digits = 1)
+```
+
+Production covers the plant's nonfreight cost at the specified output, including any allocated fixed cost. Inbound shipping moves inputs to the plant; outbound shipping delivers the finished product to customers. The table already expresses both types of freight per unit of output. Do not multiply inbound freight again by the amount of raw material: doing so would count the input requirement twice.
+
+Let $p_i$ be production cost, $a_i$ inbound shipping cost, and $b_i$ baseline outbound shipping cost for site $i$. Let $\tau$ multiply outbound freight rates. The delivered unit cost is
+
+$$d_i(\tau)=p_i+a_i+\tau b_i.$$
+
+At the baseline, $\tau=1$. Resource costs $40+2+18=60$ CU per unit. Junction costs $43+6+8=57$. Market costs $48+10+2=60$. **Junction is the least-cost site**, at `r fmt(min(base_location$total))` CU per unit. At 1,000 units, its total cost is `r fmt(1000 * min(base_location$total))` CU per period, a saving of `r fmt(1000 * (60 - min(base_location$total)))` relative to either other site. Resource has the lowest production cost; Market has the lowest outbound cost. Neither has the lowest sum.
+
+Cost minimization is sufficient here because revenue is identical across sites. If revenue is $R$, comparing profits $R-C_i$ gives the same ranking as comparing costs $C_i$. This equivalence fails if a site changes the price customers will pay, sales volume, product quality, or capacity. Then compare site-specific profits, $\pi_i=R_i-C_i$, and allow output to respond if the question requires it. A location with higher cost can still be more profitable if its revenue advantage is larger.
+
+A second limitation concerns scale. We use a table evaluated at one output level; we cannot assume each cost remains unchanged when production doubles. Capacity constraints, fixed-cost spreading, or different input requirements can change the ranking. Always state both the choice being made and what is being held fixed. A model that answers “Which site supplies this order most cheaply?” does not automatically answer “How large should the firm become?”
+
+## A transport improvement can change the winner
+
+Now suppose outbound freight rates fall by half at every site, so $\tau=0.5$. Production and inbound costs do not change. This is a deliberately narrow counterfactual: it is not a claim that a particular road project halves all shipping costs.
+
+```{r}
+#| label: tbl-location-low
+#| tbl-cap: "Example 1: outbound freight rates halved, CU per unit. Outbound column shows baseline freight."
+knitr::kable(low_location[, c("site", "production", "inbound", "outbound", "total")],
+  col.names = c("Site", "Production", "Inbound", "Base outbound", "New total"), digits = 1)
+```
+
+Resource now costs $42+0.5(18)=51$, Junction $49+0.5(8)=53$, and Market $58+0.5(2)=59$. Resource becomes the preferred site. All three benefit in absolute cost terms, but Resource benefits most because it initially paid the largest outbound freight bill. This separates an **absolute improvement** from a **relative advantage**. A location can become cheaper to use and still lose the competition for the plant.
+
+To find the threshold, equate Resource and Junction:
+
+$$42+18\tau=49+8\tau,
+\qquad 10\tau=7,
+\qquad \tau^*=0.7.$$
+
+Below `r location_threshold()`, Resource is cheaper than Junction. Above it, Junction is cheaper than Resource. At the threshold, both cost $54.6$ CU per unit. But a pairwise tie is not automatically a global optimum: the third site must also be checked. Market costs $58+2(0.7)=59.4$, so it is more expensive at this threshold. Resource and Junction genuinely tie for the least cost.
+
+```{r}
+#| label: fig-location
+#| fig-cap: "Example 1: the preferred site lies on the lower envelope of the three delivered-cost lines."
+#| fig-alt: "Delivered costs increase with the outbound freight multiplier. Resource is cheapest below 0.7, Junction between 0.7 and 1.5, and Market above 1.5."
+plot_location()
+```
+
+Each line's intercept is production plus inbound cost, while its slope is baseline outbound cost. Resource has a low intercept and a steep slope. Market has a high intercept and a shallow slope. Junction and Market tie when $49+8\tau=58+2\tau$, giving $\tau=1.5$. Thus, for nonnegative freight multipliers, Resource wins below 0.7, Junction between 0.7 and 1.5, and Market above 1.5, with ties at the endpoints. The Resource–Market intersection at 1 is not a change in the winner: Junction is cheaper than both there.
+
+## Interpretation and self-check
+
+**Question.** At $\tau=0.8$, which site wins, and why is a claim that “lower transport costs always favor the market location” incorrect?
+
+**Worked answer.** Resource costs $56.4$, Junction $55.4$, and Market $59.6$. Junction remains cheapest. Relative to the baseline, Resource gains more from the freight reduction, but the reduction is not large enough to cross the 0.7 threshold. Lower delivery costs can make it economical to serve customers from farther away. In other circumstances, cheaper inbound freight may favor a market site. The direction depends on which costs change and how much each site uses the affected transport service.
+
+Brueckner's §1.4 discusses source-oriented and market-oriented production using transport costs and the relationship between input and output weight. Our table generalizes the accounting by including different production costs. A weight-losing process may favor proximity to the raw-material source, while a process using locally available inputs to add bulk may favor customers. These are conditional tendencies, not universal location laws. Multiple inputs, markets, transport modes, and production-cost differences can overturn a simple weight comparison.
+
+# Scale economies and city formation
+
+## From choosing a site to choosing the number of plants
+
+Example 1 held the number of plants fixed. Example 2 asks whether production should occur in one large plant or two smaller plants. These questions are related but distinct. A firm can select the best site for a given plant while still choosing the wrong number of plants overall. Regional concentration depends on both decisions: where establishments locate and how much employment or output each establishment contains.
+
+Suppose a plant has cost $C(Q)=F+cQ$ for positive output, where $F$ is its avoidable fixed operating cost per period and $c$ is constant marginal production cost. Average production cost is
+
+$$AC(Q)=\frac{F}{Q}+c.$$
+
+As output increases, the fixed cost is spread across more units. With $F>0$, the derivative is $-F/Q^2<0$, so average cost falls. This is an internal scale economy: it operates within the establishment. No neighboring firm is needed to generate it. Here the fixed cost is avoidable when deciding whether to operate a plant. A sunk cost that cannot be recovered should not be treated as an avoidable saving in the same decision.
+
+```{r}
+#| label: fig-average-cost
+#| fig-cap: "Example 2: fixed-cost spreading lowers average production cost as plant output increases. Shipping costs are excluded here."
+#| fig-alt: "Average production cost declines with output, from 32 CU at 100 units to 26 CU at 200 units."
+plot_average_cost()
+```
+
+This technology simplifies the benefits of specialization and indivisible equipment into one fixed cost. Real scale economies can arise because larger operations support specialized jobs, machinery, or management. They can also eventually be offset by coordination costs. We do not need to assume that average cost falls forever to understand why a larger plant can be cheaper over a relevant range. For the conceptual foundation, read @brueckner2011, §1.2; for the interaction with transport, read §1.5, printed pp. 16–18.
+
+## Example 2: one plant or two?
+
+There are two identical markets, each demanding 100 units per period. Each plant costs $F=1{,}200$ CU per period to operate, plus $c=20$ CU per unit produced. A firm can put one plant in each market, or serve both markets from a single plant in either market. Local delivery costs are normalized to zero. Shipping to the other market costs $t=4$ CU per unit. Input availability, product quality, and total revenue are identical across the alternatives; there are no capacity limits.
+
+With **two dispersed plants**, each produces 100 units and pays its own fixed cost. Total cost is
+
+$$C_D=2F+2cq=2(1{,}200)+20(200)=6{,}400,$$
+
+where $q=100$ is demand in each market. With **one centralized plant**, production is 200 units, and only the 100 units sent to the other market incur intermarket freight:
+
+$$C_C=F+2cq+tq=1{,}200+20(200)+4(100)=5{,}600.$$
+
+Centralization saves `r fmt(base_plants["dispersed"] - base_plants["centralized"])` CU per period. Its production saving is one fixed cost, 1,200 CU; its additional shipping bill is 400 CU. Average delivered cost is $5{,}600/200=28$ CU under centralization and $6{,}400/200=32$ under dispersion. Notice that centralized *production* average cost is 26, but centralized *delivered* average cost is 28. Confusing these quantities would exaggerate the advantage of centralization.
+
+## Deriving and interpreting the threshold
+
+Subtract the two cost expressions:
+
+$$C_C-C_D=tq-F.$$
+
+Centralization is cheaper when $tq<F$, dispersion is cheaper when $tq>F$, and the firm is indifferent when
+
+$$t^*=\frac{F}{q}=\frac{1{,}200}{100}=12
+\quad\text{CU per unit shipped}.$$
+
+At $t=12$, both arrangements cost 6,400 CU. At $t=16$, centralization costs `r fmt(plant_costs(16)["centralized"])` CU, so dispersion is cheaper by 400 CU. The threshold compares a fixed-cost saving measured per period with a freight bill measured per period. Equating the fixed cost directly to a shipping rate without multiplying by the shipped quantity would mix units and produce an incorrect result.
+
+```{r}
+#| label: fig-plants
+#| fig-cap: "Example 2: centralized production is cheaper below an intermarket shipping rate of 12 CU per unit."
+#| fig-alt: "One-plant total cost rises with shipping rates; two-plant cost stays at 6400 CU. The lines cross at a shipping rate of 12."
+plot_plants()
+```
+
+If demand per market doubles while the fixed cost stays unchanged, the threshold falls to 6. More units must be shipped under centralization, while the avoided fixed cost remains 1,200. At a shipping rate of 4, centralization still wins, but by only 400 CU. This does not mean larger markets always cause dispersion. It is the conclusion of this particular fixed-cost technology and two-market comparison. If larger output unlocks additional production efficiencies, or if market sizes differ, the calculation changes.
+
+## What does this tell us about cities?
+
+A large plant concentrates jobs at one location. If commuting is costly, some workers will prefer to live nearby. Demand for housing and local services can then encourage a settlement around employment. This supplies one mechanism linking production scale to city formation. It does not establish a complete equilibrium city size: we have not modeled land, wages, commuting, household preferences, or housing supply.
+
+It also does not explain why many independent firms locate together. The fixed-cost saving in Example 2 belongs to one firm's plant organization. A cluster of separate firms may require a different argument involving shared suppliers, workers, or information. Keep the establishment-level mechanism separate from the neighborhood-level mechanism, even when both contribute to the same city's development.
+
+**Self-check.** If the fixed cost falls to 600 while $t=8$, should the firm centralize? **Worked answer:** one plant costs $600+4{,}000+800=5{,}400$, while two plants cost $1{,}200+4{,}000=5{,}200$. Dispersion wins by 200. The smaller avoidable fixed cost reduces the benefit of concentrating production. This is a technology change, not a transport improvement, although both changes can affect the same organizational choice.
+
+# Guided practice and synthesis
+
+## Reproduce before extending
+
+The companion files provide the original inputs and functions used in both this reader and the slides. To run the code below, set your working directory to the `01-location` module folder. The CSV stores the baseline unit costs from Example 1. Its columns are `site`, `production`, `inbound`, and `outbound`. The shared script calculates costs and draws figures using base R. Rendering the documents also uses Quarto, knitr, and rmarkdown; reproducing the calculations themselves does not require those authoring tools.
+
+```{r}
+#| echo: true
+# Read the module's shared functions and baseline data.
+source("R/examples.R")
+location_costs(tau = 1)
+location_threshold("Resource", "Junction")
+plant_costs(t = 4)
+```
+
+Read the first output row as an accounting statement rather than as an unexplained answer. The `outbound` column retains the baseline freight amount; `total` incorporates the multiplier supplied to the function. For example, with `tau = 0.5`, Resource's outbound charge in the counterfactual is 9, even though the baseline column still says 18. Keeping the original input visible makes it easier to audit what changed.
+
+Try the following sensitivity calculation. Predict the winner at each multiplier before running it. The comparison deliberately varies one parameter while preserving all other assumptions.
+
+```{=latex}
+\begin{minipage}{\linewidth}
+```
+
+```{r}
+#| echo: true
+multipliers <- c(0.5, 0.8, 1, 1.6)
+results <- do.call(rbind, lapply(multipliers, function(tau) {
+  costs <- location_costs(tau)
+  data.frame(tau = tau, site = costs$site, cost = costs$total)
+}))
+results[ave(results$cost, results$tau, FUN = min) == results$cost, ]
+```
+
+```{=latex}
+\end{minipage}
+```
+
+The preferred sites are Resource, Junction, Junction, and Market. A correct script is useful because it keeps arithmetic consistent across scenarios. It does not establish that the assumed freight reduction will occur, or that the firm's output and wages would remain unchanged after it does. Implementation accuracy and economic validity are different questions. Explain both before presenting a recommendation.
+
+## Practice with revenue and technology
+
+**Practice A: revenue differs.** Return to the baseline location table. Suppose Market can earn an additional 5 CU of revenue per unit because it offers faster service, with output and all listed costs unchanged. Which site maximizes profit? Write the answer as a comparison with Junction so you do not need to invent a baseline selling price.
+
+**Worked answer.** Market's delivered cost exceeds Junction's by 3 CU per unit, but its revenue exceeds Junction's by 5. Market therefore earns 2 CU more profit per unit, or 2,000 CU more per period at 1,000 units. The cost ranking remains correct as a cost ranking; it no longer determines the profit ranking. If faster service also changes quantity demanded, a new demand and cost calculation is needed.
+
+**Practice B: change market size.** In Example 2, set demand to 200 units per market and keep $F=1{,}200$, $c=20$, and $t=4$. Calculate the costs before checking them in R.
+
+```{r}
+#| echo: true
+plant_costs(t = 4, q = 200)
+```
+
+**Worked answer.** Centralization costs 10,000 CU, and dispersion costs 10,400. The saving falls from 800 to 400 because the additional intermarket shipments rise from 100 to 200 units. State which quantity doubled: demand *per market* doubled, so total output rose from 200 to 400. Avoid changing only one market's demand unless you also rewrite the symmetric model.
+
+End the practice by writing three sentences: identify the preferred alternative, explain the mechanism, and name an assumption that could reverse your conclusion. A useful response might say that one plant saves an avoidable fixed cost, but a sufficiently large intermarket freight bill makes two plants preferable. A statement that one plant “is more efficient” without identifying the relevant saving leaves the central economic argument unstated.
+
+# Agglomeration mechanisms
+
+## External to the firm, connected to nearby activity
+
+An agglomeration economy is an advantage associated with nearby economic activity that is external to the individual establishment's own scale. To diagnose one, ask what would happen to the firm if neighboring activity changed while the firm's own production scale stayed fixed. A larger internal production run is not, by itself, agglomeration. A repair specialist becoming available because many local manufacturers jointly provide enough demand can be.
+
+Brueckner distinguishes pecuniary effects, operating through prices or costs of purchased inputs, from technological effects that change productivity. Our classification emphasizes three mechanisms: supplier sharing, labor pooling and matching, and knowledge spillovers. They overlap, but naming them separately helps formulate observable predictions. See @brueckner2011, §1.3, and the supplemental discussion in @hoover2020, §§5.2–5.4, printed pp. 84–96. The latter also discusses market attraction and the distinction between specialized clusters and urbanization.
+
+## Example 3: diagnosing a cluster
+
+Imagine a cluster of independent precision-component firms. Each is small, and none could cheaply provide every specialized service internally. Consider three explanations for why they choose nearby locations. These are hypothetical mechanisms, not claims that we have measured their importance in a particular industry.
+
+**Shared suppliers.** A specialist testing laboratory faces a substantial fixed cost for equipment and expertise. One customer alone cannot support frequent service at a reasonable price, but many nearby customers can. Each manufacturer can purchase testing without owning a full laboratory. The specialist may itself exploit internal scale economies; the resulting availability of testing is an external advantage for its customers. Proximity matters if moving samples, coordinating tests, or correcting faults is costly. If samples can be shipped cheaply and turnaround time is irrelevant, the service might support geographically dispersed customers instead.
+
+**Labor pooling and matching.** A concentration of employers attracts workers with specialized skills; a concentration of workers makes hiring easier for employers. A worker may accept specialized training more readily when several potential employers are available. A firm may fill a vacancy faster or find a better match. These benefits do not require lower wages: greater productivity and stronger competition for workers can raise wages. Compare labor cost per unit of effective output, not the wage alone.
+
+Pooling can also reduce exposure to an individual firm's demand fluctuations. When one employer contracts while another expands, workers may move without relocating their households. That insurance mechanism weakens if all local employers experience the same shock at the same time. A specialized cluster may therefore support excellent matching in normal conditions while remaining vulnerable to an industry-wide downturn. Whether diversity helps depends partly on how shocks are correlated across activities.
+
+**Knowledge spillovers.** Nearby workers and firms may learn from each other's experience through professional interaction, employee movement, or observation. A production improvement developed in one firm may raise another firm's productivity without full compensation to the originator. That uncompensated component is what makes the effect a spillover. Buying a consultant's advice is a market transaction, even if it also transmits knowledge. Geographic proximity is useful when some knowledge is difficult to codify or exchange at a distance, but proximity alone does not guarantee learning.
+
+## Turn explanations into evidence questions
+
+For the testing-laboratory mechanism, ask whether specialized services are available, whether local firms actually purchase them, and whether delivery times or costs differ from comparable isolated firms. For matching, examine vacancy duration, worker transitions, skill composition, and output per worker. For learning, ask what knowledge moved, between whom, and whether productivity changed beyond what purchased inputs or worker quality would predict. These questions move beyond simply counting firms in a cluster.
+
+An observed association between density and productivity can reflect several processes. Productive firms may choose dense locations; high-skill workers may sort into those firms; both may be attracted by a port or university. A convincing causal claim requires a comparison that separates the proposed spillover from these alternatives. Module 1 introduces the interpretation problem without requiring a full econometric design. @glaeser2009, §3, printed pp. 999–1015, is optional advanced background on competing agglomeration explanations and their evidence.
+
+**Self-check.** A firm's average cost falls after it doubles production, but its neighbors do not change. Is this evidence of agglomeration? **Worked answer:** not from the information supplied. Fixed-cost spreading or internal specialization could explain the result. Conversely, if the firm maintains its output but gains access to a new local specialist serving many firms, supplier sharing is a plausible mechanism. Further evidence would still be needed to attribute the cost change to that service.
+
+# Limits and competing explanations
+
+## Why concentration does not grow without limit
+
+The same concentration that improves access to workers and suppliers can intensify competition for land, road space, and environmental capacity. Longer commutes consume time; unreliable deliveries disrupt production; expensive space raises operating costs. Pollution and noise can reduce household well-being even when they do not appear fully in the firm's accounts. The relevant comparison is the additional benefit and additional cost of locating in, or expanding, a cluster.
+
+A simple private calculation illustrates the logic. Suppose an otherwise comparable cluster location provides 6 CU per unit of supplier savings and 4 CU of matching benefits, but adds 5 CU of occupancy cost and 3 CU of congestion cost. The firm's net advantage is $6+4-5-3=2$ CU per unit. An additional congestion cost of 3 would reverse the ranking. These assumed amounts are a transparent accounting exercise, not estimates of an optimal city size. They also hold the effects on other firms and residents outside the calculation.
+
+Private profitability is not identical to social welfare. A higher rent is a cost to a tenant and income to a landowner; some rent changes reflect the scarcity value of space rather than a direct loss of resources. Extra time wasted in congestion is a resource cost, while pollution can harm people outside the transaction. A policy assessment must distinguish transfers, real resource costs, and external effects. We will return to that distinction when interpreting regional policies later in the course.
+
+## Specialization versus diversity
+
+A specialized cluster can support highly tailored suppliers and close worker matches within one industry. These are often called **localization economies**. A diverse city can support services, infrastructure, and ideas useful across industries; advantages associated with the broader urban scale and diversity are often called **urbanization economies**. Diversity may also reduce exposure to a single industry's decline, although common shocks can still affect many sectors together.
+
+Neither pattern is always superior. Precision manufacturing may benefit from a deep, narrow skill base, while a new business service may draw ideas and customers from many sectors. The right question is which mechanism matters for the activity and how it interacts with costs and risks. Avoid treating a diverse economy as automatically innovative or a specialized region as automatically fragile. Both claims require evidence about connections, technology, and the shocks being considered.
+
+## A Vietnam connection
+
+The World Bank's *Vietnam Development Report 2019* documents spatial concentration of population and estimated economic activity around Hanoi and Ho Chi Minh City; see Chapter 4, Figure 4.1, printed p. 79 [@worldbank2020]. This is a historical illustration using the report's data, not a statement about current administrative boundaries or a current numerical estimate. It gives us a real setting in which to ask why activity concentrates.
+
+Use the report's pattern to formulate competing explanations: market access, transport infrastructure, worker matching, supplier availability, and historical location choices. The map alone cannot distinguish these mechanisms or establish a knowledge spillover. A useful discussion question is which additional observation would help separate two explanations. For example, evidence on supplier purchases would address a different mechanism from evidence on worker mobility. Our cost tables remain generic; they should not be interpreted as calibrated Vietnamese data.
+
+# Retrieval and Module 2 bridge
+
+Before moving on, answer the following without consulting the worked examples. First, why can the lowest-wage or lowest-production-cost location fail to minimize delivered cost? Second, what must be checked after finding a pairwise location threshold? Third, why does a fixed operating cost favor a larger establishment? Fourth, how does supplier sharing differ from knowledge spillovers? Finally, why does a cluster of productive firms fail to prove that proximity caused their productivity?
+
+The answers follow from the comparisons developed here. Delivered cost includes more than production. A third alternative may undercut a pairwise tie. A larger establishment spreads an avoidable fixed cost across more output. Supplier sharing works through access to specialized inputs, while a knowledge spillover concerns learning whose benefits are not fully paid for. Finally, selection and common location advantages can generate a density–productivity association without establishing a causal spillover. These distinctions are useful even when a numerical question is unfamiliar.
+
+Module 2 moves from location choices to regional growth and interregional connections. A transport improvement may alter where a firm produces, but regional growth also depends on migration, investment, trade, and productivity responses over time. Our examples hold many of those quantities fixed to isolate a mechanism. Carry the mechanism forward, but reopen the assumptions when the question changes. A cheaper site for one plant is not yet a prediction of a region's employment growth or its residents' welfare.
+
+```{=latex}
+\newpage
+```
+
+# Reading guide and references {.unnumbered}
+
+**Primary:** Brueckner, Chapter 1, §§1.1–1.5, printed pp. 1–18. Read §1.4 alongside Example 1, §§1.2 and 1.5 alongside Example 2, and §1.3 alongside Example 3. In the local PDF, add 11 to the printed page number.
+
+**Supplemental:** Hoover and Giarratani, Chapter 1, pp. 12–15, for regional framing; Chapter 2, §§2.3–2.7, pp. 19–35, for location factors; Chapter 5, §§5.2–5.4, pp. 84–96, for external economies. Select the passage relevant to your question. In the local fourth-edition PDF, add 1 to the printed page number.
+
+**Optional advanced:** Glaeser and Gottlieb, §3, pp. 999–1015, particularly the discussions of transport, labor markets, and ideas. In the local article PDF, subtract 982 from the printed page number. The full article is not required for this module.
+
+**Application:** World Bank, Chapter 4, Figure 4.1, printed p. 79 (PDF page 99), for the Vietnam discussion. Use the linked report in the bibliography; no additional empirical calculation is assigned.
+
+::: {#refs}
+:::

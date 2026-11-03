@@ -1,6 +1,8 @@
 project:
   type: default
 
+bibliography: references.bib
+
 format:
   pdf:
     toc: false
