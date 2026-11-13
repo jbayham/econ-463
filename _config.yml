@@ -1,7 +1,7 @@
 # Site settings
 title: ECON 463
 subtitle: Regional Economics
-description: Regional economics course materials, syllabus, and schedule.
+description: "Welcome to the course website for ECON 463: Regional Economics. See the navigation at the top for links to the syllabus, schedule, and course modules. The modules contain lecture slides and other resources."
 
 baseurl: "/econ-463"
 url: "https://jbayham.github.io"
