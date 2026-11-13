@@ -267,7 +267,7 @@ For an **80-CU** direct addition and $b=0.50$:
 Next: trade, migration, and the responses of connected regions.
 
 ::: {.notes}
-8 minutes. Three minutes independent response, two minutes comparing answers with a neighbor, three minutes debrief. Welfare answer may mention imports' benefits, environmental effects, distribution, or opportunity cost. This completes M2's 60 minutes on Nov 25. No additional homework submission. Reader Practice B develops the same exercise in R; continue the course's existing A1 schedule.
+8 minutes. Three minutes independent response, two minutes comparing answers with a neighbor, three minutes debrief. Welfare answer may mention imports' benefits, environmental effects, distribution, or opportunity cost. This completes M2's 60 minutes on Nov 25. No additional homework submission. Reader Practice B develops the same exercise in R; continue the course's existing PS 1 schedule.
 :::
 
 ## November 26: reconnect the regions
@@ -479,7 +479,7 @@ demand_effect(delta_X = 80, b = 0.25)
 Which assumption changed? Why is the larger result not a welfare ranking?
 
 ::: {.notes}
-8 minutes. Three minutes paired calculation, three minutes R support, two minutes explanation. Expected totals 160 and 106.7, additional amounts 80 and 26.7. Feedback, not the direct shock, changed. Students can work by hand if R setup fails. These are ungraded examples supporting A1; no new submission. Reader Practice B contains worked answers.
+8 minutes. Three minutes paired calculation, three minutes R support, two minutes explanation. Expected totals 160 and 106.7, additional amounts 80 and 26.7. Feedback, not the direct shock, changed. Students can work by hand if R setup fails. These are ungraded examples supporting PS 1; no new submission. Reader Practice B contains worked answers.
 :::
 
 ## Synthesis and the Module 3 bridge
@@ -493,7 +493,7 @@ For the corridor, write:
 **Next:** choose boundaries and comparable data, then measure regional structure in R.
 
 ::: {.notes}
-6 minutes. Three minutes writing, two sharing, one transition. Sample: lower freight raises farm sales; capacity or competition limits gains; inspect freight and destinations while considering a counterfactual. This completes 60 working minutes today and 120 for M2. Take the 10-minute break before M3. A1 checkpoint Nov 27 and final Nov 30 remain unchanged. No extra assignment is created.
+6 minutes. Three minutes writing, two sharing, one transition. Sample: lower freight raises farm sales; capacity or competition limits gains; inspect freight and destinations while considering a counterfactual. This completes 60 working minutes today and 120 for M2. Take the 10-minute break before M3. PS 1 checkpoint Nov 27 and final Nov 30 remain unchanged. No extra problem set is created.
 :::
 
 ## Break · 10 minutes

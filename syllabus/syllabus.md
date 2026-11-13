@@ -86,14 +86,14 @@ Class meetings combine explanation, discussion, worked examples, and supported p
 
 ## Assessment and Grading
 
-The course has four assignment sets and two exams. Assignments assess the ability to use tools and explain results. Exams assess economic reasoning, assumptions, and interpretation.
+The course has four problem sets and two exams. Problem sets assess the ability to use tools and explain results. Exams assess economic reasoning, assumptions, and interpretation.
 
 | Component                             | Focus                                                                                       | Points  |
 | ------------------------------------- | ------------------------------------------------------------------------------------------- | ------: |
-| A1: Location and regional structure   | Location calculations, agglomeration/growth reasoning, and a regional profile in R.         | 7.5     |
-| A2: Spatial equilibrium and amenities | Spatial adjustment and hedonic estimation/interpretation in R.                              | 7.5     |
-| A3: Input-output analysis             | Accounts, coefficients, model solution, a demand shock, and sensitivity.                    | 7.5     |
-| A4: CGE and model comparison          | Baseline replication, one shock, one sensitivity comparison, and a bounded policy question. | 7.5     |
+| PS 1: Location and regional structure   | Location calculations, agglomeration/growth reasoning, and a regional profile in R.         | 7.5     |
+| PS 2: Spatial equilibrium and amenities | Spatial adjustment and hedonic estimation/interpretation in R.                              | 7.5     |
+| PS 3: Input-output analysis             | Accounts, coefficients, model solution, a demand shock, and sensitivity.                    | 7.5     |
+| PS 4: CGE and model comparison          | Baseline replication, one shock, one sensitivity comparison, and a bounded policy question. | 7.5     |
 | Exam 1                                | Modules 1-5                                                                                 | 35      |
 | Final exam                            | Modules 6-8                                                                                 | 35      |
 | **Total**                             |                                                                                             | **100** |
@@ -149,4 +149,4 @@ You will have the full class period for exams. Exam 1 is scheduled for **Friday,
 
 ## Academic Work and Course Policies
 
-Students are responsible for the accuracy of submitted calculations, code, claims, and interpretations. You may use AI tools to help with understanding course materials. I suggest you try to avoid using them on assignments because it will undermine your ability to answer exam questions.
+Students are responsible for the accuracy of submitted calculations, code, claims, and interpretations. You may use AI tools to help with understanding course materials. I suggest you try to avoid using them on problem sets because it will undermine your ability to answer exam questions.

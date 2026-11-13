@@ -126,7 +126,7 @@ By the end of the course, you will be able to:
 
 **In class:** explanation, discussion, and guided practice.
 
-**Four assignments:** calculations and R work, with interpretation.
+**Four problem sets:** calculations and R work, with interpretation.
 
 **Two exams:** reasoning, assumptions, and manageable calculations.
 
@@ -142,12 +142,12 @@ By the end of the course, you will be able to:
 
 **Exams:** December 4 and December 18.
 
-**First assignment:** introduced today; checkpoint November 27; final submission November 30.
+**First problem set:** introduced today; checkpoint November 27; final submission November 30.
 
 Discuss expectations, access to materials, support, and questions.
 
 ::: {.notes}
-20 minutes reserved for the syllabus walkthrough and questions. Use the current regional-economics course plan, not the copied graduate optimization syllabus. The instructor will fill in unresolved policies. TODO: grading weights; collaboration and AI-use rules; late work; permitted exam materials; submission platform and format; classroom/meeting times; office hours and support arrangements. Do not infer these from the old syllabus. Suggested allocation: 5 minutes schedule/assessments, 10 minutes instructor-supplied expectations/logistics, 5 minutes questions. A1's graded opening questions remain a separate preparation task; announce the established milestones without treating today's ungraded practice as the assignment.
+20 minutes reserved for the syllabus walkthrough and questions. Use the current regional-economics course plan, not the copied graduate optimization syllabus. The instructor will fill in unresolved policies. TODO: grading weights; collaboration and AI-use rules; late work; permitted exam materials; submission platform and format; classroom/meeting times; office hours and support arrangements. Do not infer these from the old syllabus. Suggested allocation: 5 minutes schedule/assessments, 10 minutes instructor-supplied expectations/logistics, 5 minutes questions. PS 1's graded opening questions remain a separate preparation task; announce the established milestones without treating today's ungraded practice as the problem set.
 :::
 
 ## Regions and cities are connected

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Model Labs"
-permalink: /model_lab/
+title: "Problem Sets"
+permalink: /problem-sets/
 ---
 
-Lab information will be added here.
+Problem sets will be posted here as they become available. See the [course schedule]({{ site.baseurl }}/schedule/) for due dates.

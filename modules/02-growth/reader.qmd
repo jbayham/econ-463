@@ -281,7 +281,7 @@ Recalculate the moving budget over one and three years using `move_budget(years 
 
 ## Carry forward
 
-For Exam 1, practice explaining mechanisms, distinguishing levels from growth rates, calculating simple ratios and feedback effects, and identifying an assumption that could reverse a conclusion. R implementation belongs in assignment work, not timed coding. These exercises are ungraded preparation for A1; the graded questions are separate. A1's checkpoint is November 27 and its final deadline is November 30, both at the end of class.
+For Exam 1, practice explaining mechanisms, distinguishing levels from growth rates, calculating simple ratios and feedback effects, and identifying an assumption that could reverse a conclusion. R implementation belongs in problem set work, not timed coding. These exercises are ungraded preparation for PS 1; the graded questions are separate. PS 1's checkpoint is November 27 and its final deadline is November 30, both at the end of class.
 
 Module 3 asks how to choose regional boundaries and comparable data, then measure industrial structure in R. Module 4 develops wage, rent, and population adjustment. Module 6 extends demand transmission to a system of industries; Module 7 introduces additional behavioral and resource constraints. The common thread is to define the outcome and counterfactual, trace the mechanism, and state what the calculation leaves out.
 
