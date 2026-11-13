@@ -6,7 +6,7 @@ Jekyll course scaffold using Steve Miller's [course website template](https://gi
 - `_data/schedule.yml`: class dates, topics, and readings. The list is empty; a commented example preserves the format.
 - `_data/modules.yml`: module descriptions and links to readings, problem sets, and additional materials. The list is empty; a commented example preserves the format.
 - `modules/`: add new module folders and teaching materials here. Shared Quarto settings and PDF styling are retained.
-- `syllabus/`: copied syllabus files are unchanged and still need review for the new course.
+- `syllabus/`: regional economics syllabus draft in Markdown/PDF. The existing Excel workbook retains its older sheets and contains the current calendar in `ECON463_2026`; `schedule_convert.R` reads that sheet. Grading weights, meeting logistics, and course policies still need instructor review.
 - `course-materials.md` and `model_lab.md`: empty page scaffolds.
 - `_layouts/`, `_includes/`, `_sass/`, and `_css/`: shared layout and styling.
 
@@ -14,16 +14,8 @@ On this computer, run `serve463` in a new Bash or Zsh terminal to build and prev
 
 Alternatively, run `bundle exec jekyll serve --port=4463 --open-url`; build without serving with `bundle exec jekyll build`.
 
-The copied Git history and remotes have been removed. To start a new local repository:
+The GitHub repository is [jbayham/econ-463](https://github.com/jbayham/econ-463). GitHub Pages uses **Deploy from a branch**, branch **module-1**, and folder **/ (root)**, matching the built-in Jekyll setup used by the other course sites.
 
-```sh
-git init -b main
-git add .
-git commit -m "Initialize ECON 463 course site"
-```
-
-Create an empty GitHub repository, connect it as `origin`, and push `main`. For a repository named `econ-463` under `jbayham`, the current `url` and `baseurl` settings are ready for GitHub Pages. If the repository name or owner differs, update `_config.yml` accordingly. Set `githubdir` to the new `owner/repository` to show the repository link in the footer.
-
-In GitHub Settings → Pages, select **Deploy from a branch**, branch **main**, and folder **/ (root)**. GitHub Pages will build the Jekyll site.
+The course site is [jbayham.github.io/econ-463](https://jbayham.github.io/econ-463/). Push reviewed site changes to `module-1` to trigger a Pages build. The `_config.yml` values `url`, `baseurl`, and `githubdir` point to this repository. Local planning, reference, development, and output directories are excluded from the site build.
 
 Keep `LICENSE`, including Steven V. Miller's copyright and MIT permission notice, with the template-derived code. A GitHub fork relationship is not required.

@@ -46,7 +46,7 @@ By the end of this module, you should be able to explain how natural advantages,
 
 The sequence matches the lecture deck. Read an example's setup, make a prediction, and then check the calculation. When your prediction is wrong, identify which cost or assumption you overlooked. After each example, ask: **What mechanism explains this result, and which assumption would change your conclusion?** That question is more useful than memorizing the preferred location in one particular table.
 
-The primary reading is @brueckner2011, Chapter 1, §§1.1–1.5, printed pp. 1–18. It develops city formation, scale economies, agglomeration, and transport costs. This reader changes the teaching order slightly by introducing a location calculation before the plant-scale comparison. Its numerical examples are original, synthetic teaching examples; they are not estimates for an actual firm or country. All amounts use illustrative **currency units (CU)**. Supplemental readings are identified where they add a distinct perspective. They are not an additional bundle of required chapters.
+The primary reading is @brueckner2011, Chapter 1, §§1.1–1.5, printed pp. 1–18. It develops city formation, scale economies, agglomeration, and transport costs. The numerical examples in this reader are synthetic; they are not estimates for an actual firm or country. All amounts use illustrative **currency units (CU)**. Supplemental readings are identified where they add a distinct perspective. They are not an additional bundle of required chapters.
 
 Before proceeding, check that you can distinguish total cost, marginal cost, and average cost; interpret a straight line's intercept and slope; and solve an equation in one unknown. You should also be able to read a CSV file and create a new column in R. If one of these steps is unfamiliar, use the worked calculations as a refresher. No numerical optimizer or additional R package is needed to reproduce the examples.
 
@@ -191,7 +191,7 @@ It also does not explain why many independent firms locate together. The fixed-c
 
 ## Reproduce before extending
 
-The companion files provide the original inputs and functions used in both this reader and the slides. To run the code below, set your working directory to the `01-location` module folder. The CSV stores the baseline unit costs from Example 1. Its columns are `site`, `production`, `inbound`, and `outbound`. The shared script calculates costs and draws figures using base R. Rendering the documents also uses Quarto, knitr, and rmarkdown; reproducing the calculations themselves does not require those authoring tools.
+The companion files provide the inputs and functions used in both this reader and the slides. To run the code below, set your working directory to the `01-location` module folder. The CSV stores the baseline unit costs from Example 1. Its columns are `site`, `production`, `inbound`, and `outbound`. The shared script calculates costs and draws figures using only base R.
 
 ```{r}
 #| echo: true
