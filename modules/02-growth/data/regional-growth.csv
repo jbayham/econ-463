@@ -1,0 +1,5 @@
+region,period,population,employment,real_value_added
+River,0,1000,500,10000
+River,1,1200,600,13200
+Harbor,0,1000,500,15000
+Harbor,1,1050,525,16800

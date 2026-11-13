@@ -1,0 +1,309 @@
+---
+title: "Regional Growth and Interregional Connections"
+subtitle: "Module 2 · Student reader · ECON 463"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    embed-resources: true
+    code-fold: false
+    theme: cosmo
+  pdf:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    pdf-engine: xelatex
+    documentclass: article
+    fontsize: 11pt
+    geometry: margin=1in
+    colorlinks: true
+    keep-tex: false
+    include-in-header:
+      text: |
+        \raggedbottom
+        \usepackage{float}
+        \floatplacement{table}{H}
+---
+
+```{r}
+#| include: false
+source("R/growth.R")
+knitr::opts_chunk$set(fig.width = 7, fig.height = 3.1, fig.align = "center", fig.pos = "H")
+options(knitr.table.format = if (knitr::is_latex_output()) "latex" else "pipe")
+module_table <- function(x, ...) {
+  knitr::kable(x, ..., booktabs = TRUE, longtable = FALSE, position = "H")
+}
+```
+
+# Opening question
+
+## Why do regions grow differently?
+
+Module 1 explained why a firm might choose one site and why firms might cluster. Its numerical examples held output and revenue fixed. We now relax that restriction: customers change their purchases, firms invest, people move, and productivity changes. A place with the lowest delivered cost today need not have the fastest growth tomorrow. Its future also depends on demand for its products, available workers and capital, and the responses of connected places.
+
+The central question is **why regions grow differently, and how changes spread between them**. A useful explanation identifies an initiating change, the decisions it changes, and the constraints that limit adjustment. For example, stronger demand for a region's manufactured products can increase factory orders and local supplier purchases. Whether this raises employment or mainly raises prices depends on spare capacity, labor availability, and the time allowed for adjustment. Calling a place a “growth region” does not explain these mechanisms.
+
+By the end of this module, you should be able to compare explanations involving productivity, industrial structure, market access, trade, and migration (**LO3**). You should also be able to explain when the agglomeration mechanisms from Module 1 reinforce growth, and when congestion or other costs limit that process (**LO2**). Each example asks the same question: **What mechanism explains this result, and which assumption would change your conclusion?**
+
+## How to use this reader
+
+The reader follows the deck: growth and structural change; demand and supply; trade and market access; migration and rural–urban connections; convergence; and guided practice. The three examples use synthetic data and illustrative currency units (CU). River and Harbor are fictional regions, not Vietnamese provinces. The examples do not establish a dataset or a regional boundary for later assignments.
+
+Work through the arithmetic before looking at the answers, then reproduce it with `R/growth.R`. You need ratios, percentage changes, and a linear equation in one unknown. No matrix algebra, regression, or optimizer is required. The baseline for a percentage change is always the initial value: $100(z_1/z_0-1)$. The periods in Example 1 are two comparable observations, not necessarily consecutive years, so changes are **not annual growth rates**.
+
+The selected primary reading is @hoover2020, §11.2, printed pp. 223–224, and §§11.5–11.6, pp. 234–239. The first selection introduces competing forces; the second develops trade, factor movements, and convergence. Use this reader's worked examples to connect them. Selected supporting passages are listed at the end. These are reading choices within Chapter 11, not a requirement to read the whole chapter before class. Module 2 begins after Module 1 on November 25 and concludes in the first hour of November 26.
+
+# Growth, development, and structural change
+
+## Choose an outcome before explaining it
+
+Regional **growth** usually refers to an increase in a specified quantity: real output, employment, population, or income. These outcomes can move differently. A region can produce more because it has more workers even if output per worker is unchanged. A region can become more productive while employment falls if production requires fewer workers and demand does not expand enough to absorb them. Always name the measure before describing a place as successful or declining.
+
+Regional **development** is broader. It can involve productive capabilities, access to services, health, environmental quality, and opportunities available to residents. Higher real output can support these improvements, but it is not a complete measure of them. An industrial expansion could increase output and employment while exposing nearby households to pollution. A production measure alone does not tell us whether the affected households are better off.
+
+We use **real value added** as our production measure: the value of output less purchased intermediate inputs, measured at common prices. Subtracting intermediates avoids counting the same production repeatedly as it passes between firms. “Real” means that a price increase alone does not register as additional production. Module 3 will address how actual datasets define and measure these quantities. For now, all regions and periods use consistent definitions and prices.
+
+Let $Y$ be real value added, $L$ be employment measured in workers, and $N$ be population. A useful accounting identity is
+
+$$Y=\frac{Y}{L}\,L,
+\qquad
+\frac{Y}{N}=\frac{Y}{L}\frac{L}{N}.$$
+
+Here $Y/L$ is average labor productivity and $L/N$ is employment relative to the entire population. The latter is **not** the employment rate among working-age people or one minus the unemployment rate. The identity helps organize a comparison; it does not establish what caused productivity or employment to change. Productivity can reflect capital, technology, skills, or the mix of industries and workers.
+
+## Example 1: River and Harbor
+
+Both regions begin with 1,000 residents and 500 employed workers. They differ in initial production and subsequent growth. Assume no cross-boundary commuting in this small example so that workplace employment and resident employment coincide.
+
+```{r}
+#| label: tbl-regions
+#| tbl-cap: "Example 1: synthetic regional observations. Value added is real CU per period."
+module_table(growth_data, col.names = c("Region", "Period", "Population", "Workers", "Value added"))
+```
+
+River's output grows from 10,000 to 13,200 CU, an increase of 32%. Harbor's grows from 15,000 to 16,800 CU, an increase of 12%. On this measure, River grows faster. But River's population also grows by 20%, compared with Harbor's 5%. Dividing by population changes the interpretation.
+
+```{r}
+module_table(indicators[c("region", "period", "productivity", "employment_ratio", "per_resident")],
+  col.names = c("Region", "Period", "CU/worker", "Workers/resident", "CU/resident"), digits = 2)
+```
+
+River's real value added per resident rises from 10 to 11 CU, or 10%. Harbor's rises from 15 to 16 CU, or about 6.7%. River still grows faster proportionally, but Harbor remains more productive and produces more per resident. Faster growth is a statement about a **change**, not a statement about the final **level**.
+
+River's output growth combines a 10% increase in productivity with a 20% increase in employment. The exact calculation is $1.10\times1.20-1=0.32$. Adding the two percentages gives 30%, which misses their interaction. Harbor's calculation is $(32/30)\times(525/500)-1=0.12$. In both regions $L/N$ stays at 0.5, so per-resident production grows at the same percentage rate as productivity.
+
+Even with this careful arithmetic, $Y/N$ is not resident disposable income or welfare. Some value added may accrue to owners elsewhere. Actual commuters can produce in one region and live in another. Housing costs, amenities, leisure, and the distribution of income also matter. The table describes production and population; it cannot identify every resident's gain.
+
+## Structural change can raise an average
+
+Suppose River initially has 300 workers in agriculture producing 10 CU per worker and 200 in other activities producing 35 CU per worker. Total value added is $300(10)+200(35)=10{,}000$, matching River's initial total. Now move 100 workers from agriculture to other activities, holding total employment and both sector productivities fixed.
+
+```{r}
+#| label: tbl-structure
+#| tbl-cap: "Example 1 extension: a separate reallocation counterfactual, not River's observed period 1."
+module_table(sector_data, col.names = c("Scenario", "Sector", "Workers", "CU/worker"))
+```
+
+Value added becomes $200(10)+300(35)=12{,}500$. Average productivity rises from 20 to 25 CU per worker, or 25%, even though neither sector becomes more productive. Aggregate productivity is a weighted average of sector productivity, with employment shares as the weights:
+
+$$\frac{Y}{L}=\sum_s\frac{L_s}{L}\frac{Y_s}{L_s}.$$
+
+This is a separate counterfactual starting from River's baseline. It does not decompose the actual change to 13,200. In real data, both within-sector productivity and employment shares may change. Module 3 will develop formal descriptions of industrial structure and change; we do not need shift-share formulas here.
+
+Nor does a sector productivity gap prove that moving any particular worker creates 25 CU of additional production. The example assumes that destination employers can absorb the workers at the stated productivity, that workers have the needed skills, and that other inputs are available. Differences in average productivity can reflect capital intensity or worker selection. Retraining costs, lost agricultural output, and the demand for additional production belong in a real causal argument. The arithmetic illustrates a possible composition effect, not a policy impact estimate.
+
+# Demand, supply, and local feedback
+
+## Distinguish the initiating change from its transmission
+
+A **demand explanation** begins with buyers wanting more of a region's output: a new export order, increased tourism, or higher spending by an outside customer. It then traces purchases, production, and incomes. A **supply explanation** begins with a change in productive capacity or cost: better skills, new equipment, improved logistics, or access to an input. It then asks whether firms can sell additional output and how prices and employment respond. A complete explanation often uses both.
+
+Economic-base reasoning emphasizes sales outside the region as a source of purchasing power. “Export” here means a sale across the chosen regional boundary, including sales elsewhere within the same country. A service sold to visitors can therefore be an export. A locally consumed service is not economically unimportant because it is classified as nonbasic. Transport, repair, health, and education can help make exporting possible and improve residents' lives.
+
+Local purchases connect activities, but the relevant outcome must be consistent. A factory's gross sales are not identical to local income because some payments buy imported inputs. Our next example starts with an **exogenous addition to regional income associated with external demand**, already net of imported intermediate inputs. This allows transparent income accounting without pretending that every unit of sales becomes regional income.
+
+For the underlying distinction between demand, supply, and feedback, see @hoover2020, §11.2, pp. 223–224; the economic-base discussion begins in §11.3.1, pp. 224–225. The full input-output machinery later in §11.3 belongs in Module 6.
+
+## Example 2: an export-demand shock
+
+Suppose a one-period increase in outside demand directly adds 100 CU to local income. Let $\Delta X=100$ denote that initial addition. Assume every extra CU of regional income generates **0.60 CU of further regional income** through local expenditure. Write this effective feedback coefficient as $b=0.60$. The remainder does not generate further income inside our boundary in this example. It can include saving, taxes not returned as local spending, imports, and payments that accrue elsewhere.
+
+The first rounds are 100, 60, 36, and 21.6 CU. These are accounting rounds within the adjustment to one shock, **not four consecutive years of growth**. Let $\Delta Y$ be the total income change after allowing all rounds. Then
+
+$$\Delta Y=\Delta X+b\Delta Y,
+\qquad (1-b)\Delta Y=\Delta X,
+\qquad \Delta Y=\frac{\Delta X}{1-b}.$$
+
+At $b=0.60$, the total is $100/(1-0.60)=250$ CU. The income multiplier is 2.5, while additional income beyond the original shock is 150 CU. These are three different quantities: the direct change, the total change, and their ratio. “A multiplier of 2.5” is incomplete unless we specify what is multiplied and what outcome is counted.
+
+```{r}
+module_table(demand_rounds(last_round = 4),
+  col.names = c("Round", "Additional income (CU)", "Cumulative income (CU)"), digits = 2)
+```
+
+The sum remains finite because $0\leq b<1$. Each additional round is smaller. At $b=0$, total income changes only by the original 100 CU. As $b$ approaches one, the formula becomes very sensitive; this should prompt scrutiny of the assumptions, not a claim of unlimited productive capacity. A pure feedback model with $b=1$ has no finite solution for a nonzero shock.
+
+## Change the local feedback assumption
+
+Now suppose more of the additional spending leaves the region, lowering $b$ to 0.40. The same direct shock produces $100/(1-0.40)=166.7$ CU. The initial income addition is unchanged; subsequent local rounds are smaller. The difference of 83.3 CU comes entirely from the changed feedback assumption.
+
+```{r}
+#| label: fig-feedback
+#| fig-cap: "Example 2: cumulative income responses to the same synthetic 100-CU shock."
+#| fig-alt: "Cumulative income approaches 250 CU at b 0.6 and 166.7 CU at b 0.4; both start at 100."
+plot_rounds()
+```
+
+An import is a leakage **from this region's income feedback**, but it is revenue for a producer somewhere else and may provide a better or cheaper input. A larger local multiplier is therefore not automatically a welfare improvement. Requiring expensive local purchases could retain more spending locally while reducing purchasing power or productivity. We have not calculated those effects.
+
+The regional boundary matters too. A purchase from a nearby district is an import for a narrow district boundary and an internal transaction for a combined region. One cannot compare two multipliers without comparing their geographic scope, income definitions, and assumptions. Module 3 formalizes boundary choices. Module 6 traces sector purchases and distinguishes output, value added, and income more carefully.
+
+## What this model leaves out
+
+The calculation holds prices, the feedback coefficient, and production relationships fixed. It assumes enough available labor and capacity to meet the additional demand without displacing other production. It does not model investment decisions, technology, migration, housing, or an ongoing productivity trend. A one-time shift in the level of income is not a theory of sustained growth in income per person.
+
+If factories already operate at capacity, the first response may include higher prices, longer delivery times, imports, or displacement of other customers. If workers arrive later, employment and housing demand can change together. Investment can expand capacity, but firms need expected returns, financing, and time. These mechanisms determine whether the demand-driven calculation is a useful approximation for the stated horizon.
+
+Under the model's unchanged assumptions, a negative 100-CU shock gives a negative 250-CU total response at $b=0.60$. Actual expansions and contractions need not be symmetric: layoffs, business exit, unused buildings, and moving costs can make a decline persistent. The formula supplies a conditional comparison, not evidence that a particular event caused the observed change.
+
+# Market access and trade
+
+## Example 3: a corridor between River and Harbor
+
+Consider a hypothetical transport improvement connecting an agricultural region, River, with a manufacturing and service center, Harbor. This is a scenario for tracing mechanisms, separate from Example 1's period comparison. We have no estimated effect of the corridor on either region's production. The counterfactual is the same economy over the same horizon **without the transport improvement**, holding other initiating changes fixed.
+
+Better **market access** means reaching customers or suppliers at lower generalized cost, including freight charges, travel time, spoilage, and reliability. River's farmers may reach Harbor's buyers more cheaply. Harbor's manufacturers may reach River's customers more cheaply. Firms in both regions may obtain inputs at lower delivered prices. The same connection also exposes local producers to more outside competition.
+
+A seller's gain is not simply the entire freight saving multiplied by existing shipments. Prices may adjust, customers may switch suppliers, and shipment volumes may change. The distribution of the saving depends on competition and bargaining as well as technology. Our Module 1 location calculation held revenue fixed; this scenario explicitly asks what happens when customer access and competition change revenue too.
+
+Trade allows specialization when the gains exceed trade costs. Comparative advantage concerns **relative opportunity costs**, so a place need not be the most productive at everything to participate in mutually useful exchange. Larger markets can also support production at a more efficient scale or specialized services. Yet a region's increased specialization can make its income more sensitive to an industry-specific downturn. Diversity is useful when activities face different shocks; merely counting more industries does not guarantee resilience.
+
+## Benefits can cross boundaries in several ways
+
+Trace at least four connections. First, orders from Harbor may raise demand for River's crops and services. Second, cheaper imported machinery or inputs may improve River's productivity. Third, workers may commute or migrate in response to job opportunities. Fourth, repeated interaction can spread knowledge about production, quality, or logistics. These are distinct mechanisms and need different evidence.
+
+Purchased services and supplier revenue are market transactions. A knowledge spillover occurs when useful knowledge benefits others without the originator capturing the full return. A corridor's effect on supplier sales does not, by itself, establish a knowledge spillover. Evidence might include adoption of a technique after contact, but even that pattern requires consideration of shared demand changes or selection of more productive firms into the corridor.
+
+Transport improvements need not disperse production evenly. A large Harbor producer may now serve River from one plant, saving fixed costs as in Module 1. Alternatively, lower freight costs may allow a River producer to serve Harbor while taking advantage of cheaper land or inputs. The direction depends on scale economies, initial costs, market size, and local constraints. **Cheaper transport strengthens connections; it does not guarantee that every place gains jobs.** See @hoover2020, §11.5, pp. 234–236, for trade and factor movements.
+
+# Migration, capital, and rural–urban connections
+
+## Compare opportunities after costs
+
+A wage gap is one reason to consider moving, but a household compares opportunities after housing, commuting, moving costs, risk, and amenities. A higher nominal wage can accompany higher living costs. Some households cannot finance a move; others have location-specific skills, family obligations, or a preference for their current community. Workers therefore need not move immediately until nominal wages equalize.
+
+For a deliberately narrow private-budget illustration in Example 3, suppose an annual wage is 100 CU in River and 140 CU in Harbor. Annual housing and commuting costs are 40 and 70 CU. The remaining budget is 60 CU in River and 70 CU in Harbor. A one-time moving cost of 15 CU makes the first-year destination budget 55 CU, compared with 60 from staying. The first-year gain is negative 5 CU.
+
+```{r}
+#| label: tbl-move
+#| tbl-cap: "Example 3: illustrative budgets with constant wages and costs; no discounting."
+module_table(move_budget(), col.names = c("Year", "Stay (CU)", "Move (CU)", "Cumulative gain (CU)"))
+```
+
+Over three years, the undiscounted gain is $3(70-60)-15=15$ CU. With a one-year horizon, the move loses 5 CU. If Harbor's annual housing and commuting costs rise to 85 CU, its recurring remaining budget becomes 55 CU, and the three-year gain becomes negative 30 CU. The conclusion changes without any change in the nominal wage offer.
+
+This budget assumes certain employment, unchanged wages and costs, identical other expenses and amenities, and no discounting. It is not a solved spatial equilibrium or a full welfare measure. A household may need credit to cover the initial expense even if the cumulative gain is positive. Different workers can face different job prospects and costs. Module 4 will connect household and firm choices to endogenous wages, rents, and population.
+
+## Both origins and destinations adjust
+
+An inflow of workers can help Harbor firms expand and enlarge demand for shops and services. Holding labor demand fixed, additional labor supply tends to put downward pressure on wages, but firms may also invest and raise labor demand. Housing demand can raise rents if supply is slow to respond. Congestion can erode benefits. The final wage response is therefore not determined by the direction of migration alone.
+
+River can lose workers and consumers, which may reduce production and local demand. But migrants may send remittances, return with skills, or establish business links. A smaller workforce may raise remaining workers' bargaining opportunities or wages under some conditions. Whether these effects offset the loss depends on the workers who leave, the substitutability of labor, and what happens to investment and demand.
+
+Capital can also flow toward expected returns, complementing or substituting for labor. A new processing facility may increase demand for local workers and farm output; a labor-saving machine may reduce labor required per unit. Expanding output can offset that reduction. Existing buildings and infrastructure cannot simply move between regions like financial claims. The speed and reversibility of adjustment matter when interpreting regional decline.
+
+Rural–urban connections include food and input purchases, commuting, seasonal movement, remittances, service access, and knowledge. A city boundary can split a connected labor and product market. In the corridor scenario, ask separately about River farmers, River shop owners, Harbor renters, and property owners. Aggregate growth in either region can coexist with losses for some groups. For additional migration detail, consult @hoover2020, §10.3, pp. 197–208; for cities and development, use §11.7, pp. 239–242 selectively.
+
+# Convergence and divergence
+
+## Example 1 revisited: what kind of convergence?
+
+River's production per resident grows faster than Harbor's, but the absolute difference remains 5 CU: initially $15-10=5$, subsequently $16-11=5$. The ratio rises from $10/15=0.667$ to $11/16=0.688$. River partially catches up **in relative terms** without closing the absolute gap.
+
+```{r}
+#| label: fig-convergence
+#| fig-cap: "Example 1 revisited: faster percentage growth need not shrink the absolute gap."
+#| fig-alt: "River rises from 10 to 11 CU per resident and Harbor from 15 to 16, leaving a constant gap of 5."
+plot_growth()
+```
+
+Always name the outcome and criterion when claiming convergence. Are production per resident, wages, employment shares, or population growth rates becoming more similar? Are we comparing differences, ratios, or dispersion across many regions? Two regions over two periods illustrate the distinction; they cannot establish a general convergence law.
+
+## Forces can reinforce or limit concentration
+
+Convergence can arise when knowledge diffuses, new investment earns attractive returns in a capital-scarce place, or workers move toward better opportunities. These mechanisms depend on access to technology, skills, infrastructure, and institutions. Diminishing returns to one input do not guarantee catch-up if other complementary inputs are missing.
+
+Divergence can arise when expansion supports specialized suppliers and matching, making an already productive region more attractive to firms and workers. This is Module 1's agglomeration logic applied to a sequence of changes. The reverse can also operate: business exit weakens supplier viability and local demand, making further exit more likely. Historical advantages and sunk investments can matter for the path a region follows.
+
+Neither process is unlimited. Rising rents, congestion, scarce inputs, and competition can offset agglomeration benefits. The balance can differ across industries and time horizons. Labor mobility might reduce differences in comparable workers' opportunities even while concentrating population in fewer places. The distribution of activity and the distribution of well-being are related questions, not identical ones. @hoover2020, §11.6, pp. 237–239, presents convergence as something to explain rather than an inevitable outcome.
+
+## What would distinguish competing explanations?
+
+Suppose employment rises after a road opens. Possible explanations include cheaper freight, an unrelated demand boom, firms selecting into an already growing corridor, or an accompanying investment program. Before-and-after comparison alone cannot separate them. Ask what would have happened without the road, what other changes occurred, and whether a credible comparison is available. A model can show what follows from assumptions; it cannot supply missing causal evidence simply by producing a precise number.
+
+Useful observations depend on the mechanism. Freight rates, delivery reliability, and shipment destinations speak to access. Establishment output, inputs, and worker composition help interpret productivity. Job offers, rents, and flows of people inform migration. Supplier entry and transactions inform local purchasing; knowledge transfer requires additional evidence. These observations help assess an explanation, but none alone guarantees causal identification. Module 5 returns to the interpretation of spatial evidence.
+
+# Guided practice and synthesis
+
+## Practice A: growth versus composition
+
+Using Example 1, calculate River's output, employment, and productivity growth. Then explain why the percentages do not simply add. **Worked answer:** output rises 32%, employment 20%, and productivity 10%. The exact output factor is $1.20\times1.10=1.32$. The extra two percentage points are the interaction of the two increases.
+
+Next hold total employment at 500 and move 50, rather than 100, workers from agriculture to other activities. **Worked answer:** $250(10)+250(35)=11{,}250$ CU, or 22.5 CU per worker. This is a 12.5% increase from the baseline. Sector productivities do not change. The result depends on the ability to employ the additional workers at 35 CU each, which the arithmetic assumes rather than establishes.
+
+## Practice B: trace a smaller shock
+
+Let the direct income addition be 80 CU and $b=0.50$. Predict the first three rounds, the total, and the additional income beyond the direct shock. Then set $b=0.25$ while holding the direct shock fixed.
+
+**Worked answer:** the first rounds are 80, 40, and 20 CU. Total income changes by $80/(1-0.50)=160$ CU; 80 CU is additional to the direct shock. With $b=0.25$, the total is approximately 106.7 CU and the additional amount is 26.7 CU. More of the feedback now leaves the region. This is not proof that restricting imports would improve welfare: the model omits their price and productivity benefits.
+
+Set R's working directory to this module folder and run:
+
+```{r}
+#| echo: true
+#| eval: false
+source("R/growth.R")
+growth_comparison()
+demand_effect(delta_X = 80, b = 0.5)
+demand_effect(delta_X = 80, b = 0.25)
+```
+
+The script reads the two CSV files in `data/`. You can inspect `growth_indicators()` and `sector_summary()` to see the quantities behind the summary. The demand function rejects $b\geq1$ because the finite feedback solution would not apply.
+
+## Practice C: compare two corridor explanations
+
+Write four sentences about Example 3: (1) state the corridor/no-corridor comparison; (2) trace one benefit to River through trade; (3) identify one possible loss or cost in either region; and (4) identify evidence that would help distinguish your mechanism from another explanation.
+
+**One worked response:** Compared with the same period without the corridor, lower delivery costs could increase River farmers' sales to Harbor. Higher farm income could support local purchases, with the size of the response depending on capacity and local sourcing. River retailers could lose customers to Harbor competitors, while Harbor renters could face higher housing costs if workers move there. Changes in freight costs, shipment destinations, retailer sales, migration, and rents would help assess these channels, although a credible counterfactual is still needed for a causal estimate.
+
+Recalculate the moving budget over one and three years using `move_budget(years = 1)` and `move_budget(years = 3)`. Then use `move_budget(destination_cost = 85)`. Explain the changed conclusion in words before reporting the numbers. Do not add the migration budget gain to the demand multiplier: the examples use different quantities, horizons, and assumptions.
+
+## Carry forward
+
+For Exam 1, practice explaining mechanisms, distinguishing levels from growth rates, calculating simple ratios and feedback effects, and identifying an assumption that could reverse a conclusion. R implementation belongs in assignment work, not timed coding. These exercises are ungraded preparation for A1; the graded questions are separate. A1's existing checkpoint is November 27 and its final deadline is November 30, both at the end of class.
+
+Module 3 asks how to choose regional boundaries and comparable data, then measure industrial structure in R. Module 4 develops wage, rent, and population adjustment. Module 6 extends demand transmission to a system of industries; Module 7 introduces additional behavioral and resource constraints. The common thread is to define the outcome and counterfactual, trace the mechanism, and state what the calculation leaves out.
+
+```{=latex}
+\newpage
+```
+
+# Reading guide and references
+
+The following page numbers use the local fourth-edition web version of Hoover and Giarratani (updated 2020). Add one to the printed page number to obtain the PDF page. Its historical examples illustrate arguments; they are not current regional statistics.
+
+| Purpose | Selection | Printed pages | PDF pages |
+|---|---|---|---|
+| Primary: growth forces | §11.2 | 223–224 | 224–225 |
+| Primary: trade and mobility | §11.5 | 234–236 | 235–237 |
+| Primary: convergence | §11.6 | 237–239 | 238–240 |
+| Supporting: economic-base idea | Opening of §11.3.1 | 224–225 | 225–226 |
+| Supporting: supply and capacity | §11.4 | 233–234 | 234–235 |
+| Supporting: migration detail | §10.3 | 197–208 | 198–209 |
+| Optional: cities and regional development | §11.7 | 239–242 | 240–243 |
+
+Read the primary selections with three questions: What initiates change? How does it spread? What limits or reverses it? The remaining entries provide targeted explanation, not an additional required reading bundle. The income-feedback equation and numerical tables in this reader are original teaching examples, not estimates copied from the text. No local reference PDF is included with these materials.
+
+::: {#refs}
+:::

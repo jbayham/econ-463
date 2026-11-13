@@ -1,0 +1,5 @@
+scenario,sector,employment,value_added_per_worker
+Baseline,Agriculture,300,10
+Baseline,Other,200,35
+Reallocation,Agriculture,200,10
+Reallocation,Other,300,35

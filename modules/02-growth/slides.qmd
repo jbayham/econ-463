@@ -1,0 +1,560 @@
+---
+title: "Regional Growth and Interregional Connections"
+subtitle: "Module 2 · ECON 463"
+format:
+  revealjs:
+    theme: [simple, assets/slides.scss]
+    width: 1280
+    height: 720
+    margin: 0.08
+    center: false
+    slide-number: c/t
+    transition: none
+    navigation-mode: linear
+    controls: true
+    progress: true
+    history: false
+    embed-resources: true
+    code-overflow: wrap
+    incremental: false
+    slide-level: 2
+    toc: false
+    number-sections: false
+---
+
+```{r}
+#| include: false
+source("R/growth.R")
+knitr::opts_chunk$set(fig.width = 9, fig.height = 4.3, fig.align = "center")
+```
+
+## From location to regional change
+
+**November 25 · second 60 working minutes**
+
+Module 1 held output and revenue fixed.
+
+Now customers change orders, firms invest, and people move.
+
+::: {.prompt}
+A region attracts a large factory. What else must happen for residents to become better off?
+:::
+
+::: {.notes}
+3 minutes, including title. Begin after M1's 60 working minutes and the day's 10-minute break. Take two responses: jobs/income and living costs/environment. No advance reading is assumed. The module has 60 minutes today and 60 tomorrow, not two full meetings. The central question is why regions grow differently and how changes spread between them.
+:::
+
+## Growth of what?
+
+**Output · employment · population · income per person** can move differently.
+
+Growth: an increase in a specified quantity.
+
+Development: changes in capabilities, opportunities, and living conditions.
+
+::: {.prompt}
+Can output rise while output per resident falls?
+:::
+
+::: {.fragment}
+Yes, if population grows proportionally faster than output.
+:::
+
+::: {.notes}
+4 minutes. Define real output as production at common prices. Explain that employment can fall while productivity rises. Development includes services and environmental quality. By the end students should compare productivity, demand, trade, and migration explanations (LO3) and connect agglomeration to reinforcing and limiting forces (LO2).
+:::
+
+## Example 1: two regional growth paths
+
+All quantities are **synthetic**. Value added uses common prices.
+
+```{r}
+knitr::kable(growth_data, col.names = c("Region", "Period", "Residents", "Workers", "Value added"))
+```
+
+::: {.prompt}
+Which region grows faster? Which remains larger in production?
+:::
+
+::: {.notes}
+4 minutes. River and Harbor are fictional, not Vietnamese provinces. Define value added as output less purchased intermediate inputs, avoiding double counting. Units are real CU per period. Demonstrate River: 13200/10000 minus 1 = 32%. Students calculate Harbor: 12%. Periods are comparable observations, not necessarily consecutive years; do not call these annual rates.
+:::
+
+## Example 1: divide by the relevant denominator
+
+| Measure | River: period 0 to 1 | Harbor: period 0 to 1 |
+|---|---|---|
+| Real value added | 10,000 to 13,200 | 15,000 to 16,800 |
+| Real CU per worker | 20 to 22 | 30 to 32 |
+| Real CU per resident | 10 to 11 | 15 to 16 |
+
+**River grows faster. Harbor remains higher per resident.**
+
+Production per resident is not resident disposable income or welfare.
+
+::: {.notes}
+4 minutes. Have pairs compute 13200/600 and 13200/1200, then check Harbor. Per-resident growth is 10% and 6.7%. Explain level versus change. Ownership income may leave a region; commuting can separate workplace output from residence. For this example assume no cross-boundary commuting. Rents, environment, and distribution remain unmeasured.
+:::
+
+## Example 1: connect productivity and employment
+
+Let $Y$ = real value added, $L$ = workers, $N$ = residents.
+
+$$Y=(Y/L)L,\qquad Y/N=(Y/L)(L/N).$$
+
+River: productivity rises **10%**, employment rises **20%**.
+
+::: {.fragment}
+$$1.10\times1.20-1=0.32=32\%.$$
+
+The percentages do not simply add. This identity does not identify a cause.
+:::
+
+::: {.notes}
+4 minutes. Translate each ratio into words before the equation. L/N = 0.5 in both places and periods. It is workers divided by all residents, not an unemployment measure. The 2-percentage-point interaction explains why 10 + 20 is not 32. Ask what could raise Y/L: capital, skills, technology, or composition.
+:::
+
+## Example 1: productivity can rise through reallocation
+
+Separate counterfactual: move **100 of 500 workers**.
+
+| Sector | Initial workers | New workers | CU per worker |
+|---|---:|---:|---:|
+| Agriculture | 300 | 200 | 10 |
+| Other activities | 200 | 300 | 35 |
+
+::: {.prompt}
+Does aggregate productivity rise if neither sector improves?
+:::
+
+::: {.fragment}
+Value added: **10,000 to 12,500**. Productivity: **20 to 25**.
+:::
+
+::: {.notes}
+5 minutes. Allow two minutes for pairs to calculate both totals. The counterfactual shares River's baseline but does not reproduce its period 1 observation. We assume destination jobs and other inputs are available at unchanged sector productivity. Average productivity gaps do not prove that any particular worker can create the implied marginal gain. Formal industrial measurement waits for M3.
+:::
+
+## What could start regional growth?
+
+**Demand:** outside buyers place more orders.
+
+**Supply:** skills, equipment, or logistics improve capacity or costs.
+
+**Structure:** workers and resources shift between activities.
+
+::: {.prompt}
+Which explanation would you investigate if output rose but employment fell?
+:::
+
+**Read more:** reader, “Growth, development, and structural change.”
+
+::: {.notes}
+4 minutes. Multiple answers are possible: labor-saving productivity with limited demand growth, composition change, or changes in hours. Ask for an observation that distinguishes explanations. Demand and supply are complementary parts of an account, not competing slogans. This completes the first 28 minutes.
+:::
+
+## An export crosses the regional boundary
+
+Customers elsewhere in the country can buy a region's exports.
+
+Visitors can buy exported services.
+
+Local suppliers and services help make export production possible.
+
+::: {.prompt}
+Is a restaurant serving visitors economically different from one serving only local residents?
+:::
+
+::: {.notes}
+4 minutes. Introduce economic-base reasoning. Distinguish customer location and outside purchasing power, without claiming local services are unimportant. A regional boundary need not be a national border. Full regional accounts and the classification of observed industries belong in M3 and M6.
+:::
+
+## Example 2: outside demand adds local income
+
+Direct addition to regional income: **100 CU**, net of imported intermediate inputs.
+
+Each extra CU of income generates **0.60 CU of further local income**.
+
+Call this effective feedback coefficient $b=0.60$.
+
+::: {.prompt}
+What are the next two rounds after 100?
+:::
+
+::: {.fragment}
+**60**, then **36** CU. The rounds get smaller.
+:::
+
+::: {.notes}
+4 minutes. This is a simplified local income model, not gross factory sales or an IO table. b includes the effective retention of spending as local income. Saving, taxes not returned as local spending, imports, and nonlocal income payments can reduce feedback. Rounds are accounting iterations, not years. Define the direct addition carefully before doing arithmetic.
+:::
+
+## Example 2: solve the feedback equation
+
+Total income change = direct addition + local feedback.
+
+$$\Delta Y=\Delta X+b\Delta Y.$$
+
+::: {.fragment}
+$$\Delta Y=\frac{\Delta X}{1-b}=\frac{100}{1-0.60}=250.$$
+
+**Direct: 100. Total: 250. Additional: 150. Multiplier: 2.5.**
+:::
+
+::: {.notes}
+5 minutes. Move b delta Y to the left and factor delta Y. Have students name each number and its unit. The multiplier is dimensionless. For nonzero shocks the finite response requires b less than 1; at b=0 only the direct addition remains. The income addition is exogenous, so this equation does not explain what caused the export order.
+:::
+
+## Example 2: reduce local feedback
+
+Keep the direct addition at **100 CU**. Change $b$ to **0.40**.
+
+::: {.prompt}
+Predict the direction before calculating the total.
+:::
+
+::: {.fragment}
+$$\Delta Y=100/(1-0.40)=166.7\text{ CU}.$$
+
+The difference comes from subsequent rounds, not the initial shock.
+:::
+
+::: {.notes}
+4 minutes. Give one minute to calculate. Difference from 250 is 83.3. Changing the coefficient is a sensitivity exercise, not an estimate from data. Imports can lower costs and improve productivity even while reducing local feedback. A larger multiplier does not automatically mean greater welfare.
+:::
+
+## Example 2: follow the accounting rounds
+
+```{r}
+#| fig-alt: "The same direct 100-CU income addition approaches 250 CU with b 0.6 and 166.7 CU with b 0.4."
+plot_rounds()
+```
+
+::: {.notes}
+3 minutes. Read both axes. The horizontal axis is accounting rounds, not time. Dashed horizontal lines show limits. Each sequence starts at the same direct addition. Explain why the curve flattens. The module's R function reproduces the rounds and closed-form total.
+:::
+
+## A demand multiplier needs supply assumptions
+
+Hold prices and feedback relationships fixed.
+
+Assume available workers and capacity, without displacement of other production.
+
+::: {.prompt}
+What changes if factories already operate at capacity?
+:::
+
+**A one-time level increase is not sustained productivity growth.**
+
+**Read more:** reader, “Demand, supply, and local feedback”; Hoover–Giarratani §11.2 and opening of §11.3.1.
+
+::: {.notes}
+4 minutes. Possible responses: higher prices, imports, delivery delays, displaced customers, later investment. The formula ignores these adjustments. A decline of 100 gives -250 only under unchanged symmetric assumptions. Avoid teaching the scalar calculation as the complete theory of long-run regional development. IO details wait until M6.
+:::
+
+## November 25: check the mechanism
+
+For an **80-CU** direct addition and $b=0.50$:
+
+1. Calculate total income change.
+2. Name one assumption needed for that result.
+3. Explain why it is not a welfare estimate.
+
+::: {.fragment}
+**160 CU**, conditional on fixed feedback and available capacity.
+:::
+
+Next: trade, migration, and the responses of connected regions.
+
+::: {.notes}
+8 minutes. Three minutes independent response, two minutes comparing answers with a neighbor, three minutes debrief. Welfare answer may mention imports' benefits, environmental effects, distribution, or opportunity cost. This completes M2's 60 minutes on Nov 25. No additional homework submission. Reader Practice B develops the same exercise in R; continue the course's existing A1 schedule.
+:::
+
+## November 26: reconnect the regions
+
+**First 60 working minutes today**
+
+Yesterday: outside demand can raise local income.
+
+Today: purchases, people, capital, and knowledge cross boundaries.
+
+::: {.prompt}
+If River imports a machine from Harbor, is the payment lost to the whole economy?
+:::
+
+::: {.notes}
+3 minutes. Retrieve the leakage idea: spending leaves River's feedback but becomes revenue elsewhere and buys a useful input. Do not add a new direct shock when tracing an already-counted transaction. M2 ends after 60 minutes; take the 10-minute break then begin M3's 60 minutes. No double break.
+:::
+
+## Example 3: improve a transport corridor
+
+**River:** agricultural production. **Harbor:** manufacturing and services.
+
+Compare the same period **with and without** lower transport costs.
+
+Better access can reduce freight, travel time, spoilage, and uncertainty.
+
+::: {.prompt}
+Who gains access to new customers? Who faces new competition?
+:::
+
+::: {.notes}
+4 minutes. This is a hypothetical setting, not an estimated Vietnamese project. It is separate from Example 1's observed period change. The same connection works in both directions. Hold other initiating changes fixed for the counterfactual, while allowing responses to the corridor. Ask for River farmers and retailers and Harbor producers.
+:::
+
+## Access changes costs and revenue
+
+River farmers may reach more buyers.
+
+Harbor firms may supply River more cheaply.
+
+Both may obtain better inputs, but local competitors can lose sales.
+
+::: {.takeaway}
+Cheaper transport does not guarantee that every region gains jobs.
+:::
+
+::: {.notes}
+4 minutes. Bring back M1's one-plant versus two-plant comparison. Lower freight can let a Harbor plant serve both places, or let a low-cost River producer reach Harbor. Discuss relative opportunity cost briefly: trade need not require absolute superiority. Price pass-through and competition determine who captures savings; do not assign all freight savings to sellers automatically.
+:::
+
+## Trace four interregional connections
+
+| Channel | Possible response |
+|---|---|
+| Product purchases | Orders and supplier revenue change |
+| Input access | Delivered costs and productivity change |
+| Worker and capital flows | Capacity and local demand adjust |
+| Knowledge | Firms adopt useful techniques |
+
+**A supplier transaction is not, by itself, a knowledge spillover.**
+
+::: {.notes}
+4 minutes. Have students distinguish payments from uncompensated learning, recalling M1. Trade, mobility, and knowledge are different mechanisms. Expansion can reinforce supplier availability, but competition for scarce inputs can raise costs. Introduce movement of investment toward expected returns; existing buildings are less mobile than new investment funds.
+:::
+
+## Example 3: would a worker move?
+
+Illustrative annual budgets, in CU:
+
+| | River | Harbor |
+|---|---:|---:|
+| Wage | 100 | 140 |
+| Housing and commuting | 40 | 70 |
+| Remaining budget | 60 | 70 |
+
+One-time moving cost: **15 CU**.
+
+::: {.prompt}
+Is the higher wage enough to make the move worthwhile in year 1?
+:::
+
+::: {.notes}
+4 minutes. Assume certain work, identical other expenses and amenities, fixed annual wages and costs, and no discounting. Students calculate 70 minus 15 = 55, versus 60 staying. A private budget is deliberately narrower than utility or welfare. Do not call this a solved spatial equilibrium.
+:::
+
+## Example 3: the horizon changes the comparison
+
+First-year gain: $(140-70)-15-(100-40)=\mathbf{-5}$ CU.
+
+Three-year gain: $3(70-60)-15=\mathbf{15}$ CU.
+
+::: {.prompt}
+What if Harbor's annual housing and commuting costs rise to 85 CU?
+:::
+
+::: {.fragment}
+Three-year gain: $3(55-60)-15=\mathbf{-30}$ CU.
+:::
+
+::: {.notes}
+4 minutes. Pause before each answer. Three-year comparison does not discount future gains and requires financing the initial move. Risk, amenities, family commitments, and credit constraints can alter the choice. Keeping wages fixed while changing costs is a sensitivity comparison, not an equilibrium prediction. M4 makes wages, rents, and population jointly responsive.
+:::
+
+## Origins and destinations both adjust
+
+**Harbor:** more workers and customers, housing demand, possible congestion.
+
+**River:** fewer workers and customers, possible remittances and new connections.
+
+Wages depend on both labor supply and firms' demand for workers.
+
+::: {.prompt}
+Would migration necessarily lower destination wages?
+:::
+
+::: {.notes}
+4 minutes. Holding demand fixed, inflow tends to lower wages; investment, productivity, and product demand can shift demand too. At the origin, labor scarcity and remittances may offset some losses, but no sign is guaranteed. Mention commuting and seasonal moves as alternatives to permanent migration. Do not equalize nominal wages automatically.
+:::
+
+## Rural–urban links change who benefits
+
+Consider **farmers, retailers, renters, and property owners** separately.
+
+Food and input purchases, commuting, remittances, and services connect their outcomes.
+
+::: {.prompt}
+Name a group that could lose even if both regions' total production rises.
+:::
+
+**Read more:** reader, “Market access and trade” and “Migration, capital, and rural–urban connections”; Hoover–Giarratani §11.5.
+
+::: {.notes}
+3 minutes. Examples: a retailer facing new competition, a renter facing higher costs, households exposed to pollution. Some costs are transfers and some use resources; leave full welfare accounting for M8. This ends the first 30 minutes today. The next block returns to comparing regional paths.
+:::
+
+## Example 1 revisited: are the regions converging?
+
+```{r}
+#| fig-alt: "River's value added per resident rises 10 to 11 while Harbor rises 15 to 16, leaving a five-CU gap."
+plot_growth()
+```
+
+::: {.notes}
+4 minutes. Retrieve 10% versus 6.7% growth. Ask students to calculate absolute differences and relative ratios before using the word convergence. The same figure supports faster proportional growth in River and an unchanged absolute gap. This is a two-region illustration, not a general empirical convergence test.
+:::
+
+## Specify the convergence criterion
+
+**Absolute gap:** $15-10=5$ and $16-11=5$ CU.
+
+**Relative position:** $10/15=0.667$ and $11/16=0.688$.
+
+River catches up in **relative terms**. The absolute gap is unchanged.
+
+::: {.prompt}
+Would population concentration necessarily imply declining opportunities elsewhere?
+:::
+
+::: {.notes}
+4 minutes. Distinguish distribution of activity from comparable households' opportunities. Migration can concentrate people while reducing opportunity gaps. Also distinguish output, wages, and living standards; evidence of convergence in one is not evidence in every measure. Do not generalize from these two observations.
+:::
+
+## Why catch-up is not automatic
+
+**Can narrow gaps:** diffusion, investment, access to markets and skills.
+
+**Can reinforce concentration:** specialized suppliers, matching, learning.
+
+**Can limit concentration:** rents, congestion, scarce inputs, competition.
+
+::: {.prompt}
+Choose one reinforcing force and one constraint for Harbor.
+:::
+
+**Read more:** reader, “Convergence and divergence”; Hoover–Giarratani §11.6.
+
+::: {.notes}
+4 minutes. Use the M1 mechanisms dynamically. Knowledge diffusion requires capacity to adopt; returns to capital depend on complementary skills/infrastructure. Supplier loss can reinforce decline. A specialized cluster may be exposed to common shocks, while unrelated activities may diversify risks. Neither convergence nor divergence follows inevitably from integration.
+:::
+
+## Evidence must match the mechanism
+
+| Explanation | Useful observations |
+|---|---|
+| Better access | Freight costs, reliability, shipment destinations |
+| Productivity | Output, inputs, worker and industry composition |
+| Migration | Job offers, housing costs, flows of people |
+
+**“Employment rose after the road opened” is not a causal estimate.**
+
+::: {.notes}
+4 minutes. Ask what would have happened without the road. Competing explanations include a demand boom, preexisting growth, selection, and other investment. Observations in the table help but do not guarantee identification. M5 develops interpretation of spatial evidence. A precise modeled effect also remains conditional on assumptions.
+:::
+
+## Guided practice: calculate, then explain
+
+1. Predict the total for an 80-CU direct addition with $b=0.50$.
+2. Change only $b$ to $0.25$ and compare.
+3. Check in R, working from the module folder:
+
+```{r}
+#| echo: true
+#| eval: false
+source("R/growth.R")
+demand_effect(delta_X = 80, b = 0.5)
+demand_effect(delta_X = 80, b = 0.25)
+```
+
+Which assumption changed? Why is the larger result not a welfare ranking?
+
+::: {.notes}
+8 minutes. Three minutes paired calculation, three minutes R support, two minutes explanation. Expected totals 160 and 106.7, additional amounts 80 and 26.7. Feedback, not the direct shock, changed. Students can work by hand if R setup fails. These are ungraded examples supporting A1; no new submission. Reader Practice B contains worked answers.
+:::
+
+## Synthesis and the Module 3 bridge
+
+For the corridor, write:
+
+1. A with/without comparison.
+2. One transmission mechanism and one constraint.
+3. One observation that would help assess the explanation.
+
+**Next:** choose boundaries and comparable data, then measure regional structure in R.
+
+::: {.notes}
+6 minutes. Three minutes writing, two sharing, one transition. Sample: lower freight raises farm sales; capacity or competition limits gains; inspect freight and destinations while considering a counterfactual. This completes 60 working minutes today and 120 for M2. Take the 10-minute break before M3. A1 checkpoint Nov 27 and final Nov 30 remain unchanged. No extra assignment is created.
+:::
+
+## Break · 10 minutes
+
+Continue with **Module 3: Defining and Measuring a Regional Economy**.
+
+::: {.notes}
+10-minute break, excluded from M2's working-time budget. The remaining 60 working minutes on Nov 26 belong to M3. The following reference and optional slides are not additional scheduled M2 teaching.
+:::
+
+## Readings and example files {.references}
+
+**Selected primary:** Hoover–Giarratani, §11.2, pp. 223–224; §11.5, pp. 234–236; §11.6, pp. 237–239 [@hoover2020].
+
+**Supporting:** opening of §11.3.1, pp. 224–225; §11.4, pp. 233–234; §10.3, pp. 197–208.
+
+**Optional:** §11.7, pp. 239–242, on cities and regional development.
+
+Full explanations, worked answers, and printed/PDF page conversions: **companion reader**.
+
+Calculations: `R/growth.R`. Inputs: `data/regional-growth.csv` and `data/sector-change.csv`.
+
+::: {.notes}
+Reference slide, no additional teaching minutes. Local fourth-edition web version, updated 2020. Printed page plus one gives PDF page. The primary selection is bounded; do not assign every supporting selection as additional reading. Historical examples in the source are not current statistics.
+:::
+
+::: {#refs .hidden}
+:::
+
+## Optional backup: decline and capacity
+
+A direct income loss of **100 CU**, with $b=0.60$:
+
+::: {.fragment}
+$$\Delta Y=-100/(1-0.60)=-250\text{ CU}.$$
+:::
+
+::: {.prompt}
+Why might actual expansion and decline be asymmetric?
+:::
+
+Business exit, sunk investments, and costly moves can change the response.
+
+::: {.notes}
+Optional, no scheduled minutes. The linear model is symmetric by construction; reality need not be. Capacity constraints can limit expansion while idle capacity can permit contraction. Do not label a negative change as negative total income. The baseline must be large enough for the illustrative loss to be feasible.
+:::
+
+## Optional backup: aggregate productivity
+
+Move **50 workers**, holding sector productivities fixed.
+
+$$Y=250(10)+250(35)=11{,}250.$$
+
+$$Y/L=11{,}250/500=22.5\text{ CU per worker}.$$
+
+::: {.prompt}
+Does the arithmetic establish what a real worker would produce after moving?
+:::
+
+No. Skills, capital, job availability, and selection matter.
+
+::: {.notes}
+Optional, no scheduled minutes. Average productivity rises 12.5% from 20. This mirrors reader Practice A and requires no additional graded work. M3 will describe sector composition; causal interpretation still requires more than an accounting identity.
+:::
