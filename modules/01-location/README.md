@@ -4,27 +4,35 @@ Instructor-review draft for ECON 463. Aligns with LO1–LO2, the dated semester 
 
 ## Materials
 
-- `slides.qmd` → `slides.html`: 33-slide, 16:9 Reveal.js deck, with speaker notes, timed activities, and staged answers.
+- `slides.qmd` → `slides.html`: 41-slide, 16:9 Reveal.js deck, with speaker notes, timed activities, and staged answers.
 - `reader.qmd` → `reader.html` and `reader.pdf`: approximately 5,000 words, with detailed explanations, worked answers, R examples, and reading guidance.
 - `R/examples.R` and `data/location-costs.csv`: shared calculations, inputs, and figure functions used by both documents.
 - `../references.bib`: shared course bibliography, inherited through `modules/_quarto.yml`. `assets/slides.scss` supplies the deck styling.
 
-The reader and slides follow the same seven sections and three example labels. Example 1 compares three plant locations and freight thresholds. Example 2 compares one plant with two plants. Example 3 diagnoses supplier, labor, and learning mechanisms in a hypothetical precision-component cluster.
+After the course orientation, the slides follow the reader’s seven sections and three example labels. Example 1 compares three plant locations and freight thresholds. Example 2 compares one plant with two plants. Example 3 diagnoses supplier, labor, and learning mechanisms in a hypothetical precision-component cluster.
 
 ## Teaching sequence
 
 | Date / section | Slides | Working minutes |
 | --- | --- | ---: |
-| Nov 23: Opening question | 1–4 | 15 |
-| Natural advantages and firm location | 5–12 | 40 |
-| Scale economies and city formation | 13–19 | 35 |
-| Guided practice and synthesis | 20–22 | 30 |
-| Nov 25: Agglomeration mechanisms | 23–27 | 30 |
-| Limits and competing explanations | 28–31 | 20 |
-| Retrieval and Module 2 bridge | 32 | 10 |
-| Reading reference | 33 | No additional time |
+| Nov 23: Course overview and opening discussion | 1–8 | 15 |
+| Syllabus walkthrough and questions | 9 | 20 |
+| Regional economics and location vocabulary | 10–11 | 10 |
+| Example 1: baseline comparison | 12–14 | 15 |
+| Break | 15 | 10 (not working time) |
+| Example 1: transport change and threshold | 16–19 | 15 |
+| Scale economies and city formation | 20–26 | 25 |
+| Guided practice and R access | 27 | 15 |
+| Exit question and next steps | 28 | 5 |
+| Nov 25: Agglomeration mechanisms | 29–33 | 30 |
+| Limits and competing explanations | 34–37 | 20 |
+| Retrieval and Module 2 bridge | 38 | 10 |
+| Reading reference | 39 | No additional time |
+| Optional backups: demand and freight sensitivity | 40–41 | Outside scheduled teaching |
 
-November 23 has 120 working minutes plus a 10-minute break after slide 13 (60 working minutes into the meeting). November 25 devotes its first 60 working minutes to M1 and leaves 60 for M2; the shared meeting's break can fall at the module transition. November 24 has no class or required work. Speaker notes contain activity prompts and timings. Press **S** in Reveal.js for speaker view; arrow keys advance, including staged solution fragments.
+November 23 has 120 working minutes plus a 10-minute break after 60 working minutes. No advance reading is expected: introduce terms in class, model the first calculation, and use the reader for follow-up explanation. The 35-minute introduction comprises a 15-minute course overview (including all seven learning outcomes on slides 5–7) and 20-minute syllabus discussion. Learning outcomes are introduced in this deck only; later module decks omit outcome lists and LO labels. Unresolved syllabus policies are TODO items in slide 9's speaker notes for the instructor to complete; do not copy policies from the old graduate optimization syllabus.
+
+November 25 keeps its original 60-minute M1 allocation and leaves 60 working minutes for M2. November 24 has no class or required work. Optional backup exercises are not assigned during that closure. Speaker notes contain timings and guidance; press **S** for speaker view. Reading pointers appear at the ends of concepts/examples, with full bibliographic detail in the reader.
 
 These materials provide ungraded practice only. The graded M1 portion of A1 remains to be written separately. The established A1 release (Nov 23), checkpoint (Nov 27), and final deadline (Nov 30) are unchanged.
 
@@ -68,7 +76,7 @@ Local reference PDFs are not copied into student materials. Bibliographic refere
 
 ## Review status
 
-Rendered and reviewed on November 2, 2026 with Quarto 1.3.450: 33 slides and both reader formats. Browser checks found no slide overflow, broken reader images, or missing internal anchors. All PDF pages were visually reviewed.
+Initial materials rendered and reviewed on November 2, 2026 with Quarto 1.3.450. Slides revised November 11 for a self-contained first day: 41 slides including two optional backups, with a dedicated syllabus block. The reader content is unchanged. The November 11 render and visual review checked all 41 slides; browser checks found no slide overflow. Earlier reader checks found no broken images or missing internal anchors. All PDF pages were visually reviewed.
 
 Numeric checks cover baseline and reduced-freight rankings, both relevant site-switch thresholds, the pairwise tie versus third-site comparison, baseline plant costs, the shipping tie, a high-freight case, doubled demand, and a reduced-fixed-cost case. Check all rendered formats and inspect slide/PDF layout after editing figures or equations.
 
