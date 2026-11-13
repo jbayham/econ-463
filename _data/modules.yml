@@ -1,14 +1,36 @@
-# Add modules using this structure; omit resource lists until files are ready.
-# - title: "Module title"
-#   dirname: modules/module-01
-#   filename: notes  # Optional PDF basename, without .pdf
-#   desc: "Module description"
-#   readings:
-#     - title: "Reading title"
-#   ps:
-#     - title: "Problem set"
-#       url: problem_set.pdf
-#   materials:
-#     - title: "Additional material"
-#       url: material.pdf
-[]
+# Add modules and resource links as their materials become available.
+- title: "Module 1: Location, Cities, and Agglomeration"
+  dirname: modules/01-location
+  desc: "Why cities form, how firms choose locations, and how scale economies, transport costs, and agglomeration shape regional activity. Includes worked location and production examples."
+  readings:
+    - title: "Brueckner (2011), Chapter 1, sections 1.1–1.5, pp. 1–18. See the reader for supporting selections."
+  materials:
+    - title: "Lecture slides"
+      url: slides.html
+    - title: "Student reader (web)"
+      url: reader.html
+    - title: "Student reader (PDF)"
+      url: reader.pdf
+    - title: "R examples"
+      url: R/examples.R
+    - title: "Location-cost data (CSV)"
+      url: data/location-costs.csv
+
+- title: "Module 2: Regional Growth and Interregional Connections"
+  dirname: modules/02-growth
+  desc: "Regional growth, productivity, structural change, trade, migration, and convergence. Includes synthetic regional comparisons, income-feedback calculations, and a transport-corridor example."
+  readings:
+    - title: "Hoover–Giarratani, sections 11.2 (pp. 223–224), 11.5 (pp. 234–236), and 11.6 (pp. 237–239). See the reader for supporting selections."
+  materials:
+    - title: "Lecture slides"
+      url: slides.html
+    - title: "Student reader (web)"
+      url: reader.html
+    - title: "Student reader (PDF)"
+      url: reader.pdf
+    - title: "R examples"
+      url: R/growth.R
+    - title: "Regional-growth data (CSV)"
+      url: data/regional-growth.csv
+    - title: "Sector-change data (CSV)"
+      url: data/sector-change.csv

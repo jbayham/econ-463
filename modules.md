@@ -4,7 +4,7 @@ title: Modules
 permalink: /modules/
 ---
 
-Lectures and materials will be organized by module here.
+Lecture slides, student readers, R examples, and data are organized by module below. Reading page numbers refer to the printed pages in the course editions.
 
 <ul id="archive">
 {% for modules in site.data.modules %}
@@ -26,7 +26,7 @@ Lectures and materials will be organized by module here.
 {% endif %}
 
 {% if modules.ps %}
-  <strong>📝 Problem Set:</strong>
+  <strong>📝 Problem Sets:</strong>
   <ul>
     {% for a in modules.ps %}
       <li><a href="{{ site.url }}{{ site.baseurl }}/{{ modules.dirname }}/{{ a.url }}">{{ a.title }}</a></li>
@@ -35,7 +35,7 @@ Lectures and materials will be organized by module here.
 {% endif %}
 
 {% if modules.materials %}
-  <strong>Additional Materials:</strong>
+  <strong>Materials:</strong>
   <ul>
     {% for c in modules.materials %}
       <li><a href="{{ site.url }}{{ site.baseurl }}/{{ modules.dirname }}/{{ c.url }}">{{ c.title }}</a></li>
