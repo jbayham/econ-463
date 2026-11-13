@@ -1,12 +1,12 @@
 # Site settings
 title: ECON 463
-subtitle: Course title to be added
-description: Course information will be added here.
+subtitle: Regional Economics
+description: Regional economics course materials, syllabus, and schedule.
 
 baseurl: "/econ-463"
 url: "https://jbayham.github.io"
 syllabus: "/syllabus/"
-githubdir: ""
+githubdir: "jbayham/econ-463"
 canvas_url: ""
 
 # Author/user information
@@ -35,4 +35,4 @@ include: ['_images', '_css']
 # bing_webmastertools_id: ""
 
 # Keep authoring files out of the published website.
-exclude: [README.md, econ-463.Rproj]
+exclude: [README.md, econ-463.Rproj, docs, dev, references, outputs]
