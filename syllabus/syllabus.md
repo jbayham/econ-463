@@ -1,153 +1,152 @@
 ---
-title: "Syllabus"
+title: "ECON 463: Regional Economics"
 layout: page
 permalink: /syllabus/
 format:
   pdf:
     pdf-engine: xelatex
+    fontsize: 10pt
+    geometry: margin=0.85in
 ---
+
 
 ## Course Information
 
-- **Location:** Eddy 106
-- **Time:** Tuesday and Thursday, 9:30–10:45 AM
-- **Term:** Fall 2026 (August 25–November 19)
-- **Final Exam:** Thursday, November 19, during the regularly scheduled class period
-- **Instructor:** Jude Bayham  
-  - Office: Nutrien 203  
-  - Email: [jbayham@colostate.edu](mailto:jbayham@colostate.edu)  
-  - Office Hours: Tuesday & Thursday, 11:00–12:00 PM, or by appointment ([book here](https://outlook.office.com/bookwithme/user/8f601447c7934b3fb7dc895f4140ffe4@colostate.edu?anonymous&ismsaljsauthenabled&ep=plink))  
+| Item              | Details                                                                  |
+| ----------------- | ------------------------------------------------------------------------ |
+| Course            | ECON 463: Regional Economics                                             |
+| Term and location | November 23-December 18, 2026; Foreign Trade University, Hanoi, Vietnam. |
+| Instructor        | Jude Bayham                                                              |
+| Email             | [jbayham@colostate.edu](mailto:jbayham@colostate.edu)                    |
+| Exams             | Friday, December 4, and Friday, December 18                              |
 
+### Sections and Meeting Times
+
+| Section | Class code             | Time            |
+| ------- | ---------------------- | --------------- |
+| 1 - K63 | ECON463(2627-HK1)GD2.1 | 9:20-11:30 a.m. |
+| 2 - K63 | ECON463(2627-HK1)GD2.2 | 12:30-2:40 p.m. |
+
+### Meeting Rooms
+
+| Day       | Section 1 | Section 2 |
+| --------- | --------- | --------- |
+| Monday    | A705      | H202      |
+| Tuesday   | A705      | H302      |
+| Wednesday | A703      | H206      |
+| Thursday  | A1203     | H206      |
+| Friday    | H302      | A703      |
+
+**Meeting rooms may change.** Check course announcements for room updates. There is no class on November 24.
 
 ## Course Description
 
-This course provides graduate students in agricultural, environmental, and resource economics with an introduction to optimization methods used in economic modeling and policy analysis. Emphasizing both theory and computation, the course covers linear and nonlinear programming, dynamic optimization, and numerical methods essential for solving complex economic problems. Students will learn to formulate, solve, and interpret optimization models using R, with applications drawn from land use planning, natural resource management, agricultural production, and environmental policy design. The course equips students with practical modeling skills and analytical tools that support evidence-based research and decision-making in applied economics.
+Why do cities exist, why do firms cluster, and why do some regions grow while others decline? This course uses economic theory, regional data, and quantitative models to investigate these questions. Topics include location, agglomeration, regional growth, trade and migration, land use, spatial equilibrium, and the valuation of amenities through housing markets. Students will use R to describe regional economies, estimate hedonic relationships, and conduct input-output and computable general equilibrium (CGE) calculations with supplied data and model structures. Applications emphasize how assumptions shape estimated impacts and how those impacts relate to welfare, environmental externalities, and distribution.
+
+## Learning Outcomes
+
+By the end of the course, students will be able to:
+
+1. **LO1.** Explain how transportation costs, scale economies, and natural advantages shape the location of economic activity and the formation of cities.
+
+2. **LO2.** Analyze how shared suppliers, labor markets, and knowledge spillovers encourage firms to cluster, and how congestion and other costs limit concentration.
+
+3. **LO3.** Compare explanations for regional growth and decline, and explain how industrial specialization, productivity, market access, trade, and migration transmit economic changes across regions.
+
+4. **LO4.** Explain how household and firm location choices jointly determine wages, rents, and population across places; estimate hedonic models in R to examine how amenities and other location characteristics are reflected in property values, and assess how sorting and omitted variables limit interpretation.
+
+5. **LO5.** Define an appropriate regional unit and use data with comparable geographic boundaries, years, and sector definitions in R to measure industrial structure, specialization, and economic change.
+
+6. **LO6.** Use supplied data and model structures to conduct input-output and computable general equilibrium (CGE) calculations in R and estimate regional economic impacts; compare how trade leakages, resource constraints, price adjustment, and factor mobility shape the models' results.
+
+7. **LO7.** Apply regional theory and models to a real-world problem using an explicit baseline and counterfactual.
+
+## Preparation and Course Tools
+
+The course is designed for undergraduate students with intermediate microeconomic preparation. Basic statistics, regression interpretation, and familiarity with R will support the applied work.
+
+We will use R for data analysis, estimation, and model calculations. Data, model structures, and starter code will be supplied; students are responsible for understanding the calculations and interpreting results. Guided work will occur in class. Computer access arrangements are to be confirmed before the first data exercise.
+
+## Materials and Reading
+
+I will share course materials via a Github website: <https://jbayham.github.io/econ-463/>. The material will be organized into modules containing slides, student readers, prepared datasets, and model handouts to support the class.
+
+The main reference texts are:
+
+- Brueckner, J. K. (2011). [*Lectures on urban economics*](https://mitpress.mit.edu/9780262300315/lectures-on-urban-economics/). MIT Press.
+- Hoover, E. M., & Giarratani, F. (1999). [*An introduction to regional economics*](https://researchrepository.wvu.edu/rri-web-book/4/) (4th web ed., updated 2020; S. Loveridge & R. Jackson, Eds.). Regional Research Institute, West Virginia University.
+- Schaffer, W. A. (1999). [*Regional impact models*](https://researchrepository.wvu.edu/rri-web-book/7/) (2nd ed., updated 2020; S. Loveridge & R. Jackson, Eds.). Regional Research Institute, West Virginia University.
+- Hewings, G. J. D. (1985). [*Regional input-output analysis*](https://researchrepository.wvu.edu/rri-web-book/10/). SAGE Publications. (Web reprint edited by G. I. Thrall, Regional Research Institute, West Virginia University, 2020.)
+- Hall, J., Lawson, K., & Shia, J. (Eds.). (2021). [*Measuring amenities and disamenities in the housing market: Applications of the hedonic method*](https://researchrepository.wvu.edu/rri-web-book/32/). Regional Research Institute, West Virginia University.
+
+## Class Format and Expectations
+
+Class meetings combine explanation, discussion, worked examples, and supported problem solving or data analysis. Students should participate in guided practice and bring questions about methods and assumptions. I’ll expect some work outside of class.
 
 
-## Learning Objectives
+## Assessment and Grading
 
-By the end of this course, students should be able to:
+The course has four assignment sets and two exams. Assignments assess the ability to use tools and explain results. Exams assess economic reasoning, assumptions, and interpretation.
 
-1. Formulate and solve numerical optimization models in economics.
-2. Use optimization software to solve economic optimization problems (with a focus on R).
-3. Interpret results from mathematical programming models in applied settings.
-4. Use optimization models to conduct independent research.
-
-## Prerequisites
-
-AREC 506 or equivalent. I assume students are familiar with basic microeconomic theory (e.g., producer, consumer, general equilibrium) and constrained and unconstrained optimization.
-
-## Textbooks and Readings
-
-I will post several texbooks on Canvas. These are references for the course content.
-
-- McCarl, Bruce A., and Thomas A. Spreen. *Applied Mathematical Programming Using Algebraic Systems*. [Available online](https://agecoresearch.tamu.edu/mccarl/regbook/)
-- Kaiser, Harry M., Kent D. Messer. *Mathematical Programming for Agricultural, Environmental, and Resource Economics*. 
-- Hazell, Peter B. R., and Roger D. Norton. *Mathematical Programming for Economic Analysis in Agriculture*.
-- Miranda, Mario J., and Paul L. Fackler. *Applied Computational Economics and Finance*.
-
-
-Supplemental readings and journal articles will be assigned.
-
-## Assignments and Grading
-
-| Component                | Percentage |
-|--------------------------|------------:|
-| Midterm Exam 1          | 20%        |
-| Midterm Exam 2          | 20%        |
-| Final Exam              | 20%        |
-| Model Labs               | 40%        |
-
-I will use the standard CSU grading scale including + and - where the thresholds are defined at 2 and 8 of each 10-point range.
+| Component                             | Focus                                                                                       | Points  |
+| ------------------------------------- | ------------------------------------------------------------------------------------------- | ------: |
+| A1: Location and regional structure   | Location calculations, agglomeration/growth reasoning, and a regional profile in R.         | 7.5     |
+| A2: Spatial equilibrium and amenities | Spatial adjustment and hedonic estimation/interpretation in R.                              | 7.5     |
+| A3: Input-output analysis             | Accounts, coefficients, model solution, a demand shock, and sensitivity.                    | 7.5     |
+| A4: CGE and model comparison          | Baseline replication, one shock, one sensitivity comparison, and a bounded policy question. | 7.5     |
+| Exam 1                                | Modules 1-5                                                                                 | 35      |
+| Final exam                            | Modules 6-8                                                                                 | 35      |
+| **Total**                             |                                                                                             | **100** |
 
 ### Exams
 
-There will be two midterm exams and a final exam. The exams will be written, in class, and will not require students to run code. They will assess formulation, interpretation, numerical judgment, and small transparent calculations. The final will be cumulative, with emphasis on applying and interpreting the course's linear, nonlinear, and discrete-time dynamic models.
+You will have the full class period for exams. Exam 1 is scheduled for **Friday, December 4** and covers regional foundations, measurement, spatial equilibrium, and hedonics. The **final is Friday, December 18**, emphasizing IO, CGE, and policy interpretation.
 
-### Model Labs
+## Course Topics by Module
 
-Model Labs replace a traditional semester project with short, AI-assisted investigations of applied economic optimization models. On selected Thursdays, we will examine a model or paper; by the following Tuesday, you will investigate one focused question and be prepared to present your approach and findings to the class. You may use AI and computational tools extensively, but you remain responsible for your assumptions, formulation, code, results, and claims. Evaluation emphasizes model understanding, sound implementation and reasoning, and clear economic and mathematical interpretation. See the [Model Lab Guidelines]({{ site.baseurl }}/model_lab/) for full expectations, procedures, and deliverables.
+### Module 1: Location, Cities, and Agglomeration
 
+- Natural advantages, transportation costs, scale economies, and city formation.
+- Firm location, shared suppliers, labor pooling, knowledge spillovers, and the costs of concentration.
 
-## Tentative Schedule of Topics
+### Module 2: Regional Growth and Interregional Connections
 
-1. **Modeling Basics**
-   - Credible economic models, R, and AI-assisted model development
-   - Objectives, decision variables, constraints, units, and solution audits
+- Regional growth and decline, productivity, specialization, structural change, and convergence.
+- Market access, trade costs, migration, and the transmission of economic changes across regions.
 
-2. **Linear and Mixed-Integer Programming**
-   - Formulation, graphical intuition, and matrix representations
-   - Solving and interpreting applied linear programs
-   - Sensitivity analysis, shadow values, and duality
-   - Binary choices, fixed costs, and mixed-integer applications
+### Module 3: Defining and Measuring a Regional Economy
 
-3. **Static Nonlinear Optimization**
-   - Numerical foundations: roots, diagnostics, and convergence
-   - Unconstrained optimization, derivatives, geometry, and local/global optima
-   - Constrained optimization, feasible sets, bounds, corners, and KKT conditions
-   - Solver initialization, scaling, feasibility, and interpretation of multipliers
-   - Risk, uncertainty, and scenario analysis
+- Administrative and functional regions; geographic, temporal, and sector comparability.
+- Regional data analysis in R, location quotients, shift-share, and regional profiles.
 
-4. **Dynamic Optimization**
-   - States, controls, transitions, payoffs, and discounting
-   - Finite-horizon dynamic programming and backward induction in R
-   - Infinite-horizon Bellman equations and value function iteration
-   - Value and policy functions, diagnostics, and parameter sensitivity
+### Module 4: Land Use and Spatial Equilibrium
 
+- Bid rents, commuting, housing supply, and land-use constraints.
+- Wages, rents, amenities, mobility, capitalization, and population adjustment across places.
 
-## Modified Schedule
+### Module 5: Hedonics and Interpretation of Spatial Evidence
 
-This class will end on Nov 19 because I will be leaving Fall break to teach in Vietnam. We need to make up 4 75-minute class sessions. First we need to find 4 dates and times that work for everyone. I will send a whentomeet poll to find the best times. My tentative plan is to have model lab development sessions or use it as time to dive deeper into material.
+- Hedonic models of property values and amenities; estimation and interpretation in R.
+- Sorting, omitted variables, specification comparisons, and limits to causal and welfare interpretation.
 
-## Principles of Community
+### Module 6: Input-Output Analysis and Regional Linkages
 
-The Principles of Community support the Colorado State University mission and vision of access, research, teaching, service and engagement. A collaborative, and vibrant community is a foundation for learning, critical inquiry, and discovery. Therefore, each member of the CSU community has a responsibility to uphold these principles when engaging with one another and acting on behalf of the University
+- Regional accounts, technical coefficients, the Leontief inverse, and demand shocks.
+- Direct, indirect, and induced effects; imports and leakages; output, value added, income, and employment.
+- Model assumptions, sensitivity, and interpretation of regional impacts.
 
-*Inclusion*: We create and nurture inclusive environments and welcome, value and affirm all members of our community, including their various identities, skills, ideas, talents, and contributions.
+### Module 7: Regional CGE Modeling and Model Comparison
 
-*Integrity*: We are accountable for our actions and will act ethically and honestly in all our interactions.
-Respect: We honor the inherent dignity of all people within an environment where we are committed to freedom of expression, critical discourse, and the advancement of knowledge.
+- Social accounting, household and firm behavior, market clearing, and baseline replication.
+- Closure, regional trade, factor mobility, substitution, prices, and resource constraints.
+- Counterfactual calculations in R, sensitivity analysis, and comparison with input-output results.
 
-*Service*: We are responsible, individually and collectively, to give of our time, talents, and resources to promote the well-being of each other and the development of our local, regional, and global communities.
+### Module 8: Regional Application and Policy Evaluation
 
-*Social Justice*: We have the right to be treated and the responsibility to treat others with fairness and equity, the duty to challenge prejudice, and to uphold the laws, policies and procedures that promote justice in all respects.
+- Defining a baseline and counterfactual and selecting an appropriate regional model.
+- Economic impacts, welfare, opportunity costs, externalities, distribution, and model limitations.
+- Communicating findings and evaluating regional policy claims.
 
-## Academic Integrity
+## Academic Work and Course Policies
 
-Academic misconduct (see examples below) undermines the educational experience at Colorado State University, lowers morale by engendering a skeptical attitude about the quality of education, and negatively affects the relationship between students and faculty/instructors.
-
-Faculty/Instructors are expected to use reasonably practical means of preventing and detecting academic misconduct. Any student found responsible for having engaged in academic misconduct will be subject to academic penalty and/or University disciplinary action.
-
-Students are encouraged to positively impact the academic integrity culture of CSU by reporting incidents of academic misconduct.
-
-Examples of academic misconduct include (but are not limited to):
-
-1.	Cheating – Cheating includes using unauthorized sources of information and providing or receiving unauthorized assistance on any form of academic work or engaging in any behavior specifically prohibited by the instructor in the course syllabus or class presentation.
-
-2.	Plagiarism – Plagiarism includes the copying of language, structure, images, ideas, or thoughts of another, and representing them as one’s own without proper acknowledgment, and is related only to work submitted for credit. Also included is the failure to cite sources properly; sources must always be appropriately referenced, whether the source is printed, electronic or spoken.
-
-3.	Unauthorized Possession or Disposition of Academic Materials – Unauthorized possession or disposition of academic materials includes the unauthorized selling or purchasing of examinations, term papers, or other academic work; stealing another student’s work; and using information from or possessing exams that an instructor did not authorize for release to students.
-
-4.	Falsification – Falsification encompasses any untruth, either verbal or written, in one’s academic work.
-
-5.	Facilitation of any act of Academic Misconduct – Facilitation of any act of academic misconduct includes knowingly assisting another to commit an act of misconduct.
-
-## AI Statement
-
-This course treats generative AI as a working tool, and your ability to use it well is part of what is being assessed. 
-
-You are expected to use AI tools on the model labs. You will be evaluated not on whether you used them, but on how well you directed them, how accurately you judged their output, and how effectively you corrected what they got wrong. I won't ask you for your prompts, but I may ask you about your reasoning, your assumptions, and your interpretation of the results.
-
-During class, I expect that you don't use computers unless you are presenting. I urge you to take hand written notes whether on paper or a tablet.
-
-You may also use AI tools to help you prepare for exams, but you will not be allowed to use them during the exams themselves.
-
-You remain responsible for the accuracy of everything you submit or present. "The model produced it" is not a defense here any more than it is anywhere else. 
-
-AI-enabled assistive technology authorized by a student's accommodation letter is permitted in this course. 
-
-
-## Accommodations
-
-If you require accommodations, contact the Student Disability Center:  
-[https://disabilitycenter.colostate.edu](https://disabilitycenter.colostate.edu), TILT Room 121, (970) 491-6385.
+Students are responsible for the accuracy of submitted calculations, code, claims, and interpretations. You may use AI tools to help with understanding course materials. I suggest you try to avoid using them on assignments because it will undermine your ability to answer exam questions.
