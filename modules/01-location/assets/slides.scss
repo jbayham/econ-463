@@ -17,3 +17,30 @@ $presentation-h2-font-size: 1.35em;
 .reveal pre { font-size: 0.58em; }
 .reveal .cell-output-stdout pre { font-size: 0.54em; }
 .reveal .references { font-size: 0.58em; }
+
+// Keep the introductory comparison readable; allow vertical scrolling.
+.reveal .fields-comparison table {
+  width: 100%;
+  table-layout: fixed;
+  font-size: 1em;
+  line-height: 1.2;
+}
+.reveal .fields-comparison th,
+.reveal .fields-comparison td {
+  vertical-align: top;
+  padding: 0.25em 0.35em;
+  overflow-wrap: break-word;
+}
+.reveal .fields-comparison col { width: 41% !important; }
+.reveal .fields-comparison col:first-child { width: 18% !important; }
+.reveal .fields-comparison .takeaway { font-size: 1em; }
+
+// Keep both states of the production figure at the same readable size.
+.reveal .basket-scale .r-stack { width: 100%; }
+.reveal .basket-scale .r-stack > * { width: 100%; }
+.reveal .basket-scale .r-stack img {
+  width: 1100px !important;
+  height: 525px !important;
+  max-width: 100%;
+  object-fit: contain;
+}

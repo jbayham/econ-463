@@ -41,7 +41,10 @@ format:
 
 ## Course Description
 
-Why do cities exist, why do firms cluster, and why do some regions grow while others decline? This course uses economic theory, regional data, and quantitative models to investigate these questions. Topics include location, agglomeration, regional growth, trade and migration, land use, spatial equilibrium, and the valuation of amenities through housing markets. Students will use R to describe regional economies, estimate hedonic relationships, and conduct input-output and computable general equilibrium (CGE) calculations with supplied data and model structures. Applications emphasize how assumptions shape estimated impacts and how those impacts relate to welfare, environmental externalities, and distribution.
+
+Why do cities exist, why do firms cluster, and why do some regions grow while others decline? This course uses economic theory, regional data, and quantitative models to investigate these questions. Topics include location, agglomeration, regional growth, trade and migration, land use, spatial equilibrium, and the valuation of amenities through housing markets. Students will learn how to analyze data to describe regional economies, estimate hedonic relationships, and conduct input-output and computable general equilibrium (CGE) calculations with supplied data and model structures. 
+
+This course blends regional and urban economics. Regional economics emphasizes differences and connections across places; urban economics emphasizes why cities form and how activity is organized within them. The fields overlap and the study of regional economics benefits from learning urban economics as well.
 
 ## Learning Outcomes
 
@@ -63,13 +66,13 @@ By the end of the course, students will be able to:
 
 ## Preparation and Course Tools
 
-The course is designed for undergraduate students with intermediate microeconomic preparation. Basic statistics, regression interpretation, and familiarity with R will support the applied work.
+The course is designed for undergraduate students with intermediate microeconomic preparation. Basic statistics, regression interpretation, and familiarity with R will make the applied work more accessible.
 
-We will use R for data analysis, estimation, and model calculations. Data, model structures, and starter code will be supplied; students are responsible for understanding the calculations and interpreting results. Guided work will occur in class. Computer access arrangements are to be confirmed before the first data exercise.
+We will use R for data analysis, estimation, and model calculations. Data, model structures, and starter code will be supplied; students are responsible for understanding the calculations and interpreting results. Guided work will occur in class. 
 
 ## Materials and Reading
 
-I will share course materials via a Github website: <https://jbayham.github.io/econ-463/>. The material will be organized into modules containing slides, student readers, prepared datasets, and model handouts to support the class.
+I will share course materials via a Github website: <https://jbayham.github.io/econ-463/>. The material will be organized into modules containing slides, student readers, prepared datasets, and model handouts to support the class. I will also share copyright restricted materials through FTU resources.
 
 The main reference texts are:
 
@@ -81,7 +84,7 @@ The main reference texts are:
 
 ## Class Format and Expectations
 
-Class meetings combine explanation, discussion, worked examples, and supported problem solving or data analysis. Students should participate in guided practice and bring questions about methods and assumptions. I’ll expect some work outside of class.
+Class meetings combine lecture, discussion, worked examples, and supported problem solving or data analysis. Students should participate in guided practice and ask questions about methods and assumptions. I’ll expect some work outside of class.
 
 
 ## Assessment and Grading

@@ -9,13 +9,24 @@ format:
     embed-resources: true
     code-fold: false
     theme: cosmo
+  epub:
+    output-file: module-02-growth-reader.epub
+    css: ../styles/reader-epub.css
+    filters:
+      - ../styles/reader-epub-math.lua
+    toc: true
+    toc-depth: 2
+    number-sections: true
   pdf:
     toc: true
     toc-depth: 2
     number-sections: true
     pdf-engine: xelatex
-    documentclass: article
-    fontsize: 11pt
+    documentclass: extarticle
+    fontsize: 14pt
+    linestretch: 1.2
+    monofont: lmmono12-regular.otf
+    monofontoptions: Scale=0.88
     geometry: margin=1in
     colorlinks: true
     keep-tex: false

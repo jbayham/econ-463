@@ -6,7 +6,7 @@ Explore how natural advantages, transport costs, scale economies, and agglomerat
 
 - [Reader (HTML)](reader.html) or [reader (PDF)](reader.pdf): explanations, worked examples, practice questions, and a reading guide.
 - [Lecture slides](slides.html): class discussion, calculations, and optional practice.
-- [R calculations](R/examples.R) and [location-cost data](data/location-costs.csv): reproduce the examples and explore different assumptions.
+- Optional EPUB: `module-01-location-reader.epub`.
 
 The examples compare three plant locations, one plant versus two plants, and the mechanisms behind a hypothetical industrial cluster. All numerical data are synthetic; monetary amounts use illustrative currency units (CU).
 
@@ -14,21 +14,37 @@ The examples compare three plant locations, one plant versus two plants, and the
 
 Read each setup, predict the result, and try the calculation before consulting the worked answer. Explain the mechanism and identify an assumption that could change your conclusion. The exercises are ungraded practice.
 
-To reproduce the calculations, download the R script and CSV, keeping the `R/` and `data/` folders together inside `01-location/`. Set R's working directory to that module folder, then run:
+Day 1 requires no advance reading, coding, or software setup. Use paper and optionally a calculator. The basket story introduces specialization; the plant example first compares production costs, then adds freight. Practice changing fixed cost to 600 CU and shipping to 8 CU per unit before checking the reader's answer.
 
-```r
-source("R/examples.R")
-location_costs(tau = 1)
-location_costs(tau = 0.5)
-location_threshold()
-plant_costs(t = 4)
-plot_location()
+## Teaching sequence
+
+November 23 has 120 working minutes: overview 15, syllabus 20, foundations 10, location baseline 15, transport change 15, scale and city formation 25, paired hand calculations 20. Take the 10-minute break after the location baseline. Stop after the paired exercise; no midpoint recap or required work on November 24.
+
+November 25 uses 60 minutes: agglomeration 30, limits 20, closing summary/retrieval/Module 2 bridge 10. The optional retail and doubled-demand slides have no scheduled time. Introduce all course learning outcomes only in the Module 1 introduction.
+
+## Authoring and rendering
+
+`R/examples.R` and `data/location-costs.csv` are internal shared calculation and figure inputs. Students do not run these for Module 1. The shared bibliography is `../references.bib`.
+
+From the repository root:
+
+```sh
+quarto render modules/01-location/slides.qmd --to revealjs
+quarto render modules/01-location/reader.qmd --to html
+quarto render modules/01-location/reader.qmd --to pdf
+quarto render modules/01-location/reader.qmd --to epub
 ```
 
-Only base R is needed. `tau` changes outbound freight only. The `outbound` column retains baseline freight; `total` applies the multiplier. In the plant comparison, `q` is demand per market. Keep revenue fixed when interpreting cost rankings as profit rankings.
+Rendered files stay beside their sources. The basket figure advances on a click in the slides and appears complete in the reader. MathJax remains configured for this deck; adopting it as course-wide policy still awaits instructor approval.
 
 ## Readings
 
 Start with Brueckner, *Lectures on Urban Economics*, Chapter 1, §§1.1–1.5, pp. 1–18. The reader identifies supplemental selections from Hoover and Giarratani, optional advanced discussion from Glaeser and Gottlieb, and a historical Vietnam illustration from the World Bank.
 
 Use the reader's reading guide for section and page references. The PDF reader can be used offline.
+
+## Verification
+
+Verified November 21: Reveal.js HTML and reader HTML/PDF/EPUB rendered successfully. Checked all 45 slides and 28 PDF pages visually; enlarged the staged production figure and improved equation/bibliography page breaks. Verified A-to-B reveal on one keypress. MathJax produced 29 SVG expressions with no errors. Reader HTML: 31 navigation links, no broken internal anchors, six loaded figures with descriptions, and no displayed code blocks. EPUB archive/XHTML and manifest resources passed structural checks; no displayed code blocks. Independently checked baseline and reduced-freight location costs, both decision thresholds, production-only and freight-inclusive plant costs, the revised practice result, and basket totals. The existing regional/urban comparison remains intentionally scrollable. Native e-reader display and classroom pacing remain instructor review items.
+
+Graded Module 1 A1/PS1 questions remain a separate outstanding task.

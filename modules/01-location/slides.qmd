@@ -56,21 +56,38 @@ No advance reading is expected today. We will build the ideas together.
 2 minutes, including welcome and title. Introduce yourself and regional economics through these questions. The opening course overview, including all seven learning outcomes, takes 15 minutes; the syllabus discussion then takes 20. Do not ask students to recall a reading.
 :::
 
-## Start with a familiar decision
+## Motivating example: a new factory
 
 A firm plans to open a factory. It needs materials, workers, space, and customers.
 
 ::: {.prompt}
-Where should it locate? Discuss two factors with a neighbor, then explain why each matters.
+Where should it locate? 
+
+What impact will it have on the surrounding area?
 :::
 
-A place you know is enough—no specialist terminology needed.
+Discuss with a neighbor, then explain why each matters.
+
+I don't expect you to use the proper/formal economic terms.
 
 ::: {.notes}
-3 minutes. Allow one minute of individual thought, one minute of discussion, and one minute to collect ideas. Group responses into production costs, movement costs, and access to people or firms. Revisit the list in Example 1; do not require a single correct site yet.
+3 minutes. Allow one minute of individual thought, one minute of discussion, and one minute to collect ideas. For the location question, group responses into production costs, movement costs, and access to people or firms. Revisit the list in Example 1; do not require a single correct site yet.
+
+For the second question, “What impact will it have on the surrounding area?”, select one or two follow-ups from this menu rather than covering every channel:
+
+- **Jobs and wages:** “Who gets the new jobs—local residents, commuters, or people moving here? What might happen to workers at existing businesses?” Draw out both employment opportunities and competition for workers; factory jobs are not necessarily an equal increase in total local employment.
+- **Local businesses:** “What will the factory buy, and where will its workers spend their wages?” Invite examples such as transport, repairs, food, and shops. Ask whether those purchases stay in the area or go elsewhere; benefits depend on local suppliers and spending.
+- **Housing and land:** “If more people want to live nearby, what happens to housing demand and rents? Who benefits, and who might struggle?” Contrast owners and renters; the response depends partly on whether new housing can be built.
+- **Traffic, services, and environment:** “What else changes when more trucks and workers arrive?” Prompt for congestion, road and water demands, noise, and pollution alongside possible public revenue. These effects depend on the factory's activity and existing capacity.
+- **Nearby places and timing:** “Could one town gain activity that another loses? Would construction effects last after the factory opens?” Separate temporary building work from ongoing operations and local gains from gains for the wider region.
+
+If students simply say “good for the economy,” ask: “Good for whom, through what change, and compared with what would happen without the factory?” If incentives arise, ask what else the public money or land could support. Use everyday language; formal terms and models come later.
+
+Close with: “The factory can create opportunities and costs, and those effects can spread beyond its gates. This course will help us trace those changes and assess who gains and who bears the costs.” Treat student responses as hypotheses to investigate, not effects we have already established.
+
 :::
 
-## Our route through the course
+## Course progression
 
 **Location and growth:** why activity concentrates and regions change.
 
@@ -130,7 +147,7 @@ By the end of the course, you will be able to:
 
 **Two exams:** reasoning, assumptions, and manageable calculations.
 
-**Materials:** slides guide class; the reader explains examples fully; selected readings add depth.
+**Materials:** slides guide class; the reader explains examples fully; selected readings provide context.
 
 ::: {.notes}
 3 minutes. Explain that timed coding is not planned for exams and that there is no standalone project. No preparation from the reader is expected today. Later reading expectations will be stated explicitly. Do not introduce an LMS, submission format, or grading policy that has not been confirmed.
@@ -150,20 +167,25 @@ Discuss expectations, access to materials, support, and questions.
 20 minutes reserved for the syllabus walkthrough and questions. Use the current regional-economics course plan, not the copied graduate optimization syllabus. The instructor will fill in unresolved policies. TODO: grading weights; collaboration and AI-use rules; late work; permitted exam materials; submission platform and format; classroom/meeting times; office hours and support arrangements. Do not infer these from the old syllabus. Suggested allocation: 5 minutes schedule/assessments, 10 minutes instructor-supplied expectations/logistics, 5 minutes questions. PS 1's graded opening questions remain a separate preparation task; announce the established milestones without treating today's ungraded practice as the problem set.
 :::
 
-## Regions and cities are connected
-**Regional economics:** activity across places and connections among them.
+# Regional (and urban) economics
 
-**Urban economics:** city formation and organization within cities.
+## Regional and urban economics {.scrollable .fields-comparison}
 
-A city draws workers and inputs from elsewhere and sells beyond its boundary.
+**This course blends both perspectives.**
+
+| | Regional economics | Urban economics |
+|:--|:--|:--|
+| **Focus** | Differences and connections across regions | Why cities form and how activity is organized within them |
+| **Questions** | Why do some regions grow while others decline? How do trade and migration connect places? | Why do firms and people cluster? What determines rents, density, and commuting? |
+| **Topics** | Growth, specialization, migration, and regional inequality | Agglomeration, housing, land use, transport, and neighborhoods |
+| **Policies** | Regional development, infrastructure, and incentives to attract employers | Zoning, transit, congestion pricing, and housing policy |
 
 ::: {.takeaway}
-Choose the geographic unit to fit the question. Formal measurement comes in Module 3.
+Shared ground: location choices, agglomeration, and mobility. A metropolitan area is also a region; the distinction is one of emphasis.
 :::
 
-
 ::: {.notes}
-5 minutes. Start the 10-minute foundation block. Define a region as an area relevant to the question, and a city as a concentration of people and activity. Ask where a familiar city obtains workers, food, or materials. Explain the two fields before asking students to classify an example. Formal boundary measurement waits until M3.
+5 minutes. Start the 10-minute foundation block. Define a region as an area relevant to the question, and a city as a concentration of people and activity. Regional economics often emphasizes relationships between places; urban economics often emphasizes concentration and organization within cities. These are overlapping emphases, not rigid boundaries or a rural-versus-urban split. Explain agglomeration as the benefits and costs of locating near other firms and people. For a new factory, contrast choosing Hanoi rather than another region with choosing a site within Hanoi and tracing effects on rents and commuting. Scroll if needed to show the policy row and shared ground. Choose the geographic unit to fit the question; formal boundary measurement waits until Module 3.
 :::
 
 ## Natural advantages and firm location
@@ -174,11 +196,13 @@ A port combines geography with built infrastructure.
 A large customer base can reduce delivery costs.
 
 ::: {.prompt}
-Would the cheapest raw-material location necessarily maximize profit?
+Would locating near the cheapest raw-material source necessarily maximize profit?
 :::
 
 ::: {.notes}
-5 minutes. Finish the foundation block. Define natural advantage using a deposit or waterway, production cost as the cost of making output, and freight as the cost of moving goods. Explain that an advantage in one cost need not minimize the sum. The goal today is to explain a location decision and how scale can concentrate jobs.
+5 minutes. Finish the foundation block. Define natural advantage using a deposit or waterway, production cost as the cost of making output, and freight as the cost of moving goods. 
+
+Explain that an advantage in one cost need not minimize the sum. The goal today is to explain a location decision and how scale can concentrate jobs.
 :::
 
 ## Example 1: three possible plant locations
@@ -193,7 +217,9 @@ knitr::kable(base_location[, 1:4], col.names = c("Site", "Production", "Inbound"
 All entries are **CU per unit of finished output**. Data are illustrative.
 
 ::: {.prompt}
-Resource costs $40+2+18=60$ CU per unit. Now calculate Junction and Market.
+Resource costs $40+2+18=60$ CU per unit. 
+
+Now calculate Junction and Market.
 :::
 
 ::: {.notes}
@@ -211,7 +237,7 @@ Production + inbound freight + adjusted outbound freight.
 knitr::kable(base_location[, c("site", "total")], col.names = c("Site", "Baseline cost (CU/unit)"))
 ```
 
-**Junction saves `r fmt(3000)` CU per period** relative to either alternative.
+**Junction saves 3 $\times$ 1000 = `r fmt(3000)` CU per period** relative to either alternative.
 
 ::: {.notes}
 5 minutes. Define i as the site and tau as a multiplier: 1 means unchanged outbound freight, 0.5 means half. Begin with words, then translate into symbols. Ask students to explain the 3-CU unit saving and convert it to 3000 per period at 1000 units.
@@ -305,97 +331,163 @@ Why can cheaper transport make production farther from customers more attractive
 3 minutes. End the 15-minute transport-change block. Ask why a distant producer gains when shipping gets cheaper. Point to the reader for the complete calculation and the reading for source/market orientation. The remaining sensitivity cases can be revisited after class or in the optional backup slides.
 :::
 
-## Scale economies and city formation
-Example 1: **where** should one plant locate?
+## From choosing a location to choosing a scale
 
-Example 2: **how many** plants should operate?
+**Example 1:** Where should one plant locate? We took its output and production costs as given.
 
-**Fixed cost $F$:** paid to operate a plant. **Unit cost $c$:** cost of producing one more unit.
+**Next question:** Could producing together lower costs compared with many small operations?
 
-For output $Q$, total cost is $C(Q)=F+cQ$.
-
-Average cost is total cost divided by output:
-
-$$AC(Q)=\frac{C(Q)}{Q}=\frac{F}{Q}+c.$$
-
-::: {.notes}
-4 minutes. Begin the 25-minute scale block. Explain F and c in words before the equation, and Q as the plant output. Spreading the same fixed operating cost across more units lowers average cost. Distinguish avoidable fixed cost from an unrecoverable sunk expense. No derivative is required.
+::: {.prompt}
+Why have a large factory at all, rather than produce near every customer?
 :::
 
-## Example 2: spread the fixed cost
+First explore **scale economies**. 
+
+Then bring shipping costs back into the decision.
+
+::: {.notes}
+1 minute; begin the existing 25-minute scale block. Say: “Our first example compared sites for a plant we had already decided to build. It did not explain why production belongs in one large plant. Producing close to each customer could save freight—but would we give up something in production?” Take one brief response. Introduce scale economies as greater efficiency at a larger production scale. The basket story isolates that benefit; Example 2 then compares one plant with two while restoring shipping costs. This minute comes from the basket-story introduction, keeping the total block at 25 minutes.
+:::
+
+## Scale economies
+
+An island has **100 basket makers** and reeds available as needed (elastic suply).
+
+Alone, each worker gathers reeds, prepares them, weaves, and packs.
+
+In a factory, workers can specialize in different tasks.
+
+::: {.prompt}
+Could the same 100 workers produce more baskets by working together? Why?
+:::
+
+::: {.notes}
+1 minute; continue the scale block. Tell the story before displaying a curve. Division of labor can raise output per worker. Hold total workers fixed; reeds are available as needed, not fixed in quantity. Initially set aside transport, demand constraints, and housing. This is an illustrative technology, not measured basket-industry data.
+:::
+
+## Scale economies: read output per worker {.basket-scale}
+
+::: {.r-stack}
 ```{r}
-#| fig-alt: "Average production cost falls from 32 CU at 100 units to 26 CU at 200 units, with fixed cost 1200 and marginal cost 20."
-plot_average_cost()
+#| fig-alt: "Illustrative production curve with point A at 25 workers and 150 baskets. Its ray from the origin has slope 6 baskets per worker."
+plot_baskets(1)
 ```
 
-::: {.notes}
-3 minutes. F=1200 and c=20. Calculate 1200/100+20=32 and 1200/200+20=26. Explain axes and labels. This is production average cost, excluding freight; neighboring firms are not required for this internal scale economy.
+::: {.fragment}
+```{r}
+#| fig-alt: "Point B at 100 workers and 1100 baskets has a steeper origin ray: 11 baskets per worker, compared with 6 at A."
+plot_baskets(2)
+```
+:::
 :::
 
-## Example 2: one plant or two?
-Two markets, **100 units each per period**.
-
-| Input | Assumption |
-|---|---|
-| Fixed operating cost per plant | 1,200 CU/period |
-| Marginal production cost | 20 CU/unit |
-| Shipping to the other market | 4 CU/unit |
-| Local delivery | 0 |
-
-Same revenue, no capacity limits, identical input access.
-
 ::: {.notes}
-4 minutes. Define q as 100 units demanded in each market, so total output is 200. One plant can operate in either identical market. Only the 100 units sent to the other market incur shipping. Ask students to identify what is paid once versus twice.
+3 minutes. Start with A: output per worker is Q/L = 150/25 = 6. Ask students to predict the ray for a larger factory; advance once to reveal B and its ray, 1100/100 = 11. The slope from the origin is average product, not marginal product (the tangent slope). Higher output alone would not establish greater efficiency; the comparison is output per worker. Illustrative Q=L(1+sqrt(L)); students need not use that formula. The reader provides the completed static figure.
 :::
 
-## Example 2: compare total costs
-**Two plants**
+## Scale economies: compare the same workforce
 
-$$C_D=2F+2cq=2(1{,}200)+20(200)=6{,}400.$$
+| Arrangement | Plants | Workers per plant | Baskets per worker | Total baskets |
+|---|---:|---:|---:|---:|
+| Separate workshops | 100 | 1 | `r basket_table$Output_per_worker[1]` | `r fmt(basket_table$Total_output[1])` |
+| One factory | 1 | 100 | `r basket_table$Output_per_worker[2]` | `r fmt(basket_table$Total_output[2])` |
 
-**One plant**
+**Total output = plants × workers per plant × output per worker.**
 
-$$C_C=F+2cq+tq=1{,}200+20(200)+4(100)=5{,}600.$$
+Same 100 workers; greater output per worker raises total output.
+
+::: {.notes}
+2 minutes. Ask students to account for all 100 workers in both rows before calculating output. These illustrative values use the same technology as the figure; the one-worker point has Q/L=2. Holding labor fixed and comparing output differs from our next exercise, which holds the order fixed and compares costs. No claim that extra output sells at an unchanged price is needed for the physical-output comparison.
+:::
+
+## Example 2: from output to cost
+
+Now hold required output fixed and compare **one plant versus two**.
+
+A plant pays fixed operating cost $F$ and $c$ per unit produced:
+
+$$C(Q)=F+cQ,\qquad AC(Q)=F/Q+c.$$
+
+With $F=1{,}200$ and $c=20$, production cost per unit is:
+
+**100 units: 32 CU. 200 units: 26 CU.**
+
+::: {.notes}
+3 minutes. This is a second illustration of internal scale: spreading an avoidable fixed cost. It is not the same production function as the basket story. Define Q, F, and c; calculate 1200/100+20 and 1200/200+20 aloud. No derivative is needed. Distinguish avoidable operating costs from sunk expenses. Average cost excludes freight here.
+:::
+
+## Example 2: two markets, one order
+
+```{r}
+#| fig-height: 3.5
+#| fig-alt: "Two markets demand 100 units each. A centralized plant in A makes 200 units and ships 100 to B. Alternatively each market has its own 100-unit plant."
+plot_market_map()
+```
+
+**Same revenue · identical input access · no capacity limits.**
+
+::: {.notes}
+2 minutes. Both arrangements serve 200 units. One plant can be in either identical market. Ask which units travel between markets. Local freight is normalized to zero. First compare production alone, then add intermarket shipping.
+:::
+
+## Example 2: first compare production
+
+| Production costs (CU/period) | One plant | Two plants |
+|---|---:|---:|
+| Fixed operating costs | 1,200 | 2,400 |
+| Variable costs: 200 × 20 | 4,000 | 4,000 |
+| **Total before freight** | **`r fmt(plant_costs(0)["centralized"])`** | **`r fmt(plant_costs(0)["dispersed"])`** |
 
 ::: {.fragment}
-Save 1,200 in fixed costs; spend 400 more on freight.
-
-**Net saving: `r fmt(base_plants["dispersed"] - base_plants["centralized"])` CU per period.**
+**One plant saves 1,200 CU: one avoidable fixed cost.**
 :::
 
 ::: {.notes}
-5 minutes. Work through each cost term aloud, then let students calculate the saving. Why is freight charged on 100 rather than 200 units? Distinguish centralized production average cost 26 from delivered average cost 28.
+2 minutes. Show the accounting before symbolic cost expressions. Ask students why variable cost is unchanged and which cost is paid twice. For now t=0. Both total output and revenue are fixed.
 :::
 
-## Example 2: derive the shipping threshold
+## Example 2: now add shipping
+
+Shipping costs **4 CU per unit** to the other market.
+
+One plant ships 100 units: **4 × 100 = 400 CU**.
+
+$$C_C=F+2cq+tq=1{,}200+4{,}000+400=5{,}600.$$
+
+$$C_D=2F+2cq=2{,}400+4{,}000=6{,}400.$$
+
+::: {.fragment}
+**Save 1,200 in production; spend 400 on freight. Net saving: 800 CU.**
+:::
+
+::: {.notes}
+3 minutes. Define q as demand per market and t as the rate per shipped unit. Why is freight charged on 100 rather than 200 units? Centralized average production cost is 26, while delivered average cost is 28. The fixed cost saving outweighs freight at this rate.
+:::
+
+## Example 2: when would two plants win?
+
+::: {.prompt}
+What freight bill would exhaust the 1,200 CU production saving?
+:::
+
+::: {.fragment}
 $$C_C-C_D=tq-F.$$
 
 Centralize when $tq<F$; disperse when $tq>F$.
 
-::: {.fragment}
-$$t^*=\frac{F}{q}=\frac{1{,}200}{100}=12\text{ CU per unit shipped}.$$
-
-At $t=16$: one plant costs `r fmt(plant_costs(16)["centralized"])`; two cost `r fmt(plant_costs(16)["dispersed"])`.
+$$t^*=F/q=1{,}200/100=12\text{ CU per unit shipped}.$$
 :::
 
 ::: {.notes}
-4 minutes. Subtract the expressions together, canceling their common production cost. Compare avoidable fixed-cost savings with the freight bill. Explain F/q units as CU per unit shipped; at t=12 both alternatives cost 6400.
-:::
-
-## Example 2: scale versus distance
-```{r}
-#| fig-alt: "One-plant total cost rises with freight rates and crosses the constant two-plant cost of 6400 at t equals 12."
-plot_plants()
-```
-
-::: {.notes}
-2 minutes. Read the lines at t=4 and t=16. Ask which cost changes with shipping rates. Defer doubled demand to the reader or optional backup slide; it is not needed for today’s main conclusion.
+5 minutes. Let students reason from the 1200-CU saving and 100 shipped units before revealing the algebra. At t=12 both alternatives cost 6400. At t=16 one plant costs 6800 and two cost 6400. Check units: compare a freight bill per period with a fixed cost per period, not a rate with a total. Production concentration is favored by strong scale savings relative to freight; dispersion is not itself evidence of underdevelopment. Detailed cost plots remain in the reader.
 :::
 
 ## From a large plant to a city
-**Concentrated production → concentrated jobs → demand for nearby housing and services.**
+1. Scale economies concentrate production and jobs in a large plant.
 
-Commuting costs help connect jobs to residences.
+2. Commuting time and expense encourage workers to live near those jobs.
+
+3. Workers’ spending supports nearby shops and services.
 
 But this example does not determine city size or explain why many independent firms cluster.
 
@@ -405,56 +497,39 @@ But this example does not determine city size or explain why many independent fi
 3 minutes. End the 25-minute scale block. Explain the jobs-to-residences connection without claiming to solve city size. Many independent firms clustering is the next meeting’s question. Housing and spatial equilibrium return in M4.
 :::
 
-## Guided practice and synthesis
-At $\tau=0.8$, production and inbound costs stay fixed.
+## Your turn: should the firm still centralize?
+Keep demand at **100 units per market** and production cost at **20 CU/unit**.
 
-1. Calculate $40+2+0.8(18)$, $43+6+0.8(8)$, and $48+10+0.8(2)$.
-2. Identify the preferred site and explain why.
-3. Check in R, working from the module folder:
+Now fixed cost falls to **600 CU per plant** and shipping costs **8 CU/unit**.
 
-```{r}
-#| echo: true
-#| eval: false
-source("R/examples.R")
-location_costs(tau = 0.8)
-```
+1. Predict: one plant or two?
+2. Calculate each total cost. What saving must cover the freight bill?
+3. Compare your reasoning with a neighbor. Why does the preferred arrangement change?
 
 ::: {.notes}
-15 minutes. Allow 6 minutes for paired calculation and explanation, 5 for supported R access/checks, and 4 for discussion. Expected costs: 56.4, 55.4, 59.6; Junction wins. Students can complete the reasoning by hand if setup is incomplete. Record access problems for follow-up. This is ungraded practice; no new submission or required pre-reading. Do not run the optional sensitivity extension within this allocation.
-:::
+20 minutes: 3 for prediction, 8 for paired hand calculations, 6 for comparing explanations, and 3 for questions and feedback. Students need paper and optionally a calculator; no coding or setup. This applies the scale-versus-shipping comparison to a new scenario.
 
-## End of November 23: explain, then qualify
-Write three sentences:
+One plant costs 600 + 20(200) + 8(100) = 5,400 CU per period; two plants cost 2(600) + 20(200) = 5,200. Two plants win by 200. The avoided fixed cost is 600, while freight is 800; the threshold is F/q=6 CU/unit. Both lower fixed cost and higher shipping favor dispersion. Ask students to identify both changes. The reader supplies the worked answer.
 
-1. Which alternative wins?
-2. What mechanism explains the result?
-3. Which assumption could reverse the conclusion?
-
-::: {.takeaway}
-Cost rankings depend on the counterfactual and what is held fixed.
-:::
-
-Resume with agglomeration on **November 25**.
-
-Use the reader to revisit today’s examples. **No required work on November 24.**
-
-::: {.notes}
-5 minutes. Use the location choice from guided practice for the three-sentence exit response. End the day after 120 working minutes plus the 10-minute break. Introduce the reader as follow-up explanation, not a prerequisite students missed. No required work on the closure day. Resume M1 at the agglomeration slide on November 25.
+End November 23 here after 120 working minutes plus the 10-minute break. No required work on November 24. Resume with agglomeration on November 25. The summary and retrieval questions remain at the module's end.
 :::
 
 ## Agglomeration mechanisms
-**November 25 · first 60 working minutes**
 
 Internal scale: change the plant's own output.
 
 Agglomeration: change nearby activity while holding its own scale fixed.
 
 ::: {.prompt}
-A small firm benefits when neighboring firms attract a testing laboratory. Where is the scale economy, and who benefits?
+**Cheaper inputs:** lower search or service costs.
+
+**More productive inputs:** better matches or learning.
+
+Could a larger labor market provide both?
 :::
 
 ::: {.notes}
-5 minutes. Begin the unchanged 30-minute agglomeration block on November 25. Retrieve the internal-scale idea from class rather than assuming reading. The laboratory has internal scale economies; its customers gain an external location advantage.
+5 minutes. Begin the 30-minute agglomeration block. Retrieve internal scale from class. Brueckner calls the cost channel pecuniary and the productivity channel technological. These are channels, while suppliers, labor, and knowledge are mechanisms that may overlap. A deeper labor market can reduce recruitment spending and improve worker-job matches. Hold the focal firm's own scale fixed. A testing laboratory may have internal scale economies while its customers gain an external location advantage.
 :::
 
 ## Example 3: shared suppliers
@@ -469,7 +544,7 @@ Would the advantage remain if testing could be supplied equally well from anywhe
 :::
 
 ::: {.notes}
-6 minutes. This is a generic hypothetical cluster. Discuss demand aggregation and the specialist's fixed costs. A purchased input can generate a pecuniary agglomeration advantage; not every advantage is an uncompensated spillover.
+6 minutes. This is a generic hypothetical cluster. Discuss demand aggregation and the specialist's fixed costs. More local suppliers may also compete on prices; service availability and competition are distinct possible benefits. A purchased input can generate a pecuniary agglomeration advantage; not every advantage is an uncompensated spillover.
 :::
 
 ## Example 3: labor pooling and matching
@@ -480,11 +555,11 @@ Workers have alternative employers; firms have alternative recruits.
 **Higher wages can coexist with lower labor cost per effective unit of output.**
 
 ::: {.prompt}
-What happens to the insurance benefit if every employer faces the same negative shock?
+If recruitment and interviews move online, which benefit of proximity weakens? Which might remain?
 :::
 
 ::: {.notes}
-7 minutes. Ask students to distinguish wage rates from productivity-adjusted costs. Explain that pooling works best for idiosyncratic fluctuations; correlated industry shocks weaken it. Connect to specialization and diversity later.
+7 minutes. Online recruitment may reduce search and travel costs without eliminating local skill matching, face-to-face coordination, or worker mobility. Treat the net location effect as a question, not an established prediction. Ask students to distinguish wage rates from productivity-adjusted costs. Explain that pooling works best for idiosyncratic fluctuations; correlated industry shocks weaken it. Connect to specialization and diversity later.
 :::
 
 ## Example 3: knowledge spillovers
@@ -576,19 +651,57 @@ Ask what comparison would separate the proposed mechanism from these alternative
 5 minutes. End the 20-minute block. Explain omitted location attributes in plain language. Do not require a complete econometric research design. Interpretation of spatial evidence returns in Module 5.
 :::
 
-## Retrieval and Module 2 bridge
-- Why can the lowest production cost lose?
-- What must follow a pairwise threshold calculation?
-- Internal scale economy or external agglomeration benefit?
-- Which cost could reverse the clustering incentive?
+## Module 1: what explains concentration?
 
-**Next:** how trade, migration, and productivity transmit regional growth.
+**Location:** compare production, inbound, and outbound costs; revenue differences can change the choice.
+
+**Internal scale:** a larger plant can save production costs, but serving distant customers adds freight.
+
+**Agglomeration:** nearby suppliers, workers, and ideas can benefit separate firms.
+
+**Limits:** land costs and congestion can offset those benefits; clustering alone does not prove spillovers.
 
 ::: {.notes}
-10 minutes. Seven minutes retrieval and discussion, three minutes bridge. This completes M1's 60 minutes on November 25, leaving 60 working minutes for M2. Reader provides answers. Reopen fixed-output and fixed-price assumptions as the course moves to regional adjustment.
+2 minutes of the final 10-minute block. This is the module's consolidated summary, replacing the removed midpoint recap. Connect each statement to Examples 1, 2, and 3. Emphasize that the conclusion depends on what changes and what is held fixed.
 :::
 
-## Readings and example files {.references}
+## Retrieval: explain, then qualify
+
+Choose **a plant location, one versus two plants, or a cluster**.
+
+1. Which alternative wins, and through what mechanism?
+2. Which assumption or cost could reverse the conclusion?
+3. What would you check before accepting the explanation?
+
+::: {.notes}
+5 minutes: 1 minute individual recall, 2 minutes paired explanation, 2 minutes discussion. Ask students to respond without consulting the worked answers. These questions consolidate the removed recap with end-of-module retrieval.
+
+For Example 1: Junction wins at baseline because its combined cost is lowest, not because every cost is lowest. Changing outbound freight or site revenue can reverse the ranking. Check all three alternatives after a pairwise threshold calculation and verify the identical-revenue assumption.
+
+For Example 2: the baseline single plant saves 1,200 in fixed cost and adds 400 in freight, saving 800 overall. Higher freight or lower avoidable fixed cost can favor two plants, as in the practice exercise. Check shipped quantity and distinguish production from delivered cost. This is internal scale, not evidence of external agglomeration.
+
+For Example 3: supplier access, matching, or learning can favor clustering, but congestion or occupancy costs can reverse the incentive. Ask for evidence of the specific mechanism and consider selection and common location advantages before claiming causation. The reader supplies fuller explanations.
+:::
+
+## Module 2 bridge: return to the new factory
+
+We can now explain **why the factory might choose a place**.
+
+::: {.prompt}
+If it opens, how might the surrounding region change over time?
+:::
+
+**Purchases and trade · jobs and migration · productivity and investment**
+
+A profitable location for one firm does not establish gains for every resident.
+
+::: {.notes}
+3 minutes. Return to the opening factory slide's second question. Invite two possible changes, then ask what the location examples held fixed that would now need to adjust: output, wages, prices, population, or other firms' decisions. Purchases may support suppliers locally or elsewhere; jobs may attract commuters or migrants; productivity and investment may respond. These are channels to investigate, not guaranteed effects.
+
+Module 2 studies regional growth and connections through trade, migration, and productivity. Separate a firm's location choice from regional employment growth and residents' welfare. This completes Module 1's 60 working minutes on November 25, leaving 60 for Module 2. No additional recap is needed before proceeding.
+:::
+
+## Readings and further explanation {.references}
 **Primary:** Brueckner, Ch. 1, §§1.1–1.5, pp. 1–18 [@brueckner2011].
 
 **Supplemental:** Hoover–Giarratani, Ch. 1, pp. 12–15; §§2.3–2.7, pp. 19–35; §§5.2–5.4, pp. 84–96 [@hoover2020].
@@ -597,7 +710,7 @@ Ask what comparison would separate the proposed mechanism from these alternative
 
 **Vietnam illustration:** World Bank, Ch. 4, Fig. 4.1, p. 79 [@worldbank2020].
 
-Full bibliography and worked answers: **companion reader**. Calculations: `R/examples.R`; inputs: `data/location-costs.csv`.
+Full bibliography, diagrams, and worked answers: **companion reader**.
 
 ::: {.notes}
 Reference slide, no additional teaching time. Page references use printed numbering. Bibliographic details appear in the companion reader. Do not assign all supplemental passages as additional required reading.
@@ -622,23 +735,20 @@ The saving falls to **400**: more units cross between markets, but the avoided f
 Optional backup, no scheduled minutes. Use only after the main lesson if time permits, or as voluntary review. Allow students to predict before checking plant_costs(t=4,q=200). Total output rises to 400. This example also appears in the reader’s Practice B.
 :::
 
-## Optional backup: vary outbound freight
+## Optional extension: why do competing shops cluster?
 
-Predict the preferred site at $\tau=0.5$, $0.8$, $1$, and $1.6$.
+Nearby shops can save customers trips and make comparison easier.
 
-```{r}
-#| echo: true
-#| eval: false
-source("R/examples.R")
-for (tau in c(0.5, 0.8, 1, 1.6)) {
-  costs <- location_costs(tau)
-  print(costs[costs$total == min(costs$total), ])
-}
-```
+They may also compete more intensely on price.
 
-**For the full walkthrough:** reader, “Guided practice and synthesis.”
-
-::: {.notes}
-Optional backup, no scheduled minutes and no required work on November 24. Expected winners: Resource, Junction, Junction, Market. Preserve the baseline outbound column; the total column applies tau. This extension belongs after the main module, not in the 15-minute first-day practice block.
+::: {.prompt}
+Which advantage changes when customers can compare products online?
 :::
 
+A mall owner can account for cross-store benefits through tenant mix and rents.
+
+**Optional explanation:** reader, “Retail clustering”; Brueckner §1.6 (supplemental).
+
+::: {.notes}
+Optional, no scheduled minutes. Distinguish shared trips, comparison shopping, and competition. Some cross-store customer flows benefit neighboring shops; a common owner may account for some of these effects. Online search may reduce one benefit of proximity, but the net effect is not predetermined. This does not expand the required reading beyond §§1.1–1.5.
+:::
