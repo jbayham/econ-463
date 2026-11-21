@@ -14,8 +14,8 @@ On this computer, run `serve463` in a new Bash or Zsh terminal to build and prev
 
 Alternatively, run `bundle exec jekyll serve --port=4463 --open-url`; build without serving with `bundle exec jekyll build`.
 
-The GitHub repository is [jbayham/econ-463](https://github.com/jbayham/econ-463). GitHub Pages uses **Deploy from a branch**, branch **module-1**, and folder **/ (root)**, matching the built-in Jekyll setup used by the other course sites.
+The GitHub repository is [jbayham/econ-463](https://github.com/jbayham/econ-463). GitHub Pages uses **Deploy from a branch**, branch **Course-Website**, and folder **/ (root)**, matching the built-in Jekyll setup used by the other course sites.
 
-The course site is [jbayham.github.io/econ-463](https://jbayham.github.io/econ-463/). Push reviewed site changes to `module-1` to trigger a Pages build. The `_config.yml` values `url`, `baseurl`, and `githubdir` point to this repository. Local planning, reference, development, and output directories are excluded from the site build.
+The course site is [jbayham.github.io/econ-463](https://jbayham.github.io/econ-463/). Push reviewed site changes to `Course-Website` to trigger a Pages build. The `_config.yml` values `url`, `baseurl`, and `githubdir` point to this repository. Local planning, reference, development, and output directories are excluded from the site build.
 
 Keep `LICENSE`, including Steven V. Miller's copyright and MIT permission notice, with the template-derived code. A GitHub fork relationship is not required.
