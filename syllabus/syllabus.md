@@ -18,7 +18,7 @@ format:
 | Term and location | November 23-December 18, 2026; Foreign Trade University, Hanoi, Vietnam. |
 | Instructor        | Jude Bayham                                                              |
 | Email             | [jbayham@colostate.edu](mailto:jbayham@colostate.edu)                    |
-| Exams             | Friday, December 4, and Friday, December 18                              |
+| Exams             | Monday, December 7, and Friday, December 18                              |
 
 ### Sections and Meeting Times
 
@@ -103,7 +103,7 @@ The course has four problem sets and two exams. Problem sets assess the ability 
 
 ### Exams
 
-You will have the full class period for exams. Exam 1 is scheduled for **Friday, December 4** and covers regional foundations, measurement, spatial equilibrium, and hedonics. The **final is Friday, December 18**, emphasizing IO, CGE, and policy interpretation.
+You will have the full class period for exams. Exam 1 is scheduled for **Monday, December 7** and covers regional foundations, measurement, spatial equilibrium, and hedonics. The **final is Friday, December 18**, emphasizing IO, CGE, and policy interpretation.
 
 ## Course Topics by Module
 
