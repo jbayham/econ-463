@@ -1,0 +1,21 @@
+{
+  "method": "Built-in image_gen tool",
+  "prompts": [
+    {
+      "asset": "factory",
+      "prompt": "Use case: scientific-educational. Create a polished classroom illustration for a regional economics slide, wide landscape 3:2 aspect. White background, restrained navy/teal with warm rust accents, clean editorial isometric illustration. Show an unbuilt new factory as a small neutral factory icon in the foreground with three dotted possible routes to three different candidate locations: a raw-material quarry among hills, a busy container port, and a city with workers and customers. The factory's choice is unresolved. No arrows implying a winning site, no numerical claims, no text, no labels, no logo. Simple readable forms for projection, generous white margins."
+    },
+    {
+      "asset": "advantages",
+      "prompt": "Use case: scientific-educational. Wide 3:1 horizontal triptych for an economics lecture, three equal separate small illustrations on pure white background: LEFT raw mineral deposit and quarry with excavator representing access to raw inputs; CENTER natural harbor with container port cranes and cargo ship representing geography plus infrastructure; RIGHT urban neighborhood with shops and customers representing market access. Clean editorial isometric style with navy/teal and muted rust accents, restrained detail, high contrast and generous white space. All three equally sized, aligned, no connecting arrows, no labels or text, no logos, no claims about real places."
+    },
+    {
+      "asset": "plants",
+      "prompt": "Use case: scientific-educational. Wide landscape classroom diagram, pure white background, clean navy/teal editorial isometric factory and shop icons, rust arrows, crisp simple readable forms. Two equal panels with substantial white gutter. LEFT panel title exactly 'One large plant': one large factory at top center with THREE separate arrows pointing outward/downward to THREE small market/shop icons arranged below. RIGHT panel title exactly 'Three local plants': THREE small factories each next to its own market/shop, arranged as three separate pairs. NO arrows connecting different local pairs. Both panels have exactly three equal-size market icons, representing the same three markets. Do not imply different demand, show no quantities or monetary figures. Only text is the two panel titles, large clean sans serif. All icons completely visible, no decorative background."
+    },
+    {
+      "asset": "two",
+      "prompt": "Use case: scientific-educational. Very wide horizontal 4:1 diagram for the lower half of a classroom slide. Pure white background. Two separated identical market zones side by side with large white gap and NO line or arrow between them. Left zone contains one teal small factory and one navy outlined shop; right zone contains one identical factory and one identical shop. Heading above left zone exactly 'Market A'; heading above right zone exactly 'Market B'. Beneath EACH zone exactly 'Produce 100 · Sell 100'. At far left/top if room title 'Two local plants' otherwise omit title. Clean restrained flat/isometric illustration navy teal rust palette, large high-contrast sans serif lettering. Exactly TWO factories total, exactly TWO shops total. No shipping arrows, no trucks, no extra numbers. This shows each plant supplying only its own market with no intermarket freight."
+    }
+  ]
+}

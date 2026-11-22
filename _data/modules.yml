@@ -3,7 +3,11 @@
   dirname: modules/01-location
   desc: "Why cities form, how firms choose locations, and how scale economies, transport costs, and agglomeration shape regional activity. Includes worked location and production examples."
   readings:
-    - title: "Brueckner (2011), Chapter 1, sections 1.1–1.5, pp. 1–18. See the reader for supporting selections."
+    - title: "Required — regional framing and location: Hoover–Giarratani (2020), Chapter 1, pp. 12–15; Chapter 2, sections 2.3–2.7, pp. 19–35."
+    - title: "Required — scale and agglomeration: Brueckner (2011), Chapter 1, sections 1.1–1.5, pp. 1–18, including transport connections."
+    - title: "Supplemental: Hoover–Giarratani, Chapter 5, sections 5.2–5.4, pp. 84–96; Brueckner section 1.6."
+    - title: "Optional advanced: Glaeser–Gottlieb (2009), section 3, pp. 999–1015. See the reader for the optional Vietnam application and full references."
+    - title: "Use the required readings to follow up on class; no advance reading or R setup is expected on Day 1."
   materials:
     - title: "Lecture slides"
       url: slides.html
@@ -11,10 +15,6 @@
       url: reader.html
     - title: "Student reader (PDF)"
       url: reader.pdf
-    - title: "R examples"
-      url: R/examples.R
-    - title: "Location-cost data (CSV)"
-      url: data/location-costs.csv
 
 - title: "Module 2: Regional Growth and Interregional Connections"
   dirname: modules/02-growth

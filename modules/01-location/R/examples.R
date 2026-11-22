@@ -90,11 +90,11 @@ plot_market_map <- function(show_both = FALSE) {
       text(c(4.4, 10), row + 1.4, "Demand: 100 units")
     }
     text(1.2, 4.5, "One plant", font = 2)
-    text(4.4, 3.7, "Plant: makes 200")
+    text(4.4, 3.7, "One plant: makes 200")
     arrows(6.3, 3.7, 8.1, 3.7, length = .12, lwd = 2, col = "#AC501C")
     text(7.2, 4.4, "Ship 100", cex = .95)
     text(1.2, 1.5, "Two plants", font = 2)
-    text(c(4.4, 10), .7, "Plant: makes 100")
+    text(c(4.4, 10), .7, "One plant: makes 100")
     return(invisible(NULL))
   }
   old <- par(mar = c(0, 0, 0, 0)); on.exit(par(old))
@@ -114,4 +114,25 @@ plot_transport_average <- function() {
        xlab = "Distance (miles)", ylab = "Shipping charge (CU/ton)")
   plot(k, 20/k + 2, type = "l", lwd = 3, col = "#AC501C",
        xlab = "Distance (miles)", ylab = "Average charge (CU/ton-mile)")
+}
+
+# Inbound-only counterfactual: outbound freight stays at its baseline level.
+inbound_location_costs <- function(sigma = 1) {
+  stopifnot(length(sigma) == 1, is.finite(sigma), sigma >= 0)
+  transform(location_data, total = production + sigma * inbound + outbound)
+}
+plot_inbound_location <- function() {
+  old <- par(mar = c(4.3, 4.4, 1, 1)); on.exit(par(old))
+  sigma <- seq(0, 2, length.out = 401)
+  costs <- sapply(sigma, function(s) inbound_location_costs(s)$total)
+  matplot(sigma, t(costs), type = "l", lty = 1:3, lwd = 3,
+          col = c("#176B87", "#AC501C", "#555555"),
+          xlab = "Inbound freight multiplier (sigma)",
+          ylab = "Delivered cost (CU per unit)")
+  abline(v = c(.25, 1.75), lty = 3, col = "#999999")
+  abline(v = .5, lty = 2, col = "#888888")
+  points(rep(.5, 3), inbound_location_costs(.5)$total,
+         col = c("#176B87", "#AC501C", "#555555"), pch = 19)
+  legend("topleft", location_data$site, col = c("#176B87", "#AC501C", "#555555"),
+         lty = 1:3, lwd = 3, bty = "n")
 }

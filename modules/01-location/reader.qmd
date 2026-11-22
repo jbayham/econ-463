@@ -60,7 +60,7 @@ By the end of this module, you should be able to explain how natural advantages,
 
 No advance reading is expected on the first day. Use this reader during or after class; no software setup is needed. The sequence matches the lecture deck. Read an example's setup, make a prediction, and then check the calculation. When your prediction is wrong, identify which cost or assumption you overlooked. After each example, ask: **What mechanism explains this result, and which assumption would change your conclusion?** That question is more useful than memorizing the preferred location in one particular table.
 
-The primary reading is @brueckner2011, Chapter 1, §§1.1–1.5, printed pp. 1–18. It develops city formation, scale economies, agglomeration, and transport costs. The numerical examples in this reader are synthetic; they are not estimates for an actual firm or country. All amounts use illustrative **currency units (CU)**. Supplemental readings are identified where they add a distinct perspective. They are not an additional bundle of required chapters.
+Two readings are required: @hoover2020, Chapter 1, printed pp. 12–15, and Chapter 2, §§2.3–2.7, pp. 19–35, for regional framing, resource endowments, and location choice; and @brueckner2011, Chapter 1, §§1.1–1.5, pp. 1–18, for scale economies, agglomeration, and their connections to transport and city formation. Use them as follow-up to class; no advance reading is assumed on Day 1. The numerical examples in this reader are synthetic; they are not estimates for an actual firm or country. All amounts use illustrative **currency units (CU)**. Supplemental readings are identified where they add a distinct perspective. They are not an additional bundle of required chapters.
 
 Before proceeding, check that you can distinguish total cost, marginal cost, and average cost; interpret a straight line's intercept and slope; and solve an equation in one unknown. If one of these steps is unfamiliar, use the worked calculations as a refresher. Paper and, if useful, a calculator are sufficient.
 
@@ -74,7 +74,7 @@ It helps to distinguish natural advantages from advantages that depend on econom
 
 Transport costs also extend beyond the freight invoice. Time in transit can tie up inventory, uncertain delivery can interrupt production, and moving a fragile product can cause damage. A firm with perishable output may value reliability more than a small reduction in the quoted shipping rate. Our first example compresses these complications into transparent monetary entries. That simplification makes the arithmetic manageable while reminding us to ask what each entry represents.
 
-For regional framing, see @hoover2020, Chapter 1, printed pp. 12–15. For location factors and their connection to production, consult Chapter 2, especially §§2.3–2.7, pp. 19–35. These are supplemental references: use the relevant subsection to investigate a mechanism that remains unclear.
+For regional framing, see @hoover2020, Chapter 1, printed pp. 12–15. For location factors and their connection to production, consult Chapter 2, especially §§2.3–2.7, pp. 19–35. These selections are required and provide the foundation for the opening location discussion.
 
 ## Example 1: three possible plant locations
 
@@ -369,13 +369,15 @@ Module 2 moves from location choices to regional growth and interregional connec
 
 # Reading guide and references {.unnumbered}
 
-**Primary:** Brueckner, Chapter 1, §§1.1–1.5, printed pp. 1–18. Read §1.4 alongside Example 1, §§1.2 and 1.5 alongside Example 2, and §1.3 alongside Example 3. Use section and figure labels to navigate electronic editions. Printed page references refer to the print edition; the annotated electronic copy begins Chapter 1 on PDF page 10 and has different page breaks, so a single page-number offset does not apply.
+**Required — scale and agglomeration:** Brueckner, Chapter 1, §§1.1–1.5, printed pp. 1–18. Read §1.4 alongside Example 1, §§1.2 and 1.5 alongside Example 2, and §1.3 alongside Example 3. Use section and figure labels to navigate electronic editions. Printed page references refer to the print edition; the annotated electronic copy begins Chapter 1 on PDF page 10 and has different page breaks, so a single page-number offset does not apply.
 
-**Supplemental:** Hoover and Giarratani, Chapter 1, pp. 12–15, for regional framing; Chapter 2, §§2.3–2.7, pp. 19–35, for location factors; Chapter 5, §§5.2–5.4, pp. 84–96, for external economies. Select the passage relevant to your question. In the local fourth-edition PDF, add 1 to the printed page number.
+**Required — regional framing and location:** Hoover and Giarratani, Chapter 1, pp. 12–15, and Chapter 2, §§2.3–2.7, pp. 19–35. These selections cover regional framing, resource endowments, and location factors. In the local fourth-edition PDF, add 1 to the printed page number.
+
+**Supplemental:** Hoover and Giarratani, Chapter 5, §§5.2–5.4, pp. 84–96, for external economies; Brueckner §1.6 for retail clustering.
 
 **Optional advanced:** Glaeser and Gottlieb, §3, pp. 999–1015, particularly the discussions of transport, labor markets, and ideas. In the local article PDF, subtract 982 from the printed page number. The full article is not required for this module.
 
-**Application:** World Bank, Chapter 4, Figure 4.1, printed p. 79 (PDF page 99), for the Vietnam discussion. Use the linked report in the bibliography; no additional empirical calculation is assigned.
+**Optional application:** World Bank, Chapter 4, Figure 4.1, printed p. 79 (PDF page 99), for the Vietnam discussion. Use the linked report in the bibliography; no additional empirical calculation is assigned.
 
 ```{=latex}
 \begingroup

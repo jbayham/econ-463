@@ -44,3 +44,28 @@ $presentation-h2-font-size: 1.35em;
   max-width: 100%;
   object-fit: contain;
 }
+
+// Stack the centralized and local-production arrangements on one slide.
+.reveal .two-arrangements p { margin: 0.2em 0; }
+.reveal .two-arrangements img { object-fit: contain; }
+
+.reveal img.generated-illustration { display: block; margin: 0.3em auto; object-fit: contain; }
+
+// Display the existing triptych as three separate, evenly spaced panels.
+.reveal .location-advantages .columns { justify-content: space-between; }
+.reveal .location-advantages .advantage-image {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.reveal .location-advantages .advantage-image img {
+  display: block;
+  width: 300%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+}
+.reveal .location-advantages .port-image img { transform: translateX(-33.333333%); }
+.reveal .location-advantages .market-image img { transform: translateX(-66.666667%); }
+.reveal .location-advantages .column p { font-size: 0.88em; text-align: center; }
+.reveal .location-advantages .prompt { margin-top: 0.7em; }

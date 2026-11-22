@@ -1,0 +1,192 @@
+---
+title: "Welcome to Regional Economics"
+subtitle: "Course introduction · ECON 463"
+author: "Jude Bayham"
+format:
+  revealjs:
+    theme: [simple, ../01-location/assets/slides.scss]
+    width: 1280
+    height: 720
+    margin: 0.08
+    center: false
+    slide-number: c/t
+    transition: none
+    navigation-mode: linear
+    controls: true
+    progress: true
+    history: false
+    embed-resources: true
+    code-overflow: wrap
+    incremental: false
+    slide-level: 2
+    toc: false
+    number-sections: false
+---
+
+## A little about me
+
+**Jude Bayham · Colorado State University**
+
+- **Where I am from:** [Add hometown / region and a little about growing up there.]
+- **Outside work:** [Add interests, family, or other personal details you want to share.]
+- **A place that matters to me:** [Add a photo or brief story.]
+
+::: {.notes}
+2 minutes, including welcome and title. Instructor placeholders: choose only details you are comfortable sharing. A hometown photo or map can introduce the importance of place without turning this into a formal economics lesson.
+:::
+
+## My path to Colorado State
+
+- **Where I started:** [Add education or early interests.]
+- **How I found economics:** [Add a turning point, mentor, or experience.]
+- **Becoming a professor at CSU:** [Add the steps that brought you to CSU.]
+
+::: {.notes}
+1 minute. Replace these prompts with a short personal story rather than a full CV. Add dates only if useful. What first made you want to teach or research economics?
+:::
+
+## What I teach and research at CSU
+
+**Teaching:** [Add courses, student audiences, and what you enjoy teaching.]
+
+**Research:** [Add two or three central questions or topics.]
+
+**One example:** [Add a project, image, or finding that students can connect to.]
+
+::: {.notes}
+2 minutes. Explain research in everyday language: the question, why it matters, and how you study it. Briefly connect your teaching or research interests to this course where appropriate. These are placeholders, not verified biographical claims.
+:::
+
+## What this course asks
+
+**Why do firms and people choose particular places?**
+
+Why do some regions grow faster than others?
+
+How can we evaluate a new factory, road, or regional policy?
+
+::: {.takeaway}
+No advance reading is expected today. We will build the ideas together.
+:::
+
+::: {.notes}
+1 minute. Introduce regional economics through these questions. The course overview takes 10 minutes, following 5 minutes of instructor introductions; the syllabus discussion takes 20 minutes. Do not ask students to recall a reading.
+:::
+
+## Motivating example: a new factory
+::: {.columns}
+::: {.column width="48%"}
+A firm plans to open a factory. It needs materials, workers, space, and customers.
+
+::: {.prompt}
+Where should it locate?
+
+What impact will it have on the surrounding area?
+:::
+
+Discuss with a neighbor, then explain why each matters.
+
+I don't expect you to use the proper/formal economic terms.
+
+:::
+::: {.column width="52%"}
+![](assets/factory-location.png){.generated-illustration width="100%" fig-alt="Illustrative factory location choice: dotted routes connect a proposed factory to raw materials, a container port, and a city with workers and customers. No preferred site is indicated."}
+:::
+:::
+
+::: {.notes}
+2 minutes. Allow one minute of paired discussion and one minute to collect ideas. For the location question, group responses into production costs, movement costs, and access to people or firms. Revisit the list in Example 1; do not require a single correct site yet.
+
+For the second question, “What impact will it have on the surrounding area?”, select one or two follow-ups from this menu rather than covering every channel:
+
+- **Jobs and wages:** “Who gets the new jobs—local residents, commuters, or people moving here? What might happen to workers at existing businesses?” Draw out both employment opportunities and competition for workers; factory jobs are not necessarily an equal increase in total local employment.
+- **Local businesses:** “What will the factory buy, and where will its workers spend their wages?” Invite examples such as transport, repairs, food, and shops. Ask whether those purchases stay in the area or go elsewhere; benefits depend on local suppliers and spending.
+- **Housing and land:** “If more people want to live nearby, what happens to housing demand and rents? Who benefits, and who might struggle?” Contrast owners and renters; the response depends partly on whether new housing can be built.
+- **Traffic, services, and environment:** “What else changes when more trucks and workers arrive?” Prompt for congestion, road and water demands, noise, and pollution alongside possible public revenue. These effects depend on the factory's activity and existing capacity.
+- **Nearby places and timing:** “Could one town gain activity that another loses? Would construction effects last after the factory opens?” Separate temporary building work from ongoing operations and local gains from gains for the wider region.
+
+If students simply say “good for the economy,” ask: “Good for whom, through what change, and compared with what would happen without the factory?” If incentives arise, ask what else the public money or land could support. Use everyday language; formal terms and models come later.
+
+Close with: “The factory can create opportunities and costs, and those effects can spread beyond its gates. This course will help us trace those changes and assess who gains and who bears the costs.” Treat student responses as hypotheses to investigate, not effects we have already established.
+
+:::
+
+## Course progression
+
+**Location and growth:** why activity concentrates and regions change.
+
+**Regional measurement:** use data to describe places and industries.
+
+**Land, housing, and amenities:** connect location choices to wages and prices.
+
+**Regional models and policy:** trace a shock and interpret its consequences.
+
+::: {.notes}
+1 minute. Map the four stages to M1–2, M3, M4–5, and M6–8. Explain input-output models as tracking purchases between industries; explain computable general equilibrium models as also allowing prices and behavior to adjust. These are previews, not assumed vocabulary. The final stage asks what results mean for people and places.
+:::
+
+## Learning outcomes: location and growth
+
+By the end of the course, you will be able to:
+
+**LO1.** Explain how transportation costs, scale economies, and natural advantages shape the location of economic activity and the formation of cities.
+
+**LO2.** Analyze how shared suppliers, labor markets, and knowledge spillovers encourage firms to cluster, and how congestion and other costs limit concentration.
+
+**LO3.** Compare explanations for regional growth and decline, and explain how industrial specialization, productivity, market access, trade, and migration transmit economic changes across regions.
+
+::: {.notes}
+1 minutes. Introduce the three outcomes together: explain location, analyze clustering, and compare regional growth. This is a preview; the terminology will be taught during the course. Full wording and stable IDs follow docs/course-prep-step-1-learning-outcomes.md. Introduce course outcomes in this course-introduction deck only; all module decks should omit outcome lists and LO labels.
+:::
+
+## Learning outcomes: places and data
+
+By the end of the course, you will be able to:
+
+**LO4.** Explain how household and firm location choices jointly determine wages, rents, and population across places; estimate hedonic models in R to examine how amenities and other location characteristics are reflected in property values, and assess how sorting and omitted variables limit interpretation.
+
+**LO5.** Define an appropriate regional unit and use data with comparable geographic boundaries, years, and sector definitions in R to measure industrial structure, specialization, and economic change.
+
+::: {.notes}
+1 minute. Explain amenities as valued features of a place, hedonic models as relating property prices to characteristics, and sorting as people selecting different locations. Preview comparable regional data and R work. Do not presume advance reading. Full wording and stable IDs follow docs/course-prep-step-1-learning-outcomes.md. Introduce course outcomes in this course-introduction deck only; all module decks should omit outcome lists and LO labels.
+:::
+
+## Learning outcomes: models and policy
+
+By the end of the course, you will be able to:
+
+**LO6.** Use supplied data and model structures to conduct input-output and computable general equilibrium (CGE) calculations in R and estimate regional economic impacts; compare how trade leakages, resource constraints, price adjustment, and factor mobility shape the models' results.
+
+**LO7.** Apply regional theory and models to a real-world problem using an explicit baseline and counterfactual; distinguish modeled impacts from causal evidence and welfare changes, assess opportunity costs, externalities, and distributional consequences, and communicate findings and limitations.
+
+::: {.notes}
+1 minute. Explain input-output analysis as tracing industry purchases and CGE as allowing prices and behavior to adjust. Define baseline as the starting situation and counterfactual as the comparison scenario. Distinguish an estimated regional effect from evidence of causation or improved well-being. These are course destinations, not concepts students must already know. Full wording and stable IDs follow docs/course-prep-step-1-learning-outcomes.md. Introduce course outcomes in this course-introduction deck only; all module decks should omit outcome lists and LO labels.
+:::
+
+## How we will work
+
+**In class:** explanation, discussion, and guided practice.
+
+**Four problem sets:** calculations and R work, with interpretation.
+
+**Two exams:** reasoning, assumptions, and manageable calculations.
+
+**Materials:** slides guide class; the reader explains examples fully; selected readings provide context.
+
+::: {.notes}
+3 minutes. Explain that timed coding is not planned for exams and that there is no standalone project. No preparation from the reader is expected today. Later reading expectations will be stated explicitly. Do not introduce an LMS, submission format, or grading policy that has not been confirmed.
+:::
+
+## Syllabus walkthrough and questions
+
+**Course:** November 23–December 18; no class November 24.
+
+**Exams:** December 4 and December 18.
+
+**First problem set:** introduced today; checkpoint November 27; final submission November 30.
+
+Discuss expectations, access to materials, support, and questions.
+
+::: {.notes}
+20 minutes reserved for the syllabus walkthrough and questions. Open the current syllabus in syllabus/syllabus.md or its PDF; use its confirmed policies and assessment allocations. The instructor will fill in unresolved policies. TODO: confirm remaining policies on collaboration and AI-use rules; late work; permitted exam materials; submission platform and format; classroom/meeting times; office hours and support arrangements. Use the current syllabus for confirmed grading weights, section times, and rooms; leave unresolved policies for the instructor. Suggested allocation: 5 minutes schedule/assessments, 10 minutes instructor-supplied expectations/logistics, 5 minutes questions. PS 1 now has a draft World Bank location-choice question; confirm its final wording before assigning it.
+:::
