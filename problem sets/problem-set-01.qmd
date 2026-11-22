@@ -6,13 +6,82 @@ subtitle: "Location and Regional Structure"
 <!-- Replace the sample prompts and adjust the minimum writing space as needed,
      for example with \answerspace[2in]. Use {{< pagebreak >}} to start a new page. -->
 
-## Problem 1
+## Problem 1: Where should a new factory locate?
 
-*Add the first problem prompt here.*
+**Required reading:** World Bank, *Vietnam Development Report 2019: Connecting
+Vietnam for Growth and Shared Prosperity*, Chapter 2, **printed pages 45–47**
+(PDF pages 65–67), within “Economic Clusters and Corridor Development.”
+[Read the report](https://documents1.worldbank.org/curated/en/590451578409008253/pdf/Vietnam-Development-Report-2019-Connecting-Vietnam-for-Growth-and-Shared-Prosperity.pdf#page=65).
+Focus on the discussion and Figures 2.13–2.15; you do not need to extract numerical
+values from the figures. Treat the report as historical evidence.
+
+A manufacturer is choosing between two sites in northern Vietnam:
+
+- **Site A:** an established industrial cluster with access to suppliers and a
+  large labor pool, but relatively expensive land and congested roads.
+- **Site B:** a less developed area near an expressway junction, with cheaper
+  land but higher production costs and initially higher freight costs.
+
+The firm will produce and sell **1,000 units per month at the same price at either
+site**. Product quality and plant scale are identical. The table includes all
+relevant monthly costs; ignore relocation and construction costs. These numbers
+are **illustrative assumptions, not estimates from the World Bank report**.
+
+| Monthly cost (CU) | Site A | Site B |
+|:-----------------|-------:|-------:|
+| Production, excluding land and freight | 40,000 | 44,000 |
+| Land and premises | 8,000 | 4,000 |
+| Inbound freight | 2,000 | 4,000 |
+| Outbound freight | 6,000 | 7,000 |
+
+CU denotes a common, hypothetical currency unit.
+
+**(a)** Calculate total monthly cost at each site and choose the preferred
+location. Why is minimizing cost appropriate for this firm's profit-maximization
+problem?
 
 ```{=latex}
-\answerspace
+\answerspace[0.7in]
 ```
+
+**(b)** Explain two distinct agglomeration mechanisms that could account for
+Site A's lower production cost. Connect each to the reading, citing a page.
+Explain why these are external economies rather than internal economies of scale.
+
+```{=latex}
+\answerspace[1in]
+```
+
+{{< pagebreak >}}
+
+### Problem 1 (continued)
+
+**(c)** A new road connection reduces **both inbound and outbound freight costs
+at Site B by the same proportion, $r$**, where $0 \leq r \leq 1$. All other costs,
+including Site A's costs, remain unchanged.
+
+- Recalculate Site B's total monthly cost for a 40% reduction ($r=0.40$).
+  Does the preferred location change?
+- Find the percentage reduction at which the firm is indifferent between the
+  sites. Show your calculation.
+- Use the discussion on page 47 to explain how Site B could become more
+  attractive without moving physically closer to a port or city.
+
+```{=latex}
+\answerspace[1.7in]
+```
+
+**(d)** A policymaker concludes: “Industrial parks cluster near transport
+corridors, so building a new expressway will necessarily create a productive
+industrial cluster.” Evaluate this claim. Identify one reason
+the observed clustering does not establish causation, and one condition beyond
+the road itself that would help a new cluster succeed. Refer to pages 45–47.
+
+```{=latex}
+\answerspace[1.5in]
+```
+
+{{< pagebreak >}}
 
 ## Problem 2
 

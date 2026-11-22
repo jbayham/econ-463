@@ -21,40 +21,63 @@ format:
     slide-level: 2
     toc: false
     number-sections: false
+    css: assets/intro-slides.css
 ---
 
-## A little about me
+## A little about me {.about-me}
 
 **Jude Bayham · Colorado State University**
 
-- **Where I am from:** [Add hometown / region and a little about growing up there.]
-- **Outside work:** [Add interests, family, or other personal details you want to share.]
-- **A place that matters to me:** [Add a photo or brief story.]
-
-::: {.notes}
-2 minutes, including welcome and title. Instructor placeholders: choose only details you are comfortable sharing. A hometown photo or map can introduce the importance of place without turning this into a formal economics lesson.
-:::
+```{=html}
+<div class="photo-collage">
+  <img class="mountain-bike" src="assets/collage-mountain-bike.webp" alt="Jude standing with a bicycle on a rocky mountain trail">
+  <img class="road-bike" src="assets/collage-road-bike.webp" alt="Jude wearing a cycling helmet on a mountain road">
+  <img class="family-outing" src="assets/collage-family-outing.webp" alt="Jude and his family seated together at an outdoor event">
+  <div class="family-portrait">
+    <img src="assets/collage-family-portrait.webp" alt="Jude and his family smiling beneath flowering trees">
+  </div>
+</div>
+```
 
 ## My path to Colorado State
 
-- **Where I started:** [Add education or early interests.]
-- **How I found economics:** [Add a turning point, mentor, or experience.]
-- **Becoming a professor at CSU:** [Add the steps that brought you to CSU.]
+![](assets/path-to-colorado-state.svg){.career-map fig-alt="A dotted route runs from Chico, California (Chico State), through Moscow, Idaho (University of Idaho), and Pullman, Washington (Washington State University), to New Haven, Connecticut (Yale University). It returns to Chico before continuing to Fort Collins, Colorado (Colorado State University). The Pullman and Moscow logos sit on opposite sides of the route."}
 
 ::: {.notes}
-1 minute. Replace these prompts with a short personal story rather than a full CV. Add dates only if useful. What first made you want to teach or research economics?
+I returned to Chico State to teach after my postdoc at Yale, then moved to Colorado State.
+
+Sources: [CV](https://webdoc.agsci.colostate.edu/cv/jbayham.pdf), [U.S. Census Bureau state boundaries via U.S. Atlas](https://github.com/topojson/us-atlas), and official marks from [Chico State](https://www.csuchico.edu/about/brand/visual-identity/index.shtml), [University of Idaho Athletics](https://govandals.com/), [Washington State University Athletics](https://wsucougars.com/), [Yale](https://www.yale.edu/), and [Colorado State](https://brand.colostate.edu/symbol/).
 :::
 
 ## What I teach and research at CSU
 
-**Teaching:** [Add courses, student audiences, and what you enjoy teaching.]
+**Teaching:** Data driven decision making, economics of outdoor recreation, graduate optimization for economists
 
-**Research:** [Add two or three central questions or topics.]
+**Research**
 
-**One example:** [Add a project, image, or finding that students can connect to.]
+```{=html}
+<div class="research-panels">
+  <figure>
+    <img src="assets/research-wildfire.webp" alt="Flames and smoke rise from a forested slope during the Hayes Fire in Olympic National Park">
+    <figcaption>Wildfire management</figcaption>
+  </figure>
+  <figure>
+    <img src="assets/research-air-quality.webp" alt="An outdoor particulate matter sensor mounted on a pole in Yosemite National Park">
+    <figcaption>Air quality</figcaption>
+  </figure>
+  <figure>
+    <img class="research-map" src="assets/research-recreation.webp" alt="Map of U.S. public lands where researchers used mobile device data to help estimate recreational visits">
+    <figcaption>Estimating visits with mobile data</figcaption>
+  </figure>
+</div>
+```
 
 ::: {.notes}
-2 minutes. Explain research in everyday language: the question, why it matters, and how you study it. Briefly connect your teaching or research interests to this course where appropriate. These are placeholders, not verified biographical claims.
+2 minutes. Describe how wildfire management affects people and places, how air pollution affects health, and how aggregated mobile device locations can help measure visits to recreation sites.
+
+- Hayes Fire in Olympic National Park. [Courtesy U.S. National Parks](https://npgallery.nps.gov/AssetDetail/32275dd6-5c88-4fa0-b4d3-54b769754792).
+- PurpleAir sensor in Yosemite National Park. [National Park Service](https://www.nps.gov/subjects/air/howwemeasure-smoke.htm).
+- U.S. public lands visitation study map by Merrill and colleagues. [University of Washington](https://natureandhealth.uw.edu/publications/a-national-model-for-estimating-us-public-land-visitation/).
 :::
 
 ## What this course asks
@@ -181,9 +204,9 @@ By the end of the course, you will be able to:
 
 **Course:** November 23–December 18; no class November 24.
 
-**Exams:** December 4 and December 18.
+**Exams:** December 7 and December 18.
 
-**First problem set:** introduced today; checkpoint November 27; final submission November 30.
+**First problem set:** introduced today and due November 30.
 
 Discuss expectations, access to materials, support, and questions.
 
