@@ -44,7 +44,9 @@ knitr::opts_chunk$set(fig.width = 9, fig.height = 4.3, fig.align = "center")
 
 ## Regional and urban economics {.scrollable .fields-comparison}
 
-**This course blends both perspectives.**
+**This course blends both perspectives.**[^location-scope]
+
+[^location-scope]: Here we focus on firms choosing among cities or regions. Detailed strategic positioning relative to competitors within a city is a topic in industrial organization, with overlap in urban economics.
 
 | | Regional economics | Urban economics |
 |:--|:--|:--|
@@ -58,7 +60,11 @@ Shared ground: location choices, agglomeration, and mobility. A metropolitan are
 :::
 
 ::: {.notes}
-5 minutes. Start the 10-minute foundation block. Define a region as an area relevant to the question, and a city as a concentration of people and activity. Regional economics often emphasizes relationships between places; urban economics often emphasizes concentration and organization within cities. These are overlapping emphases, not rigid boundaries or a rural-versus-urban split. Explain agglomeration as the benefits and costs of locating near other firms and people. For a new factory, contrast choosing Hanoi rather than another region with choosing a site within Hanoi and tracing effects on rents and commuting. Scroll if needed to show the policy row and shared ground. Choose the geographic unit to fit the question; formal boundary measurement waits until Module 3.
+5 minutes. Start the 10-minute foundation block.
+
+**Say aloud:** “Our firm-location examples mainly ask which city or region a firm should choose. We are not solving the detailed strategic question of exactly where to locate relative to competitors within a city; that is a spatial-competition topic in industrial organization. The fields overlap: urban economics also studies locations within cities, including land costs and commuting.”
+
+ Define a region as an area relevant to the question, and a city as a concentration of people and activity. Regional economics often emphasizes relationships between places; urban economics often emphasizes concentration and organization within cities. These are overlapping emphases, not rigid boundaries or a rural-versus-urban split. Explain agglomeration as the benefits and costs of locating near other firms and people. For a new factory, contrast choosing Hanoi rather than another region with choosing a site within Hanoi and tracing effects on rents and commuting. Scroll if needed to show the policy row and shared ground. Choose the geographic unit to fit the question; formal boundary measurement waits until Module 3.
 :::
 
 ## Natural advantages and firm location {.location-advantages}
