@@ -1,0 +1,23 @@
+---
+title: "Problem Set 1"
+subtitle: "Location and Regional Structure"
+---
+
+<!-- Replace the sample prompts and adjust the minimum writing space as needed,
+     for example with \answerspace[2in]. Use {{< pagebreak >}} to start a new page. -->
+
+## Problem 1
+
+*Add the first problem prompt here.*
+
+```{=latex}
+\answerspace
+```
+
+## Problem 2
+
+*Add the second problem prompt here.*
+
+```{=latex}
+\answerspace
+```
