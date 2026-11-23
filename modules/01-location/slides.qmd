@@ -227,7 +227,7 @@ Check the third site: $d_M=58+2(0.7)=59.4$.
 5 minutes. Demonstrate the algebra one step at a time: subtract 8 tau and 42, then divide 7 by 10. Students explain what 0.7 means and check Market. Tau is dimensionless and delivered cost is CU/unit. No reading-based derivation is assumed.
 :::
 
-## Min cost location as a function of outbound freight cost, $\tau$
+## Min cost location as a function of outbound cost multiplier, $\tau$
 ```{r}
 #| fig-alt: "Three delivered-cost lines. The least-cost site switches from Resource to Junction at tau 0.7 and from Junction to Market at tau 1.5."
 plot_location()
@@ -246,7 +246,7 @@ Why can cheaper transport make production farther from customers more attractive
 
 ## Extension
 :::{.prompt}
-Suppose an improvement in input transport reduces inbound costs by 50% at every site. Determine the new preferred site?
+Suppose an improvement in input transport reduces inbound costs by 50% at every site. Which site is now preferred?
 
 At what inbound cost multiplier would the preferred site switch?
 :::
@@ -310,7 +310,7 @@ Then bring shipping costs back into the decision.
 
 ## Scale economies
 
-An island has **100 basket makers** and reeds available as needed (elastic suply).
+An island has **100 basket makers** and reeds available as needed (elastic supply).
 
 Alone, each worker gathers reeds, prepares them, weaves, and packs.
 
@@ -546,7 +546,7 @@ Connect to specialization and diversity later.
 Firm A develops a method that reduces defects. **How might Firm B learn?**
 
 - **Paid advice**:  B pays A to teach the method: a purchased service.
--  **Informal exchange**:  A conversation gives B a useful idea; A is not paid for B's gain. |
+-  **Informal exchange**:  A conversation gives B a useful idea; A is not paid for B's gain. 
 - Some combination of the two
 
 **Proximity → opportunities to exchange ideas → higher productivity.**[^knowledge]
