@@ -30,8 +30,6 @@ knitr::opts_chunk$set(fig.width = 9, fig.height = 4.3, fig.align = "center")
 
 ## From location to regional change
 
-**November 25 · second 60 working minutes**
-
 Module 1 held output and revenue fixed.
 
 Now customers change orders, firms invest, and people move.
@@ -41,7 +39,7 @@ A region attracts a large factory. What else must happen for residents to become
 :::
 
 ::: {.notes}
-3 minutes, including title. Begin after M1's 60 working minutes and the day's 10-minute break. Take two responses: jobs/income and living costs/environment. No advance reading is assumed. The module has 60 minutes today and 60 tomorrow, not two full meetings. The central question is why regions grow differently and how changes spread between them.
+3 minutes, including title. Take two responses: jobs/income and living costs/environment. No advance reading is assumed. The central question is why regions grow differently and how changes spread between them. Timings are suggestions; pause and resume wherever class ends.
 :::
 
 ## Growth of what?
@@ -153,20 +151,103 @@ Which explanation would you investigate if output rose but employment fell?
 4 minutes. Multiple answers are possible: labor-saving productivity with limited demand growth, composition change, or changes in hours. Ask for an observation that distinguishes explanations. Demand and supply are complementary parts of an account, not competing slogans. This completes the first 28 minutes.
 :::
 
-## An export crosses the regional boundary
+## The economic base: where outside demand enters
 
-Customers elsewhere in the country can buy a region's exports.
+Choose a **region** and draw its boundary.
 
-Visitors can buy exported services.
+In the **export-base model**, the economic base consists of activities that sell goods or services to customers outside that region.
 
-Local suppliers and services help make export production possible.
+Those sales bring in purchasing power that can support other local activity.
 
 ::: {.prompt}
-Is a restaurant serving visitors economically different from one serving only local residents?
+What does River produce that people elsewhere would pay for?
 :::
 
 ::: {.notes}
-4 minutes. Introduce economic-base reasoning. Distinguish customer location and outside purchasing power, without claiming local services are unimportant. A regional boundary need not be a national border. Full regional accounts and the classification of observed industries belong in M3 and M6.
+3 minutes. Introduce the economic base before any multiplier calculation. River might sell crops, processed food, or services to outside customers. The export-base model treats outside demand as an initiating force and asks how local activity responds. This is a particular demand-side explanation, not the definition of every source of regional prosperity. Hoover–Giarratani §11.3.1, printed pp. 224–225.
+:::
+
+## Basic and nonbasic activity
+
+| Term | Market served | Example in River |
+|---|---|---|
+| **Basic (base)** | Customers outside the region | Rice sold to Harbor |
+| **Nonbasic (local-serving)** | Customers within the region | Haircuts for River residents |
+
+**Basic sector:** the collection of basic activities in the region.
+
+**Nonbasic does not mean unnecessary or low value.**
+
+::: {.notes}
+3 minutes. Base and basic are synonyms here; non-base is also called nonbasic. Use the narrow export-sales classification first. The distinction concerns the market served, not how large, advanced, essential, or profitable an industry is. In the simplest model, basic activity responds to outside demand and nonbasic activity responds to local demand. That behavioral assumption is not established merely by giving an activity a label. Local suppliers tied to exports require the additional distinction introduced shortly.
+:::
+
+## Services can be part of the base
+
+An **export** crosses the regional boundary, not necessarily a national border.
+
+The customer can come to the product: visitors buy local lodging and meals.
+
+::: {.prompt}
+A hotel serves outside visitors. A software firm serves only River businesses. Which sales are basic under the export-sales definition?
+:::
+
+::: {.fragment}
+The **hotel's visitor sales** are basic. The software firm's local sales are nonbasic under that definition.
+:::
+
+::: {.notes}
+3 minutes. Give students time to classify the customers before revealing the answer. Manufacturing is not automatically basic and services are not automatically nonbasic. What matters is the source of demand, not whether a physical object leaves the region. The software firm could still support exporters indirectly; distinguish its immediate customers from their customers. Hoover–Giarratani p. 225, including footnote 6.
+:::
+
+## Classify sales, not just industry labels
+
+A River restaurant sells **100 CU** of meals:
+
+- **80 CU** to visitors from outside River.
+- **20 CU** to River residents.
+
+::: {.prompt}
+Is the entire restaurant basic or nonbasic?
+:::
+
+::: {.fragment}
+Its sales are **80% basic and 20% nonbasic** under the export-sales definition. One establishment can do both.
+:::
+
+::: {.notes}
+3 minutes. These are synthetic sales shares, not employment or value-added shares. Do not infer that 80% of jobs are basic without an additional allocation assumption. If the visitors all come from Harbor, those purchases are exports for River but internal sales for a combined River–Harbor region. Boundary choice precedes classification. The reading cautions against classifying whole industries without investigating their markets; M3 introduces location quotients as imperfect evidence, not direct observation of exports.
+:::
+
+## Local services support the base
+
+A River repair shop serves a local processor that exports rice.
+
+The repair sale is local, but its demand is **indirectly tied to exports**.
+
+Some base studies include these indirect export activities in the base. State the classification rule.
+
+**Local services and imported inputs can make export production possible.**
+
+::: {.notes}
+3 minutes. Connect to Hoover–Giarratani's can manufacturers serving local exporting packing plants, p. 226. A direct-sales definition and a definition that traces ultimate demand need not classify the repair shop the same way. Do not count its response once as part of an initial base shock and again as a separate spillover. The reading broadens the discussion to interregionally traded activities and import substitution on pp. 226–227. More local purchases are not automatically better: imports can lower costs, and skills, technology, and local services can initiate growth too. Nonbasic is not a judgment of economic importance.
+:::
+
+## From the base to local feedback
+
+1. Outside customers place more orders with River's processor.
+2. The processor purchases inputs and pays workers.
+3. Local suppliers and households make further purchases.
+4. Some spending leaves River or does not generate another local round.
+
+::: {.prompt}
+How much local income follows from the initial increase?
+:::
+
+**Read more:** reader, “The economic base: basic and nonbasic activity”; Hoover–Giarratani §11.3.1, pp. 224–227.
+
+::: {.notes}
+3 minutes. Explain the mechanism in words before introducing the equation. A multiplier summarizes the total response to a specified initial change. Sales, income, and jobs require different multipliers. The next example starts with 100 CU of direct local income already net of imported intermediate inputs, not the restaurant's 100 CU of sales. Its feedback coefficient summarizes local income generation; it is not the restaurant's basic sales share. The model holds prices and capacity assumptions fixed. Exports are one possible initiating change, not a complete growth theory.
 :::
 
 ## Example 2: outside demand adds local income
@@ -252,7 +333,7 @@ What changes if factories already operate at capacity?
 4 minutes. Possible responses: higher prices, imports, delivery delays, displaced customers, later investment. The formula ignores these adjustments. A decline of 100 gives -250 only under unchanged symmetric assumptions. Avoid teaching the scalar calculation as the complete theory of long-run regional development. IO details wait until M6.
 :::
 
-## November 25: check the mechanism
+## Check the mechanism
 
 For an **80-CU** direct addition and $b=0.50$:
 
@@ -264,26 +345,8 @@ For an **80-CU** direct addition and $b=0.50$:
 **160 CU**, conditional on fixed feedback and available capacity.
 :::
 
-Next: trade, migration, and the responses of connected regions.
-
 ::: {.notes}
-8 minutes. Three minutes independent response, two minutes comparing answers with a neighbor, three minutes debrief. Welfare answer may mention imports' benefits, environmental effects, distribution, or opportunity cost. This completes M2's 60 minutes on Nov 25. No additional homework submission. Reader Practice B develops the same exercise in R; continue the course's existing PS 1 schedule.
-:::
-
-## November 26: reconnect the regions
-
-**First 60 working minutes today**
-
-Yesterday: outside demand can raise local income.
-
-Today: purchases, people, capital, and knowledge cross boundaries.
-
-::: {.prompt}
-If River imports a machine from Harbor, is the payment lost to the whole economy?
-:::
-
-::: {.notes}
-3 minutes. Retrieve the leakage idea: spending leaves River's feedback but becomes revenue elsewhere and buys a useful input. Do not add a new direct shock when tracing an already-counted transaction. M2 ends after 60 minutes; take the 10-minute break then begin M3's 60 minutes. No double break.
+8 minutes. Three minutes independent response, two minutes comparing answers with a neighbor, three minutes debrief. Welfare answer may mention imports' benefits, environmental effects, distribution, or opportunity cost. No additional homework submission. Reader Practice B develops the same exercise in R; continue the course's existing PS 1 schedule.
 :::
 
 ## Example 3: improve a transport corridor
@@ -299,7 +362,7 @@ Who gains access to new customers? Who faces new competition?
 :::
 
 ::: {.notes}
-4 minutes. This is a hypothetical setting, not an estimated Vietnamese project. It is separate from Example 1's observed period change. The same connection works in both directions. Hold other initiating changes fixed for the counterfactual, while allowing responses to the corridor. Ask for River farmers and retailers and Harbor producers.
+4 minutes. This is a hypothetical setting, not an estimated Vietnamese project. It is separate from Example 1's observed period change. The same connection works in both directions. Hold other initiating changes fixed for the counterfactual, while allowing responses to the corridor. Ask for River farmers and retailers and Harbor producers. If useful, recall the leakage idea: a machine purchase from Harbor leaves River's income feedback but becomes revenue elsewhere and buys a useful input. Do not count the same transaction as a new direct shock.
 :::
 
 ## Access changes costs and revenue
@@ -400,7 +463,7 @@ Name a group that could lose even if both regions' total production rises.
 **Read more:** reader, “Market access and trade” and “Migration, capital, and rural–urban connections”; Hoover–Giarratani §11.5.
 
 ::: {.notes}
-3 minutes. Examples: a retailer facing new competition, a renter facing higher costs, households exposed to pollution. Some costs are transfers and some use resources; leave full welfare accounting for M8. This ends the first 30 minutes today. The next block returns to comparing regional paths.
+3 minutes. Examples: a retailer facing new competition, a renter facing higher costs, households exposed to pollution. Some costs are transfers and some use resources; leave full welfare accounting for M8. The next block returns to comparing regional paths.
 :::
 
 ## Example 1 revisited: are the regions converging?
@@ -493,22 +556,16 @@ For the corridor, write:
 **Next:** choose boundaries and comparable data, then measure regional structure in R.
 
 ::: {.notes}
-6 minutes. Three minutes writing, two sharing, one transition. Sample: lower freight raises farm sales; capacity or competition limits gains; inspect freight and destinations while considering a counterfactual. This completes 60 working minutes today and 120 for M2. Take the 10-minute break before M3. PS 1 checkpoint Nov 27 and final Nov 30 remain unchanged. No extra problem set is created.
-:::
-
-## Break · 10 minutes
-
-Continue with **Module 3: Defining and Measuring a Regional Economy**.
-
-::: {.notes}
-10-minute break, excluded from M2's working-time budget. The remaining 60 working minutes on Nov 26 belong to M3. The following reference and optional slides are not additional scheduled M2 teaching.
+6 minutes. Three minutes writing, two sharing, one transition. Sample: lower freight raises farm sales; capacity or competition limits gains; inspect freight and destinations while considering a counterfactual. PS 1 checkpoint Nov 27 and final Nov 30 remain unchanged. No extra problem set is created.
 :::
 
 ## Readings and example files {.references}
 
 **Selected primary:** Hoover–Giarratani, §11.2, pp. 223–224; §11.5, pp. 234–236; §11.6, pp. 237–239 [@hoover2020].
 
-**Supporting:** opening of §11.3.1, pp. 224–225; §11.4, pp. 233–234; §10.3, pp. 197–208.
+**Economic-base vocabulary:** §11.3.1, pp. 224–227.
+
+**Supporting:** §11.4, pp. 233–234; §10.3, pp. 197–208.
 
 **Optional:** §11.7, pp. 239–242, on cities and regional development.
 

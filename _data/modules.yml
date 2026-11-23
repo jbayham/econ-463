@@ -9,6 +9,8 @@
     - title: "Optional advanced: Glaeser–Gottlieb (2009), section 3, pp. 999–1015. See the reader for the optional Vietnam application and full references."
     - title: "Use the required readings to follow up on class; no advance reading or R setup is expected on Day 1."
   materials:
+    - title: "Course introduction slides"
+      url: ../00-course-introduction/slides.html
     - title: "Lecture slides"
       url: slides.html
     - title: "Student reader (web)"

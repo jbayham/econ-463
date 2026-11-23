@@ -8,7 +8,7 @@ What can a house-price difference tell us about an amenity? Students estimate an
 
 - **Dec 1.** Start with the M4 capitalization prediction. Compare prices across noise exposure levels, then estimate a housing-price equation with structural characteristics. Interpret the noise coefficient in the units of the fitted model.
 - **Dec 2.** Compare two specifications on the same observations. Trace how access to jobs or neighborhood characteristics could affect both prices and measured exposure. Discuss what additional evidence could support a causal or welfare claim.
-- **Dec 3.** Consolidate the diagram and regression evidence, then reserve about one hour for Exam 1 review across M1–M5.
+- **Dec 3.** Consolidate the diagram and regression evidence, and work through PS 2 questions. Use the full Dec 4 session for Exam 1 review across M1–M5.
 
 ## Readings and teaching materials
 
@@ -16,7 +16,7 @@ Brueckner, §6.2, pp. 116–119, introduces capitalization. Use the airport-nois
 
 ## Assessment connection
 
-PS 2 ends Dec 2 with an R estimate and interpretation. The Dec 4 exam can supply regression output and ask which claim the evidence supports.
+PS 2 is due Dec 7 with an R estimate and interpretation. The Dec 7 exam can supply regression output and ask which claim the evidence supports.
 
 ## Decision for review
 

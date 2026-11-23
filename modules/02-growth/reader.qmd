@@ -33,6 +33,9 @@ format:
     include-in-header:
       text: |
         \raggedbottom
+        \widowpenalty=10000
+        \clubpenalty=10000
+        \brokenpenalty=10000
         \usepackage{float}
         \floatplacement{table}{H}
 ---
@@ -130,11 +133,37 @@ Nor does a sector productivity gap prove that moving any particular worker creat
 
 A **demand explanation** begins with buyers wanting more of a region's output: a new export order, increased tourism, or higher spending by an outside customer. It then traces purchases, production, and incomes. A **supply explanation** begins with a change in productive capacity or cost: better skills, new equipment, improved logistics, or access to an input. It then asks whether firms can sell additional output and how prices and employment respond. A complete explanation often uses both.
 
-Economic-base reasoning emphasizes sales outside the region as a source of purchasing power. “Export” here means a sale across the chosen regional boundary, including sales elsewhere within the same country. A service sold to visitors can therefore be an export. A locally consumed service is not economically unimportant because it is classified as nonbasic. Transport, repair, health, and education can help make exporting possible and improve residents' lives.
+## The economic base: basic and nonbasic activity
+
+Begin by choosing a region and drawing its boundary. In the **export-base model**, the **economic base** consists of activities that sell goods or services to customers outside that region. These sales bring in purchasing power. The model then asks how that outside demand supports production, employment, and income within the region. This is a particular explanation of regional growth, not a claim that all improvements must originate outside the region.
+
+**Basic activity**, also called **base activity**, serves outside customers under this export-sales definition. River's rice sales to Harbor are basic activity for River. The **basic sector** is the collection of those activities. A **base industry** is an industry with activity serving those outside markets; the label need not describe every sale by every establishment in that industry.
+
+**Nonbasic activity**, also called **non-base** or **local-serving activity**, serves customers within the region under the same definition. Haircuts sold to River residents provide a straightforward example. In the simplest export-base model, basic activity responds to outside demand and nonbasic activity responds to local demand. This is an assumption about how demand changes, not something proved by classifying a sale. **Nonbasic does not mean unnecessary, unproductive, or low value.** Schools, repair services, and health care can improve residents' lives and support the region's productive capacity.
+
+### The market served matters more than the industry name
+
+An **export** crosses the chosen regional boundary, not necessarily a national border. River's sales to Harbor count even when both places belong to the same country. Nor must a physical product leave River. A visitor can come to River and purchase a meal, a hotel stay, or another service. Those visitor sales are exports for River. Manufacturing is therefore not automatically basic, and services are not automatically nonbasic.
+
+For practice, compare a River hotel serving outside visitors with a software firm serving only River businesses. Under the export-sales definition, the hotel's visitor sales are basic and the software firm's local sales are nonbasic. The distinction depends on customers, not the sophistication of the product. The software firm may still support exporting clients indirectly, a connection considered below.
+
+One establishment can serve both markets. Suppose a River restaurant sells 100 CU of meals, of which 80 CU go to outside visitors and 20 CU to River residents. Under this definition, 80% of its sales are basic and 20% are nonbasic. These are **sales shares**, not necessarily employment or value-added shares. Allocating workers or income using the same percentages would require additional assumptions. If all visitors came from Harbor, their purchases would be exports for River but internal sales for a combined River–Harbor region.
+
+Hoover and Giarratani warn against assigning whole industries to the export or nonexport category without investigating their actual markets [@hoover2020, p. 225]. In practice, customer and shipment information can help. Location quotients provide an indirect approach, but they do not directly observe exports; Module 3 develops their interpretation and limitations.
+
+### Local suppliers and the limits of the classification
+
+Suppose a River repair shop serves a local rice processor that exports its product. The repair shop's immediate customer is local, but the demand for repairs is **indirectly tied to exports**. Some economic-base studies include such indirect export activities in the base. A classification based on direct sales and one based on the ultimate source of demand can therefore produce different labels. State the rule before interpreting a base-industry measure. The reading illustrates this issue with local suppliers to exporting producers [@hoover2020, p. 226].
+
+The reading also qualifies the export-base story: import substitution and interregionally traded activities complicate a simple exporter/local-service split, and exports alone cannot explain all growth [@hoover2020, pp. 226–227]. Local services can make exporting possible, while imported equipment and inputs can improve productivity. Replacing an import with a local product can retain spending, but that does not establish a welfare gain if the local product costs more or performs worse. Treat the vocabulary as a way to organize a demand mechanism, not as a ranking of which industries deserve support.
+
+## From the base to local feedback
+
+Now trace a change rather than just classify activity. Outside buyers place more orders with River's processor. The processor purchases inputs and pays workers; local suppliers and households then make further purchases. Some expenditure goes outside River or does not generate another local round. A **multiplier** summarizes the total response to a specified initial change under stated assumptions. Do not count a supplier response both as part of the initial base shock and again as a separate subsequent effect.
 
 Local purchases connect activities, but the relevant outcome must be consistent. A factory's gross sales are not identical to local income because some payments buy imported inputs. Our next example starts with an **exogenous addition to regional income associated with external demand**, already net of imported intermediate inputs. This allows transparent income accounting without pretending that every unit of sales becomes regional income.
 
-For the underlying distinction between demand, supply, and feedback, see @hoover2020, §11.2, pp. 223–224; the economic-base discussion begins in §11.3.1, pp. 224–225. The full input-output machinery later in §11.3 belongs in Module 6.
+The restaurant's 100 CU of sales and its 80% basic share are not the inputs to the income calculation below. Sales, income, and employment are different quantities, and the basic sales share is not the local-income feedback coefficient. For the distinction between demand and supply, see @hoover2020, §11.2, pp. 223–224. For economic-base vocabulary and its qualifications, read §11.3.1, pp. 224–227. The input-output machinery in §11.3.2 belongs in Module 6.
 
 ## Example 2: an export-demand shock
 
@@ -309,7 +338,7 @@ The following page numbers use the local fourth-edition web version of Hoover an
 | Primary: growth forces | §11.2 | 223–224 | 224–225 |
 | Primary: trade and mobility | §11.5 | 234–236 | 235–237 |
 | Primary: convergence | §11.6 | 237–239 | 238–240 |
-| Supporting: economic-base idea | Opening of §11.3.1 | 224–225 | 225–226 |
+| Economic-base vocabulary | §11.3.1 | 224–227 | 225–228 |
 | Supporting: supply and capacity | §11.4 | 233–234 | 234–235 |
 | Supporting: migration detail | §10.3 | 197–208 | 198–209 |
 | Optional: cities and regional development | §11.7 | 239–242 | 240–243 |

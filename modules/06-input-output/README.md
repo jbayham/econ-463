@@ -6,9 +6,8 @@ How does an order placed with one regional industry change production elsewhere?
 
 ## Teaching sequence
 
-- **Dec 7.** Read a two-sector transactions table, identify final demand and value added, and divide each input column by sector output. Solve for gross output after a final-demand shock and check that the solution balances.
-- **Dec 8.** Trace direct and indirect production, then consider induced spending when households are endogenous. Compare local sourcing assumptions and report output and value added separately.
-- **Dec 9.** Use a sensitivity run to explain which part of the result depends on regional purchases. Allow class time to finish PS 3.
+- **Dec 8.** Read a two-sector transactions table, identify final demand and value added, and divide each input column by sector output. Solve for gross output after a final-demand shock and check that the solution balances.
+- **Dec 9.** Trace direct and indirect production, then consider induced spending when households are endogenous. Compare local sourcing assumptions and report output and value added separately. Use a sensitivity run to explain which part of the result depends on regional purchases. Use the example for guided PS 3 practice.
 - **Dec 10, before M7.** Debrief the calculations. Ask what happens if expanding firms must compete for scarce workers, motivating prices and substitution in M7.
 
 ## Readings and teaching materials
@@ -17,7 +16,7 @@ Schaffer, chs. 4–5, pp. 48–62, covers accounting and solution. Ch. 6, pp. 63
 
 ## Assessment connection
 
-PS 3 runs Dec 7–9. Use a supplied table for the R solution, one demand shock, and one sensitivity comparison. The final exam can ask why a multiplier changes.
+PS 3 runs Dec 8–14. Use a supplied table for the R solution, one demand shock, and one sensitivity comparison. The final exam can ask why a multiplier changes.
 
 ## Decision for review
 

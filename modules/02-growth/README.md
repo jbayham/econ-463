@@ -11,6 +11,8 @@ Explore why regions grow differently and how trade, migration, capital, and know
 
 River and Harbor are fictional regions. All observations are synthetic, and monetary amounts use illustrative currency units (CU). The examples compare regional growth, trace an income-feedback response, and examine a hypothetical transport corridor.
 
+Before the multiplier calculation, the slides and reader introduce the economic base, basic and nonbasic activity, service exports, mixed local/export sales, and local suppliers linked to exporters. Classification depends on the regional boundary and market served; it is not a judgment of an industry's importance.
+
 ## Work through the examples
 
 Try each calculation before consulting the worked answer. State the outcome, the comparison, and the assumptions behind your explanation. The exercises are ungraded practice.
@@ -51,4 +53,4 @@ The moving budget uses annual wages and costs plus a one-time moving expense. It
 
 ## Readings
 
-Start with Hoover and Giarratani, *An Introduction to Regional Economics*, §11.2, pp. 223–224; §11.5, pp. 234–236; and §11.6, pp. 237–239. The reader's reading guide lists supporting selections and page references. The PDF reader can be used offline.
+Start with Hoover and Giarratani, *An Introduction to Regional Economics*, §11.2, pp. 223–224; §11.5, pp. 234–236; and §11.6, pp. 237–239. For economic-base vocabulary and its qualifications, use §11.3.1, pp. 224–227. The reader's reading guide lists supporting selections and page references. The PDF reader can be used offline.

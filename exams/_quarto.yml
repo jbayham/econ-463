@@ -1,0 +1,41 @@
+project:
+  type: default
+  render:
+    - "*exam*.qmd"
+
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: article
+    papersize: letter
+    fontsize: 11pt
+    geometry:
+      - margin=1in
+      - headheight=14pt
+      - headsep=18pt
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \makeatletter
+        \renewcommand{\@maketitle}{%
+          \begingroup
+          \centering
+          {\LARGE\@title\par}%
+          \endgroup
+          \medskip
+        }
+        \makeatother
+        \fancypagestyle{exam}{
+          \fancyhf{}
+          \fancyhead[L]{\footnotesize ECON 463 \enspace\textbar\enspace Regional Economics}
+          \fancyhead[R]{\footnotesize\textbf{Name}\enspace\rule{2.75in}{0.4pt}}
+          \fancyfoot[C]{\footnotesize\thepage}
+          \renewcommand{\headrulewidth}{0.4pt}
+        }
+        \AtBeginDocument{\pagestyle{exam}}
+        \fancypagestyle{plain}[exam]{}
+        \newcommand{\answerspace}[1][1.5in]{\par\vspace*{#1 plus 1fill}}
+    include-before-body:
+      text: |
+        \noindent Write your answers by hand. Show your work, explain your reasoning,
+        and label any graphs.\par

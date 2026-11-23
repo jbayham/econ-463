@@ -16,7 +16,7 @@ Use selected diagrams from Brueckner, ch. 2, pp. 23–50, and the spatial equili
 
 ## Assessment connection
 
-Introduce the diagram and prediction component of PS 2 on Nov 27. Use the same prediction when interpreting the M5 estimates. PS 2 is due Dec 2.
+Introduce the diagram and prediction component of PS 2 on Nov 27. Use the same prediction when interpreting the M5 estimates. PS 2 is due Dec 7.
 
 ## Decision for review
 
