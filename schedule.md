@@ -7,43 +7,42 @@ course_year: 2026
 
 November 23–December 18, 2026. Both sections follow the same schedule. There is **no class on November 24** or on weekends. See the [syllabus]({{ site.baseurl }}/syllabus/) for meeting times and rooms.
 
-This schedule is tentative. Readings are selected excerpts; additional handouts will accompany the relevant module. Problem Sets 1–3 are due at the **end of class** on the listed Mondays. The shortened Problem Set 4 is due at the **end of the final exam**. Changes will be announced in class.
+This schedule is tentative. Additional handouts will accompany the relevant module. Problem Sets 1–3 are due at the **end of class** on the listed Mondays. The following Tuesday's class includes about an hour of problem set review. The shortened Problem Set 4 is due at the **end of the final exam**. Changes will be announced in class.
 
 <!-- Edit this table directly. No spreadsheet or conversion step is required. -->
 
-<div class="schedule-table" markdown="1">
+<div id="course-schedule" class="schedule-table" markdown="1">
 
-| Date | Topics | Reading | Due |
-| --- | --- | --- | --- |
-| Mon Nov 23 | Course introduction. **M1:** Firm location: natural advantages, transportation costs, and scale economies.  | No advance reading. [M1 reader]({{ site.baseurl }}/modules/01-location/reader.html) for follow-up. |  |
-| Tue Nov 24 | **No class.** | — |  |
-| Wed Nov 25 | **M1**; **M2:** Regional growth and structural change. | M1 reader; [M2 reader]({{ site.baseurl }}/modules/02-growth/reader.html). Hoover–Giarratani §11.2, pp. 223–224. |  |
-| Thu Nov 26 | **M2:** Market access, trade, migration, and spillovers; **M3:** Regional boundaries and data comparability. | M2 reader; Hoover–Giarratani §§11.5–11.6, pp. 234–239. |  |
-| Fri Nov 27 | **M3:** Location quotients and shift-share; **M4:** Commuting costs and bid rents. | Schaffer ch. 2, pp. 6–9; Note A, pp. 43–47 (selected excerpts). |  |
-| Mon Nov 30 | **M4:** Housing supply, land-use constraints, spatial equilibrium, mobility, and capitalization. | Brueckner ch. 2 and §11.2 (selected diagrams and mechanisms). | **PS 1 final submission** |
-| Tue Dec 1 | **M5:** Hedonics, amenities, and property values. | Brueckner §6.2, pp. 116–119; supplied hedonic exercise. |  |
-| Wed Dec 2 | **M5:** Sorting, omitted variables, specification comparisons, and limits to causal and welfare interpretation. | Hall, Lawson, and Shia, ch. 5, pp. 65–75 (selected specification and results). |  |
-| Thu Dec 3 | **M4:** Spatial-equilibrium predictions; **M5:** Interpret hedonic estimates and work through PS 2 questions. | M4–M5 notes and the supplied hedonic exercise. |  |
-| Fri Dec 4 | **Full-session review for Exam 1 (M1–M5).** Practice location and regional measurement questions, then interpret spatial-equilibrium diagrams and hedonic results. | Review M1–M5 notes, worked examples, and PS 1 feedback. |  |
-| Mon Dec 7 | **Exam 1: Regional foundations, spatial equilibrium, and hedonics (M1–M5).** |  | **PS 2 final submission** |
-| Tue Dec 8 | **M6:** IO accounting, technical coefficients, final demand, and the Leontief inverse. | Schaffer chs. 4–5, pp. 48–62 (selected excerpts). |  |
-| Wed Dec 9 | **M6:** Interpret multipliers using a demand shock. Compare output and value added, then examine how imports and household spending change the result. | Schaffer ch. 6, pp. 63–69; supplied IO exercise. |  |
-| Thu Dec 10 | **M6:** Sensitivity and limits of IO estimates; **M7:** Resource constraints, price adjustment, and behavioral responses. | Hewings §4.1, pp. 28–30, and §7.2, pp. 52–54 (selected excerpts). |  |
-| Fri Dec 11 | **M7:** Social accounting, production, households, budgets, and market clearing. **Regular teaching day.** | Supplied CGE model guide and accounting handout (forthcoming). |  |
-| Mon Dec 14 | **M7:** Baseline replication, closure, factor markets, and regional trade. | Supplied baseline and closure notes (forthcoming). | **PS 3 final submission** |
-| Tue Dec 15 | **M7:** Counterfactuals, substitution, constraints, and factor mobility. | Supplied counterfactual and model-comparison exercise (forthcoming). |  |
-| Wed Dec 16 | **M7:** Sensitivity analysis; **M8:** Policy interpretation, opportunity costs, welfare, externalities, and distribution. | Hoover–Giarratani §12.2, pp. 250–255 (selected excerpt); supplied sensitivity exercise. |  |
-| Thu Dec 17 | **M8:** Policy synthesis, model comparison, and final-exam review. | Review IO/CGE notes, worked examples, and PS 3 feedback. |  |
-| Fri Dec 18 | **Final exam: IO, CGE, and policy interpretation (M6–M8).** |  | **PS 4 final submission (shortened)** |
-{: #course-schedule }
+| Date       | Topics                                                                                                                           | Reading                                        | Due               |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ----------------- |
+| Mon Nov 23 | Course introduction. **M1:** Firm location, natural advantages, transportation costs, scale economies, and agglomeration.        |                                                |                   |
+| Tue Nov 24 | **No class.**                                                                                                                    | —                                              |                   |
+| Wed Nov 25 | **M2:** Regional growth and structural change, trade, migration, and convergence.                                                | Hoover–Giarratani §11.2.                       |                   |
+| Thu Nov 26 | **M2**; **M3:** Regional boundaries, comparable data, location quotients, and shift-share analysis.                              | Hoover–Giarratani §§11.5–11.6.                 |                   |
+| Fri Nov 27 | **M3**;                                                                                                                          | Schaffer ch. 2 and Note A.                     |                   |
+| Mon Nov 30 | **M4:** Land use, commuting and bid rents, wages and rents across cities.                                                        | Brueckner ch. 2 and §11.2.                     | **Problem Set 1** |
+| Tue Dec 1  | **Problem set review (PS 1).** **M5:** Hedonic regressions, amenity capitalization, sorting.                                     | Brueckner §6.2.                                |                   |
+| Wed Dec 2  | **M5**                                                                                                                           | Hall, Lawson, and Shia, ch. 5.                 |                   |
+| Thu Dec 3  | **M4**; **M5**                                                                                                                   | M4–M5 notes and the supplied hedonic exercise. |                   |
+| Fri Dec 4  | **Full-session review for Exam 1 (M1–M5).**                                                                                      | Review M1–M5.                                  |                   |
+| Mon Dec 7  | **Exam 1: Regional foundations, spatial equilibrium, and hedonics (M1–M5).**                                                     |                                                | **Problem Set 2** |
+| Tue Dec 8  | **Problem set review (PS 2).** **M6:** Input-output accounting, the Leontief model, and regional multipliers.                    | Schaffer ch. 4–5.                              |                   |
+| Wed Dec 9  | **M6**                                                                                                                           | Schaffer ch. 6; supplied IO exercise.          |                   |
+| Thu Dec 10 | **M6**; **M7:** Regional CGE modeling, social accounting, market adjustment and closure, and counterfactual comparisons with IO. | Hewings §§4.1 and 7.2.                         |                   |
+| Fri Dec 11 | **M7**: Regional CGE                                                                                                             |                                                |                   |
+| Mon Dec 14 | **M7**: Regional CGE                                                                                                             |                                                | **Problem Set 3** |
+| Tue Dec 15 | **Problem set review (PS 3).** **M7**                                                                                            |                                                |                   |
+| Wed Dec 16 | **M7**; **M8:** Regional policy evaluation, counterfactuals, opportunity costs, externalities, and distribution.                 | Hoover–Giarratani §12.2                        |                   |
+| Thu Dec 17 | **M8**. Final-exam review.                                                                                                       |                                                | **Problem Set 4** |
+| Fri Dec 18 | **Final exam: M1–M8 (Cumulative)**                                                                                               |                                                |                   |
 
 </div>
 
-Book page references use the printed pages in the course editions. Full citations and online links appear in the [syllabus]({{ site.baseurl }}/syllabus/#materials-and-reading). Module readers and handouts provide guidance on the selected passages.
+Full citations and online links appear in the [syllabus]({{ site.baseurl }}/syllabus/#materials-and-reading).
 
 <script>
   (function () {
-    var table = document.getElementById('course-schedule');
+    var table = document.querySelector('#course-schedule table');
     if (!table) return;
     var year = {{ page.course_year | jsonify }};
     var months = { Jan: '01', Feb: '02', Mar: '03', Apr: '04', May: '05', Jun: '06',
