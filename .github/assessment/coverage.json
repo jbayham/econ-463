@@ -1,0 +1,61 @@
+{
+  "PS1.1": {
+    "module": "01",
+    "reviewed": "cdadd6d19f82c5bd",
+    "parts": {
+      "a": {
+        "skill": "Add relevant costs on a common output basis and justify cost minimization at fixed revenue.",
+        "slides": ["Example 1: add the relevant costs", "Digression: Profit max or cost min"]
+      },
+      "b": {
+        "skill": "Distinguish external from internal economies and connect two mechanisms to evidence in the assigned corridor reading.",
+        "slides": ["Agglomeration mechanisms", "Cheaper inputs: shared suppliers", "More productive inputs: labor pooling and matching", "Vietnam: connectivity shapes concentration"]
+      },
+      "c": {
+        "skill": "Apply a proportional freight change, solve for indifference, and interpret better access at a fixed location.",
+        "slides": ["Example 1: outbound freight falls by half", "How large does $\\tau$ need to be?", "Vietnam: connectivity shapes concentration"]
+      },
+      "d": {
+        "skill": "Give a competing explanation for observed clustering and identify a complementary condition for growth.",
+        "slides": ["Example 3: distinguish mechanisms with evidence", "Vietnam: connectivity shapes concentration"],
+        "gap": "Students see the caution about causation. Have them practice one concrete alternative explanation, such as roads being routed to places where firms already cluster."
+      }
+    }
+  },
+  "PS1.2": {
+    "module": "02",
+    "reviewed": "90f7be04dedf3423",
+    "parts": {
+      "a": {
+        "skill": "Trace payer-to-recipient flows and locate firms and households on a district boundary diagram.",
+        "slides": ["Whose income is local?", "How export demand reaches other industries", "Regional economic impact"]
+      },
+      "b": {
+        "skill": "Distinguish the initiating export sale from a local supplier whose sales depend indirectly on exports.",
+        "slides": ["The region and its economic base", "Local services support the base", "Regional economic impact"]
+      },
+      "c": {
+        "skill": "Redraw the regional boundary and reclassify payments while keeping recipients fixed.",
+        "slides": ["Which places belong in the region?", "Whose income is local?"]
+      },
+      "d.1": {
+        "skill": "Convert order expenditures into first-round resident income with commuter wages and imported inputs.",
+        "slides": ["From export sales to local income", "Example 2: outside demand adds local income", "Optional practice · Who earns the order revenue?"]
+      },
+      "d.2": {
+        "skill": "Derive feedback from two retention shares, compare total and normalized incomes, and explain a binding supplier constraint.",
+        "slides": ["From export sales to local income", "Income multiplier", "Example 2: outside demand adds local income", "Example 2: solve the feedback equation", "Example 2: reduce local feedback", "A demand multiplier depends on assumptions", "Optional practice · Who earns the order revenue?", "Optional practice · Which order generates more local income?"]
+      }
+    }
+  },
+  "PS1.3": {
+    "module": "03",
+    "reviewed": "84d02480707af4d3",
+    "parts": {
+      "a": {"skill": "Calculate employment shares and national-benchmark LQs and distinguish jobs from specialization.", "slides": [], "gap": "Module 3 needs a worked count/share/LQ comparison."},
+      "b": {"skill": "Recalculate LQs with a provincial benchmark and interpret levels and rankings.", "slides": [], "gap": "Module 3 needs practice switching the reference economy."},
+      "c.1": {"skill": "Apply three five-year growth rates to the district's base-year manufacturing employment.", "slides": [], "gap": "Module 3 needs a worked base-year employment counterfactual."},
+      "c.2": {"skill": "Calculate industry mix and regional shift and distinguish initial specialization from subsequent job growth.", "slides": [], "gap": "Module 3 needs a shift-share interpretation alongside the initial LQ."}
+    }
+  }
+}

@@ -1,0 +1,20 @@
+name: Assessment foundations
+on:
+  pull_request:
+    paths: ['modules/**', 'problem sets/**', '.github/assessment/**', '.github/workflows/assessment-foundations.yml']
+  push:
+    paths: ['modules/**', 'problem sets/**', '.github/assessment/**', '.github/workflows/assessment-foundations.yml']
+  schedule:
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check problem-set preparation
+        run: python3 .github/assessment/check.py

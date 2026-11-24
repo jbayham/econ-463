@@ -35,4 +35,4 @@ include: ['_images', '_css']
 # bing_webmastertools_id: ""
 
 # Keep authoring files out of the published website.
-exclude: [README.md, econ-463.Rproj, docs, dev, references, outputs]
+exclude: [README.md, AGENTS.md, econ-463.Rproj, docs, dev, references, outputs, modules/02-growth/R, modules/02-growth/data]

@@ -62,13 +62,21 @@ By the end of this module, you should be able to compare explanations involving 
 
 ## How to use this reader
 
-The reader follows the deck: growth and structural change; demand and supply; trade and market access; migration and rural–urban connections; convergence; and guided practice. The three examples use synthetic data and illustrative currency units (CU). River and Harbor are fictional regions, not Vietnamese provinces.
+The five lecture questions guide the examples. First choose a region. Then ask what sets growth in motion, how export orders reach other industries, how a road changes trade and migration, and what helps one region catch up with another. River and Harbor are fictional regions. The examples use illustrative currency units (CU). The optional festival-program exercise at the end brings the boundary and income calculations together.
 
-Work through the arithmetic before looking at the answers, then reproduce it with `R/growth.R`. You need ratios, percentage changes, and a linear equation in one unknown. No matrix algebra, regression, or optimizer is required. The baseline for a percentage change is always the initial value: $100(z_1/z_0-1)$. The periods in Example 1 are two comparable observations, not necessarily consecutive years, so changes are **not annual growth rates**.
+Work through the arithmetic before looking at the answers. You need ratios, percentage changes, and a linear equation in one unknown. No matrix algebra, regression, or optimizer is required. The baseline for a percentage change is always the initial value: $100(z_1/z_0-1)$. The periods in Example 1 are two comparable observations, not necessarily consecutive years, so changes are **not annual growth rates**.
 
 Read @hoover2020, Chapter 11, “How Regions Develop,” from the opening through §11.6, “Interregional Convergence” (printed pp. 217–239, PDF pp. 218–240). The assignment spans 23 pages. Stop at the §11.7 heading on the last page. The opening trends motivate the chapter’s question about why places grow at different rates. As you read §11.3.2, trace how a new order affects purchases from suppliers. Module 6 returns to the calculations.
 
 # Growth, development, and structural change
+
+## Which region are we studying?
+
+A **region** groups places according to a stated rule. A district boundary makes sense for a question about district taxes. A rice-growing belt groups places with similar growing conditions. For a question about access to jobs, a region might instead include several districts connected by regular commuting.
+
+**Try the bakery example.** A bakery in Region A pays a baker who lives in Region B and buys flour from a mill outside both regions. On paper, draw an arrow from the bakery to the baker and another from the bakery to the mill. Label each arrow with what the bakery pays for. Draw a boundary around A. Then widen it to include B, keeping the bakery, the baker, and the mill in place. Which payment changes classification?
+
+With A alone, both the wage and the flour payment cross the boundary. With A and B together, the wage stays inside the region because the baker lives there. The flour payment still leaves. The bakery produces its bread in A under either definition. What changes is whether the worker who earns the wage is a resident of the region we are studying. Once you choose a boundary for a growth comparison, use it in both periods.
 
 ## Choose an outcome before explaining it
 
@@ -76,7 +84,7 @@ Regional **growth** usually refers to an increase in a specified quantity: real 
 
 Regional **development** is broader. It can involve productive capabilities, access to services, health, environmental quality, and opportunities available to residents. Higher real output can support these improvements, but it is not a complete measure of them. An industrial expansion could increase output and employment while exposing nearby households to pollution. A production measure alone does not tell us whether the affected households are better off.
 
-We use **real value added** as our production measure: the value of output less purchased intermediate inputs, measured at common prices. Subtracting intermediates avoids counting the same production repeatedly as it passes between firms. “Real” means that a price increase alone does not register as additional production. Module 3 will address how actual datasets define and measure these quantities. For now, all regions and periods use consistent definitions and prices.
+We use **real value added** as our production measure: the value of output less purchased intermediate inputs, measured at common prices. For producer $i$, write this contribution as $\mathrm{VA}_i$. Regional output is $Y=\sum_i\mathrm{VA}_i$, summing over producers inside the boundary. A bakery subtracts the flour it buys when calculating its contribution. If the mill also operates inside the region, its own value added enters the sum separately. This counts each stage of local production once. “Real” means that a price increase alone does not register as additional production. Module 3 will address how actual datasets define and measure these quantities. For now, all regions and periods use consistent definitions and prices.
 
 Let $Y$ be real value added, $L$ be employment measured in workers, and $N$ be population. A useful accounting identity is
 
@@ -93,17 +101,20 @@ Both regions begin with 1,000 residents and 500 employed workers. They differ in
 ```{r}
 #| label: tbl-regions
 #| tbl-cap: "Example 1: synthetic regional observations. Value added is real CU per period."
-module_table(growth_data, col.names = c("Region", "Period", "Population", "Workers", "Value added"))
+module_table(growth_data[c("region", "period", "real_value_added", "population", "employment")],
+  col.names = c("Region", "Period", "Real output (CU)", "Residents", "Workers"))
 ```
 
-River's output grows from 10,000 to 13,200 CU, an increase of 32%. Harbor's grows from 15,000 to 16,800 CU, an increase of 12%. On this measure, River grows faster. But River's population also grows by 20%, compared with Harbor's 5%. Dividing by population changes the interpretation.
+River's output grows from 10,000 to 13,200 CU, an increase of 32%. Harbor's grows from 15,000 to 16,800 CU, an increase of 12%. On this measure, River grows faster. But River's population also grows by 20%, compared with Harbor's 5%. To find output per resident, divide each period’s real output by that period’s resident count. For River, $10{,}000/1{,}000=10$ and $13{,}200/1{,}200=11$ CU per resident. Try Harbor before checking: $15{,}000/1{,}000=15$ and $16{,}800/1{,}050=16$. Each region gained 1 CU per resident. Dividing the gain by the starting level gives $1/10=10\%$ for River and $1/15\approx6.7\%$ for Harbor.
+
+You can check the result using the growth factors. Dividing River’s output growth factor by its population growth factor gives $1.32/1.20=1.10$. If output and population had both risen 10%, their ratio would have been $1.10/1.10=1$, leaving output per resident unchanged.
 
 ```{r}
 module_table(indicators[c("region", "period", "productivity", "employment_ratio", "per_resident")],
   col.names = c("Region", "Period", "CU/worker", "Workers/resident", "CU/resident"), digits = 2)
 ```
 
-River's real value added per resident rises from 10 to 11 CU, or 10%. Harbor's rises from 15 to 16 CU, or about 6.7%. River still grows faster proportionally, but Harbor remains more productive and produces more per resident. Faster growth is a statement about a **change**, not a statement about the final **level**.
+Harbor finishes at a higher level of output per resident, even though River grew faster. To recover River’s final 11 CU per resident from the worker data, multiply 22 CU per worker by 0.5 workers per resident. The worker units cancel.
 
 River's output growth combines a 10% increase in productivity with a 20% increase in employment. The exact calculation is $1.10\times1.20-1=0.32$. Adding the two percentages gives 30%, which misses their interaction. Harbor's calculation is $(32/30)\times(525/500)-1=0.12$. In both regions $L/N$ stays at 0.5, so per-resident production grows at the same percentage rate as productivity.
 
@@ -122,6 +133,8 @@ module_table(sector_data, col.names = c("Scenario", "Sector", "Workers", "CU/wor
 Value added becomes $200(10)+300(35)=12{,}500$. Average productivity rises from 20 to 25 CU per worker, or 25%, even though neither sector becomes more productive. Aggregate productivity is a weighted average of sector productivity, with employment shares as the weights:
 
 $$\frac{Y}{L}=\sum_s\frac{L_s}{L}\frac{Y_s}{L_s}.$$
+
+In the two-sector notation from class, let $s$ be the share in other activities. The average is $(1-s)10+s(35)$. The move raises $s$ from $200/500=0.4$ to $300/500=0.6$. The change in the regional average is therefore $(0.6-0.4)(35-10)=5$ CU per worker. This gives a second way to check the calculation.
 
 This is a separate counterfactual starting from River's baseline. It does not decompose the actual change to 13,200. In real data, both within-sector productivity and employment shares may change. Module 3 will develop formal descriptions of industrial structure and change; we do not need shift-share formulas here.
 
@@ -147,7 +160,7 @@ An **export** crosses the chosen regional boundary, not necessarily a national b
 
 For practice, compare a River hotel serving outside visitors with a software firm serving only River businesses. Under the export-sales definition, the hotel's visitor sales are basic and the software firm's local sales are nonbasic. The distinction depends on customers, not the sophistication of the product. The software firm may still support exporting clients indirectly, a connection considered below.
 
-One establishment can serve both markets. Suppose a River restaurant sells 100 CU of meals, of which 80 CU go to outside visitors and 20 CU to River residents. Under this definition, 80% of its sales are basic and 20% are nonbasic. These are **sales shares**, not necessarily employment or value-added shares. Allocating workers or income using the same percentages would require additional assumptions. If all visitors came from Harbor, their purchases would be exports for River but internal sales for a combined River–Harbor region.
+One establishment can serve both markets. Suppose a River restaurant sells 100 CU of meals, of which 80 CU go to outside visitors and 20 CU to River residents. Total sales are $S=S_E+S_L=80+20=100$ CU, where $E$ denotes export sales and $L$ denotes sales to local customers. Divide export revenue by total revenue to get the basic share, $S_E/S=80/100=0.80$. The remaining 20% of sales are nonbasic. These are **sales shares**, not necessarily employment or value-added shares. Allocating workers or income using the same percentages would require additional assumptions. If all visitors came from Harbor, their purchases would be exports for River but internal sales for a combined River–Harbor region.
 
 Hoover and Giarratani warn against assigning whole industries to the export or nonexport category without investigating their actual markets [@hoover2020, p. 225]. In practice, customer and shipment information can help. Location quotients provide an indirect approach, but they do not directly observe exports; Module 3 develops their interpretation and limitations.
 
@@ -161,21 +174,23 @@ The reading also qualifies the export-base story: import substitution and interr
 
 Now trace a change rather than just classify activity. Outside buyers place more orders with River's processor. The processor purchases inputs and pays workers; local suppliers and households then make further purchases. Some expenditure goes outside River or does not generate another local round. A **multiplier** summarizes the total response to a specified initial change under stated assumptions. Do not count a supplier response both as part of the initial base shock and again as a separate subsequent effect.
 
-Local purchases connect activities, but the relevant outcome must be consistent. A factory's gross sales are not identical to local income because some payments buy imported inputs. Our next example starts with an **exogenous addition to regional income associated with external demand**, already net of imported intermediate inputs. This allows transparent income accounting without pretending that every unit of sales becomes regional income.
+To sketch the rice order from class, draw Harbor’s buyer paying River’s processor. Draw two arrows out of the processor. One goes to a repair shop for its services. The other goes to workers for their labor. Extend the workers’ branch to the grocer where they spend some of their pay. The repair shop gains a customer directly from the processor’s production decision. The grocer gains sales when households decide to spend. If the repair shop buys parts from Harbor, mark that payment crossing River’s boundary.
 
 The restaurant's 100 CU of sales and its 80% basic share are not the inputs to the income calculation below. Sales, income, and employment are different quantities, and the basic sales share is not the local-income feedback coefficient. For the distinction between demand and supply, see @hoover2020, §11.2, pp. 223–224. For economic-base vocabulary and its qualifications, read §11.3.1, pp. 224–227. The input-output machinery in §11.3.2 belongs in Module 6.
 
 ## Example 2: an export-demand shock
 
-Suppose a one-period increase in outside demand directly adds 100 CU to local income. Let $\Delta X=100$ denote that initial addition. Assume every extra CU of regional income generates **0.60 CU of further regional income** through local expenditure. Write this effective feedback coefficient as $b=0.60$. The remainder does not generate further income inside our boundary in this example. It can include saving, taxes not returned as local spending, imports, and payments that accrue elsewhere.
+**Find the income that starts the first round.** The slide starts with a 100-CU gain for River residents. One way this can happen is for Harbor to pay 140 CU for processed rice. Suppose River’s processor pays 40 CU for packaging from outside the region and the balance goes to River residents as wages and profits. The direct gain is $\Delta X=140-40=100$ CU.
 
-The first rounds are 100, 60, 36, and 21.6 CU. These are accounting rounds within the adjustment to one shock, **not four consecutive years of growth**. Let $\Delta Y$ be the total income change after allowing all rounds. Then
+**Follow one round of spending.** Households spend a share $s=0.80$ of each additional CU at River businesses. A share $v=0.75$ of those sales becomes income for River residents. Starting with 100 CU, households spend $100(0.80)=80$ CU locally. That generates $80(0.75)=60$ CU of new resident income. The feedback coefficient is $b=sv=0.60$. In the next round, 60 CU supports 48 CU of spending and 36 CU of new income. Keep spending and income in separate columns if you work this by hand.
 
-$$\Delta Y=\Delta X+b\Delta Y,
-\qquad (1-b)\Delta Y=\Delta X,
-\qquad \Delta Y=\frac{\Delta X}{1-b}.$$
+**Add the income rounds.** Let $\Delta I$ be the total change in resident income. The direct gain and each later round form a geometric series:
 
-At $b=0.60$, the total is $100/(1-0.60)=250$ CU. The income multiplier is 2.5, while additional income beyond the original shock is 150 CU. These are three different quantities: the direct change, the total change, and their ratio. “A multiplier of 2.5” is incomplete unless we specify what is multiplied and what outcome is counted.
+$$\Delta I=\Delta X+b\Delta X+b^2\Delta X+\cdots.$$
+
+Multiplying by $b$ shifts the series forward one round. The difference between the two series is exactly the first term, so $(1-b)\Delta I=\Delta X$. With $0\leq b<1$, the income multiplier is $m=1/(1-b)$. For River, $m=1/(1-0.60)=2.5$ and the total gain is $100(2.5)=250$ CU. Of that total, $250-100=150$ CU comes from later rounds. Adding the 80 CU of shop sales to the 60 CU of income it generates would count part of the same transaction twice.
+
+Read the table across each row. Round 0 is the initial income gain. At the end of round 1, cumulative income is $100+60=160$ CU. Each row tracks one more round of payments within the same scenario.
 
 ```{r}
 module_table(demand_rounds(last_round = 4),
@@ -215,6 +230,8 @@ Consider a hypothetical transport improvement connecting an agricultural region,
 
 Better **market access** means reaching customers or suppliers at lower generalized cost, including freight charges, travel time, spoilage, and reliability. River's farmers may reach Harbor's buyers more cheaply. Harbor's manufacturers may reach River's customers more cheaply. Firms in both regions may obtain inputs at lower delivered prices. The same connection also exposes local producers to more outside competition.
 
+**Which seller supplies the grain?** Hold grain quality and seller prices fixed. Harbor buyers can pay $p_H=11$ CU per unit locally. River grain costs $p_R=8$ at the source plus freight $t$ per unit. Before the road improves, River’s delivered price is $8+4=12$ CU, so the buyer chooses Harbor. Afterward it is $8+2=10$ CU, so the buyer chooses River. To find the switching point, set $p_R+t=p_H$. At $t^*=11-8=3$ CU the buyer is indifferent. Below 3 CU the River seller can undercut the Harbor seller. The buyer saves 1 CU relative to the 11 CU they actually paid before the improvement.
+
 A seller's gain is not simply the entire freight saving multiplied by existing shipments. Prices may adjust, customers may switch suppliers, and shipment volumes may change. The distribution of the saving depends on competition and bargaining as well as technology. Our Module 1 location calculation held revenue fixed; this scenario explicitly asks what happens when customer access and competition change revenue too.
 
 Trade allows specialization when the gains exceed trade costs. Comparative advantage concerns **relative opportunity costs**, so a place need not be the most productive at everything to participate in mutually useful exchange. Larger markets can also support production at a more efficient scale or specialized services. Yet a region's increased specialization can make its income more sensitive to an industry-specific downturn. Diversity is useful when activities face different shocks; merely counting more industries does not guarantee resilience.
@@ -233,7 +250,9 @@ Transport improvements need not disperse production evenly. A large Harbor produ
 
 A wage gap is one reason to consider moving, but a household compares opportunities after housing, commuting, moving costs, risk, and amenities. A higher nominal wage can accompany higher living costs. Some households cannot finance a move; others have location-specific skills, family obligations, or a preference for their current community. Workers therefore need not move immediately until nominal wages equalize.
 
-For a deliberately narrow private-budget illustration in Example 3, suppose an annual wage is 100 CU in River and 140 CU in Harbor. Annual housing and commuting costs are 40 and 70 CU. The remaining budget is 60 CU in River and 70 CU in Harbor. A one-time moving cost of 15 CU makes the first-year destination budget 55 CU, compared with 60 from staying. The first-year gain is negative 5 CU.
+A road may make daily commuting feasible for someone who wants to keep their home. For a worker considering relocation, let $d=(w_H-c_H)-(w_R-c_R)$ be the annual gain in the remaining budget after housing and commuting costs, and let $F$ be the one-time cost of moving. Over $T$ years the gain is $Td-F$. When $d>0$, dividing $F$ by $d$ tells us how many years of gains pay for the move.
+
+In Example 3, suppose an annual wage is 100 CU in River and 140 CU in Harbor. Annual housing and commuting costs are 40 and 70 CU. The remaining budget is 60 CU in River and 70 CU in Harbor. A one-time moving cost of 15 CU makes the first-year destination budget 55 CU, compared with 60 from staying. The first-year gain is negative 5 CU. The recurring advantage is 10 CU per year, so recovering the 15 CU moving cost takes $15/10=1.5$ years if earnings accrue evenly. A worker staying two full years comes out 5 CU ahead.
 
 ```{r}
 #| label: tbl-move
@@ -298,26 +317,46 @@ Let the direct income addition be 80 CU and $b=0.50$. Predict the first three ro
 
 **Worked answer:** the first rounds are 80, 40, and 20 CU. Total income changes by $80/(1-0.50)=160$ CU; 80 CU is additional to the direct shock. With $b=0.25$, the total is approximately 106.7 CU and the additional amount is 26.7 CU. More of the feedback now leaves the region. This is not proof that restricting imports would improve welfare: the model omits their price and productivity benefits.
 
-Set R's working directory to this module folder and run:
-
-```{r}
-#| echo: true
-#| eval: false
-source("R/growth.R")
-growth_comparison()
-demand_effect(delta_X = 80, b = 0.5)
-demand_effect(delta_X = 80, b = 0.25)
-```
-
-The script reads the two CSV files in `data/`. You can inspect `growth_indicators()` and `sector_summary()` to see the quantities behind the summary. The demand function rejects $b\geq1$ because the finite feedback solution would not apply.
-
 ## Practice C: compare two corridor explanations
 
 Write four sentences about Example 3: (1) state the corridor/no-corridor comparison; (2) trace one benefit to River through trade; (3) identify one possible loss or cost in either region; and (4) identify evidence that would help distinguish your mechanism from another explanation.
 
 **One worked response:** Compared with the same period without the corridor, lower delivery costs could increase River farmers' sales to Harbor. Higher farm income could support local purchases, with the size of the response depending on capacity and local sourcing. River retailers could lose customers to Harbor competitors, while Harbor renters could face higher housing costs if workers move there. Changes in freight costs, shipment destinations, retailer sales, migration, and rents would help assess these channels, although a credible counterfactual is still needed for a causal estimate.
 
-Recalculate the moving budget over one and three years using `move_budget(years = 1)` and `move_budget(years = 3)`. Then use `move_budget(destination_cost = 85)`. Explain the changed conclusion in words before reporting the numbers. Do not add the migration budget gain to the demand multiplier: the examples use different quantities, horizons, and assumptions.
+**Check the household decision.** If Harbor’s annual housing and commuting costs rise to 85 CU, the annual gain changes to $(140-85)-(100-40)=-5$ CU. Over three years the worker would give up 15 CU in recurring income after costs and pay 15 CU to move. Staying leaves the worker 30 CU ahead.
+
+## Optional practice: a festival orders printed programs
+
+### Follow the money across the boundary
+
+A festival in Region B buys programs from a printer in Region A. The printer pays a bindery in A, a paper supplier outside both regions, and an employee who lives in B. The employee buys a meal at a café in B. Sketch the arrows from payer to recipient. Which payments cross A’s boundary? What changes if the region includes both A and B?
+
+**Worked explanation.** The festival’s payment enters A, making the program sale an export. The printer’s payment to the bindery stays in A. The bindery can therefore gain business from the export order even if it serves only local customers. The printer’s payments to the paper supplier and commuter leave A. The café purchase takes place in B. Enlarge the boundary to A and B together and trace the same arrows again. Now only the paper payment crosses the boundary.
+
+### Calculate the initial income from each order
+
+Suppose the festival can order either 400 or 600 CU of programs. The local bindery reaches capacity filling the smaller order. For the larger order the printer hires a second bindery outside A. The local bindery spends 40% of its fee on imported materials, and the rest goes to A’s residents. Assume payments outside A stay there.
+
+| Printer’s payment (CU) | 400 CU order | 600 CU order |
+|---|---:|---:|
+| Wages to residents of A | 120 | 180 |
+| Wages to commuters from B | 80 | 120 |
+| Fee to the bindery in A | 100 | 100 |
+| Fee to a bindery outside A | 0 | 50 |
+| Paper from outside A | 100 | 150 |
+
+Before calculating a multiplier, mark the payments that become residents’ income. The commuters live in B. The local bindery earns a fee of 100 CU under either order, of which $100(1-0.40)=60$ CU reaches A’s residents. Adding their wages gives **180 CU** under the smaller order ($120+60$) and **240 CU** under the larger order ($180+60$). A quick check is to add all five payments in each column. They exhaust the order revenue, so adding the printer’s sales again would double count it.
+
+### Compare total income and income per 100 CU of sales
+
+In this exercise households spend 80% of each additional CU locally, and half of local sales becomes resident income. Start with 100 CU and follow one round: 80 CU of local purchases yields 40 CU of income. Thus $b=0.80(0.50)=0.40$ and $m=1/(1-0.40)=5/3$. Apply the multiplier to the initial **resident income** calculated above.
+
+| Result | 400 CU order | 600 CU order |
+|---|---:|---:|
+| Total resident income (CU) | $180(5/3)=300$ | $240(5/3)=400$ |
+| Resident income per 100 CU of sales | $100(300/400)=75$ | $100(400/600)\approx66.7$ |
+
+The larger order generates more total income. The smaller order generates more income per 100 CU of sales. The local bindery has no spare capacity for the extra work, so some of the larger order pays a bindery elsewhere. The share of order revenue that initially reaches A’s residents falls from $180/400=45\%$ to $240/600=40\%$. Both initial gains face the same subsequent spending pattern and income multiplier.
 
 ## Carry forward
 

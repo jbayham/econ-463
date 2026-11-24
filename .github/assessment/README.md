@@ -1,0 +1,14 @@
+# Does the deck prepare students for the problem set?
+
+Run `python3 .github/assessment/check.py` from the repository root. The Assessment foundations workflow also runs on relevant pushes and pull requests, on Monday mornings at 09:00 Hanoi time on the default branch, and on manual dispatch. Open gaps or stale reviews give a nonzero exit. An unwritten template question is reported as pending.
+
+## Review a question from the student's perspective
+
+1. Read the actual question, including the shared setup, tables, subparts, and assigned sources. List what a student has to produce. For example, using a supplied multiplier and deriving one from spending shares require different preparation.
+2. Try the task using the student-facing slides available before the due date and any materials the question expressly supplies. Find where students learn the terms, see the method or reasoning, and practice applying or interpreting it in a different case. For a diagram, look for practice choosing boundaries, labeling objects, and drawing the relevant relationships. For a reading question, check that students have a way to connect evidence in the reading to the concept. A worked analogy or a sequence of slides can provide this foundation without giving away graded answers.
+3. Record the finding in [coverage.json](coverage.json). Each real question has a module, a plain-language skill for each part, and the exact slide titles that support it. Cite another module with a title such as `01/Agglomeration mechanisms`. Use `whole` for an undivided question, `a` for a lettered part, and `d.1` for a numbered task under part d. For a missing method or missing deck, record a specific `gap` and retain any partial evidence. Revisit this map when drafting a new module even if it had no previous evidence entries.
+4. Run `python3 .github/assessment/check.py --fingerprints`. After reading the changed prompts and evidence, copy the fingerprint for each reviewed problem into its `reviewed` field and rerun the check. Remove a gap when the slides actually teach the skill. A fingerprint records that a review took place, including one that found gaps.
+
+The script discovers questions in the problem-set QMD files and checks part coverage, cited slide titles, and changes in each prompt and its cited slide source. Speaker notes and comments do not count as student-facing evidence. A human or course-authoring agent judges whether the example transfers to the graded task, inspects rendered figures and data, and records the result. An unchanged fingerprint cannot detect changes inside an external figure or dataset. Include those in the review when they change.
+
+The course map currently pairs Modules 1–3 with PS1, Modules 4–5 with PS2, Module 6 with PS3, and Modules 7–8 with PS4. Use the actual assignment as it develops.

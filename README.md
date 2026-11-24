@@ -19,3 +19,5 @@ The GitHub repository is [jbayham/econ-463](https://github.com/jbayham/econ-463)
 The course site is [jbayham.github.io/econ-463](https://jbayham.github.io/econ-463/). Push reviewed site changes to `Course-Website` to trigger a Pages build. The `_config.yml` values `url`, `baseurl`, and `githubdir` point to this repository. Local planning, reference, development, and output directories are excluded from the site build.
 
 Keep `LICENSE`, including Steven V. Miller's copyright and MIT permission notice, with the template-derived code. A GitHub fork relationship is not required.
+
+For the recurring check of whether the module slides prepare students for graded problem-set questions, run `python3 .github/assessment/check.py`. The [assessment review procedure](.github/assessment/README.md) explains how to review a new question, record slide evidence, and resolve a gap.

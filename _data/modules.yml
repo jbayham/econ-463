@@ -52,12 +52,6 @@
       url: reader.html
     - title: "Student reader (PDF)"
       url: reader.pdf
-    - title: "R examples"
-      url: R/growth.R
-    - title: "Regional-growth data (CSV)"
-      url: data/regional-growth.csv
-    - title: "Sector-change data (CSV)"
-      url: data/sector-change.csv
 
 - title: "Module 3: Defining and Measuring a Regional Economy"
   dirname: modules/03-measurement
