@@ -66,7 +66,7 @@ The reader follows the deck: growth and structural change; demand and supply; tr
 
 Work through the arithmetic before looking at the answers, then reproduce it with `R/growth.R`. You need ratios, percentage changes, and a linear equation in one unknown. No matrix algebra, regression, or optimizer is required. The baseline for a percentage change is always the initial value: $100(z_1/z_0-1)$. The periods in Example 1 are two comparable observations, not necessarily consecutive years, so changes are **not annual growth rates**.
 
-The selected primary reading is @hoover2020, §11.2, printed pp. 223–224, and §§11.5–11.6, pp. 234–239. The first selection introduces competing forces; the second develops trade, factor movements, and convergence. Use this reader's worked examples to connect them. Selected supporting passages are listed at the end. These are reading choices within Chapter 11, not a requirement to read the whole chapter before class. Module 2 begins after Module 1 on November 25 and concludes in the first hour of November 26.
+Read @hoover2020, Chapter 11, “How Regions Develop,” from the opening through §11.6, “Interregional Convergence” (printed pp. 217–239, PDF pp. 218–240). The assignment spans 23 pages. Stop at the §11.7 heading on the last page. The opening trends motivate the chapter’s question about why places grow at different rates. As you read §11.3.2, trace how a new order affects purchases from suppliers. Module 6 returns to the calculations.
 
 # Growth, development, and structural change
 
@@ -321,7 +321,7 @@ Recalculate the moving budget over one and three years using `move_budget(years 
 
 ## Carry forward
 
-For Exam 1, practice explaining mechanisms, distinguishing levels from growth rates, calculating simple ratios and feedback effects, and identifying an assumption that could reverse a conclusion. R implementation belongs in problem set work, not timed coding. These exercises are ungraded preparation for PS 1; the graded questions are separate. PS 1's checkpoint is November 27 and its final deadline is November 30, both at the end of class.
+For Exam 1, practice explaining mechanisms, distinguishing levels from growth rates, calculating simple ratios and feedback effects, and identifying an assumption that could reverse a conclusion. These exercises prepare you for PS 1, where you will show your calculations and explain your results. See the course schedule for the PS 1 deadline.
 
 Module 3 asks how to choose regional boundaries and comparable data, then measure industrial structure in R. Module 4 develops wage, rent, and population adjustment. Module 6 extends demand transmission to a system of industries; Module 7 introduces additional behavioral and resource constraints. The common thread is to define the outcome and counterfactual, trace the mechanism, and state what the calculation leaves out.
 
@@ -335,15 +335,11 @@ The following page numbers use the local fourth-edition web version of Hoover an
 
 | Purpose | Selection | Printed pages | PDF pages |
 |---|---|---|---|
-| Primary: growth forces | §11.2 | 223–224 | 224–225 |
-| Primary: trade and mobility | §11.5 | 234–236 | 235–237 |
-| Primary: convergence | §11.6 | 237–239 | 238–240 |
-| Economic-base vocabulary | §11.3.1 | 224–227 | 225–228 |
-| Supporting: supply and capacity | §11.4 | 233–234 | 234–235 |
+| Assigned reading | §§11.1–11.6 | 217–239 | 218–240 |
 | Supporting: migration detail | §10.3 | 197–208 | 198–209 |
 | Optional: cities and regional development | §11.7 | 239–242 | 240–243 |
 
-Read the primary selections with three questions: What initiates change? How does it spread? What limits or reverses it? The remaining entries provide targeted explanation, not an additional required reading bundle. The income-feedback calculation and numerical tables in this reader use synthetic values, not empirical estimates from the text.
+As you read from the beginning of the chapter through §11.6, ask what initiates change, how it spreads, and what limits or reverses it. The income-feedback calculation and numerical tables in this reader use synthetic values, not empirical estimates from the text.
 
 ::: {#refs}
 :::

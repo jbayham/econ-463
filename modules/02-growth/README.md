@@ -53,4 +53,4 @@ The moving budget uses annual wages and costs plus a one-time moving expense. It
 
 ## Readings
 
-Start with Hoover and Giarratani, *An Introduction to Regional Economics*, §11.2, pp. 223–224; §11.5, pp. 234–236; and §11.6, pp. 237–239. For economic-base vocabulary and its qualifications, use §11.3.1, pp. 224–227. The reader's reading guide lists supporting selections and page references. The PDF reader can be used offline.
+Read Hoover and Giarratani, *An Introduction to Regional Economics*, Chapter 11, “How Regions Develop,” from the beginning through §11.6, “Interregional Convergence.” The assignment spans 23 pages (printed pp. 217–239, PDF pp. 218–240). Stop at the §11.7 heading on the last page.

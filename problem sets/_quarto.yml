@@ -2,6 +2,7 @@ project:
   type: default
   render:
     - problem-set-*.qmd
+  post-render: sh _refresh-ps1-key.sh
 
 format:
   pdf:
@@ -40,5 +41,5 @@ format:
         \newcommand{\answerspace}[1][1.5in]{\par\vspace*{#1 plus 1fill}}
     include-before-body:
       text: |
-        \noindent Write your answers by hand. Show your work, explain your reasoning,
+        \noindent Complete the questions on a separate sheet of paper. Show your work, explain your reasoning,
         and label any graphs.\par

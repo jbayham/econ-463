@@ -4,11 +4,34 @@ Draft teaching plan for instructor review.
 
 How can a more attractive place end up with higher rents? Students use commuting costs, housing supply, and mobility to explain adjustments in wages, rents, and population (LO4).
 
-## Teaching sequence
+## Progression of ideas
 
-- **Nov 27, after M3.** Start with two otherwise similar homes at different distances from work. Derive the rent difference that offsets the extra commute and sketch the bid-rent gradient.
-- **Nov 30.** Trace an amenity improvement through household location and housing demand. Compare elastic and constrained housing supply, then contrast the wage and rent responses to an amenity gain and a productivity gain.
-- **Dec 3, shared with M5.** Revisit the diagram behind a house-price premium before the scheduled Exam 1 review.
+1. **Start within a city.** A shorter commute saves time or money. Ask how much more a household could pay for land closer to work and still be equally well off. This trade-off gives the bid-rent curve its slope.
+2. **Compare cities through wages and rents.** Return to the productivity gains from clustering in Module 1. In a Rosen–Roback diagram, households weigh wages, rents, and amenities when choosing where to live. Firms weigh productivity, wages, and land costs when choosing where to produce. The intersection gives a wage and rent consistent with both choices.
+3. **Distinguish two reasons rents can rise.** Use the diagram to compare a productivity gain with an improvement in amenities. Then ask how housing supply affects the population response. Module 5 takes the resulting capitalization prediction to housing data.
+
+## Topic outline
+
+### Land use within a city
+
+- Household trade-offs between rent and commuting costs. Two otherwise similar homes give a concrete starting point for the bid-rent gradient.
+- How cheaper commuting affects the gradient, and which assumptions about employment location and housing are needed for that prediction.
+
+**Instructor notes:**
+
+### Wages and rents across cities
+
+- Rosen–Roback household indifference and firm zero-profit conditions. Wages enter as household income and a cost of production.
+- Joint determination of wages and rents. Revisit the Module 1 agglomeration example as a source of local productivity differences.
+
+**Instructor notes:**
+
+### Amenities, productivity, and housing supply
+
+- Compare a cleaner city with a more productive city. Trace which equilibrium condition shifts and how wages and rents respond in each case.
+- Housing supply and population adjustment. Ask which combinations of observed wages, rents, and housing growth would help distinguish the explanations for a price premium.
+
+**Instructor notes:**
 
 ## Readings and teaching materials
 
@@ -16,7 +39,7 @@ Use selected diagrams from Brueckner, ch. 2, pp. 23–50, and the spatial equili
 
 ## Assessment connection
 
-Introduce the diagram and prediction component of PS 2 on Nov 27. Use the same prediction when interpreting the M5 estimates. PS 2 is due Dec 7.
+Introduce the diagram and prediction component of PS 2 in the spatial equilibrium exercise. Use the same prediction when interpreting the M5 estimates. PS 2 is due Dec 7.
 
 ## Decision for review
 

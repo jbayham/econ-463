@@ -58,9 +58,9 @@ By the end of this module, you should be able to explain how natural advantages,
 
 ## How to use this reader
 
-No advance reading is expected on the first day. Use this reader during or after class; no software setup is needed. The sequence matches the lecture deck. Read an example's setup, make a prediction, and then check the calculation. When your prediction is wrong, identify which cost or assumption you overlooked. After each example, ask: **What mechanism explains this result, and which assumption would change your conclusion?** That question is more useful than memorizing the preferred location in one particular table.
+No advance reading is expected. Use this reader during or after class; no software setup is needed. The sequence matches the lecture deck. Read an example's setup, make a prediction, and then check the calculation. When your prediction is wrong, identify which cost or assumption you overlooked. After each example, ask: **What mechanism explains this result, and which assumption would change your conclusion?** That question is more useful than memorizing the preferred location in one particular table.
 
-Two readings are required: @hoover2020, Chapter 1, printed pp. 12–15, and Chapter 2, §§2.3–2.7, pp. 19–35, for regional framing, resource endowments, and location choice; and @brueckner2011, Chapter 1, §§1.1–1.5, pp. 1–18, for scale economies, agglomeration, and their connections to transport and city formation. Use them as follow-up to class; no advance reading is assumed on Day 1. The numerical examples in this reader are synthetic; they are not estimates for an actual firm or country. All amounts use illustrative **currency units (CU)**. Supplemental readings are identified where they add a distinct perspective. They are not an additional bundle of required chapters.
+Two readings are required: @hoover2020, Chapter 1, printed pp. 12–15, and Chapter 2, §§2.3–2.7, pp. 19–35, for regional framing, resource endowments, and location choice; and @brueckner2011, Chapter 1, §§1.1–1.5, pp. 1–18, for scale economies, agglomeration, and their connections to transport and city formation. Use them as follow-up to class; no advance reading is assumed. The numerical examples in this reader are synthetic; they are not estimates for an actual firm or country. All amounts use illustrative **currency units (CU)**. Supplemental readings are identified where they add a distinct perspective. They are not an additional bundle of required chapters.
 
 Before proceeding, check that you can distinguish total cost, marginal cost, and average cost; interpret a straight line's intercept and slope; and solve an equation in one unknown. If one of these steps is unfamiliar, use the worked calculations as a refresher. Paper and, if useful, a calculator are sufficient.
 
@@ -341,7 +341,7 @@ Why might competing shops choose adjacent locations? Customers can combine trips
 
 A mall owner controls several units and can account for some cross-store benefits when choosing the tenant mix and rents. That common ownership differs from independent shops making location decisions without coordinating. Online comparison tools may reduce the need to visit neighboring stores to compare products, but shared trips, physical inspection, and other services may still matter. Which mechanism changes is a useful question; an inevitable decline in retail clustering is not the conclusion.
 
-This extends the discussion to Brueckner §1.6, which is **supplemental**, outside the required §§1.1–1.5. It is not an additional Day 1 task.
+This extends the discussion to Brueckner §1.6, which is **supplemental**, outside the required §§1.1–1.5.
 
 ## A Vietnam connection
 

@@ -73,7 +73,7 @@ Sources: [CV](https://webdoc.agsci.colostate.edu/cv/jbayham.pdf), [U.S. Census B
 ```
 
 ::: {.notes}
-2 minutes. Describe how wildfire management affects people and places, how air pollution affects health, and how aggregated mobile device locations can help measure visits to recreation sites.
+Describe how wildfire management affects people and places, how air pollution affects health, and how aggregated mobile device locations can help measure visits to recreation sites.
 
 - Hayes Fire in Olympic National Park. [Courtesy U.S. National Parks](https://npgallery.nps.gov/AssetDetail/32275dd6-5c88-4fa0-b4d3-54b769754792).
 - PurpleAir sensor in Yosemite National Park. [National Park Service](https://www.nps.gov/subjects/air/howwemeasure-smoke.htm).
@@ -93,7 +93,7 @@ No advance reading is expected today. We will build the ideas together.
 :::
 
 ::: {.notes}
-1 minute. Introduce regional economics through these questions. The course overview takes 10 minutes, following 5 minutes of instructor introductions; the syllabus discussion takes 20 minutes. Do not ask students to recall a reading.
+Introduce regional economics through these questions. Do not ask students to recall a reading.
 :::
 
 ## Motivating example: a new factory
@@ -118,7 +118,7 @@ I don't expect you to use the proper/formal economic terms.
 :::
 
 ::: {.notes}
-2 minutes. Allow one minute of paired discussion and one minute to collect ideas. For the location question, group responses into production costs, movement costs, and access to people or firms. Revisit the list in Example 1; do not require a single correct site yet.
+Ask pairs to discuss and share their ideas. For the location question, group responses into production costs, movement costs, and access to people or firms. Revisit the list in Example 1; do not require a single correct site yet.
 
 For the second question, “What impact will it have on the surrounding area?”, select one or two follow-ups from this menu rather than covering every channel:
 
@@ -145,7 +145,7 @@ Close with: “The factory can create opportunities and costs, and those effects
 **Regional models and policy:** trace a shock and interpret its consequences.
 
 ::: {.notes}
-1 minute. Map the four stages to M1–2, M3, M4–5, and M6–8. Explain input-output models as tracking purchases between industries; explain computable general equilibrium models as also allowing prices and behavior to adjust. These are previews, not assumed vocabulary. The final stage asks what results mean for people and places.
+Map the four stages to M1–2, M3, M4–5, and M6–8. Explain input-output models as tracking purchases between industries; explain computable general equilibrium models as also allowing prices and behavior to adjust. These are previews, not assumed vocabulary. The final stage asks what results mean for people and places.
 :::
 
 ## Learning outcomes: location and growth
@@ -159,7 +159,7 @@ By the end of the course, you will be able to:
 **LO3.** Compare explanations for regional growth and decline, and explain how industrial specialization, productivity, market access, trade, and migration transmit economic changes across regions.
 
 ::: {.notes}
-1 minutes. Introduce the three outcomes together: explain location, analyze clustering, and compare regional growth. This is a preview; the terminology will be taught during the course. Full wording and stable IDs follow docs/course-prep-step-1-learning-outcomes.md. Introduce course outcomes in this course-introduction deck only; all module decks should omit outcome lists and LO labels.
+Introduce the three outcomes together: explain location, analyze clustering, and compare regional growth. This is a preview; the terminology will be taught during the course. Full wording and stable IDs follow docs/course-prep-step-1-learning-outcomes.md. Introduce course outcomes in this course-introduction deck only; all module decks should omit outcome lists and LO labels.
 :::
 
 ## Learning outcomes: places and data
@@ -171,7 +171,7 @@ By the end of the course, you will be able to:
 **LO5.** Define an appropriate regional unit and use data with comparable geographic boundaries, years, and sector definitions in R to measure industrial structure, specialization, and economic change.
 
 ::: {.notes}
-1 minute. Explain amenities as valued features of a place, hedonic models as relating property prices to characteristics, and sorting as people selecting different locations. Preview comparable regional data and R work. Do not presume advance reading. Full wording and stable IDs follow docs/course-prep-step-1-learning-outcomes.md. Introduce course outcomes in this course-introduction deck only; all module decks should omit outcome lists and LO labels.
+Explain amenities as valued features of a place, hedonic models as relating property prices to characteristics, and sorting as people selecting different locations. Preview comparable regional data and R work. Do not presume advance reading. Full wording and stable IDs follow docs/course-prep-step-1-learning-outcomes.md. Introduce course outcomes in this course-introduction deck only; all module decks should omit outcome lists and LO labels.
 :::
 
 ## Learning outcomes: models and policy
@@ -183,7 +183,7 @@ By the end of the course, you will be able to:
 **LO7.** Apply regional theory and models to a real-world problem using an explicit baseline and counterfactual; distinguish modeled impacts from causal evidence and welfare changes, assess opportunity costs, externalities, and distributional consequences, and communicate findings and limitations.
 
 ::: {.notes}
-1 minute. Explain input-output analysis as tracing industry purchases and CGE as allowing prices and behavior to adjust. Define baseline as the starting situation and counterfactual as the comparison scenario. Distinguish an estimated regional effect from evidence of causation or improved well-being. These are course destinations, not concepts students must already know. Full wording and stable IDs follow docs/course-prep-step-1-learning-outcomes.md. Introduce course outcomes in this course-introduction deck only; all module decks should omit outcome lists and LO labels.
+Explain input-output analysis as tracing industry purchases and CGE as allowing prices and behavior to adjust. Define baseline as the starting situation and counterfactual as the comparison scenario. Distinguish an estimated regional effect from evidence of causation or improved well-being. These are course destinations, not concepts students must already know. Full wording and stable IDs follow docs/course-prep-step-1-learning-outcomes.md. Introduce course outcomes in this course-introduction deck only; all module decks should omit outcome lists and LO labels.
 :::
 
 ## How we will work
@@ -197,7 +197,7 @@ By the end of the course, you will be able to:
 **Materials:** slides guide class; the reader explains examples fully; selected readings provide context.
 
 ::: {.notes}
-3 minutes. Explain that timed coding is not planned for exams and that there is no standalone project. No preparation from the reader is expected today. Later reading expectations will be stated explicitly. Do not introduce an LMS, submission format, or grading policy that has not been confirmed.
+Explain that timed coding is not planned for exams and that there is no standalone project. No preparation from the reader is expected today. Later reading expectations will be stated explicitly. Do not introduce an LMS, submission format, or grading policy that has not been confirmed.
 :::
 
 ## Syllabus walkthrough and questions
@@ -211,5 +211,5 @@ By the end of the course, you will be able to:
 Discuss expectations, access to materials, support, and questions.
 
 ::: {.notes}
-20 minutes reserved for the syllabus walkthrough and questions. Open the current syllabus in syllabus/syllabus.md or its PDF; use its confirmed policies and assessment allocations. The instructor will fill in unresolved policies. TODO: confirm remaining policies on collaboration and AI-use rules; late work; permitted exam materials; submission platform and format; classroom/meeting times; office hours and support arrangements. Use the current syllabus for confirmed grading weights, section times, and rooms; leave unresolved policies for the instructor. Suggested allocation: 5 minutes schedule/assessments, 10 minutes instructor-supplied expectations/logistics, 5 minutes questions. PS 1 now has a draft World Bank location-choice question; confirm its final wording before assigning it.
+Open the current syllabus in syllabus/syllabus.md or its PDF; use its confirmed policies and assessment allocations. The instructor will fill in unresolved policies. TODO: confirm remaining policies on collaboration and AI-use rules; late work; permitted exam materials; submission platform and format; classroom/meeting times; office hours and support arrangements. Use the current syllabus for confirmed grading weights, section times, and rooms; leave unresolved policies for the instructor. PS 1 now has a draft World Bank location-choice question; confirm its final wording before assigning it.
 :::

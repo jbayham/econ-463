@@ -2,7 +2,7 @@
 
 Opening deck for the first meeting, before Module 1. Includes instructor background placeholders, course motivation and progression, all seven course learning outcomes, and the syllabus walkthrough.
 
-Replace the bracketed personal prompts before teaching. Use the current syllabus for confirmed policies; fill unresolved policies yourself. Timing: instructor introduction 5 minutes, course overview 10, syllabus 20 (35 total).
+Replace the bracketed personal prompts before teaching. Use the current syllabus for confirmed policies; fill unresolved policies yourself.
 
 Render from the repository root:
 

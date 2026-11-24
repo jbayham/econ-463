@@ -93,7 +93,7 @@ The course has four problem sets and two exams. Problem sets assess the ability 
 
 | Component                             | Focus                                                                                       | Points  |
 | ------------------------------------- | ------------------------------------------------------------------------------------------- | ------: |
-| PS 1: Location and regional structure   | Location calculations, agglomeration/growth reasoning, and a regional profile in R.         | 7.5     |
+| PS 1: Location and regional structure   | Location calculations, agglomeration/growth reasoning, and a regional profile.              | 7.5     |
 | PS 2: Spatial equilibrium and amenities | Spatial adjustment and hedonic estimation/interpretation in R.                              | 7.5     |
 | PS 3: Input-output analysis             | Accounts, coefficients, model solution, a demand shock, and sensitivity.                    | 7.5     |
 | PS 4: CGE and model comparison          | Baseline replication, one shock, one sensitivity comparison, and a bounded policy question. | 7.5     |
@@ -113,6 +113,8 @@ You will have the full class period for exams. Exam 1 is scheduled for **Monday,
 - Firm location, shared suppliers, labor pooling, knowledge spillovers, and the costs of concentration.
 
 ### Module 2: Regional Growth and Interregional Connections
+
+**Main reading.** Hoover and Giarratani, Chapter 11, “How Regions Develop,” through section 11.6, “Interregional Convergence.”
 
 - Regional growth and decline, productivity, specialization, structural change, and convergence.
 - Market access, trade costs, migration, and the transmission of economic changes across regions.

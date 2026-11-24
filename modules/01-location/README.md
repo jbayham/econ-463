@@ -15,13 +15,13 @@ The examples compare three plant locations, one plant versus two plants, and the
 
 Read each setup, predict the result, and try the calculation before consulting the worked answer. Explain the mechanism and identify an assumption that could change your conclusion. The exercises are ungraded practice.
 
-Day 1 requires no advance reading, coding, or software setup. Use paper and optionally a calculator. The basket story introduces specialization; the plant example first compares production costs, then adds freight. Practice changing fixed cost to 600 CU and shipping to 8 CU per unit before checking the reader's answer.
+The opening material requires no advance reading, coding, or software setup. Use paper and optionally a calculator. The basket story introduces specialization; the plant example first compares production costs, then adds freight. Practice changing fixed cost to 600 CU and shipping to 8 CU per unit before checking the reader's answer.
 
 ## Teaching sequence
 
-November 23 has 120 working minutes: separate opening deck 35 (instructor introduction 5, overview 10, syllabus 20), foundations 10, location baseline 15, transport change 15, scale and city formation 25, paired hand calculations 20. Take the 10-minute break after the location baseline. Stop after the paired exercise; no midpoint recap. November 24 has no class; the required readings provide follow-up between meetings.
+Begin with the location baseline, vary freight costs, then compare scale economies and shipping costs in the plant example.
 
-November 25 uses 60 minutes: agglomeration 30, limits 20, closing summary/retrieval/Module 2 bridge 10. The optional retail and doubled-demand slides have no scheduled time. Introduce all course learning outcomes only in the separate course-introduction deck; omit outcome lists from module decks.
+Follow with agglomeration mechanisms, limits to concentration, and the bridge to regional growth. Introduce all course learning outcomes only in the separate course-introduction deck; omit outcome lists from module decks.
 
 ## Authoring and rendering
 
@@ -40,7 +40,7 @@ Rendered files stay beside their sources. The basket figure advances on a click 
 
 ## Readings
 
-Required: Hoover–Giarratani, Chapter 1, pp. 12–15, and Chapter 2, §§2.3–2.7, pp. 19–35, for regional framing, resource endowments, and location choice; Brueckner, *Lectures on Urban Economics*, Chapter 1, §§1.1–1.5, pp. 1–18, for scale, agglomeration, and transport connections. These are follow-up readings, not Day 1 prerequisites. Hoover–Giarratani Chapter 5 and Brueckner §1.6 remain supplemental; Glaeser–Gottlieb remains optional advanced background, and the World Bank illustration is optional.
+Required: Hoover–Giarratani, Chapter 1, pp. 12–15, and Chapter 2, §§2.3–2.7, pp. 19–35, for regional framing, resource endowments, and location choice; Brueckner, *Lectures on Urban Economics*, Chapter 1, §§1.1–1.5, pp. 1–18, for scale, agglomeration, and transport connections. Use these readings to revisit the examples. Hoover–Giarratani Chapter 5 and Brueckner §1.6 remain supplemental; Glaeser–Gottlieb remains optional advanced background, and the World Bank illustration is optional.
 
 Use the reader's reading guide for section and page references. The PDF reader can be used offline.
 
