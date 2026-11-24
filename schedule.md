@@ -5,9 +5,8 @@ permalink: /schedule/
 course_year: 2026
 ---
 
-November 23–December 18, 2026. Both sections follow the same schedule. There is **no class on November 24** or on weekends. See the [syllabus]({{ site.baseurl }}/syllabus/) for meeting times and rooms.
 
-This schedule is tentative. Additional handouts will accompany the relevant module. Problem Sets 1–3 are due at the **end of class** on the listed Mondays. The following Tuesday's class includes about an hour of problem set review. The shortened Problem Set 4 is due at the **end of the final exam**. Changes will be announced in class.
+This schedule is tentative. Additional handouts will accompany the relevant module. All Problem Sets are due at the **beginning of class** on the listed due date.
 
 <!-- Edit this table directly. No spreadsheet or conversion step is required. -->
 
