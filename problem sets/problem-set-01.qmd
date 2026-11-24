@@ -1,17 +1,24 @@
 ---
 title: "Problem Set 1"
 subtitle: "Location and Regional Structure"
+geometry: margin=0.85in
+header-includes: |
+  \AtBeginDocument{%
+    \setlength{\parskip}{4pt}%
+    \setlength{\LTpre}{4pt}%
+    \setlength{\LTpost}{4pt}%
+  }
 ---
 
-<!-- Replace the sample prompts and adjust the minimum writing space as needed,
-     for example with \answerspace[2in]. Use {{< pagebreak >}} to start a new page. -->
+<!-- When editing or adding questions, update the corresponding worked answers
+     in dev/answer-keys/ps1/solutions.md in the instructor checkout. After checking
+     the answers, run render_key.py --review N there for each revised problem. -->
 
 ## Problem 1: Where should a new factory locate?
 
 **Required reading:** World Bank, *Vietnam Development Report 2019: Connecting
 Vietnam for Growth and Shared Prosperity*, Chapter 2, **printed pages 45–47**
 (PDF pages 65–67), within “Economic Clusters and Corridor Development.”
-[Read the report](https://documents1.worldbank.org/curated/en/590451578409008253/pdf/Vietnam-Development-Report-2019-Connecting-Vietnam-for-Growth-and-Shared-Prosperity.pdf#page=65).
 Focus on the discussion and Figures 2.13–2.15; you do not need to extract numerical
 values from the figures. Treat the report as historical evidence.
 
@@ -40,21 +47,9 @@ CU denotes a common, hypothetical currency unit.
 location. Why is minimizing cost appropriate for this firm's profit-maximization
 problem?
 
-```{=latex}
-\answerspace[0.7in]
-```
-
 **(b)** Explain two distinct agglomeration mechanisms that could account for
-Site A's lower production cost. Connect each to the reading, citing a page.
+Site A's lower production cost. Connect each to the reading.
 Explain why these are external economies rather than internal economies of scale.
-
-```{=latex}
-\answerspace[1in]
-```
-
-{{< pagebreak >}}
-
-### Problem 1 (continued)
 
 **(c)** A new road connection reduces **both inbound and outbound freight costs
 at Site B by the same proportion, $r$**, where $0 \leq r \leq 1$. All other costs,
@@ -67,26 +62,122 @@ including Site A's costs, remain unchanged.
 - Use the discussion on page 47 to explain how Site B could become more
   attractive without moving physically closer to a port or city.
 
-```{=latex}
-\answerspace[1.7in]
-```
-
 **(d)** A policymaker concludes: “Industrial parks cluster near transport
 corridors, so building a new expressway will necessarily create a productive
 industrial cluster.” Evaluate this claim. Identify one reason
 the observed clustering does not establish causation, and one condition beyond
-the road itself that would help a new cluster succeed. Refer to pages 45–47.
-
-```{=latex}
-\answerspace[1.5in]
-```
+the road itself that would help a new cluster succeed. 
 
 {{< pagebreak >}}
 
-## Problem 2
+## Problem 2: Where does the money from a new factory order go?
 
-*Add the second problem prompt here.*
+Suppose the factory from Problem 1 has opened and has spare capacity. A buyer
+in another province places an extra order. To fill it, the factory hires a
+repair shop in its own district, buys components from a supplier in the buyer's
+province, and pays overtime to workers who commute from a neighboring district
+in the factory's province. The workers spend part of their overtime pay at a
+grocery store in their home district.
 
-```{=latex}
-\answerspace
-```
+**(a)** Sketch the payments triggered by the order. Draw a boundary around the
+factory's district and place each firm and the workers' households on the
+appropriate side. Start with the buyer's payment. Use arrows pointing from
+payer to recipient, label what each payment is for, and follow the money as
+far as the grocery store.
+
+**(b)** The repair shop serves only customers in the factory's district. Using
+your sketch, explain how the shop can earn more from this order even though it
+exports nothing. Which sale brings outside demand into the district?
+
+**(c)** Add a dashed boundary to your sketch that includes both the factory's
+district and the commuters' home district. Identify one payment that now stays
+inside the region and one that still leaves it. What does this change in
+boundary tell you about who receives income from the order?
+
+**(d)** Suppose the buyer orders either 9,000 CU or 12,000 CU of goods. The
+factory can fill either order, but the district repair shop has only 30 hours
+available to service the machinery before the buyer's deadline. The smaller
+order needs 30 hours. The larger order needs 40, so the factory hires the same
+shop for 30 hours and a crew from outside the district for the extra 10.
+
+| How the factory spends the buyer's payment | 9,000 CU order | 12,000 CU order |
+|:------------------------------------------|---------------:|----------------:|
+| Wages to factory-district residents       | 1,800 | 2,400 |
+| Wages to commuters from outside the district | 1,200 | 1,600 |
+| Components from another province          | 3,600 | 4,800 |
+| Fee to the district repair shop           | 2,400 | 2,400 |
+| Fee to the outside crew                   |     0 |   800 |
+
+1. The district repair shop spends 25% of its fee on parts from outside
+   the district. The remaining 75% becomes income for district residents. Using the
+   table, calculate how much income district residents receive from each order
+   before households spend any of it. Assume payments outside the district stay there.
+
+2. Under either order, district households spend 75% of each round of new income
+   at district businesses and save the rest or spend it elsewhere. For every
+   3 CU those businesses receive, 1 CU pays for outside inputs and 2 CU becomes
+   income for district residents. Starting with
+   100 CU of resident income, use the amount that returns in the next round to
+   derive the income multiplier. Which order generates more **total district
+   income** after all rounds? Which generates more **district income per 100 CU
+   of the buyer's order**? Show both comparisons and explain how the repair
+   shop's capacity affects the results.
+
+{{< pagebreak >}}
+
+## Problem 3: Which district specializes in manufacturing?
+
+A provincial planner wants to know where the most manufacturing jobs are and
+where manufacturing plays the largest role in the local economy. Use the
+illustrative job counts below. The survey counts each job at its workplace
+and uses the same year and industry definitions throughout. The province
+includes Port, Hill, and other districts. The national totals include the
+entire province.
+
+| Area | Manufacturing jobs | Jobs in all industries |
+|:-----|-------------------:|-----------------------:|
+| Port District | 9,000 | 50,000 |
+| Hill District | 4,500 | 15,000 |
+| Province | 72,000 | 200,000 |
+| Country | 2,000,000 | 10,000,000 |
+
+**(a)** Calculate manufacturing's share of all jobs in Port, Hill, and the
+country. Then calculate each district's **location
+quotient (LQ)**. Record the three shares and the two LQs. Which district has
+more manufacturing jobs? Which is more specialized relative to the country?
+Use the numbers to explain how both findings can hold.
+
+**(b)** Calculate the share of provincial jobs in manufacturing. Divide each
+district's manufacturing share by the provincial share to get new LQs for
+Port and Hill. Is Hill more or less specialized in manufacturing than the
+country? Than the province? Explain using Hill's two LQs. Which district has
+the higher LQ under each benchmark?
+
+**(c)** Did the district that started out more specialized in manufacturing
+also gain manufacturing jobs faster than the industry did nationally?
+The planner now has a second survey that uses the same definitions.
+
+| Area and employment measure | Base year | Five years later |
+|:----------------------------|----------:|-----------------:|
+| Port District, manufacturing jobs | 9,000 | 9,900 |
+| Hill District, manufacturing jobs | 4,500 | 4,770 |
+| Country, manufacturing jobs | 2,000,000 | 2,160,000 |
+| Country, jobs in all industries | 10,000,000 | 10,500,000 |
+
+1. How many manufacturing jobs would each district gain at each growth rate
+   below? Calculate the five-year rates from the survey. For every row, multiply
+   the district's **base-year manufacturing jobs** by the rate in that row.
+   Record each change in jobs. 
+
+   | Growth rate applied | Port job change | Hill job change |
+   |:--------------------|----------------:|----------------:|
+   | National, all industries | | |
+   | National, manufacturing | | |
+   | District's own manufacturing rate (observed change) | | |
+
+2. Use the rows to calculate two **shift-share** effects in jobs for each district.
+   For **industry mix**, subtract the national all-industries result from the
+   national manufacturing result. For **regional shift**, subtract the national
+   manufacturing result from the observed change. Using the LQs from part (a),
+   did the more specialized district outpace national manufacturing? Explain
+   how it could gain jobs and still have a negative regional shift.
