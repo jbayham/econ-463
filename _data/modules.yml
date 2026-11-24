@@ -1,13 +1,25 @@
 # Add modules and resource links as their materials become available.
 - title: "Module 1: Location, Cities, and Agglomeration"
   dirname: modules/01-location
-  desc: "Why cities form, how firms choose locations, and how scale economies, transport costs, and agglomeration shape regional activity. Includes worked location and production examples."
+  desc: "Why cities form, how firms choose locations, and how scale economies, transport costs, and agglomeration shape regional activity. Read the textbook selections after the first class."
   readings:
-    - title: "Required — regional framing and location: Hoover–Giarratani (2020), Chapter 1, pp. 12–15; Chapter 2, sections 2.3–2.7, pp. 19–35."
-    - title: "Required — scale and agglomeration: Brueckner (2011), Chapter 1, sections 1.1–1.5, pp. 1–18, including transport connections."
-    - title: "Supplemental: Hoover–Giarratani, Chapter 5, sections 5.2–5.4, pp. 84–96; Brueckner section 1.6."
-    - title: "Optional advanced: Glaeser–Gottlieb (2009), section 3, pp. 999–1015. See the reader for the optional Vietnam application and full references."
-    - title: "Use the required readings to follow up on class; no advance reading or R setup is expected on Day 1."
+    Required reading:
+      - source: hoover-giarratani
+        selection: "§§1.1–1.3 and 2.3–2.7."
+      - source: brueckner
+        selection: "Ch. 1, §§1.1–1.5."
+      - source: world-bank
+        selection: "Ch. 2, “Economic Clusters and Corridor Development,” discussion of figures 2.13–2.15 (PS 1, Problem 1)."
+    Supplemental reading:
+      - source: hoover-giarratani
+        selection: "Ch. 5, §§5.2–5.4 (external economies)."
+      - source: brueckner
+        selection: "§1.6 (retail clustering)."
+    Optional reading:
+      - source: glaeser-gottlieb
+        selection: "§3 (evidence on agglomeration)."
+      - source: world-bank
+        selection: "Ch. 4, figure 4.1 (economic activity around Hanoi and Ho Chi Minh City)."
   materials:
     - title: "Course introduction slides"
       url: ../00-course-introduction/slides.html
@@ -17,12 +29,22 @@
       url: reader.html
     - title: "Student reader (PDF)"
       url: reader.pdf
+    - title: "World Bank, Vietnam Development Report 2019, ch. 2, figures 2.13–2.15 (required for PS 1, Problem 1)"
+      url: "https://documents1.worldbank.org/curated/en/590451578409008253/pdf/Vietnam-Development-Report-2019-Connecting-Vietnam-for-Growth-and-Shared-Prosperity.pdf#page=65"
 
 - title: "Module 2: Regional Growth and Interregional Connections"
   dirname: modules/02-growth
   desc: "Regional growth, productivity, structural change, trade, migration, and convergence. Includes synthetic regional comparisons, income-feedback calculations, and a transport-corridor example."
   readings:
-    - title: "Hoover–Giarratani, sections 11.2 (pp. 223–224), 11.5 (pp. 234–236), and 11.6 (pp. 237–239). See the reader for supporting selections."
+    Required reading:
+      - source: hoover-giarratani
+        selection: "§11.2 (Nov 25) and §§11.5–11.6 (Nov 26)."
+    Supplemental reading:
+      - source: hoover-giarratani
+        selection: "§§11.1 and 11.3–11.4 (growth trends, demand, and supply), and §10.3 (migration)."
+    Optional reading:
+      - source: hoover-giarratani
+        selection: "§11.7 (cities and regional development)."
   materials:
     - title: "Lecture slides"
       url: slides.html
@@ -36,3 +58,67 @@
       url: data/regional-growth.csv
     - title: "Sector-change data (CSV)"
       url: data/sector-change.csv
+
+- title: "Module 3: Defining and Measuring a Regional Economy"
+  dirname: modules/03-measurement
+  readings:
+    Required reading:
+      - source: schaffer
+        selection: "Ch. 2 and Note A (regional boundaries, location quotients, and shift-share)."
+    Supplemental reading:
+      - source: hoover-giarratani
+        selection: "§§9.1–9.4 and appendix 12-1 (functional regions and specialization)."
+
+- title: "Module 4: Land Use and Spatial Equilibrium"
+  dirname: modules/04-spatial-equilibrium
+  readings:
+    Required reading:
+      - source: brueckner
+        selection: "Ch. 2 and §11.2 (land use, commuting, wages, and rents)."
+    Supplemental reading:
+      - source: hoover-giarratani
+        selection: "§§6.2–6.7 and §7.3 (rent gradients and residential location)."
+
+- title: "Module 5: Hedonics and Interpretation of Spatial Evidence"
+  dirname: modules/05-hedonics
+  readings:
+    Required reading:
+      - source: brueckner
+        selection: "§6.2 (amenity capitalization)."
+      - source: hall-lawson-shia
+        selection: "Ch. 5 (airport noise and house prices)."
+    Optional reading:
+      - source: hall-lawson-shia
+        selection: "Chs. 7–8 (water quality, lake amenities, and industrial disamenities)."
+
+- title: "Module 6: Input-Output Analysis and Regional Linkages"
+  dirname: modules/06-input-output
+  readings:
+    Required reading:
+      - source: schaffer
+        selection: "Chs. 4–5 (accounts and model solution) and ch. 6 (multipliers)."
+      - source: hewings
+        selection: "§4.1 (impact analysis)."
+    Supplemental reading:
+      - source: schaffer
+        selection: "Ch. 6 multiplier appendix."
+
+- title: "Module 7: Regional CGE Modeling and Model Comparison"
+  dirname: modules/07-cge
+  readings:
+    Required reading:
+      - source: hewings
+        selection: "§7.2 (social accounting)."
+    Supplemental reading:
+      - source: hewings
+        selection: "§7.4 (labor-market links)."
+
+- title: "Module 8: Integrated Regional Application and Policy Evaluation"
+  dirname: modules/08-policy
+  readings:
+    Required reading:
+      - source: hoover-giarratani
+        selection: "§12.2 (regional policy objectives)."
+    Supplemental reading:
+      - source: hoover-giarratani
+        selection: "§12.5 (regional development strategy)."
