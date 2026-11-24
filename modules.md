@@ -10,7 +10,7 @@ See the [course schedule]({{ '/schedule/' | relative_url }}) for reading dates.
 {% assign sections = 'Required reading|Materials|Supplemental reading|Optional reading' | split: '|' %}
 {% for modules in site.data.modules %}
   <li class="archiveposturl">
-  <h2 class="module-title">
+  <h2 class="module-title" id="{{ modules.title | split: ':' | first | slugify }}">
     {% if modules.filename %}
       <a href="{{ site.url }}{{ site.baseurl }}/{{ modules.dirname }}/{{ modules.filename }}.pdf">{{ modules.title }}</a>
     {% else %}
