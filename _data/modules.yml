@@ -38,7 +38,7 @@
   readings:
     Required reading:
       - source: hoover-giarratani
-        selection: "§11.2 (Nov 25) and §§11.5–11.6 (Nov 26)."
+        selection: "§11.2 (Nov 25) and §§11.5–11.6 (interregional connections and convergence)."
     Supplemental reading:
       - source: hoover-giarratani
         selection: "§§11.1 and 11.3–11.4 (growth trends, demand, and supply), and §10.3 (migration)."
@@ -58,10 +58,23 @@
   readings:
     Required reading:
       - source: schaffer
-        selection: "Ch. 2 and Note A (regional boundaries, location quotients, and shift-share)."
+        selection: "For Nov 26, read ch. 2, “What Is a Region?” (main text, printed pp. 6–9), and ch. 3, Note A, “Techniques for Data Analysis” (printed pp. 43–47, on location quotients and shift-share)."
     Supplemental reading:
+      - source: schaffer
+        selection: "Use the full ch. 3 (printed pp. 13–47) as a reference. For the link to Module 2, see pp. 19–21 on using location quotients to estimate export employment and the assumptions that estimate requires."
       - source: hoover-giarratani
         selection: "§§9.1–9.4 and appendix 12-1 (functional regions and specialization)."
+  materials:
+    - title: "Lecture slides"
+      url: slides.html
+    - title: "The seafood order: in-class handout (PDF)"
+      url: seafood-order.pdf
+    - title: "Cần Thơ sector mix, LQs, and shift-share (Excel exercise and data)"
+      url: can-tho-sector-data.xlsx
+    - title: "Worked examples reader (web)"
+      url: reader.html
+    - title: "Worked examples reader (PDF)"
+      url: reader.pdf
 
 - title: "Module 4: Land Use and Spatial Equilibrium"
   dirname: modules/04-spatial-equilibrium

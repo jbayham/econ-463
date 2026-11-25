@@ -1,0 +1,91 @@
+---
+title: "The seafood order"
+lang: en
+format:
+  pdf:
+    pdf-engine: xelatex
+    papersize: a4
+    fontsize: 11pt
+    geometry:
+      - margin=22mm
+      - headheight=15pt
+    number-sections: false
+    colorlinks: true
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \definecolor{riverblue}{HTML}{123D51}
+        \fancypagestyle{casepage}{
+          \fancyhf{}
+          \fancyhead[L]{\small\sffamily ECON 463\quad Regional Economics}
+          \fancyhead[R]{\small\sffamily Module 3\quad In-class exercise}
+          \fancyfoot[C]{\small\sffamily\thepage}
+        }
+        \pagestyle{casepage}
+        \fancypagestyle{plain}[casepage]{}
+        \makeatletter
+        \renewcommand{\maketitle}{\par\noindent{\Huge\bfseries\sffamily\color{riverblue}\@title\par}\smallskip}
+        \makeatother
+---
+
+A processor in a fictional Mekong Delta district receives a weekly contract offer from a supermarket chain outside the district. The chain currently buys from another province. It will pay **100,000 VND per kilogram** for **20,000 kg of frozen fish**, delivered. It will accept only the full shipment. All figures in this exercise are illustrative.
+
+## 1. Would you sign the contract?
+
+The processor can fill the first 14,000 kg using spare capacity on its regular shift. For the final 6,000 kg, it must pay overtime and rent cold storage in a neighboring district. Compare accepting the order with declining it. Fixed costs are the same either way.
+
+| Terms and costs | VND per kg of finished fish |
+|:----------------|----------------------------:|
+| Supermarket’s price to the processor | 100,000 |
+| Fish, processing, and packing on every kg | 87,000 |
+| Extra overtime and cold storage on the final 6,000 kg only | 8,000 |
+| Freight on every kg, old connection | 14,000 |
+| Freight on every kg, improved connection | 10,000 |
+
+**A.** For each connection, subtract the relevant costs from the price. Calculate the margin on each kilogram in the two production runs. Then calculate the contribution of the entire weekly order toward fixed costs and profit.
+
+| Freight connection | Margin on first 14,000 kg (VND/kg) | Margin on final 6,000 kg (VND/kg) | Full order (million VND/week) |
+|:-------------------|------------------------------:|-----------------------------:|------------------------------:|
+| Old | | | |
+| Improved | | | |
+
+**B.** Would you sign the contract under the old freight rate? Under the improved rate? Explain how the buyer’s minimum shipment affects your decision.
+
+## 2. Who receives the buyer’s payment?
+
+Assume the processor signs under the improved connection. A district official says, “This contract brings our residents **2 billion VND in new income each week**.”
+
+**A.** Check what the 2 billion measures. Sketch the buyer’s payment and follow it to the processor, local fish farms, workers, and the cold store. Some workers commute from the neighboring district, where the cold store also operates. Draw the processor’s district boundary. Which payments cross it?
+
+**B.** Some local farms supply the processor by diverting fish from existing customers. What would you need to know about those sales and the farms’ costs to estimate the *additional* income local farm owners earn?
+
+\newpage
+
+## 2. Resident income and spending rounds (continued)
+
+A survey comparing the contract with no contract finds that district residents earn an additional **58 million VND per week** before households spend any of it. This includes extra pay for resident workers and additional earnings for resident owners. The estimate already accounts for the farm sales the order displaced.
+
+| What happens to an extra payment? | Survey finding |
+|:----------------------------------|:---------------|
+| Households spend part of each additional VND of income at district businesses. | 70% goes to district businesses. |
+| Businesses pay part of those additional household purchases to district residents as wages and owners’ earnings. | 600,000 VND of every 1 million VND in sales becomes resident income. |
+
+Assume businesses serving households can meet the extra demand at current prices. Use the same spending and income shares in each round. Report amounts in **millions of VND per week**.
+
+**C.** Start with 58 million VND of additional resident income. How much do households spend at district businesses? How much of those sales returns to residents as new income?
+
+| Starting resident income | Household spending at district businesses | Income returned to residents |
+|-------------------------:|------------------------------------------:|-----------------------------:|
+| 58 million | | |
+
+**D.** What fraction of the initial 58 million returns as income after one round? This fraction is the **feedback coefficient**, *b*. Use it to calculate the resident income generated in the following round.
+
+**E.** Use *b* to calculate the **income multiplier** and the increase in resident income after all rounds, including the initial 58 million. What would you tell the district official about the difference between this result and the supermarket’s weekly payment?
+
+## 3. What would you measure next?
+
+A month later the processor reports higher shipments and the same number of employees.
+
+**A.** How could both statements be true? Choose one measure you would request to track production and another to judge whether district residents are better off. Explain your choices.
+
+**B.** A planner now asks whether the area specializes in seafood processing. Would you count jobs within the processor’s district or across the commuting area? Name a comparison economy and explain what employment figures you would request for both places.

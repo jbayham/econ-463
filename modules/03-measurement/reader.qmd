@@ -1,0 +1,176 @@
+---
+title: "Measuring a Regional Economy"
+subtitle: "Module 3 · Worked examples · ECON 463"
+lang: en
+format:
+  html:
+    toc: true
+    embed-resources: true
+    html-math-method: mathml
+    number-sections: false
+  pdf:
+    pdf-engine: xelatex
+    documentclass: article
+    fontsize: 11pt
+    papersize: a4
+    number-sections: false
+    colorlinks: true
+    geometry: margin=22mm
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \fancypagestyle{modulethree}{
+          \fancyhf{}
+          \fancyhead[L]{\small\sffamily ECON 463\quad Regional Economics}
+          \fancyhead[R]{\small\sffamily Module 3\quad Worked examples}
+          \fancyfoot[C]{\small\sffamily\thepage}
+        }
+        \pagestyle{modulethree}
+        \fancypagestyle{plain}[modulethree]{}
+        \makeatletter
+        \renewcommand{\maketitle}{\noindent{\LARGE\bfseries\sffamily\@title\par}\smallskip}
+        \makeatother
+---
+
+## 1. Which boundary fits the question?
+
+The seafood order gives one plant a reason to expand production. A planner wants to describe the economy around the plant. For tax administration, an **administrative district** supplies a legal boundary. For recruiting workers, the relevant **functional region** may extend across that boundary. A **nodal region** organizes those flows around a center. A **homogeneous region** groups places with a common characteristic, such as growing conditions.
+
+### A commuting test
+
+In this fictional corridor each employed person has one main workplace. Row $i$ of the table counts employed residents of area $i$. Column $j$ counts workers at workplaces in area $j$. The outside-to-outside cell is unnecessary for either candidate boundary.
+
+| Home / Workplace | A | B | Outside |
+|:---|---:|---:|---:|
+| A | 2,500 | 1,300 | 200 |
+| B | 1,000 | 8,900 | 1,100 |
+| Outside | 500 | 1,800 | — |
+
+Choose a set of districts $R$. Let $I_R$ count people whose home and workplace both lie in $R$, $H_R$ all employed residents of $R$, and $W_R$ everyone working in $R$. Then $I_R/H_R$ is the fraction of employed residents who work inside, and $I_R/W_R$ is the fraction of local jobs filled by residents. Include people who work in their home district in $I_R$.
+
+**Try it.** Test A alone and A + B against a classroom rule that requires both shares to reach 85%. Would changing the threshold to 90% change your answer?
+
+**Worked answer.** A alone has 2,500 internal workers, 4,000 employed residents and 4,000 workplace jobs. Both shares are 62.5%. Combining the districts moves 1,300 A-to-B and 1,000 B-to-A commuters inside the boundary. The four internal cells sum to 13,700. Divide by 15,000 employed residents to get 91.3% and by 16,000 jobs to get 85.6%. The combined area passes at 85%. At 90% the workplace test fails. An employment count requested by A’s district government can still use A’s administrative boundary.
+
+**Reading.** Schaffer, ch. 2, printed pp. 6–9, and Hoover and Giarratani, §9.1, printed pp. 176–179, discuss the choice of region. Throughout this reader add 10 to Schaffer’s printed page for the course PDF and 1 to Hoover and Giarratani’s.
+
+\newpage
+
+## 2. Can the surveys support the comparison?
+
+Suppose a second payroll survey arrives five years later. It reports 594 seafood-processing jobs in A, up from 480. During the interval, A annexed a strip from outside the corridor. Establishments in the strip account for 90 processing jobs at the second date. A household survey counts 620 processing workers who live within the later district boundary.
+
+**Try it.** Calculate growth using the original boundary. What would it take to estimate growth on the new boundary? Could the household count replace either payroll observation?
+
+**Worked answer.** The published increase is $594-480=114$ jobs, or 23.75%. On the original footprint the later count is $594-90=504$ jobs. Comparable growth is $(504-480)/480=5\%$. To compare on the new footprint, add the strip’s **base-year** jobs to 480 before computing growth. Using its later count at the earlier date would assume away any growth inside the strip.
+
+The household survey assigns workers by where they live. Payroll records assign jobs by where the work takes place. Commuting makes a resident count of 620 compatible with a different workplace count. To construct a resident series, obtain residence-based observations at both dates and on the same boundaries.
+
+### Four checks before calculating a growth rate
+
+- **Geography.** Pick a common footprint. Use establishment locations or a reliable geographic crosswalk to restate counts when lines change.
+- **Unit.** Choose jobs, employed people, hours, or income to answer the question. A person can hold multiple jobs. The one-main-job assumption applies to the teaching matrix.
+- **Industry.** Check what the survey includes in processing. If a revised code combines processing and storage, obtain dual-coded establishment counts or aggregate both years to the same broader category and describe it accordingly.
+- **Time and coverage.** Match reference months or annual averages, especially in seasonal industries. Verify coverage of informal and seasonal employment. Expanding the survey to a previously uncounted group can mimic growth.
+
+The remaining corridor calculations use **synthetic workplace jobs**, a common processing definition, the original boundaries, and two surveys five years apart. A and B are disjoint districts inside the province, which is inside the country.
+
+**Reading.** Schaffer, pp. 8–9, discusses regions defined by data availability. Pages 19–21 and 44 discuss how industry aggregation affects interpretation.
+
+\newpage
+
+## 3. How specialized is a local economy?
+
+At a single date, let $e_{ir}$ be industry $i$’s jobs in region $r$ and $E_r$ all jobs in that region. The local industry share is $s_{ir}=e_{ir}/E_r$. Let $s_{ib}$ be the same industry’s share in benchmark economy $b$. Keeping local size fixed, a region with the benchmark mix would have $E_r s_{ib}$ jobs in the industry. The **location quotient** compares actual employment with this expected count:
+
+$$LQ_{ir|b}=\frac{e_{ir}}{E_r s_{ib}}=\frac{s_{ir}}{s_{ib}}.$$
+
+Both employment totals and the benchmark industry share must be positive. An LQ of one means identical employment shares. An LQ of two means twice the benchmark share.
+
+| Area | Processing jobs | All jobs | Processing share |
+|:---|---:|---:|---:|
+| Region A | 480 | 4,000 | 12% |
+| Region B | 600 | 12,000 | 5% |
+| Province | 15,000 | 100,000 | 15% |
+| Country | 80,000 | 1,000,000 | 8% |
+
+**Try it.** Which district has more processing workers? Which has the greater concentration? Could the most concentrated district still fall below one?
+
+**Worked answer.** B has 600 processing jobs, exceeding A’s 480. Relative to the country, A has $480/(4{,}000\times0.08)=1.50$ times its expected count. B has $600/(12{,}000\times0.08)=0.625$. Processing accounts for a bigger share of A’s smaller workplace job total. It has 160 more jobs than the national share would predict at its size. To connect that difference to exports, investigate customer origins, local consumption and output per worker.
+
+Relative to the **province**, A’s LQ is $0.12/0.15=0.80$ and B’s is $0.05/0.15\approx0.33$. A is above the country’s processing share and below the province’s. The benchmark change multiplies both national LQs by $0.08/0.15$. That common positive factor preserves the district ranking for this industry.
+
+**Reading.** Schaffer, pp. 19–21, discusses the assumptions behind export estimates, and p. 43 defines the LQ.
+
+\newpage
+
+## 4. Aggregation and a historical application
+
+**Try it.** A district official averages 1.50 and 0.625 and declares that the commuting area specializes in processing. Which districts receive too much or too little weight?
+
+**Worked answer.** The simple mean is 1.0625. A has only a quarter of the corridor’s jobs. Equal weights give it too much influence. Count each workplace once: A + B has 1,080 processing jobs out of 16,000, or 6.75%. The corridor’s national LQ is $0.0675/0.08=0.84375$. Its provincial LQ is $0.0675/0.15=0.45$.
+
+For disjoint regions, write $w_r=E_r/\sum_rE_r$. The pooled employment share is the sum of the regional shares weighted by $w_r$. Dividing by the common benchmark share gives
+
+$$LQ_{\mathrm{pooled}}=\sum_r w_r LQ_r.$$
+
+Here $0.25(1.50)+0.75(0.625)=0.84375$. For a recruitment question, it matters that B supplies most of the jobs in the combined labor market. For a question about employers within A, the district LQ is the relevant observation. Adding provincial or country totals to district counts would double count local jobs.
+
+### Atlanta retail, 1970
+
+Davidson and Schaffer studied whether Atlanta’s retail sector served shoppers beyond its metropolitan boundary. Their historical account gives a retail employment share of 16.6% for Atlanta and 14.1% for Georgia. With **Georgia** as the comparison, $16.6/14.1\approx1.18$. The unit is a ratio of employment shares. It is not a percentage of sales made to visitors.
+
+The authors report 101,100 actual retail jobs and a benchmark requirement of 85,760. Their difference is 15,340 jobs. It is 17.9% of the benchmark requirement but only 15.2% of actual retail jobs. In general, when the LQ exceeds one, the surplus fraction of actual jobs is $1-1/LQ$.
+
+To assess the authors’ regional-shopping-center interpretation, look for customer origins or expenditure by visitors. A larger local appetite for retail services or fewer sales per worker could also raise the local employment share. The study illustrates why an LQ can guide data collection even when employment is the first measure available.
+
+**Reading.** Davidson and Schaffer (1973), *An Economic-Base Model of Atlanta, 1961–1970*, reprinted in Schaffer, appendix B, pp. 39–42. The retail shares are on p. 40. Schaffer, pp. 43 and 46, discusses using LQs in an area profile.
+
+\newpage
+
+## 5. How much growth follows the benchmark?
+
+Let $e_0,e_1$ denote local industry jobs five years apart, and $g_r=(e_1-e_0)/e_0$ the industry’s local growth rate. Write $g_i$ for its benchmark growth rate and $g$ for growth of all benchmark jobs. Compute these as changes divided by starting counts over the same interval. Write percentages as decimals when multiplying.
+
+Holding the local industry’s base workforce fixed, the **overall benchmark** implies $e_0g$ additional jobs. The **industry benchmark** implies $e_0g_i$. Actual change is $e_1-e_0$. From these comparisons:
+
+$$\begin{aligned}
+N &= e_0g &&\text{benchmark growth}\\
+M &= e_0(g_i-g) &&\text{industry mix}\\
+S &= (e_1-e_0)-e_0g_i &&\text{regional shift}.
+\end{aligned}$$
+
+Adding gives $N+M+S=e_1-e_0$. Each difference moves one step from the broad benchmark to the observed change. Use the direct change formula for $S$ if a local industry starts with zero jobs. Benchmark growth rates still require positive benchmark base counts.
+
+| Workplace jobs | Base year | Five years later | Growth |
+|:---|---:|---:|---:|
+| A, processing | 480 | 504 | 5% |
+| B, processing | 600 | 690 | 15% |
+| Country, processing | 80,000 | 89,600 | 12% |
+| Country, all jobs | 1,000,000 | 1,040,000 | 4% |
+
+**Worked comparison.** In A the three gains are $480(0.04)=19.2$, $480(0.12)=57.6$, and $504-480=24$. Take successive differences: $N=19.2$, $M=57.6-19.2=38.4$, and $S=24-57.6=-33.6$. They sum to 24 jobs. In B the three gains are 24, 72 and 90, giving components of 24, 48 and 18 jobs. They sum to 90. Fractional jobs are meaningful as benchmark expectations.
+
+A grew faster than the national economy overall, but its industry grew even faster nationwide. A positive observed gain therefore coexists with a negative regional shift. Its initial LQ of 1.50 describes the starting industry mix and does not predict the sign of its subsequent shift. For the whole economy, compute the identity for each sector and sum the components across mutually exclusive sectors covering all jobs.
+
+**Reading.** Schaffer, Note A, pp. 43–45, sets up the benchmark paths and takes differences between them.
+
+\newpage
+
+## 6. A profile and a second application
+
+**Corridor sensitivity.** A + B gained $24+90=114$ processing jobs from a base of 1,080. At the national processing rate of 12%, the expected gain is 129.6 and regional shift is $114-129.6=-15.6$ jobs. Provincial processing grew from 15,000 to 16,050, or 7%. That rate implies a gain of 75.6 and a shift of $+38.4$. The observed growth of $114/1{,}080=10.56\%$ lies between the two rates. Each extra percentage point in the assumed benchmark rate lowers the shift by $1{,}080(0.01)=10.8$ jobs.
+
+**Reproduce the profile in R.** Save `corridor-jobs.csv` and `regional-profile.R` from the Modules page in the same folder. Set that folder as your working directory, then run `source("regional-profile.R")`. The script adds the two district counts before computing shares, uses one set of benchmark rates per comparison, and checks that each decomposition sums to the observed gain. The combined area has 6.75% of its jobs in processing, a national LQ of 0.844 and a provincial LQ of 0.45.
+
+**Locational interpretation.** A freight improvement, a plant relocation, a product-demand shock, or a change in staffing per unit of output could affect the local trend. Observe freight charges, plant employment histories, shipments, wages or commuting patterns to distinguish explanations. Module 4 asks how firms and households adjust their locations when costs and amenities differ.
+
+### Optional board problem · Pennsylvania, 1958–1963
+
+Hoover and Giarratani use U.S. Census of Manufactures data. The benchmark here is all U.S. **manufacturing**. Pennsylvania began with 718 thousand durable-goods jobs and 613 thousand nondurable-goods jobs. National employment growth was 9.61% in durables, 2.18% in nondurables and 5.79% across manufacturing. Pennsylvania ended with 1,320 thousand manufacturing jobs.
+
+**Try it.** Was the initial mix favorable? How large was the regional shift? Express all results in thousands of jobs.
+
+**Worked answer.** The base is 1,331. The broad benchmark endpoint is $1{,}331(1.0579)\approx1{,}408$. Applying the two industry rates gives $718(1.0961)+613(1.0218)\approx1{,}413$. Reading the rounded endpoints in sequence gives approximately +77 from overall growth, +5 from mix, and −93 from regional shift. They sum to −11, the observed change. A claim that the initial durable/nondurable mix explains the decline has the wrong sign. A different industry classification could redistribute the mix and regional components.
+
+**Reading.** Hoover and Giarratani, appendix 12-1, printed pp. 279–281, works the Census example. Schaffer, pp. 45–47, discusses the interpretation of a regional profile.

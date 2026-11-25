@@ -23,7 +23,7 @@
   },
   "PS1.2": {
     "module": "02",
-    "reviewed": "90f7be04dedf3423",
+    "reviewed": "012c18819991e261",
     "parts": {
       "a": {
         "skill": "Trace payer-to-recipient flows and locate firms and households on a district boundary diagram.",
@@ -31,11 +31,11 @@
       },
       "b": {
         "skill": "Distinguish the initiating export sale from a local supplier whose sales depend indirectly on exports.",
-        "slides": ["The region and its economic base", "Local services support the base", "Regional economic impact"]
+        "slides": ["The region and its economic base", "Local services support the base", "Regional economic impact", "03/How can exports in one industry impact other industries in the region?"]
       },
       "c": {
         "skill": "Redraw the regional boundary and reclassify payments while keeping recipients fixed.",
-        "slides": ["Which places belong in the region?", "Whose income is local?"]
+        "slides": ["Which places belong in the region?", "Whose income is local?", "03/What defines a region?"]
       },
       "d.1": {
         "skill": "Convert order expenditures into first-round resident income with commuter wages and imported inputs.",
@@ -49,12 +49,12 @@
   },
   "PS1.3": {
     "module": "03",
-    "reviewed": "84d02480707af4d3",
+    "reviewed": "f19ece02af5bc5ba",
     "parts": {
-      "a": {"skill": "Calculate employment shares and national-benchmark LQs and distinguish jobs from specialization.", "slides": [], "gap": "Module 3 needs a worked count/share/LQ comparison."},
-      "b": {"skill": "Recalculate LQs with a provincial benchmark and interpret levels and rankings.", "slides": [], "gap": "Module 3 needs practice switching the reference economy."},
-      "c.1": {"skill": "Apply three five-year growth rates to the district's base-year manufacturing employment.", "slides": [], "gap": "Module 3 needs a worked base-year employment counterfactual."},
-      "c.2": {"skill": "Calculate industry mix and regional shift and distinguish initial specialization from subsequent job growth.", "slides": [], "gap": "Module 3 needs a shift-share interpretation alongside the initial LQ."}
+      "a": {"skill": "Calculate employment shares and national-benchmark LQs and distinguish jobs from specialization.", "slides": ["What does each sector contribute?", "Deriving the location quotient", "Excel · Calculate the two location quotients", "Board exercise · Which place specializes?", "Counts, shares, and national LQs"]},
+      "b": {"skill": "Recalculate LQs with a provincial benchmark and interpret levels and rankings.", "slides": ["Board exercise · Which place specializes?", "Switch the reference economy", "What if the planner draws one boundary?"]},
+      "c.1": {"skill": "Apply three five-year growth rates to the district's base-year manufacturing employment.", "gap": "The local-rate row on Shift shares gives the wrong implied change. It should read x₀gᵢᵣ = x₁ − x₀, as shown on the following slide.", "slides": ["Shift shares", "Shift-share decomposition", "Excel · Decompose employment and real output growth", "A specialized district can gain jobs and fall behind"]},
+      "c.2": {"skill": "Calculate industry mix and regional shift and distinguish initial specialization from subsequent job growth.", "slides": ["Shift-share decomposition", "Excel · Decompose employment and real output growth", "A specialized district can gain jobs and fall behind", "Optional board case · Account for the loss"]}
     }
   }
 }
