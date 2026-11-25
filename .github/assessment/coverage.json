@@ -1,7 +1,7 @@
 {
   "PS1.1": {
     "module": "01",
-    "reviewed": "cdadd6d19f82c5bd",
+    "reviewed": "b60308f030147438",
     "parts": {
       "a": {
         "skill": "Add relevant costs on a common output basis and justify cost minimization at fixed revenue.",
@@ -17,8 +17,7 @@
       },
       "d": {
         "skill": "Give a competing explanation for observed clustering and identify a complementary condition for growth.",
-        "slides": ["Example 3: distinguish mechanisms with evidence", "Vietnam: connectivity shapes concentration"],
-        "gap": "Students see the caution about causation. Have them practice one concrete alternative explanation, such as roads being routed to places where firms already cluster."
+        "slides": ["Example 3: distinguish mechanisms with evidence", "Vietnam: connectivity shapes concentration", "02/Why do independent firms cluster?"]
       }
     }
   },

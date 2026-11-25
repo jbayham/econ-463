@@ -3,6 +3,8 @@ title: "Regional Growth and Interregional Connections"
 subtitle: "Module 2 · ECON 463"
 format:
   revealjs:
+    title-slide-attributes:
+      data-notes: 'Reading guide. Hoover and Giarratani, Chapter 11 through §11.6, printed pp. 217–239 (PDF pp. 218–240). Module 2 reader, pp. 2–3, introduces the questions. Page 27 lists the readings. Throughout the notes, Hoover and Giarratani citations use printed pages. Add one for the course PDF.'
     theme: [simple, assets/slides.scss]
     html-math-method:
       method: mathjax
@@ -40,13 +42,53 @@ source("R/growth.R")
 knitr::opts_chunk$set(fig.width = 9, fig.height = 4.3, fig.align = "center")
 ```
 
-## The factory’s location decision
+## Why does a firm choose a particular location? {#recap-location}
 
-In Module 1, a firm compared sites for a factory. Freight costs, access to workers, and nearby suppliers helped determine which site it chose.
+Firms choose a site to maximize benefits and minimize costs and 
+
+Decisions depend on economic distance to markets, inputs, and transportation methods as well as access to workers, suppliers, and customers.
+
+:::{.prompt}
+Where did access to workers, suppliers, and customers appear in module 1 examples?
+:::
+
+
 
 ::: {.notes}
-Ask students to recall one advantage of locating near suppliers and one cost of locating in a crowded market. Take the location decision as given for the next question.
+Recall the 3,000 CU saving on the order. A firm can move an existing job or create an additional one. In Module 2 we ask how production and employment change within a chosen boundary. Module 3 compares employment across places and over time so we can describe the pattern in the data.
+
+**Reading guide.** Hoover and Giarratani, §2.3, pp. 19–21, on access to inputs and markets. Module 1 reader, pp. 5–8, works through the plant’s location choice.
 :::
+
+## Why build one centralized plant vs. multiple smaller ones?
+
+Economies of scale can make a single large plant cheaper than several smaller ones. 
+
+High distribution costs can favor multiple plants closer to customers.
+
+**Modules 4–5.** Workers can commute or move closer to the plant. If housing nearby is scarce, what would you expect to happen to rents? What might sales prices tell us about the value of access to jobs?
+
+::: {.notes}
+Ask what would make two plants worthwhile. The extra freight bill would have to exceed the fixed cost saved. Then ask students to consider a worker who already owns a home near the plant and a renter moving there for a job. Module 4 studies how job access, commuting, wages, and rents adjust together. Module 5 asks what housing prices can tell us about the value of a location.
+
+**Reading guide.** Brueckner, §§1.2 and 1.5 (course PDF pp. 11–14 and 28–31), on scale and shipping costs. Module 1 reader, pp. 15–17, compares the cost of one plant with two.
+:::
+
+## Why do firms cluster?
+
+Agglomeration allow nearby firms to share specialist suppliers, find workers with the skills they need, and learn from one another. 
+
+Higher rents and congestion can erode those gains.
+
+**Modules 6–8.** We’ll trace how orders spread through suppliers, allow wages and prices to adjust, and ask who gains from a proposed investment.
+
+::: {.notes}
+Ask which came first, the firms or the road, and what we would expect to see without the project. Return to the supplier connection later in the course. Module 6 traces an order through suppliers. Module 7 asks what changes when workers are scarce and wages and prices respond. Module 8 compares a policy with its alternative and asks who gains, who pays, and what else the resources could support.
+
+**Reading guide.** Brueckner, §1.3 (course PDF pp. 14–20), on the benefits of proximity. Module 1 reader, pp. 20–23, connects the mechanisms to evidence and discusses congestion.
+:::
+
+
 
 ## Regional change
 
@@ -56,7 +98,9 @@ It may hire workers, buy inputs, and sell goods outside the region.
 
 We want to know what happens to economic activity in region A.
 
-
+::: {.notes}
+**Reading guide.** Hoover and Giarratani, p. 217 and pp. 223–224, move from differences in regional growth to their possible causes. Module 2 reader, pp. 2–3, makes the connection to the firm’s location decision.
+:::
 
 ## Five questions about regional growth
 
@@ -68,6 +112,8 @@ We want to know what happens to economic activity in region A.
 
 ::: {.notes}
 Use the questions as the outline. First decide what counts as the region. Then distinguish what starts growth from how it spreads through suppliers and households. Allow goods and people to cross the boundary, and finish by asking whether these connections bring the regions closer together.
+
+**Reading guide.** Module 2 reader, pp. 3–4, introduces the five questions and the boundary choice. In Hoover and Giarratani, turn to pp. 223–226 for growth and exports, pp. 234–236 for trade and mobility, and pp. 237–239 for convergence.
 :::
 
 ## Defining a region {.center .concept data-background-color="#eaf2f3"}
@@ -76,6 +122,8 @@ What defines a region?
 
 ::: {.notes}
 Module 1 placed the firm at a site. Now choose the area over which we will count jobs, production, and income.
+
+**Reading guide.** Module 2 reader, p. 4, introduces the boundary choice. For the fuller treatment coming in Module 3, see Hoover and Giarratani, §9.1, pp. 176–177.
 :::
 
 ## Which places belong in the region?
@@ -88,6 +136,8 @@ A **region** is a set of places grouped by a stated rule. Choose the rule to fit
 
 ::: {.notes}
 Ask which of these three boundaries a resident might cross simply by going to work. A functional region can span several administrative districts. Module 3 will take up the data and methods for choosing boundaries.
+
+**Reading guide.** Module 2 reader, p. 4, compares the district, rice belt, and commuting area. Hoover and Giarratani, §9.1, pp. 176–179, explains homogeneity and functional integration (Module 3 background).
 :::
 
 ## Whose income is local?
@@ -114,12 +164,16 @@ The payment for flour goes outside the combined labor market.
 
 ::: {.notes}
 Have students label the arrows “wage” and “flour.” Redraw the boundary without moving a person or business. The bread is produced in Region A under either definition. Whether the baker’s earnings count as residents’ income depends on where we draw the boundary.
+
+**Reading guide.** Module 2 reader, p. 4, walks through the bakery’s wage and flour payments under both boundaries. For commuting and functional boundaries, see Hoover and Giarratani, §9.1, pp. 177–179 (Module 3 background).
 :::
 
 ## Measuring regional growth {.center .concept data-background-color="#eaf2f3"}
 
 ::: {.notes}
 Begin the second roadmap question by asking what grew. Fix the boundary, select an outcome, and measure its change. We can then ask what started that change.
+
+**Reading guide.** Hoover and Giarratani, §11.1, pp. 217–220, compares population growth and income per capita. Module 2 reader, pp. 4–5, distinguishes output, employment, population, and income.
 :::
 
 ## From one factory to the regional economy
@@ -134,6 +188,8 @@ To interpret the change, we need a measure of production that we can compare acr
 
 ::: {.notes}
 Ask students which comparison they would make to describe the size of the market and which one accounts for how many people live there.
+
+**Reading guide.** Hoover and Giarratani, p. 217, opens with regional population change. Module 2 reader, pp. 2–5, moves from the firm’s decision to the choice of a regional outcome.
 :::
 
 ## Value added and regional output {#growth-of-what}
@@ -148,22 +204,41 @@ Holding prices fixed lets us compare quantities across periods.
 
 ::: {.notes}
 A mill sells flour to a bakery. The bakery subtracts the cost of flour from its bread sales. Adding the mill’s and bakery’s value added counts each stage’s contribution once. Payments to workers are part of value added.
+
+**Reading guide.** Module 2 reader, p. 5, defines real value added and builds regional output from the mill and bakery. Hoover and Giarratani, §11.3.2, pp. 228–229, gives the related distinction between intermediate and final sales.
 :::
 
 ## When does output per resident rise?
 
-Let $N$ be the number of residents and $y=Y/N$ real output per resident. 
+**Output per resident** is $y=Y/N$, total real output divided by population.
 
-Let $g_Y$ and $g_N$ be the proportional changes in output and population between periods 0 and 1.
+::: {.fragment}
+Observe the same region twice. In period 0, $y_0=Y_0/N_0$. In period 1, $y_1=Y_1/N_1$.
+:::
 
-$$\frac{y_1}{y_0}=\frac{Y_1/N_1}{Y_0/N_0}=\frac{1+g_Y}{1+g_N}.$$
+::: {.fragment}
+The ratio $y_1/y_0$ is the **growth factor**. Subtract one to get the **growth rate**, $g_y=y_1/y_0-1$. A factor of 1.10 means 10% growth.
+:::
 
-::: {.prompt}
-If output and population both rise 10%, what happens to output per resident? What if population grows more slowly?
+::: {.fragment}
+Let $g_Y=Y_1/Y_0-1$ be the growth rate of total output and $g_N=N_1/N_0-1$ the growth rate of population.
+:::
+
+::: {.fragment}
+$$\frac{y_1}{y_0}
+=\frac{Y_1/N_1}{Y_0/N_0}
+=\frac{Y_1/Y_0}{N_1/N_0}
+=\frac{1+g_Y}{1+g_N}.$$
+:::
+
+::: {.prompt .fragment}
+If output and population both rise by 10%, what happens to output per resident? [What if population grows more slowly?]{.fragment}
 :::
 
 ::: {.notes}
-Cancel the common growth factor in the first case. In the second case the numerator grows faster, so the ratio exceeds one. Output per resident is an average of production. Living standards also depend on who receives income, prices, amenities, and distribution.
+To rearrange the fractions, multiply $Y_1/N_1$ by $N_0/Y_0$ and group the two output terms and the two population terms. Subtract one from the final ratio to recover the growth rate of output per resident. If both totals grow by 10%, the factor is $1.10/1.10=1$, so the growth rate is zero. If population grows by 5%, the factor is $1.10/1.05$, or about 4.8% growth in output per resident.
+
+**Reading guide.** Module 2 reader, p. 5, defines output per resident. Page 6 shows the two-period calculation and checks it by dividing the output growth factor by the population growth factor. For the textbook’s comparison using income per capita, see Hoover and Giarratani, §11.1.2, pp. 219–221.
 :::
 
 ## Example 1 · River and Harbor {#example-1-two-regional-growth-paths}
@@ -186,6 +261,8 @@ Work out Harbor’s output per resident in each period. Which region gained more
 Walk through the two divisions for River. Show how to convert a level change into a percentage change by dividing the gain of 1 CU by the starting level of 10 CU. Leave the table visible while pairs do both steps for Harbor. These are changes between two observations.
 
 Harbor’s output per resident was 15,000 ÷ 1,000 = 15 CU in period 0 and 16,800 ÷ 1,050 = 16 CU in period 1. Both regions gained 1 CU per resident. **River gained more in percentage terms** because it started from a lower level. River gained 1/10 = 10%, while Harbor gained 1/15 ≈ 6.7%.
+
+**Reading guide.** Module 2 reader, p. 6, Table 1, gives River and Harbor’s observations and both percentage changes. Page 7 explains how to interpret the results.
 :::
 
 <!-- ## Example 1 · Comparing the two regions {#example-1-divide-by-the-relevant-denominator}
@@ -209,6 +286,8 @@ What initiates a region’s growth?
 
 ::: {.notes}
 Continue the second roadmap question. Use the two accounting identities to distinguish what changed in River from an explanation for why it changed.
+
+**Reading guide.** Hoover and Giarratani, §11.1.3, pp. 222–223, describes changes in regional industry mix. Module 2 reader, pp. 5–8, connects output per worker, workers per resident, and sector employment shares.
 :::
 
 ## From residents to workers
@@ -227,6 +306,8 @@ $$\frac{Y}{N}=\frac{Y}{L}\frac{L}{N}.$$
 
 ::: {.notes}
 Cancel L on the board. Hold workers per resident constant and ask what must change for output per resident to rise. This example assumes no cross-boundary commuting.
+
+**Reading guide.** Module 2 reader, p. 5, derives the accounting identity. Page 7 applies it to River and Harbor and explains the role of commuting.
 :::
 
 <!-- ## Example 1 · Accounting for River’s gain {#example-1-connect-productivity-and-employment}
@@ -254,7 +335,7 @@ So far we have treated workers as one group. Now divide them between two sectors
 
 **Labor reallocation** changes how workers are distributed across sectors.
 
-Let $p_A$ and $p_B$ be output per worker in each sector and $s$ the share of workers in B. 
+Let $p_A$ and $p_B$ be productivities (output per worker) in each sector and $s$ the share of workers in B. 
 
 Regional productivity is their weighted average:
 
@@ -264,6 +345,8 @@ With sector productivities fixed, shifting a share $\Delta s$ into B changes the
 
 ::: {.notes}
 Derive the average by adding the two sectors’ outputs and dividing by total workers. Ask students to predict the direction when B has higher output per worker. For students familiar with calculus the slope with respect to s is the productivity gap.
+
+**Reading guide.** Hoover and Giarratani, §11.1.3, pp. 222–223, motivates looking at industry composition. Module 2 reader, pp. 7–8, derives the employment-weighted average and calculates the change in River’s sector shares.
 :::
 
 ## Example 1 · Moving 100 workers {#example-1-productivity-can-rise-through-reallocation}
@@ -288,6 +371,8 @@ What would each worker produce on average after the move?
 $(200 \times 10 + 300 \times 35)/500 = 25$ CU per worker, up from **10,000/500=20**. Only the mix of jobs changed.
 
 Connect the result to the weighted average. The share in other activities rose from 0.4 to 0.6. Multiplying the 0.2 shift by the 25-CU sector productivity gap gives the 5-CU rise in output per worker. This is a separate scenario using River’s period 0 workforce. Its period 1 outcome in the earlier table was 22 CU per worker. For a quick check, each of the 100 moves adds 25 CU under our assumptions, so total output rises by 2,500 CU. This assumes jobs and other inputs are available in the destination sector at the stated productivity. We would need evidence about hiring, equipment, and demand to explain an actual shift. That leads into the next question about what starts regional growth.
+
+**Reading guide.** Module 2 reader, pp. 7–9, sets up the 100-worker move, works the weighted average in Table 2 and the text on p. 8, and explains the hiring and productivity assumptions.
 :::
 
 ## The economic base {.center .concept data-background-color="#eaf2f3"}
@@ -295,6 +380,8 @@ Connect the result to the weighted average. The share in other activities rose f
 
 ::: {.notes}
 Second roadmap question. Hoover and Giarratani introduce demand and supply in section 11.2 and the economic base in section 11.3.1.
+
+**Reading guide.** Hoover and Giarratani, §11.2.2 and the opening of §11.3.1, pp. 224–225, introduces the export-base explanation. Module 2 reader, pp. 9–10, defines the vocabulary.
 :::
 
 ## What could start regional growth?
@@ -305,9 +392,15 @@ Growth can start with a change in what buyers want or in what producers can supp
 
 **Supply.** New equipment, skills, or cheaper inputs let firms produce more with the same resources. Output can also rise when workers move into more productive activities.
 
-
+How do these explanations align with macroeconomic growth theory?
 
 ::: {.notes}
+**Reading guide.** Hoover and Giarratani, §11.2.2, p. 224, compares demand and supply explanations. Section 11.4, pp. 233–234, develops the supply side. Module 2 reader, p. 9, gives examples of initiating changes.
+
+Suppose Harbor places a larger order with River’s rice mill. If the mill has idle equipment and workers who want more hours, it can fill the order by adding a shift. River’s actual output rises toward its potential output, the amount it can sustainably produce with its current workforce, capital, and technology. That’s the short-run aggregate-demand story. If Harbor keeps ordering the same larger quantity each year, the mill can maintain a higher level of output. Its output growth rate rises during the expansion and then settles back to zero if production stays at that level.
+
+Now suppose the mill expects those orders to last. It buys a second milling machine and trains workers to operate it. River can now produce more even when both shifts were already full. That’s the connection to long-run growth theory. In the standard Solow model, more capital per worker raises output per worker. Because capital has diminishing returns, sustained growth in output per worker ultimately depends on continuing technological progress. The same export order can therefore start a demand response today and encourage investment that expands capacity tomorrow.
+
 :::
 
 ## The region and its economic base
@@ -324,6 +417,8 @@ An industry can serve both groups. Its basic share depends on where its customer
 
 ::: {.notes}
 Use the market-served definition in Hoover and Giarratani §11.3.1. A sale to a visitor counts as an export even when the service is delivered inside the region. Basic and nonbasic describe the market served.
+
+**Reading guide.** Hoover and Giarratani, §11.3.1, pp. 224–225, introduces basic and nonbasic activity. Module 2 reader, pp. 9–10, applies the market-served definition to goods and services.
 :::
 
 ## How outside demand enters the model
@@ -342,18 +437,20 @@ Those earnings can generate demand for local businesses.
 
 ::: {.notes}
 Separate the accounting identity from the model’s behavioral assumption. Writing sales in two categories does not establish that outside orders will raise local income by a particular amount. Ask why a dollar of export sales might pay for imported inputs.
+
+**Reading guide.** Hoover and Giarratani, §11.3.1, p. 225, discusses dividing an activity’s sales between export and regional markets. Module 2 reader, pp. 10–12, calculates the basic share and traces how an order reaches suppliers.
 :::
 
 ## Services can be part of the base
 
 An **export** crosses the regional boundary, not necessarily a national border.
 
-The customer can come to the product: visitors buy local lodging and meals.
+Alternatively, the customer can come to the product: visitors buy local lodging and meals.
 
 ::: {.prompt}
 Consider a hotel and a software firm. 
 
-A hotel serves outside visitors. 
+A hotel serves visitors from outside River. 
 
 A software firm serves only businesses within River. 
 
@@ -363,7 +460,9 @@ Which sales are basic under the export-sales definition?
 
 
 ::: {.notes}
-Give students time to classify the customers before revealing the answer. Manufacturing is not automatically basic and services are not automatically nonbasic. What matters is the source of demand, not whether a physical object leaves the region. The software firm could still support exporters indirectly; distinguish its immediate customers from their customers. Hoover–Giarratani p. 225, including footnote 6.
+Give students time to classify the customers before revealing the answer. Manufacturing is not automatically basic and services are not automatically nonbasic. What matters is the source of demand, not whether a physical object leaves the region. The software firm could still support exporters indirectly; distinguish its immediate customers from their customers.
+
+**Reading guide.** Hoover and Giarratani, §11.3.1, p. 225, footnote 6, explains why purchases by visitors count as exports. Module 2 reader, p. 10, works through the hotel and software comparison.
 :::
 
 ## Classify sales, not just firms or the whole industry
@@ -379,13 +478,15 @@ Its sales are **80% basic and 20% nonbasic** under the export-sales definition. 
 
 ::: {.notes}
 These are synthetic sales shares, not employment or value-added shares. Do not infer that 80% of jobs are basic without an additional allocation assumption. If the visitors all come from Harbor, those purchases are exports for River but internal sales for a combined River–Harbor region. Boundary choice precedes classification. The reading cautions against classifying whole industries without investigating their markets; M3 introduces location quotients as imperfect evidence, not direct observation of exports.
+
+**Reading guide.** Hoover and Giarratani, §11.3.1, p. 225, explains why whole-industry classifications can mislead. Module 2 reader, pp. 10–11, calculates the restaurant’s basic sales share and changes the boundary.
 :::
 
 ## Local services support the base
 
 A River repair shop serves a local processor that exports rice.
 
-The repair sale is local, but its demand is **indirectly tied to exports**.
+The repair sale is local, but its demand is **indirectly tied to exports** (via the rice processor).
 
 Some base studies include these indirect export activities in the base. Be clear about the classification rule you use.
 
@@ -393,6 +494,8 @@ Some base studies include these indirect export activities in the base. Be clear
 
 ::: {.notes}
 Connect to Hoover–Giarratani's can manufacturers serving local exporting packing plants, p. 226. A direct-sales definition and a definition that traces ultimate demand need not classify the repair shop the same way. Do not count its response once as part of an initial base shock and again as a separate spillover. The reading broadens the discussion to interregionally traded activities and import substitution on pp. 226–227. More local purchases are not automatically better: imports can lower costs, and skills, technology, and local services can initiate growth too. Nonbasic is not a judgment of economic importance.
+
+**Reading guide.** Hoover and Giarratani, §11.3.1, pp. 226–227, discusses indirect exports, local suppliers, and imports. Module 2 reader, p. 11, applies the distinction to the repair shop and rice processor.
 :::
 
 ## The regional income multiplier {.center .concept data-background-color="#eaf2f3"}
@@ -401,6 +504,8 @@ How can exports in one industry impact other industries in the region?
 
 ::: {.notes}
 Third roadmap question. Carry forward the source of demand and introduce repeated local purchases.
+
+**Reading guide.** Hoover and Giarratani, §11.3.1, p. 226, defines a regional multiplier and discusses spending outside the region. Module 2 reader, pp. 12–13, builds the resident-income version used here.
 :::
 
 ## How export demand reaches other industries
@@ -423,6 +528,8 @@ Which sales depend on household spending?
 
 ::: {.notes}
 Ask students to trace payments from an outside buyer to the exporter, then branch to a supplier and to a worker’s household. Continue the household branch to a shop. Which recipients live inside the chosen boundary? With spare capacity these purchases can raise output. With scarce workers or equipment they can also bid resources away from other firms.
+
+**Reading guide.** Hoover and Giarratani, §11.3.2, pp. 230–232, traces an export order through suppliers and discusses household spending. Module 2 reader, p. 12, traces the processor, repair shop, worker, and grocer.
 :::
 
 ## From export sales to local income
@@ -437,6 +544,8 @@ The **feedback coefficient** is $b=s\times v$. It tells us how much of one round
 
 ::: {.notes}
 Trace one extra CU from a worker to a local shop and then to the people the shop pays. Saving or shopping outside the region reduces the first share. Buying imported stock reduces the second. Keep prices and both shares fixed and assume businesses have spare capacity.
+
+**Reading guide.** Hoover and Giarratani, §11.3.2, pp. 231–232, discusses feedback from payroll to household demand. Module 2 reader, pp. 12–13, separates the initial resident income from gross receipts and multiplies the two retention shares.
 :::
 
 ## Income multiplier
@@ -457,7 +566,9 @@ m=\frac{\Delta I}{\Delta X}=\frac{1}{1-b}.$$
 ::: {.notes}
 This is an **infinite geometric series**. The first term is the direct income gain $\Delta X$, and the common ratio is $b$ because each round generates $b$ times the previous round’s income. Since $0\leq b<1$, the series converges to $\Delta X/(1-b)$.
 
-Cover the first term and ask what remains. The remaining terms sum to $b\Delta I$, so subtracting them from $\Delta I$ leaves the direct gain. Dividing total income gain by direct income gain gives the multiplier $1/(1-b)$.:::
+Cover the first term and ask what remains. The remaining terms sum to $b\Delta I$, so subtracting them from $\Delta I$ leaves the direct gain. Dividing total income gain by direct income gain gives the multiplier $1/(1-b)$.
+
+**Reading guide.** Hoover and Giarratani, §11.3.1, p. 226, explains what the multiplier measures. Module 2 reader, p. 13, derives the geometric series and the income multiplier used on this slide.
 :::
 
 ## Regional economic impact {#from-the-base-to-local-feedback}
@@ -481,7 +592,7 @@ Give students a moment to name someone beyond the processor before revealing the
 
 Module 6 will return to this question using input-output tables. Data on which industries buy from each other let us trace the processor’s extra purchases through its suppliers. In Module 7, we’ll ask how the answer changes when workers are scarce, wages and prices adjust, and firms change the inputs they use.
 
-For the economic-base reading behind this example, see Hoover–Giarratani §11.3.1, pp. 224–227.
+**Reading guide.** Hoover and Giarratani, §11.3.2, pp. 230–232, follows a new order through suppliers and household spending. Module 2 reader, pp. 12–13, traces the rice order. Page 15 discusses the capacity constraint previewed here.
 :::
 
 ## Example 2: outside demand adds local income
@@ -506,6 +617,8 @@ The first 100 CU generates 80 CU of local sales and **60 CU of new income**. The
 
 
 This is a simplified local income model, not gross factory sales or an IO table. b includes the effective retention of spending as local income. Saving, taxes not returned as local spending, imports, and nonlocal income payments can reduce feedback. Rounds are accounting iterations, not years. Define the direct addition carefully before doing arithmetic.
+
+**Reading guide.** Module 2 reader, pp. 12–13, starts with 140 CU of sales, subtracts 40 CU of imported packaging, then traces the first two spending rounds. Hoover and Giarratani, §11.3.1, p. 226, explains why spending outside the region reduces feedback.
 :::
 
 ## Example 2: solve the feedback equation
@@ -524,6 +637,8 @@ The multiplier is **2.5**.
 
 ::: {.notes}
 Write the income change as 100 + 60 + 36 + … . Point out that 150 includes the 60, the 36, and every smaller round that follows. Have students name each number and its unit. The multiplier is dimensionless. For nonzero shocks the finite response requires b less than 1; at b=0 only the direct addition remains. The income addition is exogenous, so this equation does not explain what caused the export order.
+
+**Reading guide.** Module 2 reader, p. 13, works the 100-CU example and separates the direct gain from the 150 CU in later rounds. For the textbook definition of a multiplier, see Hoover and Giarratani, §11.3.1, p. 226.
 :::
 
 ## Example 2: reduce local feedback
@@ -540,6 +655,8 @@ The difference comes from subsequent rounds, not the initial shock.
 
 ::: {.notes}
 Ask students to calculate. Difference from 250 is 83.3. Changing the coefficient is a sensitivity exercise, not an estimate from data. Imports can lower costs and improve productivity even while reducing local feedback. A larger multiplier does not automatically mean greater welfare.
+
+**Reading guide.** Hoover and Giarratani, §11.3.1, pp. 226–227, discusses imports and leakage. Module 2 reader, p. 14, recalculates the total at the lower feedback coefficient.
 :::
 
 ## Example 2: follow the accounting rounds
@@ -551,6 +668,8 @@ plot_rounds()
 
 ::: {.notes}
 Read both axes. The horizontal axis is accounting rounds, not time. Dashed horizontal lines show limits. Each sequence starts at the same direct addition. Explain why the curve flattens.
+
+**Reading guide.** Module 2 reader, p. 13, tabulates individual and cumulative rounds. Figure 1 on p. 14 plots both scenarios and their limits. Hoover and Giarratani, §11.3.2, p. 230, gives an interindustry example of successive rounds.
 :::
 
 ## A demand multiplier depends on assumptions
@@ -569,9 +688,15 @@ What changes if factories already operate at capacity?
 
 ::: {.notes}
 Possible responses: higher prices, imports, delivery delays, displaced customers, later investment. The formula ignores these adjustments. A decline of 100 gives -250 only under unchanged symmetric assumptions. Avoid teaching the scalar calculation as the complete theory of long-run regional development. IO details wait until M6.
+
+**Reading guide.** Hoover and Giarratani, §11.4, pp. 233–234, identifies the supply assumptions in a demand-driven model. Module 2 reader, p. 15, explains how capacity, prices, and displacement qualify the calculation.
 :::
 
 # Break 10 min
+
+::: {.notes}
+**Reading guide.** On resuming, turn to Hoover and Giarratani, §11.5, pp. 234–235, and Module 2 reader, p. 16, for the transport corridor.
+:::
 
 ## Market access and interregional trade {.center .concept data-background-color="#eaf2f3"}
 
@@ -579,6 +704,8 @@ When a road links two regions, how do trade and migration change?
 
 ::: {.notes}
 Fourth roadmap question. First let goods cross the boundary more cheaply. Then allow workers to move.
+
+**Reading guide.** Hoover and Giarratani, §11.5, pp. 234–235, introduces trade across regions. Module 2 reader, pp. 16–17, sets up the corridor and discusses specialization.
 :::
 
 ## From a regional boundary to a trade route
@@ -595,6 +722,8 @@ The **delivered price** includes the seller’s price and the cost of getting th
 
 ::: {.notes}
 Recall the delivered-cost comparison from Module 1. Hold production sites fixed here and change a route. Compare the same period with and without the improvement. See Hoover and Giarratani §11.5.
+
+**Reading guide.** Hoover and Giarratani, §11.5, pp. 234–235, discusses the costs of interregional trade. Module 2 reader, p. 16, defines market access and compares the buyer’s delivered prices.
 :::
 
 ## When does a buyer switch suppliers?
@@ -609,6 +738,8 @@ Rearranging gives the freight threshold $t^*=p_H-p_R$. When $t$ falls below that
 
 ::: {.notes}
 At equality the buyer is indifferent in this model. If River is already more expensive at the factory gate, positive freight cannot make it cheaper. For the opposite direction, switch the origin and destination and use the appropriate good and prices.
+
+**Reading guide.** Module 2 reader, p. 16, derives the freight threshold and explains the buyer’s choice at equality. For the trade mechanism, see Hoover and Giarratani, §11.5, pp. 234–235.
 :::
 
 ## Example 3: improve a transport corridor
@@ -627,6 +758,8 @@ It gains access to this buyer once freight falls below 3 CU.
 
 ::: {.notes}
 This is a hypothetical setting, not an estimated Vietnamese project. It is separate from Example 1's observed period change. The same connection works in both directions. Hold other initiating changes fixed for the counterfactual, while allowing responses to the corridor. Ask for River farmers and retailers and Harbor producers. If useful, recall the leakage idea: a machine purchase from Harbor leaves River's income feedback but becomes revenue elsewhere and buys a useful input. Do not count the same transaction as a new direct shock.
+
+**Reading guide.** Module 2 reader, p. 16, gives the River–Harbor grain prices, both freight costs, and the switching point. Hoover and Giarratani, §11.5, pp. 234–235, provides the trade background.
 :::
 
 ## Access changes costs and revenue
@@ -643,6 +776,8 @@ Cheaper transport does not guarantee that every region gains jobs.
 
 ::: {.notes}
 Bring back M1's one-plant versus two-plant comparison. Lower freight can let a Harbor plant serve both places, or let a low-cost River producer reach Harbor. Discuss relative opportunity cost briefly: trade need not require absolute superiority. Price pass-through and competition determine who captures savings; do not assign all freight savings to sellers automatically.
+
+**Reading guide.** Hoover and Giarratani, §11.5, pp. 234–235, discusses trade and relative costs. Module 2 reader, pp. 16–18, follows the gains to buyers and sellers and the competition facing local producers.
 :::
 
 <!-- ## Trace four interregional connections
@@ -666,6 +801,8 @@ When a road links two regions, how do trade and migration change?
 
 ::: {.notes}
 Continue the fourth roadmap question. Move from the choice of supplier to the household’s choice of location.
+
+**Reading guide.** Hoover and Giarratani, §11.5.1, pp. 235–236, introduces labor mobility. Module 2 reader, pp. 18–19, compares a recurring gain with the one-time cost of moving.
 :::
 
 ## From shipping goods to moving workers
@@ -684,6 +821,8 @@ Moving also costs $F$ once. The worker expects to stay for $T$ years.
 
 ::: {.notes}
 Use equal amenities and other expenses, certain employment, fixed wages and costs, and no discounting in the calculation. Commuting and seasonal work provide alternatives to permanent migration in practice. Hoover and Giarratani §11.5 discusses interregional factor movements.
+
+**Reading guide.** Hoover and Giarratani, §11.5.1, pp. 235–236, discusses barriers to mobility. For supporting detail on real wages and moving costs, see §10.3, pp. 197–200. Module 2 reader, p. 18, defines the household budget.
 :::
 
 ## The break-even condition for moving
@@ -700,6 +839,8 @@ When $d>0$, the break-even horizon is $T^*=F/d$.
 
 ::: {.notes}
 Ask which term changes if Harbor rents rise and which changes if a family can move at lower cost. A positive wage gap may coexist with a negative annual budget gain. If the annual gain is zero or negative and moving costs are positive, extending the horizon cannot produce a budget gain.
+
+**Reading guide.** Module 2 reader, p. 18, derives the break-even horizon and states the wage and discounting assumptions. Hoover and Giarratani, supporting §10.3, pp. 198–200, discusses the wage and cost considerations behind the choice.
 :::
 
 ## Example 3: would a worker move?
@@ -720,6 +861,8 @@ Is the higher wage enough to make the move worthwhile in year 1?
 
 ::: {.notes}
 Assume certain work, identical other expenses and amenities, fixed annual wages and costs, and no discounting. Students calculate 70 minus 15 = 55, versus 60 staying.
+
+**Reading guide.** Module 2 reader, pp. 18–19, calculates the first-year gain and sets out the alternatives in Table 3. Hoover and Giarratani, supporting §10.3, pp. 197–200, discusses living costs and barriers to moving.
 :::
 
 ## Example 3: the horizon changes the comparison
@@ -735,6 +878,8 @@ Three-year gain: $3(70-60)-15=\mathbf{15}$ CU.
 
 ::: {.notes}
 Pause before each answer. Three-year comparison does not discount future gains and requires financing the initial move. Risk, amenities, family commitments, and credit constraints can alter the choice. Keeping wages fixed while changing costs is a sensitivity comparison, not an equilibrium prediction. M4 makes wages, rents, and population jointly responsive.
+
+**Reading guide.** Module 2 reader, pp. 18–19, gives the 1.5-year break-even point and compares the one- and three-year budgets. For mobility over a worker’s career, see Hoover and Giarratani, §11.5.1, pp. 235–236.
 :::
 
 ## Origins and destinations both adjust
@@ -751,6 +896,8 @@ Would migration necessarily lower destination wages?
 
 ::: {.notes}
 Holding demand fixed, inflow tends to lower wages; investment, productivity, and product demand can shift demand too. At the origin, labor scarcity and remittances may offset some losses, but no sign is guaranteed. Mention commuting and seasonal moves as alternatives to permanent migration. Do not equalize nominal wages automatically.
+
+**Reading guide.** Hoover and Giarratani, §§11.5.1–11.6, pp. 235–238, links factor movements to regional wage and income differences. Module 2 reader, pp. 19–20, discusses labor demand, housing, and remittances at each end of the move.
 :::
 
 ## Rural–urban links change who benefits
@@ -767,6 +914,8 @@ Name a group that could lose even if both regions' total production rises.
 
 ::: {.notes}
 Examples: a retailer facing new competition, a renter facing higher costs, households exposed to pollution. Some costs are transfers and some use resources; leave full welfare accounting for M8. The next block returns to comparing regional paths.
+
+**Reading guide.** Module 2 reader, p. 20, identifies rural–urban flows and the groups affected. Page 24 applies the corridor scenario to retailers and renters. Hoover and Giarratani, §11.5, pp. 234–236, gives the trade and mobility background.
 :::
 
 ## Regional convergence {.center .concept data-background-color="#eaf2f3"}
@@ -775,6 +924,8 @@ What would help one region catch up? What could widen the gap?
 
 ::: {.notes}
 Fifth roadmap question. Return to the two regions and the output measure from the opening example.
+
+**Reading guide.** Hoover and Giarratani, §11.6, pp. 237–239, asks why regional incomes might converge or diverge. Module 2 reader, pp. 20–21, introduces the comparison using output per resident.
 :::
 
 ## From flows between regions to gaps over time
@@ -789,6 +940,8 @@ To see whether their economies are becoming more alike, we need to choose an out
 
 ::: {.notes}
 Recall Module 1 agglomeration mechanisms. Better access can spread know-how or reinforce an existing cluster. Neither trade nor mobility alone determines what happens to the gap. Hoover and Giarratani §11.6.
+
+**Reading guide.** Hoover and Giarratani, §11.6, pp. 237–239, discusses convergence in regional income. Module 2 reader, pp. 20–21, applies the question to output per resident in River and Harbor.
 :::
 
 ## Two ways to measure catch-up
@@ -805,6 +958,8 @@ Suppose $0<y_R<y_H$ throughout the comparison.
 
 ::: {.notes}
 For the relative result, divide the new ratio by the old one to obtain (1+g_R)/(1+g_H). The absolute gap depends on the difference between the level gains. These are descriptive criteria for this pair of regions.
+
+**Reading guide.** Module 2 reader, pp. 20–21, compares the absolute gap and the ratio for the same two regions. For a textbook comparison of relative income levels over time, see Hoover and Giarratani, §11.1.2, pp. 219–221.
 :::
 
 ## Why catch-up is not automatic
@@ -820,6 +975,8 @@ Rising land costs and congestion can restrict a region from growing much faster 
 
 ::: {.notes}
 Use the M1 mechanisms dynamically. Knowledge diffusion requires capacity to adopt; returns to capital depend on complementary skills/infrastructure. Supplier loss can reinforce decline. A specialized cluster may be exposed to common shocks, while unrelated activities may diversify risks. Neither convergence nor divergence follows inevitably from integration.
+
+**Reading guide.** Hoover and Giarratani, §§11.2.1 and 11.6, pp. 223–224 and 237–239, discusses cumulative growth, limits to concentration, and catch-up. Module 2 reader, pp. 21–22, applies these mechanisms to the two regions.
 :::
 
 
@@ -835,6 +992,8 @@ Use the M1 mechanisms dynamically. Knowledge diffusion requires capacity to adop
 
 ::: {.notes}
 Ask what would have happened without the road. Competing explanations include a demand boom, preexisting growth, selection, and other investment. Observations in the table help but do not guarantee identification. M5 develops interpretation of spatial evidence. A precise modeled effect also remains conditional on assumptions.
+
+**Reading guide.** Module 2 reader, p. 22, matches access, productivity, and migration explanations to observations. Pages 23–24 give a worked corridor response.
 :::
 
 
@@ -848,6 +1007,8 @@ Ask what would have happened without the road. Competing explanations include a 
 
 ::: {.notes}
 Invite students to answer the five questions in their own words before showing this slide. For the fifth, ask whether they mean a smaller difference in CU per resident or a ratio closer to one.
+
+**Reading guide.** Module 2 reader, p. 4 (boundaries), pp. 9–13 (growth and exports), pp. 16–20 (trade and migration), and pp. 20–22 (catch-up). Hoover and Giarratani, pp. 223–226 and 234–239, develops the corresponding growth mechanisms.
 :::
 
 ## Synthesis and the Module 3 bridge
@@ -862,6 +1023,8 @@ For the corridor, write:
 
 ::: {.notes}
 Write a response and share it. Sample: lower freight raises farm sales; capacity or competition limits gains; inspect freight and destinations while considering a counterfactual. See the course schedule for the PS 1 deadline. No extra problem set is created.
+
+**Reading guide.** Module 2 reader, pp. 23–24, works the corridor comparison. Page 26 connects the exercise to Module 3. For the upcoming treatment of regional boundaries, see Hoover and Giarratani, §9.1, pp. 176–179.
 :::
 
 ## Readings {.references #readings-and-example-files}
@@ -883,6 +1046,9 @@ Full explanations, worked answers, and printed/PDF page conversions: **companion
 ::: {#refs }
 :::
 
+::: {.notes}
+**Reading guide.** Module 2 reader, p. 27, lists the assignment and page conversions. Hoover and Giarratani, printed pp. 217–239 (PDF pp. 218–240), is the main reading through §11.6. Supporting migration material is on printed pp. 197–208. Optional §11.7 begins on printed p. 239.
+:::
 
 ## Optional practice · Follow a program order {#practice-program-order}
 
@@ -896,6 +1062,8 @@ Now draw the boundary around A and B together. Which payments cross this new bou
 
 ::: {.notes}
 Start the arrows at the payer. The festival pays the printer for programs. The printer pays the bindery for binding, the paper supplier for paper, and the employee for work. The employee pays the café. For A alone, the program sale is an export and the bindery earns local sales indirectly from the festival order. When A and B are combined, the festival payment and the commuter’s wages become internal. The payment to the paper supplier still crosses the boundary. The employee’s café purchase takes place in B under either boundary.
+
+**Reading guide.** Module 2 reader, pp. 24–25, traces the festival, printer, and bindery payments under both boundaries. For the analogous indirect-export supplier in the textbook, see Hoover and Giarratani, §11.3.1, p. 226.
 :::
 
 ## Optional practice · Who earns the order revenue?
@@ -916,6 +1084,8 @@ How much income do A’s residents earn from each order before they spend any of
 
 ::: {.notes}
 Have students identify the two rows that generate income for residents of A. Of the local bindery’s 100 CU fee, 40 CU buys imported materials and 60 CU goes to residents. The 400 CU order yields 120 + 60 = 180 CU in initial resident income. The 600 CU order yields 180 + 60 = 240 CU. The printer’s commuter wages go to households in B. The second bindery receives the overflow work, so the local bindery earns the same fee under both orders.
+
+**Reading guide.** Module 2 reader, p. 25, lists the two program orders and calculates how much each pays residents before household spending begins. Hoover and Giarratani, §11.3.1, p. 226, explains spending leakage.
 :::
 
 ## Optional practice · Which order generates more local income?
@@ -931,4 +1101,6 @@ In each round, households spend 80% of their extra income at businesses in A. Ha
 
 ::: {.notes}
 Of 100 CU, households spend 80 CU locally and 40 CU returns as resident income. The feedback coefficient is 0.4 and the multiplier is 1/(1 − 0.4) = 5/3. Multiply the initial incomes by 5/3 to get 300 CU for the small order and 400 CU for the large one. Per 100 CU of order revenue, the results are 100 × 300/400 = 75 CU and 100 × 400/600 ≈ 66.7 CU. The larger order generates more income overall. The smaller order retains more income per 100 CU because all its binding work stays in A. The capacity limit changes the initial local income share. Both orders have the same multiplier on that income.
+
+**Reading guide.** Module 2 reader, pp. 25–26, calculates the multiplier, compares total income with income per 100 CU of sales, and explains the bindery’s capacity limit. Hoover and Giarratani, §11.4, pp. 233–234, discusses capacity assumptions.
 :::
