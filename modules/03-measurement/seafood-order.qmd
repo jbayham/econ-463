@@ -78,9 +78,7 @@ Assume businesses serving households can meet the extra demand at current prices
 |-------------------------:|------------------------------------------:|-----------------------------:|
 | 58 million | | |
 
-**D.** What fraction of the initial 58 million returns as income after one round? This fraction is the **feedback coefficient**, *b*. Use it to calculate the resident income generated in the following round.
-
-**E.** Use *b* to calculate the **income multiplier** and the increase in resident income after all rounds, including the initial 58 million. What would you tell the district official about the difference between this result and the supermarket’s weekly payment?
+**D.** Use the two survey shares to calculate the **income multiplier** and the increase in resident income after all rounds, including the initial 58 million. What would you tell the district official about the difference between this result and the supermarket’s weekly payment?
 
 ## 3. What would you measure next?
 

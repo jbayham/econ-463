@@ -52,4 +52,4 @@ On PS 1, students use the supplied job counts to calculate location quotients an
 
 ## Data for class practice
 
-The Excel workbook includes all-industry and sector levels for Cần Thơ and Viet Nam. Students use current-price value added for 2022 composition and constant-price value added for the 2022–23 growth comparison. The separate corridor CSV provides workplace counts and alternative benchmarks for optional practice in R.
+The Excel workbook includes all-industry and sector levels for Cần Thơ and Vietnam. Students use current-price value added for 2022 composition and constant-price value added for the 2022–23 growth comparison. The separate corridor CSV provides workplace counts and alternative benchmarks for optional practice in R.

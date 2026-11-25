@@ -49,12 +49,12 @@
   },
   "PS1.3": {
     "module": "03",
-    "reviewed": "f19ece02af5bc5ba",
+    "reviewed": "c7e8bebf5c4f59e9",
     "parts": {
-      "a": {"skill": "Calculate employment shares and national-benchmark LQs and distinguish jobs from specialization.", "slides": ["What does each sector contribute?", "Deriving the location quotient", "Excel · Calculate the two location quotients", "Board exercise · Which place specializes?", "Counts, shares, and national LQs"]},
-      "b": {"skill": "Recalculate LQs with a provincial benchmark and interpret levels and rankings.", "slides": ["Board exercise · Which place specializes?", "Switch the reference economy", "What if the planner draws one boundary?"]},
-      "c.1": {"skill": "Apply three five-year growth rates to the district's base-year manufacturing employment.", "gap": "The local-rate row on Shift shares gives the wrong implied change. It should read x₀gᵢᵣ = x₁ − x₀, as shown on the following slide.", "slides": ["Shift shares", "Shift-share decomposition", "Excel · Decompose employment and real output growth", "A specialized district can gain jobs and fall behind"]},
-      "c.2": {"skill": "Calculate industry mix and regional shift and distinguish initial specialization from subsequent job growth.", "slides": ["Shift-share decomposition", "Excel · Decompose employment and real output growth", "A specialized district can gain jobs and fall behind", "Optional board case · Account for the loss"]}
+      "a": {"skill": "Calculate employment shares and national-benchmark LQs and distinguish jobs from specialization.", "slides": ["What does each sector contribute?", "Deriving the location quotient", "Employment specialization in the Mekong Delta", "What can an LQ tell a planner?", "Calculate the two location quotients"]},
+      "b": {"skill": "Recalculate LQs with a provincial benchmark and interpret levels and rankings.", "gap": "The slides name both benchmarks, but students practice switching benchmarks and comparing district rankings only in the companion reader (p. 3).", "slides": ["Deriving the location quotient", "What can an LQ tell a planner?"]},
+      "c.1": {"skill": "Apply three five-year growth rates to the district's base-year manufacturing employment.", "slides": ["Shift shares", "Shift-share decomposition", "What gain would the national benchmarks imply for Valencia?", "Decompose employment and real output growth"]},
+      "c.2": {"skill": "Calculate industry mix and regional shift and distinguish initial specialization from subsequent job growth.", "slides": ["Calculate the two location quotients", "Shift-share decomposition", "Industrial growth across Spain’s provinces", "Valencia’s industrial output grew more slowly than Spain’s", "Decompose employment and real output growth", "Would you pursue a logistics training program?"]}
     }
   }
 }

@@ -99,13 +99,15 @@ For the closing question, overtime can raise shipments at the same headcount. Co
 **Reading guide.** Module 2 reader, pp. 12–15, works through income feedback. Schaffer, ch. 3, Note A, pp. 43–45, introduces location quotients and shift-share.
 :::
 
-## What makes an industry important to a region?
 
-The importance of an industry to a region can be assessed through several key indicators:
 
-1. Which industries account for the region’s employment and output?
-2. Which industries are unusually concentrated relative to a benchmark?
-3. How much local growth would we expect if industries followed national trends?
+## Overview of regional measurement
+
+Today we will introduce measures that describe a region and help us compare regions to each other and compare their growth to national trends.
+
+1. Sector shares describe the region’s composition. 
+2. Location quotients measure the degree to which an industry is concentrated in a region relative to a benchmark.
+3. Shift-share analysis compares a region's growth to national trends.
 
 Define these indicators then apply them to Cần Thơ.
 
@@ -133,7 +135,7 @@ Let $x_{ir}$ be industry $i$’s activity in region $r$
 
 $X_r=\sum_i x_{ir}$ is the regional total 
 
-**sector share** is $s_{ir}=x_{ir}/X_r$.
+Define **sector share** as $s_{ir}=x_{ir}/X_r$.
 
 Sector shares can tell us which workers might be affected by a downturn and which industries account for local production.
 
@@ -188,6 +190,7 @@ The measure, sector definitions, date and industry universe must agree across th
 **Reading guide.** Schaffer, pp. 19–21 and 43, discusses the measure and benchmark and develops the employment case. Hoover and Giarratani, p. 189, supplies the value-added shares. Module 3 reader, p. 3, applies this ratio to jobs.
 :::
 
+
 ## What can an LQ tell a planner?
 
 An employment LQ above one means the industry employs a larger share of the workforce locally than it does in the benchmark.
@@ -204,6 +207,45 @@ Schaffer uses LQs to look for a possible export base when detailed sales by dest
 
 **Reading guide.** Schaffer, pp. 19–21 and 43, explains the export-base interpretation, its assumptions and the further questions an LQ raises. Module 3 reader, pp. 3–4, changes the reference economy.
 :::
+
+
+## Employment specialization in the Mekong Delta
+
+:::: {.columns}
+::: {.column width="60%"}
+```{=html}
+<iframe data-src="assets/world-bank-vietnam-urbanization-overview.pdf#page=20&amp;view=Fit&amp;toolbar=0&amp;navpanes=0" data-external="1" title="World Bank Box O.2, employment location quotients by region in Vietnam, PDF page 20" style="display:block; width:100%; height:510px; border:0;"></iframe>
+```
+
+::: {.source}
+World Bank (2020), Box O.2. [Open PDF at page 20](assets/world-bank-vietnam-urbanization-overview.pdf#page=20){target="_blank" rel="noopener"}
+:::
+:::
+
+::: {.column width="40%"}
+**Employment LQs, 2016**
+
+| Mekong Delta industry | LQ |
+|:----------------------|---:|
+| Marine fishing | 11.15 |
+| Rice wholesaling | 3.31 |
+
+Rice wholesaling’s share of enterprise employment was **3.31 times** its share nationally.
+
+::: {.prompt}
+Which industry was more specialized? 
+:::
+:::
+::::
+
+::: {.notes}
+Point to the Mekong table at the lower left of the map. The World Bank compared employment shares from Vietnam’s 2016 Enterprise Census. Both figures apply to the entire Mekong Delta. Marine fishing had the higher LQ. 
+
+The report asks how Vietnam can raise productivity as it urbanizes. It distinguishes the large, diverse labor markets of Hà Nội and Ho Chi Minh City from secondary cities such as Cần Thơ, where firms can benefit from sharing workers, suppliers, and services tied to a regional specialty. Box O.2 shows why that distinction matters for investment. For example, the Delta’s rice-wholesaling LQ gives a planner a reason to ask whether freight delays between mills and buyers are costly. Shipment volumes, delays, and costs would help the planner judge whether a better connection would pay off.
+
+**Reading guide.** World Bank, [*Vietnam’s Urbanization at a Crossroads*, overview](https://documents1.worldbank.org/curated/en/249961604688402439/pdf/Overview.pdf#page=18), printed pp. 23–26 (PDF pages 18–19), explains the roles of agglomeration and connections between regions. Box O.2 and map O.3, printed pp. 27–28 (PDF page 20), give the employment LQs used here.
+:::
+
 
 ## Changes in composition and growth {.center .concept data-background-color="#eaf2f3"}
 
@@ -229,7 +271,7 @@ Choose an additive measure and call the local industry’s starting amount $x_0$
 | :--------------------------------------- | :---------------- |
 | $g$ · overall benchmark growth           | $x_0 g$           |
 | $g_i$ · benchmark growth in industry $i$ | $x_0 g_i$         |
-| $g_{ir}$ · local growth in that industry | $x_0 g_r (x_1-x_0)$ |
+| $g_{ir}$ · local growth in that industry | $x_0 g_{ir}=x_1-x_0$ |
 |                                          |                   |
 
 Calculate each rate as $g=(x_1-x_0)/x_0$ for its own series. 
@@ -270,6 +312,108 @@ On the board, write x₀g, x₀gᵢ, and the observed change in one column. Use 
 **Reading guide.** Schaffer, pp. 44–45, derives and sums the components. Hoover and Giarratani, appendix 12-1, pp. 279–280, explains the role of starting industry mix. Module 3 reader, p. 5, works the employment identity.
 :::
 
+## Industrial growth across Spain’s provinces
+
+:::: {.columns}
+::: {.column width="55%"}
+```{=html}
+<img src="assets/spain-industrial-gva-2019.svg" alt="Industrial value added in Spain’s 47 mainland NUTS 3 provinces in 2019, in billions of 2015 euros. Valencia is outlined on the east coast. It is one of nine provinces in the darkest class (€5.46–30.46 billion)." style="display:block; width:100%; margin:0;">
+```
+
+::: {.source}
+[Montanía et al., Fig. 1](https://doi.org/10.1111/grow.12693) · ARDECO (2022) · [GISCO](https://ec.europa.eu/eurostat/web/gisco/geodata/statistical-units/territorial-units-statistics) © EuroGeographics
+:::
+:::
+
+::: {.column width="45%"}
+- In 2019, nine of the 47 mainland provinces accounted for nearly 60% of Spain’s industrial value added.
+- Which provinces kept pace with Spanish industry from 2015 to 2019?
+- Where did industry also outgrow the rest of the provincial economy?
+
+::: {.prompt}
+At Spain’s industrial growth rate, how much would Valencia’s industry have gained?
+:::
+:::
+::::
+
+::: {.notes}
+Find Valencia on the east coast. Like Barcelona and Madrid, it was among Spain’s nine largest provincial industrial economies in 2019. Darker shading means that the province produced more industrial value added that year. Industry includes mining, manufacturing, energy, and water and waste services. Construction is a separate sector.
+
+Ask whether Valencia’s dark shading tells us how fast its industry grew. A province can finish among the largest producers because it started with a large industrial base. To judge its performance over the four years, turn back to its 2015 starting value and calculate what it would have gained at Spain’s industrial growth rate. The next slide gives the inputs in millions of 2015 euros.
+
+**Reading guide.** [Montanía et al. (2024), Figure 1, p. 12](https://dehesa.unex.es/bitstream/10662/21445/1/grow_12693.pdf#page=12) maps 2019 industrial gross value added at constant 2015 prices using the European Commission’s 2022 ARDECO database. The map uses each province’s published class and shows the observed range of each class in billions of 2015 euros, rounded to two decimals. Footnote 7 names the nine largest producers. Table 4 (p. 14) gives Valencia’s growth components. Figure 1 adapted under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) using [GISCO’s 2021 NUTS 3 boundaries](https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_10M_2021_3035_LEVL_3.geojson).
+:::
+
+## What gain would the national benchmarks imply for Valencia?
+
+Valencia’s industry generated **€9,968.3 million** of value added in 2015. Use that same starting value ($x_0$) for both calculations.
+
+| Benchmark implied by the study | Cumulative growth, 2015–2019 |
+|:---|---:|
+| Spain, all industries ($g$) | 4.28% |
+| Spain, industrial sector ($g_i$) | 9.89% |
+
+::: {.prompt}
+On the board, calculate $x_0 g$ and $x_0 g_i$. How much does the benchmark gain change when you switch to the industrial rate?
+:::
+
+::: {.source}
+Starting value from [Spain’s INE, provincial accounts](https://www.ine.es/jaxi/Tabla.htm?tpx=67289). Rates reconstructed from [Montanía et al. (2024), Table 4](https://doi.org/10.1111/grow.12693).
+:::
+
+::: {.notes}
+Write the 2015 starting level once, in millions of 2015 euros. Applying the all-industry rate gives $9{,}968.3 \times 0.0428 \approx 426.64$, or **€427 million**. Switching to the industrial rate gives $9{,}968.3 \times 0.0989 \approx 985.86$, or **€986 million**. Both products are gains over four years. The industry-mix component is the difference, $9{,}968.3 \times (0.0989-0.0428) \approx 559$ million. Thus $N+M=427+559=986$ in rounded millions. Advance to Figure 3 and compare that benchmark with Valencia’s €963 million actual gain.
+
+Table 4 reports euro effects rounded to millions. To reconstruct the common rates independently of Valencia’s result, use Barcelona’s row and its archived 2015 industrial value added of €27,029.214 million. The all-industry rate is $1{,}158/27{,}029.214 \approx 4.28\%$. The industrial rate is $(1{,}158+1{,}515)/27{,}029.214 \approx 9.89\%$. Applying these rates to Valencia’s archived starting value reproduces its Table 4 figures to the nearest million.
+
+**Reading guide.** [Montanía et al., Table 4, p. 14](https://doi.org/10.1111/grow.12693) supplies the Barcelona and Valencia rows. [INE provincial accounts, table 67289](https://www.ine.es/jaxi/Tabla.htm?tpx=67289), 2019 statistical revision, reports 2015 NACE B–E value added in thousands of euros. Divide by 1,000 for the board units. For an independent comparison, [INE national volume indices, table 67287](https://www.ine.es/jaxi/Tabla.htm?tpx=67287) give 2015–2019 growth of 10.7% in total value added and 9.8% in industry. Use the reconstructed rates above to explain the published decomposition.
+:::
+
+## Valencia’s industrial output grew more slowly than Spain’s
+
+:::: {.columns}
+::: {.column width="56%"}
+```{=html}
+<div style="position:relative;">
+  <img src="assets/montania-2024-figure-3.jpg" alt="Figure 3 plots industry mix vertically and regional shift horizontally for 47 Spanish provinces. Valencia lies above the horizontal axis and just left of the vertical axis." style="display:block; width:100%; max-width:none; max-height:none; margin:0;">
+  <svg viewBox="0 0 992 726" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;">
+    <circle cx="580" cy="276" r="15" fill="none" stroke="#994414" stroke-width="4"/>
+    <path d="M 565 273 L 531 252 L 500 252" fill="none" stroke="#994414" stroke-width="3"/>
+    <text x="494" y="257" text-anchor="end" font-family="Arial, sans-serif" font-size="31" font-weight="bold" fill="#82390f">Valencia</text>
+  </svg>
+</div>
+```
+
+::: {.source}
+[Montanía et al. (2024), Figure 3 and Table 4](https://doi.org/10.1111/grow.12693). Valencia label added. Graph ticks show thousands of 2015 euros.
+:::
+:::
+
+::: {.column width="44%"}
+**Valencia, 2015–2019**  
+Millions of euros at 2015 prices
+
+| Industrial value added | Change |
+|:------------------|----------:|
+| National growth ($N$) | +427 |
+| Industry mix ($M$) | +559 |
+| Gain at the study’s industrial benchmark ($N+M$) | +986 |
+| Actual gain in Valencia | +963 |
+
+**Regional shift** $S = 963 - 986 = -23$.
+:::
+::::
+
+::: {.notes}
+Ask students to locate Valencia after calculating the benchmark. Each dot is one province. The paper calls the horizontal coordinate the “competitive effect,” our regional shift. The vertical coordinate is industry mix. The study’s industrial benchmark exceeds its all-industry benchmark, putting all 47 provinces above the horizontal axis. Valencia sits just left of the vertical axis because its actual gain fell short of the industrial benchmark.
+
+On the board, start with the €427 million gain implied by growth in Spain’s whole economy. Switching to Spain’s industrial growth rate adds €559 million, giving a benchmark gain of €986 million. Valencia actually gained €963 million. The difference is −€23 million. Table 4 rounds to millions of 2015 euros. The tick labels in Figure 3 are 1,000 times the table values, so the highlighted point is near (−23,000, 559,000) on the published axes.
+
+Montanía, Márquez, Fernández-Núñez, and Hewings use real industrial gross value added to compare 47 Spanish provinces from 2015 to 2019. Industrial output rose in 32 provinces, and 22 provinces had a negative regional shift. The authors then compare industry with each province’s own economy. Barcelona and Madrid both outgrew Spanish industry. Barcelona’s economy as a whole also outgrew Spain’s, while Madrid’s industry stood out within a slower-growing provincial economy. Those comparisons help a planner decide whether to investigate conditions across the province or within a particular sector. Establishing why firms grew at different rates requires additional evidence.
+
+**Reading guide.** [Montanía et al., *Growth and Change* (2024)](https://doi.org/10.1111/grow.12693), Table 4 (p. 14) gives Valencia’s components, Figure 3 (p. 15) plots the traditional decomposition, and the discussion on pp. 16–17 compares Barcelona and Madrid. Figure 3 © 2023 the authors, reproduced under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+:::
+
 ## Recap
 
 Sectoral composition describes the region’s industrial structure.
@@ -282,7 +426,7 @@ Shift shares provide a useful decomposition of local growth. How much can be att
 
 Suppose Cần Thơ is considering a logistics training program. How important is transportation and storage to local workers and production? Does recent growth warrant talking to employers?
 
-Use **Cần Thơ on its 2022–23 boundary**, with **Viet Nam** as the benchmark. The 2023 yearbooks report 2022 levels and preliminary 2023 figures.
+Use **Cần Thơ on its 2022–23 boundary**, with **Vietnam** as the benchmark. The 2023 yearbooks report 2022 levels and preliminary 2023 figures.
 
 [Open the class workbook in Excel](can-tho-sector-data.xlsx). Enter formulas on **Excel exercise**. The **Sector data** tab contains the published figures and sources.
 
@@ -321,13 +465,13 @@ Point to the unit, the year headings and the preliminary label. Ask students to 
 The all-industry output total equals GDP (or city GRDP) less product taxes net of subsidies. Use that total as the denominator for industry shares.
 
 ::: {.source}
-2023 statistical yearbooks for [Cần Thơ](https://thongkecantho.nso.gov.vn/nien-giam-thong-ke/3) (tables 31, 42, 44) and [Viet Nam](https://www.nso.gov.vn/en/default/2024/07/statistical-yearbook-of-2023/) (tables 59, 87, 89).
+2023 statistical yearbooks for [Cần Thơ](https://thongkecantho.nso.gov.vn/nien-giam-thong-ke/3) (tables 31, 42, 44) and [Vietnam](https://www.nso.gov.vn/en/default/2024/07/statistical-yearbook-of-2023/) (tables 59, 87, 89).
 :::
 
 ::: {.notes}
 Point out the three measure blocks on Sector data. National employment is converted to people, and city value added to billions of VND. A common price basis for growth removes the change in the valuation of activity attributable to prices.
 
-**Reading guide.** Cần Thơ yearbook, pp. 89–90, 123–124 and 127–128, and Viet Nam yearbook, pp. 168–169, 243–244 and 247–248, distinguish current-price and constant-price accounts.
+**Reading guide.** Cần Thơ yearbook, pp. 89–90, 123–124 and 127–128, and Vietnam yearbook, pp. 168–169, 243–244 and 247–248, distinguish current-price and constant-price accounts.
 :::
 
 ## Describe the city’s sector mix
@@ -355,7 +499,7 @@ For **transportation and storage**, complete rows **17–19**. Keep employment i
 | Row | Enter a formula for… |
 |:---|:---|
 | 17 | The Cần Thơ sector share you calculated in row 10 |
-| 18 | Viet Nam’s sector total divided by its all-industry total |
+| 18 | Vietnam’s sector total divided by its all-industry total |
 | 19 | The city’s share divided by the national share |
 
 ::: {.prompt}
@@ -390,7 +534,7 @@ Complete **both columns** on **Excel exercise**. Keep the growth rates unrounded
 
 | Rows | Calculation |
 |:----|:----------------------------------|
-| 38–40 | Calculate 2022–23 growth for Viet Nam overall, the national sector, and the city sector. |
+| 38–40 | Calculate 2022–23 growth for Vietnam overall, the national sector, and the city sector. |
 | 42–44 | Multiply each rate by the city sector’s 2022 level in row 23. |
 | 46–48 | Record the first gain, the second minus the first, and the third minus the second. Label them national growth, industry mix, and regional shift. |
 | 49 | Check that the three components sum to the observed change in each column. |
@@ -408,7 +552,7 @@ Set up the three growth paths on the board with two empty columns. Students shou
 Prepare a short briefing for the city.
 
 1. **Sector mix.** Where does transportation and storage fit among the city’s industries?
-2. **Specialization.** What do your two 2022 LQs say about employment and output relative to Viet Nam?
+2. **Specialization.** What do your two 2022 LQs say about employment and output relative to Vietnam?
 3. **Growth.** Compare the city and national sector growth **rates** for each measure. Use each regional shift to express the departure in its own units.
 
 ::: {.prompt}
