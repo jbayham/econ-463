@@ -1302,13 +1302,108 @@ display:block!important;
 <h2>What does each sector contribute?</h2>
 <!-- potentially include why this is relevant to decision makers -->
 <p>Choose a boundary and a measure. Administrative, commuting,…</p>
-<p>Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mrow><mi>i</mi><mi>r</mi></mrow></msub><annotation encoding="application/x-tex">x_{ir}</annotation></semantics></math> be industry <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>’s activity in region <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math></p>
+<p>Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mrow><mi>i</mi><mi>r</mi></mrow></msub><annotation encoding="application/x-tex">x_{ir}</annotation></semantics></math> be industry <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>’s activity in region <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>. An activity measure can be output, value added, employment, payroll, or hours.</p>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>r</mi></msub><mo>=</mo><msub><mo>∑</mo><mi>i</mi></msub><msub><mi>x</mi><mrow><mi>i</mi><mi>r</mi></mrow></msub></mrow><annotation encoding="application/x-tex">X_r=\sum_i x_{ir}</annotation></semantics></math> is the regional total</p>
 <p>Define <strong>sector share</strong> as <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mrow><mi>i</mi><mi>r</mi></mrow></msub><mo>=</mo><msub><mi>x</mi><mrow><mi>i</mi><mi>r</mi></mrow></msub><mi>/</mi><msub><mi>X</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">s_{ir}=x_{ir}/X_r</annotation></semantics></math>.</p>
-<p>Sector shares can tell us which workers might be affected by a downturn and which industries account for local production.</p>
+<p>Sector shares normalize by the regional total allowing comparison of the relative importance of each sector across regions.</p>
 <aside class="notes">
 <p>A city workforce office may want an administrative boundary for its residents and a commuting area for potential recruits. Confirm whether the data count employed people or payroll jobs. The shares sum to one for an exhaustive set of mutually exclusive industries on the same basis.</p>
 <p><strong>Reading guide.</strong> Schaffer, pp. 6–9, links boundaries to the question. Hoover and Giarratani, pp. 187–189, compares sector mixes measured in several ways.</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
+</section>
+<section id="what-can-output-tell-a-regional-planner" class="slide level2">
+<h2>What can output tell a regional planner?</h2>
+<table>
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Planning decision</th>
+<th style="text-align: left;">How to use the evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Where should we expand shared infrastructure?</strong></td>
+<td style="text-align: left;">Compare peak physical output that must pass through each facility with its usable capacity. Investigate recurring bottlenecks.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Which inputs need a second supplier?</strong></td>
+<td style="text-align: left;">Use gross output and the share sold to local buyers to identify major suppliers.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Which downturn should we plan for first?</strong></td>
+<td style="text-align: left;">Multiply each industry’s share of regional value added by the percentage it could lose. Compare the direct losses to the regional economy.</td>
+</tr>
+</tbody>
+</table>
+<div class="prompt">
+<p>Industry A generates 30% of regional value added and could lose 5% of its value added. Industry B generates 10% and could lose 20%. If both disruptions are equally likely, which would you investigate first?</p>
+</div>
+<aside class="notes">
+<p>Assume the two disruptions are equally likely, last equally long, and reduce each industry’s real value added by the stated percentage. Hold other industries’ production fixed. A would reduce regional value added by 0.30 × 0.05 = 1.5%. B would reduce it by 0.10 × 0.20 = 2%. Start the contingency study with B. Before funding a project, ask how much of that loss the project could prevent and what it would cost.</p>
+<p>The three decisions use different evidence. An infrastructure team needs peak loads in units the facility can handle, alongside queues and cheaper ways of relieving them. A supplier assessment needs purchases by buyer and the availability of substitutes. Even a small supplier can be critical if its customers cannot switch. For an economy-wide production loss, value added counts each stage’s contribution once.</p>
+<p><strong>Reading guide.</strong> Module 2 reader, PDF p. 5, defines real value added. Hoover and Giarratani, §11.3.2, printed pp. 228–229 (PDF pp. 229–230), trace transactions between producers. The U.S. Economic Development Administration asks regions to identify dependence on individual industries and choose ways to reduce their vulnerability. <a href="https://www.eda.gov/resources/comprehensive-economic-development-strategy/content/economic-resilience">EDA guidance on economic resilience</a></p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
+</section>
+<section id="what-can-employment-tell-a-workforce-planner" class="slide level2">
+<h2>What can employment tell a workforce planner?</h2>
+<table>
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Planning decision</th>
+<th style="text-align: left;">How to use the evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Which employers should we visit first?</strong></td>
+<td style="text-align: left;">Use workplace job counts and employers’ layoff notices to find sites with the most workers at risk.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Where should job-search clinics open?</strong></td>
+<td style="text-align: left;">Map affected workers by residence. Choose sites they can reach by transit.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>When should outreach begin?</strong></td>
+<td style="text-align: left;">If hours per job fall below seasonal norms, contact employers before layoffs begin.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>How much wage support should we budget?</strong></td>
+<td style="text-align: left;">Estimate lost pay from payroll and cuts in paid hours. Apply benefit rates and eligibility rules.</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>Send the response team to the district where the employers are located. Staff can meet workers before their final shifts and confirm how many people need help. Start the search for evening clinic sites in the home district. Check transit routes, worker preferences, and existing services before choosing a venue.</p>
+<p>Workplace job counts help size the response at employer sites. Resident counts help locate services that people will use after a layoff. To budget wage support, estimate lost paid hours and hourly earnings for eligible residents, then apply the replacement rate, duration, and any benefit cap. Payroll paid at local workplaces can include commuters who qualify elsewhere.</p>
+<p><strong>Reading guide.</strong> Module 3 reader, PDF p. 2, distinguishes workplace jobs from employed residents. For a documented application, Puerto Rico’s workforce agency reports visiting employers and organizing job fairs after projected layoffs affecting 2,560 workers at 16 companies. <a href="https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2024/Annual/narratives/PR_PY24%20WIOA%20Annual%20Narrative%20Report.pdf">Program-year 2024 report, “Dislocated Worker &amp; Employer Services”</a></p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
@@ -1356,7 +1451,7 @@ display:block!important;
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><msub><mi>Q</mi><mrow><mi>i</mi><mi>r</mi><mo stretchy="false" form="prefix">|</mo><mi>b</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>x</mi><mrow><mi>i</mi><mi>r</mi></mrow></msub><mrow><msub><mi>X</mi><mi>r</mi></msub><msub><mi>s</mi><mrow><mi>i</mi><mi>b</mi></mrow></msub></mrow></mfrac><mo>=</mo><mfrac><msub><mi>s</mi><mrow><mi>i</mi><mi>r</mi></mrow></msub><msub><mi>s</mi><mrow><mi>i</mi><mi>b</mi></mrow></msub></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">LQ_{ir|b}=\frac{x_{ir}}{X_r s_{ib}}=\frac{s_{ir}}{s_{ib}}.</annotation></semantics></math></p>
 </div>
 <div class="fragment">
-<p>A LQ of 1.5 means the industry’s share is <strong>50% higher</strong> locally.</p>
+<p>A LQ of 1.5 means the region’s industry share is <strong>50% higher</strong> than the benchmark.</p>
 </div>
 <aside class="notes">
 <p>The measure, sector definitions, date and industry universe must agree across the two places. Both totals and the benchmark share must be positive. Zero local activity then gives zero; parity gives one. For the output LQ, use total industry value added in both places. For the employment LQ, match the definition of employment in both places. An earnings LQ can likewise use a consistently defined earnings measure.</p>
@@ -1373,8 +1468,8 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="what-can-an-lq-tell-a-planner" class="slide level2">
-<h2>What can an LQ tell a planner?</h2>
+<section id="what-can-a-lq-tell-a-planner" class="slide level2">
+<h2>What can a LQ tell a planner?</h2>
 <p>An employment LQ above one means the industry employs a larger share of the workforce locally than it does in the benchmark.</p>
 <ul>
 <li><strong>Workforce planning.</strong> Pair the employment LQ with the headcount to decide which employers to ask about vacancies and training.</li>
@@ -1689,7 +1784,7 @@ display:block!important;
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
 <p>Sectoral composition describes the region’s industrial structure.</p>
-<p>Location quotients describe a region’s industrial structure.</p>
+<p>Location quotients describe a region’s industrial <strong>concentration</strong>.</p>
 <p>Shift shares provide a useful decomposition of local growth. How much can be atttributed to the benchmark, the industry mix, and a regional shift?</p>
 </section>
 <section id="cần-thơs-transportation-and-storage-sector" class="slide level2">

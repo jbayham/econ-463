@@ -131,18 +131,57 @@ Connect the mix of sectors to Module 2’s example of workers moving between ind
 <!-- potentially include why this is relevant to decision makers -->
 Choose a boundary and a measure. Administrative, commuting,...
 
-Let $x_{ir}$ be industry $i$’s activity in region $r$ 
+Let $x_{ir}$ be industry $i$’s activity in region $r$. An activity measure can be output, value added, employment, payroll, or hours. 
 
 $X_r=\sum_i x_{ir}$ is the regional total 
 
 Define **sector share** as $s_{ir}=x_{ir}/X_r$.
 
-Sector shares can tell us which workers might be affected by a downturn and which industries account for local production.
+Sector shares normalize by the regional total allowing comparison of the relative importance of each sector across regions.
 
 ::: {.notes}
 A city workforce office may want an administrative boundary for its residents and a commuting area for potential recruits. Confirm whether the data count employed people or payroll jobs. The shares sum to one for an exhaustive set of mutually exclusive industries on the same basis.
 
 **Reading guide.** Schaffer, pp. 6–9, links boundaries to the question. Hoover and Giarratani, pp. 187–189, compares sector mixes measured in several ways.
+:::
+
+## What can output tell a regional planner?
+
+| Planning decision | How to use the evidence |
+|:------------------|:------------------------|
+| **Where should we expand shared infrastructure?** | Compare peak physical output that must pass through each facility with its usable capacity. Investigate recurring bottlenecks. |
+| **Which inputs need a second supplier?** | Use gross output and the share sold to local buyers to identify major suppliers. |
+| **Which downturn should we plan for first?** | Multiply each industry’s share of regional value added by the percentage it could lose. Compare the direct losses to the regional economy. |
+
+::: {.prompt}
+Industry A generates 30% of regional value added and could lose 5% of its value added. Industry B generates 10% and could lose 20%. If both disruptions are equally likely, which would you investigate first?
+:::
+
+::: {.notes}
+Assume the two disruptions are equally likely, last equally long, and reduce each industry’s real value added by the stated percentage. Hold other industries’ production fixed. A would reduce regional value added by 0.30 × 0.05 = 1.5%. B would reduce it by 0.10 × 0.20 = 2%. Start the contingency study with B. Before funding a project, ask how much of that loss the project could prevent and what it would cost.
+
+The three decisions use different evidence. An infrastructure team needs peak loads in units the facility can handle, alongside queues and cheaper ways of relieving them. A supplier assessment needs purchases by buyer and the availability of substitutes. Even a small supplier can be critical if its customers cannot switch. For an economy-wide production loss, value added counts each stage’s contribution once.
+
+**Reading guide.** Module 2 reader, PDF p. 5, defines real value added. Hoover and Giarratani, §11.3.2, printed pp. 228–229 (PDF pp. 229–230), trace transactions between producers. The U.S. Economic Development Administration asks regions to identify dependence on individual industries and choose ways to reduce their vulnerability. [EDA guidance on economic resilience](https://www.eda.gov/resources/comprehensive-economic-development-strategy/content/economic-resilience)
+:::
+
+## What can employment tell a workforce planner?
+
+| Planning decision | How to use the evidence |
+|:------------------|:------------------------|
+| **Which employers should we visit first?** | Use workplace job counts and employers’ layoff notices to find sites with the most workers at risk. |
+| **Where should job-search clinics open?** | Map affected workers by residence. Choose sites they can reach by transit. |
+| **When should outreach begin?** | If hours per job fall below seasonal norms, contact employers before layoffs begin. |
+| **How much wage support should we budget?** | Estimate lost pay from payroll and cuts in paid hours. Apply benefit rates and eligibility rules. |
+
+
+
+::: {.notes}
+Send the response team to the district where the employers are located. Staff can meet workers before their final shifts and confirm how many people need help. Start the search for evening clinic sites in the home district. Check transit routes, worker preferences, and existing services before choosing a venue.
+
+Workplace job counts help size the response at employer sites. Resident counts help locate services that people will use after a layoff. To budget wage support, estimate lost paid hours and hourly earnings for eligible residents, then apply the replacement rate, duration, and any benefit cap. Payroll paid at local workplaces can include commuters who qualify elsewhere.
+
+**Reading guide.** Module 3 reader, PDF p. 2, distinguishes workplace jobs from employed residents. For a documented application, Puerto Rico’s workforce agency reports visiting employers and organizing job fairs after projected layoffs affecting 2,560 workers at 16 companies. [Program-year 2024 report, “Dislocated Worker & Employer Services”](https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2024/Annual/narratives/PR_PY24%20WIOA%20Annual%20Narrative%20Report.pdf)
 :::
 
 ## Relative specialization {.center .concept data-background-color="#eaf2f3"}
@@ -180,7 +219,7 @@ $$LQ_{ir|b}=\frac{x_{ir}}{X_r s_{ib}}=\frac{s_{ir}}{s_{ib}}.$$
 :::
 
 ::: {.fragment}
-A LQ of 1.5 means the industry’s share is **50% higher** locally. 
+A LQ of 1.5 means the region's industry share is **50% higher** than the benchmark.
 
 :::
 
@@ -191,7 +230,7 @@ The measure, sector definitions, date and industry universe must agree across th
 :::
 
 
-## What can an LQ tell a planner?
+## What can a LQ tell a planner?
 
 An employment LQ above one means the industry employs a larger share of the workforce locally than it does in the benchmark.
 
@@ -418,7 +457,7 @@ Montanía, Márquez, Fernández-Núñez, and Hewings use real industrial gross v
 
 Sectoral composition describes the region’s industrial structure.
 
-Location quotients describe a region’s industrial structure.
+Location quotients describe a region’s industrial **concentration**.
 
 Shift shares provide a useful decomposition of local growth. How much can be atttributed to the benchmark, the industry mix, and a regional shift?
 
