@@ -1,0 +1,13 @@
+name: Student slide privacy
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test note removal and parity checks
+        run: python3 -m unittest discover -s .github/slides
+      - name: Verify the student sources and rendered decks
+        run: python3 .github/slides/decks.py check-index

@@ -1,7 +1,7 @@
 {
   "PS1.1": {
     "module": "01",
-    "reviewed": "b60308f030147438",
+    "reviewed": "cba022b9f12d5951",
     "parts": {
       "a": {
         "skill": "Add relevant costs on a common output basis and justify cost minimization at fixed revenue.",
@@ -17,7 +17,7 @@
       },
       "d": {
         "skill": "Give a competing explanation for observed clustering and identify a complementary condition for growth.",
-        "slides": ["Example 3: distinguish mechanisms with evidence", "Vietnam: connectivity shapes concentration", "02/Why do independent firms cluster?"]
+        "slides": ["Example 3: distinguish mechanisms with evidence", "Vietnam: connectivity shapes concentration", "02/Why do firms cluster?"]
       }
     }
   },
@@ -49,10 +49,10 @@
   },
   "PS1.3": {
     "module": "03",
-    "reviewed": "8d9f7d2da5680d56",
+    "reviewed": "2da72b75bdac6c51",
     "parts": {
-      "a": {"skill": "Calculate employment shares and national-benchmark LQs and distinguish jobs from specialization.", "slides": ["What does each sector contribute?", "What can employment tell a workforce planner?", "Deriving the location quotient", "Employment specialization in the Mekong Delta", "What can an LQ tell a planner?", "Calculate the two location quotients"]},
-      "b": {"skill": "Recalculate LQs with a provincial benchmark and interpret levels and rankings.", "gap": "The slides name both benchmarks, but students practice switching benchmarks and comparing district rankings only in the companion reader (p. 3).", "slides": ["Deriving the location quotient", "What can an LQ tell a planner?"]},
+      "a": {"skill": "Calculate employment shares and national-benchmark LQs and distinguish jobs from specialization.", "slides": ["What does each sector contribute?", "What can employment tell a workforce planner?", "Deriving the location quotient", "Employment specialization in the Mekong Delta", "What can a LQ tell a planner?", "Calculate the two location quotients"]},
+      "b": {"skill": "Recalculate LQs with a provincial benchmark and interpret levels and rankings.", "gap": "The slides name both benchmarks, but students practice switching benchmarks and comparing district rankings only in the companion reader (p. 3).", "slides": ["Deriving the location quotient", "What can a LQ tell a planner?"]},
       "c.1": {"skill": "Apply three five-year growth rates to the district's base-year manufacturing employment.", "slides": ["Shift shares", "Shift-share decomposition", "What gain would the national benchmarks imply for Valencia?", "Decompose employment and real output growth"]},
       "c.2": {"skill": "Calculate industry mix and regional shift and distinguish initial specialization from subsequent job growth.", "slides": ["Calculate the two location quotients", "Shift-share decomposition", "Industrial growth across Spain’s provinces", "Valencia’s industrial output grew more slowly than Spain’s", "Decompose employment and real output growth", "Would you pursue a logistics training program?"]}
     }

@@ -7,7 +7,7 @@ Replace the bracketed personal prompts before teaching. Use the current syllabus
 Render from the repository root:
 
 ```sh
-quarto render modules/00-course-introduction/slides.qmd --to revealjs
+python3 .github/slides/decks.py build 00-course-introduction
 ```
 
 The deck reuses `../01-location/assets/slides.scss`. Rendered HTML stays beside the source. Learning-outcome lists belong only in this opening deck, not in the module decks.

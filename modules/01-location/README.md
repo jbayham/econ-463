@@ -30,7 +30,7 @@ Follow with agglomeration mechanisms, limits to concentration, and the bridge to
 From the repository root:
 
 ```sh
-quarto render modules/01-location/slides.qmd --to revealjs
+python3 .github/slides/decks.py build 01-location
 quarto render modules/01-location/reader.qmd --to html
 quarto render modules/01-location/reader.qmd --to pdf
 quarto render modules/01-location/reader.qmd --to epub

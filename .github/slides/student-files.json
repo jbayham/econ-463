@@ -1,0 +1,18 @@
+{
+  "00-course-introduction": {
+    "slides.html": "b0b8844d659a652523f024c9af52c77b3f310c4d1a2f49f5dadf66f353336d90",
+    "slides.qmd": "83024fc5c8a1100f54a3432c879307416ea25e57d56e41e6d166a2fc4669c76a"
+  },
+  "01-location": {
+    "slides.html": "1e435849b58b069c6f729871619231bd416aeaf9ba90198e9f35f2ac611db92a",
+    "slides.qmd": "d321ec39d53ef9fb08e0619e418f1b1b2a04bd8b733658eae208aef6c57e19cb"
+  },
+  "02-growth": {
+    "slides.html": "0fae716811115a81d115a824412d2b7f4fac19fd95cf76dc74f15d160c4495aa",
+    "slides.qmd": "73d5c4899f893f1a78c4b5802ac239d07fbff49200874c82ccdf08f5d4e6fb2b"
+  },
+  "03-measurement": {
+    "slides.html": "1c0d871ee56289ed9f464d84d8b11b90a422a9a0faf189b6e728f75ff9ba8149",
+    "slides.qmd": "3d4bb84aef35f6c49cb9b682a259397f7c39a4b79145d2cad156089a5765a041"
+  }
+}

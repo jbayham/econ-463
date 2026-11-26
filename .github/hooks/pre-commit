@@ -1,0 +1,3 @@
+#!/bin/sh
+# Verify what this commit would actually sync, even when files are partially staged.
+exec python3 .github/slides/decks.py check-index

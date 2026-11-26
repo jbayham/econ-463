@@ -5,8 +5,6 @@ author: "Jude Bayham"
 lang: en
 format:
   revealjs:
-    title-slide-attributes:
-      data-notes: "Return to the first three questions from Module 2 before introducing the seafood order. Reading guide. Schaffer, ch. 2, pp. 6–9, on choosing a region, and ch. 3, Note A, pp. 43–47, on measuring its industrial structure."
     theme: [simple, ../02-growth/assets/slides.scss]
     width: 1280
     height: 720
@@ -35,11 +33,6 @@ Choose a boundary that fits the question.
 A worker lives in River and works in Harbor. Where would you count the job? Where would you count the household’s earnings?
 :::
 
-::: {.notes}
-Count the job in Harbor using workplace data and the household’s earnings in River using residence data. Ask students what happens if they draw one boundary around the whole commuting area. The workplace and the household now fall inside it.
-
-**Reading guide.** Module 2 reader, pp. 3–4, introduces boundaries. Schaffer, ch. 2, pp. 6–9, discusses ways to define a region.
-:::
 
 ## What initiates a region’s growth?
 
@@ -51,11 +44,6 @@ Count the job in Harbor using workplace data and the household’s earnings in R
 Suppose River ships more rice this year. What evidence would tell you whether the mill used spare capacity or expanded its capacity?
 :::
 
-::: {.notes}
-For the demand response, look for additional orders, longer hours, and higher utilization of existing machines. For a capacity change, look for new equipment, skills, or higher output per hour. A persistent increase in demand can lead to investment, so both explanations can apply at different horizons.
-
-**Reading guide.** Module 2 reader, pp. 5–8, connects regional productivity to the mix of jobs. Hoover and Giarratani, §11.2, discusses demand and supply explanations for regional growth.
-:::
 
 ## How can exports in one industry impact other industries in the region?
 
@@ -68,11 +56,6 @@ Harbor buys rice from River’s mill. Two kinds of spending spread the effect th
 If the grocery restocks from a supplier in Harbor, what happens to the share of each sale that returns as income in River?
 :::
 
-::: {.notes}
-Trace the payments from buyer to mill, mill to worker, worker to grocer, and grocer to supplier. Holding the grocery sale fixed, a larger share paid for outside inputs leaves less available as River income. In the Module 2 example, households spent 80% of new income locally and 75% of that spending became resident income. The feedback coefficient was 0.80 × 0.75 = 0.60. Ask students to carry that reasoning into the seafood case with its own spending shares.
-
-**Reading guide.** Module 2 reader, pp. 9–15, follows export demand through suppliers and household spending and develops the income multiplier.
-:::
 
 ## Should the seafood processor take the order?
 
@@ -87,17 +70,6 @@ Would you sign the contract? What part of the buyer’s payment will district re
 
 [handout (PDF)](seafood-order.pdf){target="_blank"}
 
-::: {.notes}
-Allow about 20 minutes. Take an initial vote, then give pairs the cost table on page 1. At the old freight rate the margins are −1,000 and −9,000 VND per kg, yielding a weekly loss of 68 million VND. With the improvement the margins are +3,000 and −5,000. The first 14,000 kg earn 42 million VND, the last 6,000 kg lose 30 million, and the full order contributes 12 million. The buyer rules out shipping only the first 14,000 kg.
-
-Ask who receives the 2 billion VND in weekly gross sales before students turn to page 2. Local farm receipts cover costs and can replace earlier sales. Commuter wages go to households in the neighboring district. The 58 million is the supplied net gain across resident workers and owners before household spending. It already includes relevant earnings from the processor and farms.
-
-Of the 58 million, 40.6 million is spent locally and 24.36 million returns as resident income. The feedback coefficient is 0.42. The following round generates 10.2312 million. The multiplier is 1/0.58, or about 1.72. Total resident income rises by 100 million VND per week, including the initial 58 million.
-
-For the closing question, overtime can raise shipments at the same headcount. Compare weekly kilograms shipped or real value added at the plant with household real income by place of residence. Invite students to justify a district or commuting-area boundary and name a provincial or national industry share for comparison. This introduces the location quotient.
-
-**Reading guide.** Module 2 reader, pp. 12–15, works through income feedback. Schaffer, ch. 3, Note A, pp. 43–45, introduces location quotients and shift-share.
-:::
 
 
 
@@ -111,24 +83,14 @@ Today we will introduce measures that describe a region and help us compare regi
 
 Define these indicators then apply them to Cần Thơ.
 
-::: {.notes}
-Use the opening exercise to move from a decision at one plant to a description of the district. Keep the boundary, measure and benchmark explicit throughout the lecture. Schaffer references use printed pages (add 10 for the course PDF). For Hoover and Giarratani add 1. Module 3 reader references use its PDF pages.
-
-**Reading guide.** Schaffer, ch. 3, pp. 43–46, connects measurement to the questions an area profile should answer.
-:::
 
 ## Sectoral composition {.center .concept data-background-color="#eaf2f3"}
 
 Which industries account for the region’s employment and output?
 
-::: {.notes}
-Connect the mix of sectors to Module 2’s example of workers moving between industries. A planner needs to know which sectors employ residents and where businesses generate value added.
-
-**Reading guide.** Hoover and Giarratani, §9.4, pp. 187–189, connects a region’s industry mix to opportunities for residents. Module 2 reader, pp. 7–8, illustrates sector reallocation.
-:::
 
 ## What does each sector contribute?
-<!-- potentially include why this is relevant to decision makers -->
+
 Choose a boundary and a measure. Administrative, commuting,...
 
 Let $x_{ir}$ be industry $i$’s activity in region $r$. An activity measure can be output, value added, employment, payroll, or hours. 
@@ -139,11 +101,6 @@ Define **sector share** as $s_{ir}=x_{ir}/X_r$.
 
 Sector shares normalize by the regional total allowing comparison of the relative importance of each sector across regions.
 
-::: {.notes}
-A city workforce office may want an administrative boundary for its residents and a commuting area for potential recruits. Confirm whether the data count employed people or payroll jobs. The shares sum to one for an exhaustive set of mutually exclusive industries on the same basis.
-
-**Reading guide.** Schaffer, pp. 6–9, links boundaries to the question. Hoover and Giarratani, pp. 187–189, compares sector mixes measured in several ways.
-:::
 
 ## What can output tell a regional planner?
 
@@ -157,13 +114,6 @@ A city workforce office may want an administrative boundary for its residents an
 Industry A generates 30% of regional value added and could lose 5% of its value added. Industry B generates 10% and could lose 20%. If both disruptions are equally likely, which would you investigate first?
 :::
 
-::: {.notes}
-Assume the two disruptions are equally likely, last equally long, and reduce each industry’s real value added by the stated percentage. Hold other industries’ production fixed. A would reduce regional value added by 0.30 × 0.05 = 1.5%. B would reduce it by 0.10 × 0.20 = 2%. Start the contingency study with B. Before funding a project, ask how much of that loss the project could prevent and what it would cost.
-
-The three decisions use different evidence. An infrastructure team needs peak loads in units the facility can handle, alongside queues and cheaper ways of relieving them. A supplier assessment needs purchases by buyer and the availability of substitutes. Even a small supplier can be critical if its customers cannot switch. For an economy-wide production loss, value added counts each stage’s contribution once.
-
-**Reading guide.** Module 2 reader, PDF p. 5, defines real value added. Hoover and Giarratani, §11.3.2, printed pp. 228–229 (PDF pp. 229–230), trace transactions between producers. The U.S. Economic Development Administration asks regions to identify dependence on individual industries and choose ways to reduce their vulnerability. [EDA guidance on economic resilience](https://www.eda.gov/resources/comprehensive-economic-development-strategy/content/economic-resilience)
-:::
 
 ## What can employment tell a workforce planner?
 
@@ -176,23 +126,11 @@ The three decisions use different evidence. An infrastructure team needs peak lo
 
 
 
-::: {.notes}
-Send the response team to the district where the employers are located. Staff can meet workers before their final shifts and confirm how many people need help. Start the search for evening clinic sites in the home district. Check transit routes, worker preferences, and existing services before choosing a venue.
-
-Workplace job counts help size the response at employer sites. Resident counts help locate services that people will use after a layoff. To budget wage support, estimate lost paid hours and hourly earnings for eligible residents, then apply the replacement rate, duration, and any benefit cap. Payroll paid at local workplaces can include commuters who qualify elsewhere.
-
-**Reading guide.** Module 3 reader, PDF p. 2, distinguishes workplace jobs from employed residents. For a documented application, Puerto Rico’s workforce agency reports visiting employers and organizing job fairs after projected layoffs affecting 2,560 workers at 16 companies. [Program-year 2024 report, “Dislocated Worker & Employer Services”](https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2024/Annual/narratives/PR_PY24%20WIOA%20Annual%20Narrative%20Report.pdf)
-:::
 
 ## Relative specialization {.center .concept data-background-color="#eaf2f3"}
 
 Which industries are unusually concentrated relative to a benchmark?
 
-::: {.notes}
-A large retailer might employ many people in nearly every city. Ask what part of its employment a city of this size would ordinarily have. A benchmark puts the local share in context.
-
-**Reading guide.** Schaffer, pp. 19–21 and 43, introduces benchmark activity and discusses when a large share warrants further investigation.
-:::
 
 ## Location quotient
 
@@ -223,11 +161,6 @@ A LQ of 1.5 means the region's industry share is **50% higher** than the benchma
 
 :::
 
-::: {.notes}
-The measure, sector definitions, date and industry universe must agree across the two places. Both totals and the benchmark share must be positive. Zero local activity then gives zero; parity gives one. For the output LQ, use total industry value added in both places. For the employment LQ, match the definition of employment in both places. An earnings LQ can likewise use a consistently defined earnings measure.
-
-**Reading guide.** Schaffer, pp. 19–21 and 43, discusses the measure and benchmark and develops the employment case. Hoover and Giarratani, p. 189, supplies the value-added shares. Module 3 reader, p. 3, applies this ratio to jobs.
-:::
 
 
 ## What can a LQ tell a planner?
@@ -241,11 +174,6 @@ A national benchmark compares the city with the country.
 
 A provincial benchmark asks how the city stands out among nearer locations.
 
-::: {.notes}
-Schaffer uses LQs to look for a possible export base when detailed sales by destination are costly to obtain. Differences in local demand, productivity and sourcing can also produce a high share. 
-
-**Reading guide.** Schaffer, pp. 19–21 and 43, explains the export-base interpretation, its assumptions and the further questions an LQ raises. Module 3 reader, pp. 3–4, changes the reference economy.
-:::
 
 
 ## Employment specialization in the Mekong Delta
@@ -277,26 +205,14 @@ Which industry was more specialized?
 :::
 ::::
 
-::: {.notes}
-Point to the Mekong table at the lower left of the map. The World Bank compared employment shares from Vietnam’s 2016 Enterprise Census. Both figures apply to the entire Mekong Delta. Marine fishing had the higher LQ. 
-
-The report asks how Vietnam can raise productivity as it urbanizes. It distinguishes the large, diverse labor markets of Hà Nội and Ho Chi Minh City from secondary cities such as Cần Thơ, where firms can benefit from sharing workers, suppliers, and services tied to a regional specialty. Box O.2 shows why that distinction matters for investment. For example, the Delta’s rice-wholesaling LQ gives a planner a reason to ask whether freight delays between mills and buyers are costly. Shipment volumes, delays, and costs would help the planner judge whether a better connection would pay off.
-
-**Reading guide.** World Bank, [*Vietnam’s Urbanization at a Crossroads*, overview](https://documents1.worldbank.org/curated/en/249961604688402439/pdf/Overview.pdf#page=18), printed pp. 23–26 (PDF pages 18–19), explains the roles of agglomeration and connections between regions. Box O.2 and map O.3, printed pp. 27–28 (PDF page 20), give the employment LQs used here.
-:::
 
 
 ## Changes in composition and growth {.center .concept data-background-color="#eaf2f3"}
 
 How much local growth would we expect if industries followed national trends?
 
-<!-- A sector gains local share when its own activity grows faster than the regional total. To measure the change in **percentage points**, take $100(s_{ir,1}-s_{ir,0})$ with shares written as fractions. -->
 
-::: {.notes}
-A change in a sector’s local share concerns its weight within the city. Comparing growth against national industry trends asks a separate question about how far the local change departed from a benchmark. Build the latter comparison from levels at two dates.
 
-**Reading guide.** Hoover and Giarratani, pp. 189–190 and 279–280, connects industry composition and comparative growth. Module 3 reader, p. 5, distinguishes a local share change from a shift-share component.
-:::
 
 
 
@@ -317,11 +233,6 @@ Calculate each rate as $g=(x_1-x_0)/x_0$ for its own series.
 
 Shift-share can be defined for employment, output, payroll, or hours.
 
-::: {.notes}
-A rate is the change divided by the starting amount, written as a decimal. Fixing the local base separates the choice of rate from initial size. Use consistent prices and additive series when measuring real output change. Total payroll or hours also work. Average pay and output per worker are ratios and require their own weights. If local base activity is zero, compute the observed change directly; the local growth rate is undefined. Benchmark rates require positive bases.
-
-**Reading guide.** Hoover and Giarratani, appendix 12-1, printed p. 279, introduces shift-share for employment or value added. Schaffer, Note A, pp. 44–45, constructs employment benchmarks. Module 3 reader, p. 5, works the job version.
-:::
 
 ## Shift-share decomposition
 
@@ -343,13 +254,6 @@ Let $g_{ir}$ be the growth rate of industry $i$ in region $r$. Its observed chan
 The terms sum to $N+M+S=x_1-x_0$. Sum across industries for the regional change. A large regional shift gives a planner a reason to ask local employers what changed.
 :::
 
-::: {.notes}
-If the industry starts at zero locally, its growth rate is undefined. Use the observed change to calculate $S=(x_1-x_0)-x_0g_i$.
-
-On the board, write x₀g, x₀gᵢ, and the observed change in one column. Use the first entry and the two successive differences. The first two components sum to x₀gᵢ, so adding S recovers the observed change. The regional industry-mix component depends on starting sector weights and benchmark growth rates. It can be positive even when the sector’s local share stays fixed, as the fictional corridor example on p. 5 of the reader illustrates. Use exhaustive, nonoverlapping industries on a common basis. A regional shift is an accounting residual; freight access, staffing or demand would require separate evidence.
-
-**Reading guide.** Schaffer, pp. 44–45, derives and sums the components. Hoover and Giarratani, appendix 12-1, pp. 279–280, explains the role of starting industry mix. Module 3 reader, p. 5, works the employment identity.
-:::
 
 ## Industrial growth across Spain’s provinces
 
@@ -375,13 +279,6 @@ At Spain’s industrial growth rate, how much would Valencia’s industry have g
 :::
 ::::
 
-::: {.notes}
-Find Valencia on the east coast. Like Barcelona and Madrid, it was among Spain’s nine largest provincial industrial economies in 2019. Darker shading means that the province produced more industrial value added that year. Industry includes mining, manufacturing, energy, and water and waste services. Construction is a separate sector.
-
-Ask whether Valencia’s dark shading tells us how fast its industry grew. A province can finish among the largest producers because it started with a large industrial base. To judge its performance over the four years, turn back to its 2015 starting value and calculate what it would have gained at Spain’s industrial growth rate. The next slide gives the inputs in millions of 2015 euros.
-
-**Reading guide.** [Montanía et al. (2024), Figure 1, p. 12](https://dehesa.unex.es/bitstream/10662/21445/1/grow_12693.pdf#page=12) maps 2019 industrial gross value added at constant 2015 prices using the European Commission’s 2022 ARDECO database. The map uses each province’s published class and shows the observed range of each class in billions of 2015 euros, rounded to two decimals. Footnote 7 names the nine largest producers. Table 4 (p. 14) gives Valencia’s growth components. Figure 1 adapted under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) using [GISCO’s 2021 NUTS 3 boundaries](https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_10M_2021_3035_LEVL_3.geojson).
-:::
 
 ## What gain would the national benchmarks imply for Valencia?
 
@@ -400,13 +297,6 @@ On the board, calculate $x_0 g$ and $x_0 g_i$. How much does the benchmark gain 
 Starting value from [Spain’s INE, provincial accounts](https://www.ine.es/jaxi/Tabla.htm?tpx=67289). Rates reconstructed from [Montanía et al. (2024), Table 4](https://doi.org/10.1111/grow.12693).
 :::
 
-::: {.notes}
-Write the 2015 starting level once, in millions of 2015 euros. Applying the all-industry rate gives $9{,}968.3 \times 0.0428 \approx 426.64$, or **€427 million**. Switching to the industrial rate gives $9{,}968.3 \times 0.0989 \approx 985.86$, or **€986 million**. Both products are gains over four years. The industry-mix component is the difference, $9{,}968.3 \times (0.0989-0.0428) \approx 559$ million. Thus $N+M=427+559=986$ in rounded millions. Advance to Figure 3 and compare that benchmark with Valencia’s €963 million actual gain.
-
-Table 4 reports euro effects rounded to millions. To reconstruct the common rates independently of Valencia’s result, use Barcelona’s row and its archived 2015 industrial value added of €27,029.214 million. The all-industry rate is $1{,}158/27{,}029.214 \approx 4.28\%$. The industrial rate is $(1{,}158+1{,}515)/27{,}029.214 \approx 9.89\%$. Applying these rates to Valencia’s archived starting value reproduces its Table 4 figures to the nearest million.
-
-**Reading guide.** [Montanía et al., Table 4, p. 14](https://doi.org/10.1111/grow.12693) supplies the Barcelona and Valencia rows. [INE provincial accounts, table 67289](https://www.ine.es/jaxi/Tabla.htm?tpx=67289), 2019 statistical revision, reports 2015 NACE B–E value added in thousands of euros. Divide by 1,000 for the board units. For an independent comparison, [INE national volume indices, table 67287](https://www.ine.es/jaxi/Tabla.htm?tpx=67287) give 2015–2019 growth of 10.7% in total value added and 9.8% in industry. Use the reconstructed rates above to explain the published decomposition.
-:::
 
 ## Valencia’s industrial output grew more slowly than Spain’s
 
@@ -443,15 +333,6 @@ Millions of euros at 2015 prices
 :::
 ::::
 
-::: {.notes}
-Ask students to locate Valencia after calculating the benchmark. Each dot is one province. The paper calls the horizontal coordinate the “competitive effect,” our regional shift. The vertical coordinate is industry mix. The study’s industrial benchmark exceeds its all-industry benchmark, putting all 47 provinces above the horizontal axis. Valencia sits just left of the vertical axis because its actual gain fell short of the industrial benchmark.
-
-On the board, start with the €427 million gain implied by growth in Spain’s whole economy. Switching to Spain’s industrial growth rate adds €559 million, giving a benchmark gain of €986 million. Valencia actually gained €963 million. The difference is −€23 million. Table 4 rounds to millions of 2015 euros. The tick labels in Figure 3 are 1,000 times the table values, so the highlighted point is near (−23,000, 559,000) on the published axes.
-
-Montanía, Márquez, Fernández-Núñez, and Hewings use real industrial gross value added to compare 47 Spanish provinces from 2015 to 2019. Industrial output rose in 32 provinces, and 22 provinces had a negative regional shift. The authors then compare industry with each province’s own economy. Barcelona and Madrid both outgrew Spanish industry. Barcelona’s economy as a whole also outgrew Spain’s, while Madrid’s industry stood out within a slower-growing provincial economy. Those comparisons help a planner decide whether to investigate conditions across the province or within a particular sector. Establishing why firms grew at different rates requires additional evidence.
-
-**Reading guide.** [Montanía et al., *Growth and Change* (2024)](https://doi.org/10.1111/grow.12693), Table 4 (p. 14) gives Valencia’s components, Figure 3 (p. 15) plots the traditional decomposition, and the discussion on pp. 16–17 compares Barcelona and Madrid. Figure 3 © 2023 the authors, reproduced under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-:::
 
 ## Recap
 
@@ -469,11 +350,6 @@ Use **Cần Thơ on its 2022–23 boundary**, with **Vietnam** as the benchmark.
 
 [Open the class workbook in Excel](can-tho-sector-data.xlsx). Enter formulas on **Excel exercise**. The **Sector data** tab contains the published figures and sources.
 
-::: {.notes}
-Frame the training proposal as the classroom decision. The yearbook data describe the administrative city before the merger in 2025. The question of a training program's recruiting area would additionally require commuting flows. Students can work in pairs, but each pair should complete both columns.
-
-**Reading guide.** Cần Thơ City Statistical Yearbook 2023, pp. 89–90, 123–124 and 127–128, and Statistical Yearbook of Viet Nam 2023, pp. 168–169, 243–244 and 247–248, report the employment and output series.
-:::
 
 ## Employment in the Cần Thơ statistical yearbook
 
@@ -487,11 +363,6 @@ Frame the training proposal as the classroom decision. The yearbook data describ
 [Cần Thơ City Statistical Yearbook 2023, table 31, p. 89 (PDF)](https://thongkecantho.nso.gov.vn/storage/manager/niengiam_tk/SzJyDEu-aacc0480-ce59-41ec-92d8-3c94220e5886.pdf#page=89). Selected rows. Periods separate thousands.
 :::
 
-::: {.notes}
-Point to the unit, the year headings and the preliminary label. Ask students to locate the city total and the transportation and storage count for the same year before they open the workbook.
-
-**Reading guide.** Cần Thơ City Statistical Yearbook 2023, printed p. 89, gives these employment counts. Tables 42 and 44 on pp. 123–124 and 127–128 report the corresponding current-price and constant-price production figures.
-:::
 
 ## Which series belong in each calculation?
 
@@ -507,11 +378,6 @@ The all-industry output total equals GDP (or city GRDP) less product taxes net o
 2023 statistical yearbooks for [Cần Thơ](https://thongkecantho.nso.gov.vn/nien-giam-thong-ke/3) (tables 31, 42, 44) and [Vietnam](https://www.nso.gov.vn/en/default/2024/07/statistical-yearbook-of-2023/) (tables 59, 87, 89).
 :::
 
-::: {.notes}
-Point out the three measure blocks on Sector data. National employment is converted to people, and city value added to billions of VND. A common price basis for growth removes the change in the valuation of activity attributable to prices.
-
-**Reading guide.** Cần Thơ yearbook, pp. 89–90, 123–124 and 127–128, and Vietnam yearbook, pp. 168–169, 243–244 and 247–248, distinguish current-price and constant-price accounts.
-:::
 
 ## Describe the city’s sector mix
 
@@ -525,11 +391,6 @@ Open the [Cần Thơ Excel workbook](can-tho-sector-data.xlsx). On **Excel exerc
 Which industry leads on each measure? Which ranking would you use to describe workers’ exposure to a sector downturn?
 :::
 
-::: {.notes}
-Ask pairs to compare two sectors with different ranks. Look for an explanation in terms of citywide employment or value added. Have them check which activities are combined in the last row before identifying the leading named industry.
-
-**Reading guide.** Hoover and Giarratani, §9.4.2, pp. 188–189, describes industry mix and the choice of measure. Cần Thơ yearbook, pp. 89–90 and 123–124, supplies the data.
-:::
 
 ## Calculate the two location quotients
 
@@ -545,11 +406,6 @@ For **transportation and storage**, complete rows **17–19**. Keep employment i
 Does each LQ fall above or below one? Write a sentence about specialization that a workforce planner and a regional accountant could both defend.
 :::
 
-::: {.notes}
-Have students label the year, place, reference economy and measure in their sentences. Use the same definition of employment and the same price basis within each quotient. Reserve the numerical comparison for the separate walkthrough.
-
-**Reading guide.** Schaffer, ch. 3, Note A, p. 43, defines the LQ. Module 3 reader, pp. 3–4, illustrates reference shares and expected counts.
-:::
 
 ## Did the sector gain local share?
 
@@ -561,11 +417,6 @@ Rows **23–30** link to the 2022 and 2023 yearbook levels. Use them to complete
 
 For output, use **2010 prices in both years**. This gives the sector’s weight in real production over time.
 
-::: {.notes}
-Give pairs time to inspect the difference between the 2022 output series in the LQ and growth sections. Ask them to distinguish a change in local weight (sector and city total) from a comparison of growth paths (sector and national trends).
-
-**Reading guide.** Hoover and Giarratani, pp. 189–190, discusses comparing distributions. Cần Thơ yearbook, pp. 89–90 and 127–128, gives the employment and real output levels.
-:::
 
 ## Decompose employment and real output growth
 
@@ -580,11 +431,6 @@ Complete **both columns** on **Excel exercise**. Keep the growth rates unrounded
 
 Report column B in **people** and column C in **billion VND at 2010 prices**.
 
-::: {.notes}
-Set up the three growth paths on the board with two empty columns. Students should use the same local start within a column and switch the reference rate at each step. Use each check to diagnose a reference or unit error before students discuss their interpretation.
-
-**Reading guide.** Schaffer, pp. 44–45, derives the three components. Hoover and Giarratani, appendix 12-1, pp. 279–281, explains the common-base approach for employment or value added.
-:::
 
 ## Would you pursue a logistics training program?
 
@@ -600,11 +446,6 @@ What would you ask employers or workers before committing funds? Name an answer 
 
 Module 4 examines how wages, rents and commuting costs shape location choices.
 
-::: {.notes}
-Invite pairs to offer competing explanations and identify evidence that would distinguish them. Look for a distinction between employment changes and evidence about particular occupations or skill shortages. A strong brief specifies the measure and the benchmark and states the limits of preliminary annual data.
-
-**Reading guide.** Schaffer, pp. 45–47, discusses writing an area profile that can inform a decision. Module 3 reader, p. 6, connects a benchmark comparison to follow-up questions.
-:::
 
 ## Optional practice · How far does a hiring boom reach?
 
@@ -615,10 +456,3 @@ Suppose a plant in A hires a worker away from a firm in B. She keeps living in B
 ::: {.prompt}
 The plant adds 100 jobs. Can A’s mayor conclude that 100 more residents of A are employed? What would you need to know?
 :::
-
-::: {.notes}
-Use the corridor if time permits. Choose a boundary for a workforce board, then ask for the observations that would allow a valid employment comparison. The optional practice that follows uses synthetic workplace and commuting data.
-
-**Reading guide.** Hoover and Giarratani, §9.1, pp. 176–179, discusses commuting ties. Module 3 reader, p. 1, works the corridor example.
-:::
-
