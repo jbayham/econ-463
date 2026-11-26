@@ -14,5 +14,9 @@
   "03-measurement": {
     "slides.html": "1c0d871ee56289ed9f464d84d8b11b90a422a9a0faf189b6e728f75ff9ba8149",
     "slides.qmd": "3d4bb84aef35f6c49cb9b682a259397f7c39a4b79145d2cad156089a5765a041"
+  },
+  "04-spatial-equilibrium": {
+    "slides.html": "7546ae35ffea6869ce3f68ea1d2211b08c4f1933011cacacc7d3506109ad8b0e",
+    "slides.qmd": "c464ed13efde300e13e56278228f62169c6f8233897007138843c855a00d8c74"
   }
 }

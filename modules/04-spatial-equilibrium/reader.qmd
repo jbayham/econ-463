@@ -1,0 +1,603 @@
+---
+title: "The Rosen–Roback Model of Spatial Equilibrium"
+subtitle: "Module 4 · Regional Economics · ECON 463"
+lang: en
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    embed-resources: true
+    html-math-method: mathjax
+    variables:
+      mathjax: false
+    include-in-header:
+      text: |
+        <style>
+          .math.display { display: block; max-width: 100%; overflow-x: auto; }
+          @media (max-width: 600px) {
+            main figure img { width: 100% !important; }
+            main table { display: block; max-width: 100%; overflow-x: auto; }
+            .math.display mjx-container[display="true"] { width: max-content; min-width: 100%; }
+          }
+        </style>
+        <script>window.MathJax = {options: {enableMenu: false}};</script>
+        <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+  pdf:
+    pdf-engine: xelatex
+    documentclass: article
+    fontsize: 11pt
+    papersize: a4
+    geometry: margin=22mm
+    toc: true
+    toc-depth: 1
+    number-sections: true
+    colorlinks: true
+    include-in-header:
+      text: |
+        \usepackage{float}
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyhf{}
+        \fancyhead[L]{\small\sffamily ECON 463 · Regional Economics}
+        \fancyhead[R]{\small\sffamily Spatial Equilibrium}
+        \fancyfoot[C]{\small\sffamily\thepage}
+        \setlength{\headheight}{15pt}
+        \raggedbottom
+        \widowpenalty=9000
+        \clubpenalty=9000
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+source("R/wage-rent-diagram.R")
+knitr::read_chunk("R/river-harbor.R")
+knitr::opts_chunk$set(
+  dev = if (knitr::is_latex_output()) "cairo_pdf" else "svg",
+  fig.width = 8.5, fig.height = 5, fig.align = "center", fig.pos = "H",
+  out.width = "76%"
+)
+```
+
+A worker can move from Harbor to River for a better job, yet a higher wage alone need not make the move worthwhile. River land may be expensive. Conversely, a firm may be willing to pay both higher wages and higher rents if production is sufficiently efficient there. The Rosen–Roback model determines the wage and rent differences consistent with **two location decisions at once**. Comparable workers must attain the same utility in both occupied regions, and firms must cover their costs in both producing regions. Land and labor market clearing then determine how many workers live in each place.
+
+Sherwin Rosen developed a wage-based approach to the value of local amenities. Jennifer Roback’s model makes land an input to production as well as a good that households consume. The River–Harbor example below specializes this framework to two regions, Cobb–Douglas preferences and technology, and a fixed total population. Its simple functional forms make finite wage and rent differences, and even population changes, solvable by hand. [Roback (1982), pp. 1259–1263](https://matthewturner.org/ec1410/readings/Roback_JPE_1982.pdf#page=4)
+
+{{< pagebreak >}}
+
+# From a commute to a regional comparison
+
+In a single labor market, two otherwise identical homes give access to the same job. Monthly commuting costs are 160 currency units (CU) from one and 60 CU from the other. At a given wage, the amount left after rent and commuting is equal when the *total* monthly rents satisfy
+$$
+w-\mathrm{Rent}_{\rm near}-60
+   = w-\mathrm{Rent}_{\rm far}-160,
+\qquad \mathrm{Rent}_{\rm near}-\mathrm{Rent}_{\rm far}=100.
+$$
+The worker could bid 100 CU more for the nearer home. The calculation holds the job, housing quantity, and other attributes fixed. Moving between regional labor markets also changes the wage available and potentially the amenities enjoyed. An equally attractive regional offer can therefore combine several price and amenity differences. [Brueckner, §§2.3–2.4, pp. 26–30, and §11.2, pp. 233–235](https://mitpress.mit.edu/9780262016360/lectures-on-urban-economics/)
+
+## Economic environment and notation
+
+River ($R$) and Harbor ($H$) trade the same output at a common price, normalized to $p=1$. Identical workers each supply one unit of labor, live where they work, and can change regions without a moving cost. Each region has a fixed area of land. Businesses and residents compete for that land at the same local rental price. Absentee owners receive land rents, so each worker’s income equals the local wage. Both regions have positive employment, residents, and production. The total number of workers is fixed.
+
+| Symbol | Meaning |
+|:-------------------|:-------------------------------------------------------------|
+| $w_i,\ r_i$ | Monthly wage per worker and monthly rent per unit of land in region $i$. |
+| $c,\ h$ | Traded consumption and the area of residential land rented by one worker. |
+| $L,\ T,\ Q$ | Labor, business land, and output of a firm. The subscripted quantities $L_i,T_i$ denote regional totals. |
+| $A_i,\ B_i$ | Household amenity multiplier and firm productivity, both positive. |
+| $s,\ t$ | Household budget share spent on land and firm cost share spent on land. Both lie strictly between 0 and 1. |
+| $x,\ y$ | River’s rent and wage gaps relative to Harbor, in log points. |
+| $a,\ b$ | River’s amenity and productivity gaps relative to Harbor, in log points. |
+| $S_i,\ N_i,\ \bar N$ | Regional land endowment, resident workers, and total workers across the two regions. |
+
+Land quantity $h$ measures space. Distance to work affected commuting cost in the opening comparison. In the regional model a household renting $h$ pays a total bill of $r_i h$. The teaching values are $s=0.25$ and $t=0.20$.
+
+{{< pagebreak >}}
+
+# Household demand for land
+
+## From the budget to a one-variable problem
+
+At given regional prices, a worker chooses consumption and land to maximize
+$$
+U_i(c,h)=A_i c^{1-s}h^s
+\quad\text{subject to}\quad c+r_i h=w_i.
+$$
+With both goods desirable, a worker with budget constraint $c+r_i h\leq w_i$ spends the whole wage. The budget implies $c=w_i-r_i h$ and $dc/dh=-r_i$. With $w_i=1{,}000$ and $r_i=10$, a worker renting 20 units has $1{,}000-10(20)=800$ CU left. Renting 21 units leaves 790 CU. Each extra unit costs 10 units of traded consumption.
+
+Substitution gives $U_i(h)=A_i(w_i-r_i h)^{1-s}h^s$. Utility is zero at either endpoint $h=0$ or $h=w_i/r_i$ and positive in between. Since the natural logarithm is strictly increasing, the same interior choice maximizes
+$$
+\ell(h)=\ln A_i+(1-s)\ln(w_i-r_i h)+s\ln h.
+$$
+Along the budget the derivative of the consumption term includes the cost of another unit of land. The first and second derivatives are
+$$
+\begin{aligned}
+\ell'(h)&=(1-s)\frac{-r_i}{w_i-r_i h}+\frac{s}{h},\\
+\ell''(h)&=-\frac{(1-s)r_i^2}{(w_i-r_i h)^2}-\frac{s}{h^2}<0 .
+\end{aligned}
+$$
+The positive term $s/h$ measures the utility gain in log units from more space. The negative term measures the loss of traded consumption needed to pay for it. Since $dU_i/dh=U_i\,\ell'(h)$ and $U_i>0$ in the interior, the log derivative and the utility derivative always have the same sign. Strict concavity of $\ell$ makes its stationary point the unique maximum. Setting $\ell'(h)=0$ and clearing the positive denominators gives
+$$
+\begin{aligned}
+s/h&=(1-s)r_i/(w_i-r_i h),\\
+s(w_i-r_i h)&=(1-s)r_i h,\\
+s w_i-s r_i h&=r_i h-s r_i h,\\
+r_i h_i^*&=s w_i.
+\end{aligned}
+$$
+Consequently $h_i^*=s w_i/r_i$ and $c_i^*=w_i-r_i h_i^*=(1-s)w_i$. The exponent $s$ also equals the share $r_i h_i^*/w_i$ of the household budget. With $s=1/4$ the land bill is 250 CU, the land area is $250/10=25$, and traded consumption is 750. A multiplicative amenity $A_i$ changes the value of living in region $i$ while leaving the optimal bundle at given prices intact. [Brueckner, §11.2.1, pp. 233–235](https://mitpress.mit.edu/9780262016360/lectures-on-urban-economics/)
+
+{{< pagebreak >}}
+
+# Location choice and the worker curve
+
+**Indirect utility** is the utility a worker attains after choosing the best affordable bundle. Substitution of the two demands gives
+$$
+\begin{aligned}
+V_i&=A_i[(1-s)w_i]^{1-s}(s w_i/r_i)^s\\
+   &=A_i(1-s)^{1-s}s^s\,w_i^{\,1-s+s}\,r_i^{-s}\\
+   &=k_s A_i w_i/r_i^s,\qquad k_s=(1-s)^{1-s}s^s.
+\end{aligned}
+$$
+A worker strictly prefers River when $V_R>V_H$. If both regions remain populated under free mobility, $V_R=V_H$. The common constant cancels in the ratio of optimized utilities, giving
+$$
+1=\frac{V_R}{V_H}
+=\frac{A_R}{A_H}\frac{w_R}{w_H}\left(\frac{r_R}{r_H}\right)^{-s}
+\quad\Longrightarrow\quad
+\frac{w_R}{w_H}=\frac{A_H}{A_R}\left(\frac{r_R}{r_H}\right)^s.
+$$
+Multiplication by 100 expresses each log difference in log points, a scale close to percentage changes for small gaps. By definition,
+$$
+\begin{aligned}
+x&=100\ln(r_R/r_H), & y&=100\ln(w_R/w_H),\\
+a&=100\ln(A_R/A_H), & b&=100\ln(B_R/B_H).
+\end{aligned}
+$$
+Taking logs turns products into sums and powers into coefficients. At *any* wage–rent pair the utility gap is therefore
+$$
+100\ln(V_R/V_H)=a+y-sx.
+$$
+Setting it to zero gives the worker curve **$y=sx-a$**. Above the curve the wage exceeds the compensation workers require, so they prefer River. Below it they prefer Harbor. With equal amenities and $s=0.25$, an eight-log-point rent premium requires a two-log-point wage premium. The log relationship is exact. An eight-log-point rent premium corresponds to an ordinary percentage premium of $100(e^{0.08}-1)=8.33\%$. Zero denotes equal regional levels. [Roback, p. 1260, eq. (2), and pp. 1262–1263](https://matthewturner.org/ec1410/readings/Roback_JPE_1982.pdf#page=5)
+
+```{r}
+#| label: fig-worker-line
+#| fig-cap: "The worker indifference curve at equal amenities. Its slope is the household land budget share."
+#| fig-alt: "Worker indifference line rising through the origin, with rent gap on the horizontal axis and wage gap on the vertical axis."
+rent_wage_plot(firm = FALSE)
+```
+
+{{< pagebreak >}}
+
+## Which side offers higher utility?
+
+At $x=8$, wages alone determine which side of the boundary the offer occupies. The point $(8,3)$ yields a River utility advantage of $0+3-0.25(8)=1$ log point. At $(8,1)$, the gap is $-1$ and Harbor offers higher utility. Every point on the teal line gives a zero gap. The comparison assumes workers have access to the posted wage and can rent land at the posted price.
+
+```{r}
+#| label: fig-worker-river
+#| fig-cap: "For any given rent gap, wages above the line make River more attractive."
+#| fig-alt: "The area above the worker curve is shaded teal and labeled Prefer River."
+rent_wage_plot(firm = FALSE, preference_regions = "River")
+```
+
+```{r}
+#| label: fig-worker-both
+#| fig-cap: "Below the same line, the wage premium falls short of the compensation required for River’s rent."
+#| fig-alt: "Teal shading above the curve marks a preference for River. Tan shading below marks a preference for Harbor."
+rent_wage_plot(firm = FALSE, preference_regions = c("River", "Harbor"))
+```
+
+{{< pagebreak >}}
+
+# Competitive firms and the zero-profit curve
+
+A firm combines labor $L$ and business land $T$ to produce $Q=B_iL^{1-t}T^t$. Doubling both inputs doubles output because $(1-t)+t=1$. At output price $p$ the firm chooses inputs to maximize
+$$
+\pi_i=pB_iL^{1-t}T^t-w_iL-r_iT.
+$$
+For a firm operating at positive scale, the return from another unit of each input equals its price. Differentiating with respect to each input, holding the other fixed, gives
+$$
+\begin{aligned}
+0=\frac{\partial\pi_i}{\partial L}
+  &=pB_i(1-t)L^{-t}T^t-w_i
+   =p(1-t)Q/L-w_i,\\
+0=\frac{\partial\pi_i}{\partial T}
+  &=pB_i tL^{1-t}T^{t-1}-r_i
+   =ptQ/T-r_i .
+\end{aligned}
+$$
+Multiplication of the first condition by $L$ and the second by $T$ gives the factor payments
+$$
+w_iL=(1-t)pQ,\qquad r_iT=tpQ,\qquad w_iL+r_iT=pQ.
+$$
+Input bills exhaust revenue, so a firm producing at these prices earns zero economic profit. At $t=0.20$, every 100 CU of sales pays 80 CU in wages and 20 CU in rent. Dividing the land bill by payroll reveals the firm’s chosen land area per worker.
+$$
+\frac{r_iT}{w_iL}=\frac{t}{1-t}
+\quad\Longrightarrow\quad
+\frac{T}{L}=\frac{t}{1-t}\frac{w_i}{r_i}.
+$$
+The same result follows by dividing the first-order conditions, $MP_L/MP_T=w_i/r_i$. A higher land rent at a given wage reduces the area firms use per worker. At break-even prices these conditions pin down the input ratio. Constant returns allow an individual firm to produce at any scale with that ratio.
+
+## Why output cancels
+
+The traded good sets the unit of value, so $p=1$. Solving the payment equations for the **total** inputs gives $L=(1-t)Q/w_i$ and $T=tQ/r_i$. Substitution into production yields
+$$
+\begin{aligned}
+Q
+ &=B_i\left(\frac{(1-t)Q}{w_i}\right)^{1-t}
+        \left(\frac{tQ}{r_i}\right)^t\\
+ &=B_i Q^{1-t}Q^t
+       \left(\frac{1-t}{w_i}\right)^{1-t}
+       \left(\frac{t}{r_i}\right)^t.
+\end{aligned}
+$$
+The two powers of $Q$ multiply to $Q$. Canceling positive output and taking reciprocals of the factor-price terms gives the local break-even condition
+$$
+\left(\frac{w_i}{1-t}\right)^{1-t}
+\left(\frac{r_i}{t}\right)^t=B_i.
+$$
+
+{{< pagebreak >}}
+
+## From local costs to relative wages and rents
+
+Dividing the left-hand side of the preceding equation by $B_i$ gives the **minimum cost per unit** of output, denoted by $K_i$.
+$$
+K_i=\frac{1}{B_i}
+\left(\frac{w_i}{1-t}\right)^{1-t}
+\left(\frac{r_i}{t}\right)^t .
+$$
+For any positive input prices, minimizing cost for one unit requires $MP_L/MP_T=w_i/r_i$. An extra unit of currency spent on either input then buys the same marginal output. With the Cobb–Douglas technology this gives $r_iT/[w_iL]=t/(1-t)$. Since $K_i=w_iL+r_iT$, the input bills are $(1-t)K_i$ and $tK_i$. For one unit, substitution of $L=(1-t)K_i/w_i$ and $T=tK_i/r_i$ into the technology verifies the expression above. Competition and free entry require $K_i=p=1$ where firms produce. If unit cost exceeds price, producing a unit loses money. If unit cost falls below price, expansion is profitable at the posted prices. Constant returns allow the same margin at every scale. [Roback, pp. 1259–1261, especially eq. (3)](https://matthewturner.org/ec1410/readings/Roback_JPE_1982.pdf#page=5)
+
+When both regions break even, $K_R/K_H=1$. The common share terms cancel. Taking logs of the ratio gives
+$$
+\begin{aligned}
+1&=\frac{B_H}{B_R}\left(\frac{w_R}{w_H}\right)^{1-t}
+                          \left(\frac{r_R}{r_H}\right)^t,\\
+0&=-b+(1-t)y+tx,\qquad
+y=\frac{b-tx}{1-t}.
+\end{aligned}
+$$
+At arbitrary prices the expression $(1-t)y+tx-b$ is the River-minus-Harbor **log unit-cost gap**. Above the firm curve, costs in River exceed Harbor’s. If Harbor breaks even, production in River would make a loss. Below the curve River has a cost advantage. With $t=0.20$ and $b=0$, the slope is $-0.20/0.80=-0.25$. An eight-point rent premium then requires a wage gap of $-2$ to maintain zero profit. [Brueckner, §11.2.2, pp. 235–237, Figure 11.2](https://mitpress.mit.edu/9780262016360/lectures-on-urban-economics/)
+
+```{r}
+#| label: fig-firm-line
+#| fig-cap: "At equal productivity, a firm facing higher River rent can break even only at a lower River wage, given break-even in Harbor."
+#| fig-alt: "The firm zero-profit line slopes downward through the origin."
+rent_wage_plot(worker = FALSE)
+```
+
+{{< pagebreak >}}
+
+# The intersection of the two curves
+
+For an occupied region, worker mobility requires equal attainable utility. For a producing region, free entry requires zero profit at the common output price. In River–Harbor coordinates the two conditions are
+$$
+\underbrace{y=sx-a}_{\text{equal utility}}
+\qquad\text{and}\qquad
+\underbrace{y=(b-tx)/(1-t)}_{\text{equal unit cost, with Harbor breaking even}}.
+$$
+The worker curve slopes up because a higher River rent requires compensation. The firm curve slopes down because a higher River rent leaves less revenue available for wages. For $0<s,t<1$ they cross once. With identical amenities and productivity ($a=b=0$), the intersection $E_0$ is $(0,0)$. Both regions then have the same wage and the same land rent. Each price is positive. The diagram determines their **ratios**. Land endowments and population will enter the determination of price levels and regional headcounts.
+
+```{r}
+#| label: fig-baseline
+#| fig-cap: "At the intersection, workers attain equal utility and firms in both regions can cover costs at the common output price."
+#| fig-alt: "The rising Workers and falling Firms lines intersect at E zero, where the wage and rent gaps are both zero."
+rent_wage_plot()
+```
+
+The units on the axes matter. In **price levels**, along a worker’s indifference curve, $d\ln V=dw/w-s\,dr/r=0$. Hence $dw/dr=sw/r=h^*$. The wage must rise by the extra rent on the worker’s chosen area. Along the firm’s break-even curve, $(1-t)dw/w+t\,dr/r=0$, so $dw/dr=-tw/[(1-t)r]=-T/L$. The wage per worker must fall by the additional rent on the land employed per worker. In **log gaps**, multiplying those slopes by $r/w$ gives $s$ and $-t/(1-t)$. Brueckner’s Figure 11.3 places income on the horizontal axis and the price of real estate on the vertical axis. The figure here places rent on the horizontal axis. [Brueckner, §11.2, Figures 11.1–11.3](https://mitpress.mit.edu/9780262016360/lectures-on-urban-economics/)
+
+{{< pagebreak >}}
+
+# Wage and rent pressures away from equilibrium
+
+The utility and unit-cost gaps measure incentives to change location or production at posted prices.
+$$
+g_V=100\ln(V_R/V_H)=a+y-sx,\qquad
+g_K=100\ln(K_R/K_H)=(1-t)y+tx-b .
+$$
+A positive $g_V$ favors River for households. A positive $g_K$ means River is more expensive for firms. Throughout the following comparisons, Harbor is the break-even reference and $a=b=0$. A movement of an arrow illustrates a market pressure. The static model specifies the conditions at the endpoint. A prediction of adjustment speed or of the sequence of trades would require an additional adjustment rule.
+
+## To the right of the intersection
+
+At a River rent premium of $x=8$, workers require $y=0.25(8)=2$. Given the same productivity in the two locations, the highest wage gap a River firm can pay and break even is $y=-0.20(8)/0.80=-2$. The vertical dotted segment is this four-log-point disagreement. At the purple point $(8,2)$, workers are indifferent and River’s unit cost exceeds Harbor’s:
+$$
+g_V=2-0.25(8)=0,\qquad
+g_K=0.80(2)+0.20(8)=3.2 .
+$$
+A River firm cannot cover both premia. At these posted prices it would cut production or exit, reducing demand for River labor and business land.
+
+```{r}
+#| label: fig-right-start
+#| fig-cap: "At (8, 2) workers receive the wage they require. Firms face an input bill too high to break even."
+#| fig-alt: "A purple point sits on the worker curve at rent gap 8 and wage gap 2, above the firm curve."
+rent_wage_plot(case_rent = 8)
+```
+
+{{< pagebreak >}}
+
+### A lower wage and weaker demand for River land
+
+As hiring weakens, the River wage comes under downward pressure. At the intermediate offer $(8,0)$, the worker utility gap falls to $-2$ because the River rent premium persists as the compensating wage premium disappears. Households would prefer Harbor. The River unit-cost gap is still $+1.6$, so firms also have an incentive to reduce their presence there.
+
+```{r}
+#| label: fig-right-wage
+#| fig-cap: "A fall in River’s relative wage moves the offer below the worker curve."
+#| fig-alt: "An arrow points down from (8, 2) to (8, 0)."
+rent_wage_plot(case_rent = 8, case_step = "wage")
+```
+
+Both responses reduce demand for River land relative to Harbor land. A smaller rent gap narrows the disagreement. At $x=4$, workers require $y=1$ and firms can pay $y=-1$. At $x=0$ both accept $y=0$.
+
+```{r}
+#| label: fig-right-rent
+#| fig-cap: "Weaker demand for River land puts downward pressure on the rent gap."
+#| fig-alt: "A second arrow points left from (8, 0) toward the intersection."
+rent_wage_plot(case_rent = 8, case_step = "rent")
+```
+
+{{< pagebreak >}}
+
+## To the left of the intersection
+
+At a River rent discount of $x=-8$, a worker will accept a wage discount of two log points, since $y=0.25(-8)=-2$. A firm with access to cheap River land can pay a wage *premium* of two log points and still break even, since $y=-0.20(-8)/0.80=2$. At the initial offer $(-8,-2)$, workers are indifferent and firms have a cost advantage:
+$$
+g_V=-2-0.25(-8)=0,\qquad
+g_K=0.80(-2)+0.20(-8)=-3.2.
+$$
+Because Harbor breaks even at the traded output price, a unit produced in River earns a positive margin. Entry or expansion there raises the demand for River labor and business land. The purple point therefore combines household indifference with an incentive for *firms* to act first.
+
+```{r}
+#| label: fig-left-start
+#| fig-cap: "At (−8, −2) workers are indifferent, but firms can produce more cheaply in River."
+#| fig-alt: "A purple point sits on the worker curve at (−8, −2), below the firm curve."
+rent_wage_plot(case_rent = -8)
+```
+
+{{< pagebreak >}}
+
+### A higher wage and stronger demand for River land
+
+As firms compete to hire workers, the River wage comes under upward pressure. At $(-8,0)$ households can earn the same wage as in Harbor while paying a lower rent. Here $g_V=2$, and the River unit-cost advantage persists, with $g_K=-1.6$.
+
+```{r}
+#| label: fig-left-wage
+#| fig-cap: "A rise in River’s relative wage moves the offer above the worker curve."
+#| fig-alt: "An arrow points up from (−8, −2) to (−8, 0)."
+rent_wage_plot(case_rent = -8, case_step = "wage")
+```
+
+Incoming households bid for residential land and expanding firms bid for business land. As River rent rises, workers require a higher wage and firms can afford a lower one. At $x=-4$ the two wage gaps are $-1$ and $1$. At the intersection the disagreement vanishes.
+
+```{r}
+#| label: fig-left-rent
+#| fig-cap: "Greater demand for River land puts upward pressure on the rent gap."
+#| fig-alt: "A second arrow points right from (−8, 0) toward the intersection."
+rent_wage_plot(case_rent = -8, case_step = "rent")
+```
+
+{{< pagebreak >}}
+
+# How productivity and amenities change equilibrium
+
+Substituting the worker condition $y=sx-a$ into the firm condition makes it possible to solve for both gaps:
+$$
+\begin{aligned}
+(1-t)(sx-a)+tx&=b,\\
+(1-t)sx-(1-t)a+tx&=b,\\
+[t+(1-t)s]\,x&=b+(1-t)a .
+\end{aligned}
+$$
+Write $D=t+(1-t)s$. Both terms are positive. Substituting the rent solution back into the worker condition gives
+$$
+\begin{aligned}
+x^*&=\frac{b+(1-t)a}{D},\\
+y^*&=s\frac{b+(1-t)a}{D}-a
+     =\frac{sb+s(1-t)a-a[t+(1-t)s]}{D}
+     =\frac{sb-ta}{D}.
+\end{aligned}
+$$
+With $s=0.25$ and $t=0.20$, $D=0.20+0.80(0.25)=0.40$. The coefficients measure how equilibrium prices respond to a change in one regional characteristic.
+
+| One additional log point in River’s… | Change in rent gap $x^*$ | Change in wage gap $y^*$ |
+|:---|:---|:---|
+| Productivity $b$, holding amenities fixed | $1/D=2.50$ | $s/D=0.625$ |
+| Amenity $a$, holding productivity fixed | $(1-t)/D=2.00$ | $-t/D=-0.50$ |
+
+Productivity can support both higher wages and higher rents. A household amenity raises rent but permits a lower wage in River. In particular, a one-point increase in $a$ reduces the worker’s required wage by one point **at a fixed rent**. Once rent adjusts, only half a point of that wage reduction remains at the new equilibrium under these shares. The other half of the amenity gain offsets the larger land bill, since $s\,\Delta x=0.25(2)=0.5$.
+
+{{< pagebreak >}}
+
+## River firms become more productive
+
+Better access to specialized suppliers allows River’s processors to produce more with the same labor and land. Suppose $b$ rises from 0 to 4 and $a=0$. At the old prices, $g_K=-4$. Expansion raises firms’ demand for both inputs. At a fixed rent, the wage firms can pay rises by $4/(1-t)=5$ log points. The worker curve stays in place. Along that curve, a higher River wage compensates workers for a higher River rent. The new intersection is
+$$
+x^*=\frac{4}{0.40}=10,\qquad
+y^*=0.25(10)=2.5 .
+$$
+The worker calculation is $2.5-0.25(10)=0$. The firm calculation is $0.80(2.5)+0.20(10)-4=0$. The wage premium adds two points to costs, and the rent premium adds two more. Together they absorb the productivity advantage. In ordinary percentages River’s rent is $100(e^{0.10}-1)=10.52\%$ higher and its wage is $100(e^{0.025}-1)=2.53\%$ higher.
+
+```{r}
+#| label: fig-productivity
+#| fig-cap: "A productivity advantage shifts the firm curve up. The new intersection has both a wage premium and a rent premium in River."
+#| fig-alt: "The firm curve shifts up from its dashed baseline. The new intersection E one is at rent gap 10 and wage gap 2.5."
+rent_wage_plot(b = 4)
+```
+
+{{< pagebreak >}}
+
+## River households gain better access to parks
+
+New entrances shorten the walk to River’s existing neighborhood parks. The area available for firms and households stays fixed. Suppose the shorter walk raises River’s household amenity by $a=2$ log points while technology is unchanged ($b=0$). At the old prices, $g_V=2$ and households prefer River. At a fixed rent, a River worker would give up two log points of wages for the improved access. The worker curve shifts down. Increased demand for River land bids up its rent. With unchanged productivity, the higher rent can be covered only at a lower wage, as the equilibrium equations show.
+$$
+x^*=\frac{0.80(2)}{0.40}=4,\qquad
+y^*=0.25(4)-2=-1 .
+$$
+The two-point amenity gain covers a one-point wage loss and a one-point utility cost of dearer land, since $2-1-0.25(4)=0$. Firms experience a weighted wage saving of $0.80(1)=0.8$ and a weighted rent increase of $0.20(4)=0.8$. The two cancel. Brueckner’s household-only amenity case has this same logic. Roback’s Figure 1 treats an amenity that workers value and that increases production costs. In that case the firm curve moves as well. [Brueckner, §11.2.3, Figure 11.3](https://mitpress.mit.edu/9780262016360/lectures-on-urban-economics/) · [Roback, Figure 1 and discussion on pp. 1261–1262](https://matthewturner.org/ec1410/readings/Roback_JPE_1982.pdf#page=6)
+
+```{r}
+#| label: fig-parks
+#| fig-cap: "Better park access shifts the worker curve down. Higher land rent and lower wages are compatible with equal utility."
+#| fig-alt: "The worker curve shifts downward from its dashed baseline. E one is at rent gap 4 and wage gap minus 1."
+rent_wage_plot(a = 2)
+```
+
+{{< pagebreak >}}
+
+# A numerical example in R
+
+## Comparing the two wages at a candidate rent
+
+The River–Harbor script implements the same two equations in base R. Its inputs are assumed values. The calculation solves a calibrated model. Estimating the shares or amenity effects from observations would require data and an empirical design. The expression `<-` assigns a value to a name. The initial assignments reproduce the productivity example.
+
+```{r model-inputs, echo=TRUE}
+```
+
+For a candidate rent gap of eight, the household requires a wage premium of two, while the firm can afford three. The expression `c(...)` combines the two named results in a vector.
+
+```{r one-rent, echo=TRUE}
+```
+
+A vector of rents evaluates several points on each curve at once. Each row of `data.frame(...)` shows the two wage gaps at a common rent. Equality in the third row identifies the intersection. On either side, the sign of the difference reverses.
+
+```{r several-rents, echo=TRUE}
+```
+
+{{< pagebreak >}}
+
+## Adding parks to the productivity advantage
+
+The next calculation keeps the productivity advantage $b=4$ and raises the amenity advantage to $a=2$. The household wage requirement falls at every rent. The unchanged firm curve crosses the new worker curve at $(14,1.5)$. The equilibrium formulas give $x=(4+0.8\times2)/0.4=14$ and $y=0.25(14)-2=1.5$.
+
+```{r park-access, echo=TRUE}
+```
+
+A grid reveals the economic comparison even when the exact intersection falls between grid points. For any inputs, the two equations can also be solved directly. Writing $-sx+y=-a$ and $tx+(1-t)y=b$ in rows gives
+$$
+\begin{pmatrix}-s&1\\ t&1-t\end{pmatrix}
+\begin{pmatrix}x\\y\end{pmatrix}
+=\begin{pmatrix}-a\\b\end{pmatrix}.
+$$
+The first column multiplies rent and the second multiplies wages. The determinant is $-s(1-t)-t=-D\ne0$, so the solution is unique. In R, `rbind(...)` stacks the coefficient rows and `solve(...)` finds the two unknowns. [Base R documentation for `solve`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/solve.html)
+
+```{r exact-intersection, echo=TRUE}
+```
+
+::: {.content-visible when-format="html"}
+`r if (knitr::is_html_output()) xfun::embed_file("R/river-harbor.R", text = "Download the complete River–Harbor R script")`
+:::
+
+{{< pagebreak >}}
+
+# Migration and market clearing
+
+Worker indifference identifies price combinations at which a worker has no incentive to move. It leaves open how many workers each region can accommodate at those prices. A quantity calculation requires each region’s land endowment $S_i$ and the total number of workers $\bar N$. With one unit of labor per resident, no cross-region commuting and full employment, local employment $L_i$ equals resident workers $N_i$. The full set of conditions for both regions to be active is
+$$
+\begin{aligned}
+V_R&=V_H=\bar V &&\text{(worker location)},\\
+K_R&=K_H=p=1 &&\text{(firm break-even)},\\
+L_i&=N_i &&\text{(local labor clearing)},\\
+N_i h_i^*+T_i&=S_i &&\text{(local land clearing)},\\
+N_R+N_H&=\bar N &&\text{(fixed total population)} .
+\end{aligned}
+$$
+The first two lines determine relative prices. The quantity conditions allocate workers and land across the two regions. Roback gives the corresponding population, labor, and land constraints for the general model in footnote 7. [Roback, p. 1261, n. 7](https://matthewturner.org/ec1410/readings/Roback_JPE_1982.pdf#page=6)
+
+## Land demand per resident
+
+The household demand is $h_i^*=s w_i/r_i$. All local firms face the same prices, so summing their optimal input ratios gives regional business land $T_i=[t/(1-t)]w_i L_i/r_i$. Substituting both demands into the land constraint gives
+$$
+\begin{aligned}
+S_i&=N_i s\,\frac{w_i}{r_i}
+       +\frac{t}{1-t}\frac{w_i N_i}{r_i}\\
+   &=\left(s+\frac{t}{1-t}\right)\frac{w_i}{r_i}N_i
+     =\gamma\frac{w_i}{r_i}N_i,\qquad
+       \gamma=s+\frac{t}{1-t},\\
+N_i&=\frac{S_i r_i}{\gamma w_i}.
+\end{aligned}
+$$
+The coefficient $\gamma$ adds residential land per worker and business land per job, both expressed as multiples of $w_i/r_i$. At the assumed shares, $\gamma=0.25+0.20/0.80=0.50$. A higher rent relative to the wage induces households and firms to economize on land. A given area can then support more workers.
+
+{{< pagebreak >}}
+
+## From a population ratio to a count of migrants
+
+Dividing the two regional population equations cancels $\gamma$. Define $q$ as River’s population relative to Harbor’s. The definitions of $x$ and $y$ give
+$$
+q=\frac{N_R}{N_H}
+  =\frac{S_R}{S_H}\frac{r_R/r_H}{w_R/w_H}
+  =\frac{S_R}{S_H}\exp\left(\frac{x-y}{100}\right).
+$$
+Since $N_R=qN_H$, the total is $(1+q)N_H=\bar N$. Therefore
+$$
+N_H=\frac{\bar N}{1+q},\qquad
+N_R=\frac{q\bar N}{1+q}.
+$$
+Equal land areas, identical initial fundamentals and $\bar N=1{,}000$ give $q=1$ and 500 residents in each region. After the River productivity gain, $x=10$ and $y=2.5$. The new ratio and population levels are
+$$
+\begin{aligned}
+q&=\exp[(10-2.5)/100]=e^{0.075}\simeq1.07788,\\
+N_R&=1000\,\frac{1.07788}{2.07788}\simeq518.74,\\
+N_H&=1000-518.74\simeq481.26 .
+\end{aligned}
+$$
+The 7.79% premium compares River’s **new** population with Harbor’s **new** population. The net migration count equals the change in River’s population across equilibria, $518.74-500=18.74$, or about 19 workers from Harbor to River. As a share of Harbor’s initial 500, this is $18.74/500=3.75\%$. The continuous model permits fractional quantities, so the headcount is rounded after the calculation.
+
+| Change from the equal baseline | $x$ | $y$ | $N_R/N_H$ | New River population | Net change in River |
+|:---------------------------|-----:|-----:|---------:|-------------:|---------------:|
+| River productivity $b=4$ | 10 | 2.5 | 1.0779 | 518.7 | $+18.7$ |
+| River parks $a=2$ | 4 | $-1$ | 1.0513 | 512.5 | $+12.5$ |
+| Harbor productivity rises 2, so $b=-2$ | $-5$ | $-1.25$ | 0.9632 | 490.6 | $-9.4$ |
+
+In the parks case River attracts residents even as its relative wage falls. A larger population is consistent with a lower nominal wage when households value a local amenity. In the Harbor productivity case the signs reverse because the coordinate system always takes River relative to Harbor. Harbor gains about nine workers.
+
+{{< pagebreak >}}
+
+## The role of land supply and the price levels
+
+Subtracting the wage solution from the rent solution gives
+$$
+x-y=\frac{b+(1-t)a-(sb-ta)}{D}
+    =\frac{(1-s)b+a}{D}.
+$$
+For fixed land areas, either a household amenity gain or a productivity gain raises River’s relative population. Land area has its own effect. When $a=b=0$ but $S_R=2S_H$, the relative price equations still imply $x=y=0$. The population equation then gives $N_R=2N_H$. An otherwise identical region with twice the land accommodates twice the population at the same prices.
+
+The model also recovers wage and rent **levels** when regional land areas, productivity levels, and total population are known. Once $N_i$ is determined, land clearing fixes $\mu_i=w_i/r_i=S_i/(\gamma N_i)$. The firm’s break-even condition at $p=1$ implies
+$$
+\begin{aligned}
+w_i^{1-t}r_i^t&=(1-t)^{1-t}t^t B_i,\\
+(\mu_i r_i)^{1-t}r_i^t&=\mu_i^{1-t}r_i=(1-t)^{1-t}t^t B_i,\\
+r_i&=\frac{(1-t)^{1-t}t^t B_i}{\mu_i^{1-t}},\qquad
+w_i=\mu_i r_i .
+\end{aligned}
+$$
+Substitution into household indirect utility then determines the common $\bar V$. With a fixed national population, migration equalizes workers’ utility across occupied locations. The national utility level itself can change when one region improves.
+
+## More regions and different workers
+
+With three or more active, occupied regions, each satisfies $V_i=\bar V$ and $K_i=1$ and clears its land and labor markets. The population restriction becomes $\sum_i N_i=\bar N$. A common reference location supplies all relative wage and rent comparisons. With heterogeneous preferences, identical posted wages and rents can lead different workers to choose different locations. A worker with strong family ties to Harbor can remain there even when another worker gains by moving to River. In that extension an indifferent *marginal* mover marks the boundary between those who move and those who stay. [Morten, PDF pp. 9–16 and 21–25](https://steg.cepr.org/sites/default/files/2022-08/Lecture%2011%20-%20Melanie%20Morten%20-%20Slides.pdf#page=9)
+
+{{< pagebreak >}}
+
+# Interpreting wage and rent evidence
+
+When River becomes both more productive and more attractive to households, $a,b>0$ imply a higher River rent. The wage depends on which effect dominates. From $y=(sb-ta)/D$, a wage premium arises when $sb>ta$, a wage discount when $sb<ta$, and equal wages when $sb=ta$. The equilibrium conditions can also be read in reverse. With given expenditure shares and comparable workers and firms, the observed wage and rent gaps imply
+$$
+a=sx-y,\qquad b=(1-t)y+tx.
+$$
+For example, if $x=8$ and $y=0$, a household amenity advantage of $0.25(8)-0=2$ log points compensates for the rent premium. Firms require a productivity advantage of $0.80(0)+0.20(8)=1.6$ log points to cover that same premium. This inference depends on the model’s assumptions about mobility, common shares, and worker and firm comparability. The two prices alone cannot identify *which* neighborhood feature accounts for the implied amenity advantage. In the regional model a feature may affect both productivity and household utility. Roback uses wage and land-price evidence to study such implicit amenity values. Within a shared labor market, the housing comparisons in Module 5 pursue a related empirical question. [Roback, pp. 1262–1265](https://matthewturner.org/ec1410/readings/Roback_JPE_1982.pdf#page=7)
+
+## Readings and resources
+
+**Required reading.** Jan K. Brueckner (2011), *Lectures on Urban Economics*, MIT Press. Chapter 2, §§2.1–2.4 develops commuting costs and household location within a city. Section 11.2, printed pp. 233–241, develops spatial equilibrium across cities. Figures 11.1 and 11.2 introduce the worker and firm curves. Figure 11.3 treats a household amenity, and Figures 11.4–11.5 allow the amenity to affect production. [MIT Press book page](https://mitpress.mit.edu/9780262016360/lectures-on-urban-economics/)
+
+**Optional reading.** Jennifer Roback (1982), “Wages, Rents, and the Quality of Life,” *Journal of Political Economy* 90(6), 1257–1278. Printed pp. 1259–1262 develop the equilibrium conditions. Equations (2) and (3), Figure 1, and footnote 7 connect location choice, zero profit and population. The expenditure shares in the discussion following Figure 1 help interpret wage and rent evidence. [Article PDF, opening of the model](https://matthewturner.org/ec1410/readings/Roback_JPE_1982.pdf#page=4)
+
+**Origins and extensions.** Sherwin Rosen (1979), “Wage-Based Indexes of Urban Quality of Life,” in P. Mieszkowski and M. Straszheim (eds.), *Current Issues in Urban Economics*, pp. 74–104. Roback discusses how including land in production changes the wage-based argument. Melanie Morten (2021), *Introduction to the Spatial Equilibrium Model*, STEG lecture, develops a two-location model with heterogeneous location preferences and then introduces market clearing. [Roback’s comparison, p. 1262](https://matthewturner.org/ec1410/readings/Roback_JPE_1982.pdf#page=7) · [Morten’s lecture](https://steg.cepr.org/sites/default/files/2022-08/Lecture%2011%20-%20Melanie%20Morten%20-%20Slides.pdf)
+
+**Companion calculation.** The River–Harbor script uses only base R. It reproduces the candidate-rent comparison, the park-access change, and the exact matrix solution. The web edition of this reader includes a downloadable copy in the numerical example. [Base R linear system solver](https://stat.ethz.ch/R-manual/R-devel/library/base/html/solve.html)

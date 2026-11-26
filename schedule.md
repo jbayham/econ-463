@@ -18,11 +18,11 @@ This schedule is tentative. Additional handouts will accompany the relevant modu
 | Tue Nov 24 | **No class.**                                                                                                                                    | —                                                  |                                                                     |
 | Wed Nov 25 | **[M2]:** Regional growth and structural change, trade, migration, and convergence.                                                              | Hoover–Giarratani §11.2.                           |                                                                     |
 | Thu Nov 26 | **[M2]**; **[M3]:** Regional boundaries, comparable data, location quotients, and shift-share analysis.                                          | Read Schaffer, ch. 2 (main text, pp. 6–9) and ch. 3, Note A, “Techniques for Data Analysis” (pp. 43–47). Use the full ch. 3 (pp. 13–47) for reference. |                                                                     |
-| Fri Nov 27 | **[M3]** (wrap-up as needed); **[M4]:** Land use, commuting and bid rents, wages and rents across cities.                                        | Brueckner ch. 2. Revisit Schaffer ch. 3, Note A as needed. |                                                                     |
-| Mon Nov 30 | **[M4]**. Applied R demonstration on how rents vary with commuting distance.                                                                     | Brueckner §11.2.                                   | **[Problem Set 1]({{ site.baseurl }}/problem-sets/#problem-set-1)** |
-| Tue Dec 1  | **[Problem set review (PS 1)]({{ site.baseurl }}/problem-sets/#problem-set-1).** **[M5]:** Hedonic regressions, amenity capitalization, sorting. | Brueckner §6.2.                                    |                                                                     |
-| Wed Dec 2  | **[M5]**                                                                                                                                         | Hall, Lawson, and Shia, ch. 5.                     |                                                                     |
-| Thu Dec 3  | **[M4]**; **[M5]**                                                                                                                               | [M4]–[M5] notes and the supplied hedonic exercise. |                                                                     |
+| Fri Nov 27 | **[M3]** wrap-up as needed. **[M4]** opens with bid rent, then develops worker and firm location in Rosen–Roback. If time permits, explore the wage–rent intersection in R. | Brueckner §§2.1–2.4. Revisit Schaffer ch. 3, Note A as needed. | |
+| Mon Nov 30 | **[M4]** resumes with migration. Use the equilibrium wages and land rents to calculate how many workers move after a productivity gain and interpret the response to better amenities. | Brueckner §11.2. Optional reading from Roback (1982), pp. 1259–1262. | **[Problem Set 1]({{ site.baseurl }}/problem-sets/#problem-set-1)** |
+| Tue Dec 1  | **[Problem set review (PS 1)]({{ site.baseurl }}/problem-sets/#problem-set-1).** **[M5]** opens with the rent–distance R demo, then examines housing supply and land-use constraints. | Brueckner §§2.5–2.8 and §6.2. | |
+| Wed Dec 2  | **[M5]** examines amenity capitalization. Estimate the relationship between airport noise and house prices in R. | Hall, Lawson, and Shia, ch. 5. | |
+| Thu Dec 3  | **[M4]** and **[M5]** practice. Compare the regional wage–rent prediction with the housing estimates and discuss how household sorting affects interpretation. | [M4]–[M5] notes and the supplied hedonic exercise. | |
 | Fri Dec 4  | **Full-session review for Exam 1 ([M1]–[M5]).**                                                                                                  | Review [M1]–[M5].                                  |                                                                     |
 | Mon Dec 7  | **Exam 1: Regional foundations, spatial equilibrium, and hedonics ([M1]–[M5]).**                                                                 |                                                    | **Problem Set 2**                                                   |
 | Tue Dec 8  | **Problem set review (PS 2).** **[M6]:** Input-output accounting, the Leontief model, and regional multipliers.                                  | Schaffer ch. 4–5.                                  |                                                                     |
@@ -40,7 +40,7 @@ This schedule is tentative. Additional handouts will accompany the relevant modu
 [M1]: {{ site.baseurl }}/modules/#module-1
 [M2]: {{ site.baseurl }}/modules/#module-2
 [M3]: {{ site.baseurl }}/modules/#module-3
-[M4]: {{ site.baseurl }}/modules/#module-4
+[M4]: {{ site.baseurl }}/modules/04-spatial-equilibrium/
 [M5]: {{ site.baseurl }}/modules/#module-5
 [M6]: {{ site.baseurl }}/modules/#module-6
 [M7]: {{ site.baseurl }}/modules/#module-7

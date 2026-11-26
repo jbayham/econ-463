@@ -76,24 +76,41 @@
     - title: "Worked examples reader (PDF)"
       url: reader.pdf
 
-- title: "Module 4: Land Use and Spatial Equilibrium"
+- title: "Module 4: Spatial Equilibrium and Migration"
   dirname: modules/04-spatial-equilibrium
+  desc: "November 27 covers bid rent and the Rosen–Roback wage–rent diagram, with a River and Harbor numerical example in R if time permits. November 30 uses market clearing to calculate migration."
   readings:
     Required reading:
       - source: brueckner
-        selection: "Ch. 2 and §11.2 (land use, commuting, wages, and rents)."
+        selection: "Ch. 2, §§2.1–2.4 (commuting and household location), and §11.2, pp. 233–241 (the Roback model). Figures 11.1 and 11.2 correspond to the reader’s worker and firm curves on pp. 4–7."
+    Supplemental reading:
+      - source: morten-spatial-equilibrium
+        selection: "PDF pp. 6–16 and 21–25 (location preferences, migration, and market clearing)."
+    Optional reading:
+      - source: roback-1982
+        selection: "pp. 1259–1262, especially Figure 1 (how amenities affect wages and land rents)."
+  materials:
+    - title: "Lecture slides"
+      url: slides.html
+    - title: "Rosen–Roback model reader (web)"
+      url: reader.html
+    - title: "Rosen–Roback model reader (PDF)"
+      url: reader.pdf
+    - title: "River and Harbor numerical exercise (R script)"
+      url: R/river-harbor.R
+
+- title: "Module 5: Housing, Land Use, and Hedonics"
+  dirname: modules/05-hedonics
+  desc: "Use rents and commuting distance to study job access, housing supply, and land use. Estimate how airport noise shows up in house prices."
+  readings:
+    Required reading:
+      - source: brueckner
+        selection: "Ch. 2, §§2.5–2.8 (housing supply and urban land use), and §6.2 (hedonic housing prices)."
+      - source: hall-lawson-shia
+        selection: "Ch. 5 (airport noise and house prices)."
     Supplemental reading:
       - source: hoover-giarratani
         selection: "§§6.2–6.7 and §7.3 (rent gradients and residential location)."
-
-- title: "Module 5: Hedonics and Interpretation of Spatial Evidence"
-  dirname: modules/05-hedonics
-  readings:
-    Required reading:
-      - source: brueckner
-        selection: "§6.2 (amenity capitalization)."
-      - source: hall-lawson-shia
-        selection: "Ch. 5 (airport noise and house prices)."
     Optional reading:
       - source: hall-lawson-shia
         selection: "Chs. 7–8 (water quality, lake amenities, and industrial disamenities)."

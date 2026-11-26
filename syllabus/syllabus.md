@@ -124,14 +124,15 @@ You will have the full class period for exams. Exam 1 is scheduled for **Monday,
 - Administrative and functional regions; geographic, temporal, and sector comparability.
 - Regional data analysis in R, location quotients, shift-share, and regional profiles.
 
-### Module 4: Land Use and Spatial Equilibrium
+### Module 4: Spatial Equilibrium and Migration
 
-- Bid rents, commuting, housing supply, and land-use constraints.
-- Wages, rents, amenities, mobility, capitalization, and population adjustment across places.
+- A short bid-rent example comparing two commutes to the same job.
+- Rosen–Roback, migration, and regional wage and rent responses to productivity and amenities.
 
-### Module 5: Hedonics and Interpretation of Spatial Evidence
+### Module 5: Housing, Land Use, and Hedonics
 
-- Hedonic models of property values and amenities; estimation and interpretation in R.
+- Rent–distance gradients in R, housing supply, land-use constraints, and amenity capitalization.
+- Hedonic models of house prices and airport noise, with estimation and interpretation in R.
 - Sorting, omitted variables, specification comparisons, and limits to causal and welfare interpretation.
 
 ### Module 6: Input-Output Analysis and Regional Linkages

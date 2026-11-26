@@ -1,46 +1,23 @@
-# Module 4. Land Use and Spatial Equilibrium
+# Module 4. Spatial Equilibrium and Migration
 
-Draft teaching plan for instructor review.
+Why can River and Harbor pay different wages when workers can move between them? The Rosen–Roback model connects two decisions. Workers choose where to live, and firms choose where to produce. Their choices jointly determine regional wage and land-rent differences.
 
-How can a more attractive place end up with higher rents? Students use commuting costs, housing supply, and mobility to explain adjustments in wages, rents, and population (LO4).
+## Lecture materials
 
-## Progression of ideas
+- [Lecture slides](slides.html)
+- [Rosen–Roback reader (web)](reader.html) · [Download the reader (PDF)](reader.pdf)
+- [River and Harbor numerical exercise (R script)](R/river-harbor.R)
 
-1. **Start within a city.** A shorter commute saves time or money. Ask how much more a household could pay for land closer to work and still be equally well off. This trade-off gives the bid-rent curve its slope.
-2. **Compare cities through wages and rents.** Return to the productivity gains from clustering in Module 1. In a Rosen–Roback diagram, households weigh wages, rents, and amenities when choosing where to live. Firms weigh productivity, wages, and land costs when choosing where to produce. The intersection gives a wage and rent consistent with both choices.
-3. **Distinguish two reasons rents can rise.** Use the diagram to compare a productivity gain with an improvement in amenities. Then ask how housing supply affects the population response. Module 5 takes the resulting capitalization prediction to housing data.
+## Class meetings
 
-## Topic outline
+**Friday, November 27 — Wages and rents.** A short bid-rent example asks how much more a worker would pay to live closer to the same job. The River–Harbor example then allows wages to differ. The worker indifference curve and the firm zero-profit curve together explain how better supplier access or better access to parks changes equilibrium. The optional R exercise compares the wages workers require with the wages firms can pay. Reader pp. 2–17 cover the derivations, diagrams, and R example.
 
-### Land use within a city
+**Monday, November 30 — Migration.** At the new equilibrium prices, how many workers move? Combining household and firm demand for land with a fixed total population gives the new headcount in each region. [Migration slides](slides.html#/migration) · [Reader, migration and market clearing](reader.html#migration-and-market-clearing)
 
-- Household trade-offs between rent and commuting costs. Two otherwise similar homes give a concrete starting point for the bid-rent gradient.
-- How cheaper commuting affects the gradient, and which assumptions about employment location and housing are needed for that prediction.
+## Readings
 
-**Instructor notes:**
+**Required.** Jan Brueckner, *Lectures on Urban Economics*, ch. 2, §§2.1–2.4, on commuting and household location, and §11.2, pp. 233–241, on the Roback model. Compare Figure 11.1 with the worker curve on reader pp. 4–5 and Figure 11.2 with the firm curve on p. 7. The course text is available through FTU. [MIT Press book page](https://mitpress.mit.edu/9780262016360/lectures-on-urban-economics/)
 
-### Wages and rents across cities
+**Optional.** Jennifer Roback (1982), “Wages, Rents, and the Quality of Life,” pp. 1259–1262, especially Figure 1. [Read the model in the original paper](https://matthewturner.org/ec1410/readings/Roback_JPE_1982.pdf#page=4)
 
-- Rosen–Roback household indifference and firm zero-profit conditions. Wages enter as household income and a cost of production.
-- Joint determination of wages and rents. Revisit the Module 1 agglomeration example as a source of local productivity differences.
-
-**Instructor notes:**
-
-### Amenities, productivity, and housing supply
-
-- Compare a cleaner city with a more productive city. Trace which equilibrium condition shifts and how wages and rents respond in each case.
-- Housing supply and population adjustment. Ask which combinations of observed wages, rents, and housing growth would help distinguish the explanations for a price premium.
-
-**Instructor notes:**
-
-## Readings and teaching materials
-
-Use selected diagrams from Brueckner, ch. 2, pp. 23–50, and the spatial equilibrium discussion in §11.2, pp. 233–241. Morten’s spatial equilibrium lecture, PDF pp. 6–16 and 21–25, supports the wage–rent comparison.
-
-## Assessment connection
-
-Introduce the diagram and prediction component of PS 2 in the spatial equilibrium exercise. Use the same prediction when interpreting the M5 estimates. PS 2 is due Dec 7.
-
-## Decision for review
-
-How much algebra should accompany the wage–rent diagram before students move to the empirical application?
+**Supplemental.** Melanie Morten, *Introduction to the Spatial Equilibrium Model*, PDF pp. 6–16 and 21–25, connects location preferences with migration and market clearing. [Lecture slides](https://steg.cepr.org/sites/default/files/2022-08/Lecture%2011%20-%20Melanie%20Morten%20-%20Slides.pdf)
